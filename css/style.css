@@ -1,34 +1,41 @@
+/* ============================================
+   AFRIQUEEUROPECONNEXIONVMETC - Complete Professional Dark Theme
+   Universal CSS for All Pages
+   ============================================ */
 
+/* CSS Variables - Professional Dark Palette */
 :root {
-  
+    /* Primary Colors - Deep Blues */
     --primary: #2C5F8D;
     --primary-dark: #1A3A52;
     --primary-light: #4A7BA7;
     --accent: #E8A547;
     
-
+    /* Dark Theme Colors */
     --bg-dark: #0F1419;
     --bg-secondary: #1A1F26;
     --bg-tertiary: #252B35;
     --surface: #2D333D;
     
-   
+    /* Text Colors */
     --text-primary: #E8E9ED;
     --text-secondary: #B8BCC8;
     --text-muted: #8B92A6;
     
-   
+    /* Neutral Colors */
     --white: #FFFFFF;
     --light-gray: #2D333D;
     
-   
+    /* Support Colors */
     --success: #3BA55C;
     --warning: #E8A547;
     --danger: #D44B47;
     --info: #4A7BA7;
 }
 
-
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
 * {
     margin: 0;
     padding: 0;
@@ -123,7 +130,7 @@ section {
     margin-bottom: 1.5rem;
 }
 
-
+/* Grid Systems */
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -143,7 +150,9 @@ section {
     gap: 2rem;
 }
 
-
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
 header {
     background: rgba(15, 20, 25, 0.95);
     backdrop-filter: blur(10px);
@@ -174,6 +183,16 @@ nav {
 
 .logo:hover {
     color: var(--accent);
+}
+
+.logo-img {
+    max-width: 150px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -286,23 +305,71 @@ nav {
     display: none;
 }
 
-/* Mobile Menu Button */
+/* Mobile Menu Button - Modern 3 Dots */
 .mobile-menu-btn {
     display: none;
     background: none;
     border: none;
-    font-size: 1.5rem;
     cursor: pointer;
-    color: var(--text-primary);
     padding: 0.5rem;
-    transition: color 0.3s ease;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
 }
 
-.mobile-menu-btn:hover {
-    color: var(--accent);
+.mobile-menu-btn span {
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--text-primary);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
 }
 
+.mobile-menu-btn span:nth-child(1) {
+    top: 8px;
+}
 
+.mobile-menu-btn span:nth-child(2) {
+    top: 17px;
+}
+
+.mobile-menu-btn span:nth-child(3) {
+    bottom: 8px;
+}
+
+.mobile-menu-btn:hover span {
+    background: var(--accent);
+}
+
+/* Mobile Menu Active State - X icon */
+.mobile-menu-btn.active span {
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    top: 19px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    bottom: 19px;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+/* ============================================
+   HERO SECTIONS - Universal for All Pages
+   ============================================ */
 .hero {
     background: linear-gradient(135deg, #1A3A52 0%, #2C5F8D 50%, #1A3A52 100%);
     color: var(--white);
@@ -334,7 +401,7 @@ nav {
     50% { opacity: 0.7; }
 }
 
-
+/* Smaller hero for internal pages */
 .hero.page-hero {
     min-height: 50vh;
     padding: 4rem 2rem;
@@ -426,7 +493,9 @@ nav {
     }
 }
 
-
+/* ============================================
+   BUTTONS - Universal
+   ============================================ */
 .btn-primary,
 .btn-secondary,
 .btn-cta,
