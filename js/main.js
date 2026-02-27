@@ -1,196 +1,89 @@
-// ============================================
 // AFRIQUEEUROPECONNEXIONVMETC - Main JavaScript
-// Modern Interactive Features
-// ============================================
 
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-    initScrollAnimations();
-    initCounters();
-    initSmoothScroll();
-    initScrollToTop();
-    initHeaderScroll();
+// Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (navLinks.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    if (navLinks && navLinks.classList.contains('active')) {
+        if (!event.target.closest('nav')) {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
 });
 
-// ============================================
-// 1. MOBILE MENU
-// ============================================
-function initMobileMenu() {
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navLinks = document.getElementById('navLinks');
-    
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            const icon = this.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    }
-    
-    // Close menu when clicking a link
-    const menuLinks = navLinks.querySelectorAll('a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
-                navLinks.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    });
-    
-    // Dropdown functionality
-    const dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(dropdown => {
-        const toggle = dropdown.querySelector('.dropdown-toggle');
-        if (toggle) {
-            toggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                dropdown.classList.toggle('active');
-            });
+// Close mobile menu when clicking on a link
+const navLinksItems = document.querySelectorAll('.nav-links a:not(.dropdown-toggle)');
+navLinksItems.forEach(link => {
+    link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            document.body.style.overflow = '';
         }
     });
-}
+});
 
-// ============================================
-// 2. SCROLL ANIMATIONS
-// ============================================
-function initScrollAnimations() {
-    const animateElements = document.querySelectorAll('.card, .stat-item, .hero-content');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '0';
-                entry.target.style.transform = 'translateY(30px)';
-                
-                setTimeout(() => {
-                    entry.target.style.transition = 'all 0.6s ease-out';
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, 100);
-                
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+// Dropdown Toggle for Mobile
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const dropdown = this.closest('.dropdown');
+            dropdown.classList.toggle('active');
+        }
     });
-    
-    animateElements.forEach(el => observer.observe(el));
-}
+});
 
-// ============================================
-// 3. ANIMATED COUNTERS
-// ============================================
-function initCounters() {
-    const counters = document.querySelectorAll('[data-count]');
-    
-    const animateCounter = (counter) => {
-        const target = parseInt(counter.getAttribute('data-count'));
-        const duration = 2000;
-        const increment = target / (duration / 16);
-        let current = 0;
-        
-        const updateCounter = () => {
-            current += increment;
-            if (current < target) {
-                counter.textContent = Math.floor(current);
-                if (counter.classList.contains('impact-number')) {
-                    counter.textContent = Math.floor(current) + '+';
-                }
-                requestAnimationFrame(updateCounter);
-            } else {
-                if (counter.classList.contains('stat-number')) {
-                    counter.textContent = target + '+';
-                } else if (counter.classList.contains('impact-number')) {
-                    counter.textContent = target + '+';
-                } else {
-                    counter.textContent = target;
-                }
-            }
-        };
-        updateCounter();
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    counters.forEach(counter => observer.observe(counter));
-}
-
-// ============================================
-// 4. SMOOTH SCROLL
-// ============================================
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href === '#' || href === '#!') return;
-            
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href !== '#company' && href !== '#services' && href !== '#resources') {
+            e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
-                e.preventDefault();
-                const headerOffset = 80;
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
             }
-        });
-    });
-    
-    // Scroll indicator
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    if (scrollIndicator) {
-        scrollIndicator.addEventListener('click', function() {
-            window.scrollTo({
-                top: window.innerHeight,
-                behavior: 'smooth'
-            });
-        });
-    }
-}
-
-// ============================================
-// 5. SCROLL TO TOP BUTTON
-// ============================================
-function initScrollToTop() {
-    // Create scroll to top button
-    const scrollBtn = document.createElement('button');
-    scrollBtn.className = 'scroll-to-top';
-    scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    scrollBtn.setAttribute('aria-label', 'Scroll to top');
-    document.body.appendChild(scrollBtn);
-    
-    // Show/hide on scroll
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollBtn.classList.add('show');
-        } else {
-            scrollBtn.classList.remove('show');
         }
     });
-    
-    // Scroll to top on click
-    scrollBtn.addEventListener('click', function() {
+});
+
+// Back to Top Button
+const backToTopBtn = document.getElementById('backToTop');
+
+if (backToTopBtn) {
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
@@ -198,114 +91,130 @@ function initScrollToTop() {
     });
 }
 
-// ============================================
-// 6. HEADER SCROLL EFFECT
-// ============================================
-function initHeaderScroll() {
-    const header = document.querySelector('header');
-    let lastScroll = 0;
-    
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-        
-        // Hide/show on scroll direction
-        if (currentScroll > lastScroll && currentScroll > 500) {
-            header.classList.add('hide');
-        } else {
-            header.classList.remove('hide');
-        }
-        
-        lastScroll = currentScroll;
+// Scroll Indicator
+const scrollIndicator = document.querySelector('.scroll-indicator');
+
+if (scrollIndicator) {
+    scrollIndicator.addEventListener('click', function() {
+        window.scrollBy({
+            top: window.innerHeight,
+            behavior: 'smooth'
+        });
     });
 }
 
-// ============================================
-// 7. FORM VALIDATION (if forms exist)
-// ============================================
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
+// Header Scroll Effect
+const header = document.querySelector('header');
+let lastScroll = 0;
+
+window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+    
+    // Hide header on scroll down, show on scroll up
+    if (currentScroll > lastScroll && currentScroll > 500) {
+        header.classList.add('hide');
+    } else {
+        header.classList.remove('hide');
+    }
+    
+    lastScroll = currentScroll;
+});
+
+// Animated Counter for Stats
+const statNumbers = document.querySelectorAll('.stat-number');
+
+const animateCounter = (element) => {
+    const target = parseInt(element.getAttribute('data-count')) || parseInt(element.textContent);
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+    
+    const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+            element.textContent = Math.floor(current) + '+';
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target + '+';
+        }
+    };
+    
+    updateCounter();
+};
+
+// Intersection Observer for Stats Animation
+if (statNumbers.length > 0) {
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                animateCounter(entry.target);
+                entry.target.classList.add('animated');
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    statNumbers.forEach(stat => statsObserver.observe(stat));
 }
 
-function validatePhone(phone) {
-    const re = /^[+]?[\d\s\-\(\)]+$/;
-    return re.test(phone);
-}
+// Form Validation
+const forms = document.querySelectorAll('form');
 
-// Add form validation to all forms
-document.querySelectorAll('form').forEach(form => {
+forms.forEach(form => {
     form.addEventListener('submit', function(e) {
         let isValid = true;
+        const requiredFields = form.querySelectorAll('[required]');
         
-        // Validate email fields
-        const emailInputs = form.querySelectorAll('input[type="email"]');
-        emailInputs.forEach(input => {
-            if (input.value && !validateEmail(input.value)) {
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
                 isValid = false;
-                input.classList.add('error');
-                showFieldError(input, 'Please enter a valid email address');
-            } else {
-                input.classList.remove('error');
-                removeFieldError(input);
+                field.classList.add('error');
+                
+                // Remove error class on input
+                field.addEventListener('input', function() {
+                    this.classList.remove('error');
+                }, { once: true });
             }
         });
         
-        // Validate phone fields
-        const phoneInputs = form.querySelectorAll('input[type="tel"]');
-        phoneInputs.forEach(input => {
-            if (input.value && !validatePhone(input.value)) {
+        // Email validation
+        const emailFields = form.querySelectorAll('input[type="email"]');
+        emailFields.forEach(field => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (field.value && !emailRegex.test(field.value)) {
                 isValid = false;
-                input.classList.add('error');
-                showFieldError(input, 'Please enter a valid phone number');
-            } else {
-                input.classList.remove('error');
-                removeFieldError(input);
-            }
-        });
-        
-        // Validate required fields
-        const requiredInputs = form.querySelectorAll('[required]');
-        requiredInputs.forEach(input => {
-            if (!input.value.trim()) {
-                isValid = false;
-                input.classList.add('error');
-                showFieldError(input, 'This field is required');
-            } else {
-                input.classList.remove('error');
-                removeFieldError(input);
+                field.classList.add('error');
             }
         });
         
         if (!isValid) {
             e.preventDefault();
+            alert('Please fill in all required fields correctly.');
         }
     });
 });
 
-function showFieldError(field, message) {
-    removeFieldError(field);
-    const errorDiv = document.createElement('div');
-    errorDiv.className = 'field-error';
-    errorDiv.textContent = message;
-    field.parentNode.appendChild(errorDiv);
-}
+// Newsletter Form Success Message
+const newsletterForms = document.querySelectorAll('.newsletter-form');
 
-function removeFieldError(field) {
-    const errorDiv = field.parentNode.querySelector('.field-error');
-    if (errorDiv) {
-        errorDiv.remove();
-    }
-}
+newsletterForms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+        const email = form.querySelector('input[type="email"]').value;
+        if (email) {
+            // Show success message after form submission
+            setTimeout(() => {
+                alert('✅ Thank you for subscribing! Check your email for confirmation.');
+            }, 100);
+        }
+    });
+});
 
-// ============================================
-// 8. LAZY LOADING IMAGES
-// ============================================
+// Lazy Loading for Images
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -314,28 +223,26 @@ if ('IntersectionObserver' in window) {
                 if (img.dataset.src) {
                     img.src = img.dataset.src;
                     img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
                 }
+                imageObserver.unobserve(img);
             }
         });
     });
     
-    document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-    });
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    lazyImages.forEach(img => imageObserver.observe(img));
 }
 
-// ============================================
-// UTILITY: Debounce Function
-// ============================================
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
+// Console Branding
+console.log('%c AFRIQUEEUROPECONNEXIONVMETC ', 'background: #2C5F8D; color: white; font-size: 20px; font-weight: bold; padding: 10px;');
+console.log('%c Digital Transformation Solutions ', 'background: #E8A547; color: #0F1419; font-size: 14px; padding: 5px;');
+console.log('Interested in working with us? Visit: https://afriqueeuropeconnexionvmetc.com/company/contact.html');
+
+// Performance Monitoring
+window.addEventListener('load', function() {
+    if (window.performance && window.performance.timing) {
+        const perfData = window.performance.timing;
+        const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+        console.log(`Page loaded in ${pageLoadTime}ms`);
+    }
+});
