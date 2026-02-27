@@ -1,705 +1,248 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFRIQUEEUROPECONNEXIONVMETC - Digital Transformation Solutions</title>
-    <meta name="description" content="Leading digital transformation partner empowering businesses across Africa and Europe through AI, ERP, CRM, and Cloud solutions since 2017.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "v4lglq0gvb");
-    </script>
-    
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PDMNDP8F');</script>
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W229DN1ZEN"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-W229DN1ZEN');
-      
-      // Consent Mode
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
-      });
-    </script>
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDMNDP8F"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+// AFRIQUEEUROPECONNEXIONVMETC - Main JavaScript
 
-<!-- Header -->
-<header>
-    <div class="container">
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="AEC Logo" class="logo-img">
-            </a>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">Home</a></li>
-                
-                <li class="dropdown">
-                    <a href="#company" class="dropdown-toggle">
-                        Company <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                        <a href="company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
-                        <a href="company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-                        <a href="company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
-                    </div>
-                </li>
-                
-                <li class="dropdown">
-                    <a href="#services" class="dropdown-toggle">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="services/ai-ml.html"><i class="fas fa-robot"></i> AI & Machine Learning</a>
-                        <a href="services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-                        <a href="services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
-                        <a href="services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
-                        <a href="services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
-                        <a href="services/web-marketing.html"><i class="fas fa-globe"></i> Web & Marketing</a>
-                    </div>
-                </li>
+// Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
 
-                <li class="dropdown">
-                    <a href="#resources" class="dropdown-toggle">
-                        Resources <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="resources/research-insights.html"><i class="fas fa-book"></i> Research & Insights</a>
-                        <a href="resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
-                        <a href="resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
-                    </div>
-                </li>
-
-                <li><a href="consultation.html" class="cta-btn">Free Consultation</a></li>
-                <li><a href="company/contact.html">Contact</a></li>
-            </ul>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </div>
-</header>
-
-<main>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">AFRIQUEEUROPECONNEXIONVMETC</h1>
-            
-            <p class="hero-description">
-                Empowering businesses through AI, ERP, CRM, and Cloud solutions.<br>
-                Your trusted digital transformation partner bridging Africa and Europe since 2017.
-            </p>
-            
-            <p class="hero-values">
-                🎯 Aim High • ❤️ Be Kind • ✨ Dare to be Different
-            </p>
-            
-            <div class="hero-buttons">
-                <a href="consultation.html" class="btn-primary">
-                    <i class="fas fa-calendar-check"></i> Book Free Consultation
-                </a>
-                <a href="#services" class="btn-secondary">
-                    <i class="fas fa-rocket"></i> Explore Solutions
-                </a>
-            </div>
-        </div>
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('active');
         
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3 class="stat-number">8+</h3>
-                    <p>Years of Excellence</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-number">20+</h3>
-                    <p>Projects Delivered</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-number">12+</h3>
-                    <p>Happy Clients</p>
-                </div>
-                <div class="stat-item">
-                    <h3>24/7</h3>
-                    <p>Support Available</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Overview -->
-    <section class="container services-section" id="services">
-        <h2>Our Digital Solutions</h2>
-        <p class="section-intro">
-            Comprehensive technology services designed to elevate your business operations and market presence
-        </p>
-
-        <div class="grid-3">
-            <div class="card service-card">
-                <i class="fas fa-robot"></i>
-                <h3>AI & Machine Learning</h3>
-                <p>Leverage intelligent automation and predictive analytics to transform your operations and decision-making processes.</p>
-                <ul>
-                    <li>Process Automation</li>
-                    <li>Predictive Analytics</li>
-                    <li>Natural Language Processing</li>
-                    <li>Computer Vision</li>
-                </ul>
-                <a href="services/ai-ml.html" class="btn-secondary">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card service-card">
-                <i class="fas fa-project-diagram"></i>
-                <h3>ERP Solutions</h3>
-                <p>Integrated business management systems that streamline operations and provide real-time insights across your organization.</p>
-                <ul>
-                    <li>Unified Business Management</li>
-                    <li>Real-Time Data Access</li>
-                    <li>Resource Optimization</li>
-                    <li>Financial Management</li>
-                </ul>
-                <a href="services/ERP.html" class="btn-secondary">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card service-card">
-                <i class="fas fa-users"></i>
-                <h3>CRM Implementation</h3>
-                <p>Build lasting customer relationships with intelligent systems that personalize interactions and drive growth.</p>
-                <ul>
-                    <li>Customer Data Management</li>
-                    <li>Sales Pipeline Tracking</li>
-                    <li>Marketing Automation</li>
-                    <li>Customer Analytics</li>
-                </ul>
-                <a href="services/crm.html" class="btn-secondary">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card service-card">
-                <i class="fas fa-cloud"></i>
-                <h3>Cloud Services</h3>
-                <p>Scalable, flexible, and cost-effective cloud infrastructure that grows with your business needs.</p>
-                <ul>
-                    <li>Cloud Migration</li>
-                    <li>Infrastructure Management</li>
-                    <li>Data Security</li>
-                    <li>Disaster Recovery</li>
-                </ul>
-                <a href="services/cloud.html" class="btn-secondary">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card service-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Business Analysis</h3>
-                <p>Strategic insights and data-driven recommendations to optimize performance and drive sustainable growth.</p>
-                <ul>
-                    <li>Process Optimization</li>
-                    <li>Market Analysis</li>
-                    <li>Performance Metrics</li>
-                    <li>Growth Strategy</li>
-                </ul>
-                <a href="services/business-analysis.html" class="btn-secondary">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="card service-card">
-                <i class="fas fa-globe"></i>
-                <h3>Web & Digital Marketing</h3>
-                <p>Professional websites and strategic marketing solutions to amplify your digital presence and reach.</p>
-                <ul>
-                    <li>Website Development</li>
-                    <li>SEO Optimization</li>
-                    <li>Social Media Strategy</li>
-                    <li>Content Marketing</li>
-                </ul>
-                <a href="services/web-marketing.html" class="btn-secondary">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose AEC -->
-    <section class="bg-light">
-        <div class="container">
-            <h2>Why Choose AFRIQUEEUROPECONNEXIONVMETC?</h2>
-            <p class="section-intro">
-                We're more than consultants—we're your long-term partners in digital transformation
-            </p>
-
-            <div class="grid-3">
-                <div class="card feature-card">
-                    <i class="fas fa-award"></i>
-                    <h3>8+ Years of Proven Expertise</h3>
-                    <p>Since 2017, we've delivered cutting-edge digital solutions across Africa and Europe, transforming businesses of all sizes.</p>
-                </div>
-
-                <div class="card feature-card">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Innovation-First Approach</h3>
-                    <p>Leveraging the latest in AI, ML, and cloud technologies to keep you ahead of the competition and market trends.</p>
-                </div>
-
-                <div class="card feature-card">
-                    <i class="fas fa-handshake"></i>
-                    <h3>True Partnership</h3>
-                    <p>We don't just deliver projects—we build lasting relationships and support your growth every step of the way.</p>
-                </div>
-
-                <div class="card feature-card">
-                    <i class="fas fa-dollar-sign"></i>
-                    <h3>Affordable Solutions</h3>
-                    <p>Enterprise-grade technology at prices that make sense for businesses of all sizes and budgets.</p>
-                </div>
-
-                <div class="card feature-card">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3>Cross-Continental Expertise</h3>
-                    <p>Offices in Abuja (Nigeria), Douala (Cameroon), and Kraków (Poland) give us unique insights into African and European markets.</p>
-                </div>
-
-                <div class="card feature-card">
-                    <i class="fas fa-heart"></i>
-                    <h3>Social Responsibility</h3>
-                    <p>Committed to giving back through digital skills training, volunteer programs, and community support initiatives.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Journey -->
-    <section class="container">
-        <div class="grid-2">
-            <div>
-                <h2>From Grassroots to Global Impact</h2>
-                <p class="text-large">
-                    What began in 2017 as a grassroots initiative—delivering technology solutions hand-to-hand and door-to-door—has evolved into a comprehensive digital transformation consultancy serving businesses across two continents.
-                </p>
-                <p class="text-large">
-                    Founded by <strong>Armel Sandjong Nantchouang</strong>, AFRIQUEEUROPECONNEXIONVMETC now operates exclusively online with a network of trusted partners, bringing together the best engineers and technology experts to deliver world-class solutions.
-                </p>
-                <a href="company/about.html" class="btn-primary">
-                    <i class="fas fa-arrow-right"></i> Our Story
-                </a>
-            </div>
-            <div class="card values-card">
-                <h3>Our Values</h3>
-                <div class="value-item">
-                    <div class="value-icon">🎯</div>
-                    <h4>Aim High</h4>
-                    <p>We set ambitious goals and never settle for mediocrity.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">❤️</div>
-                    <h4>Be Kind</h4>
-                    <p>Compassion and respect guide all our relationships.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">✨</div>
-                    <h4>Dare to be Different</h4>
-                    <p>We challenge conventions and embrace innovation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Latest Research -->
-    <section class="bg-light" id="resources">
-        <div class="container">
-            <h2>Latest Insights & Research</h2>
-            <p class="section-intro">
-                Stay informed with our expert analysis on technology trends, finance, and business transformation
-            </p>
-
-            <div class="grid-3">
-                <div class="card research-card">
-                    <div class="research-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <span class="research-tag">Finance</span>
-                    <h3>Digital Transformation ROI</h3>
-                    <p>Measuring success and quantifying returns on digital initiatives.</p>
-                    <a href="resources/research-insights.html" class="btn-secondary">Read More</a>
-                </div>
-
-                <div class="card research-card">
-                    <div class="research-image">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <span class="research-tag">Technology</span>
-                    <h3>AI in Business 2025</h3>
-                    <p>Latest trends and applications reshaping business operations.</p>
-                    <a href="resources/research-insights.html" class="btn-secondary">Read More</a>
-                </div>
-
-                <div class="card research-card">
-                    <div class="research-image">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <span class="research-tag">Strategy</span>
-                    <h3>Cloud-First Strategy</h3>
-                    <p>Implementation guide for successful cloud migration.</p>
-                    <a href="resources/research-insights.html" class="btn-secondary">Read More</a>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <a href="resources/research-insights.html" class="btn-primary">
-                    <i class="fas fa-book"></i> View All Research
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Impact -->
-    <section class="container">
-        <div class="grid-2">
-            <div class="card social-impact-card">
-                <h2>Our Social Commitment</h2>
-                <p class="text-large">
-                    We believe in giving back and creating positive impact in communities across Africa and Europe.
-                </p>
-                <div class="impact-stat">
-                    <h3 class="impact-number">500+</h3>
-                    <p>Youth trained in digital skills</p>
-                </div>
-                <div class="impact-stat">
-                    <h3 class="impact-number">50+</h3>
-                    <p>Small businesses supported</p>
-                </div>
-                <div class="impact-stat">
-                    <h3 class="impact-number">10+</h3>
-                    <p>Community projects completed</p>
-                </div>
-                <a href="company/Volunteer.html" class="btn-impact">
-                    <i class="fas fa-heart"></i> Join Our Mission
-                </a>
-            </div>
-
-            <div>
-                <h3>Our Programs</h3>
-                <div class="card program-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h4>Digital Skills Training</h4>
-                    <p>Free training for underprivileged youth in technology and coding.</p>
-                </div>
-                <div class="card program-card">
-                    <i class="fas fa-hands-helping"></i>
-                    <h4>SME Support</h4>
-                    <p>Pro-bono consulting for small businesses that need help.</p>
-                </div>
-                <div class="card program-card">
-                    <i class="fas fa-leaf"></i>
-                    <h4>Sustainable Tech</h4>
-                    <p>Promoting eco-friendly solutions and green practices.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container text-center">
-            <h2>Ready to Transform Your Business?</h2>
-            <p class="cta-description">
-                Book your free consultation today and discover how we can help you achieve your digital transformation goals.
-            </p>
-            <a href="consultation.html" class="btn-cta">
-                <i class="fas fa-calendar-check"></i> Book Free Consultation
-            </a>
-            <p class="cta-contact">
-                <i class="fas fa-phone"></i> +48 690 386 721 | 
-                <i class="fas fa-map-marker-alt"></i> Abuja • Douala • Kraków
-            </p>
-        </div>
-    </section>
-</main>
-
-<!-- Modern SEO-Optimized Footer -->
-<footer class="footer">
-    <div class="container">
-        <!-- Main Footer Content -->
-        <div class="footer-main">
-            <!-- Company Info with Logo -->
-            <div class="footer-col footer-brand">
-                <div class="footer-logo">
-                    <img src="assets/logo.png" alt="AFRIQUEEUROPECONNEXIONVMETC Logo" class="footer-logo-img">
-                </div>
-                <h3>AFRIQUEEUROPECONNEXIONVMETC</h3>
-                <p class="footer-tagline">Transforming Businesses Across Africa & Europe</p>
-                <p class="footer-description">
-                    Leading digital transformation partner specializing in AI, ERP, CRM, and Cloud solutions. Empowering businesses since 2017 with innovative technology and expert consulting services.
-                </p>
-                <div class="footer-badges">
-                    <span class="badge">🏆 8+ Years Experience</span>
-                    <span class="badge">🌍 3 Continents</span>
-                    <span class="badge">✅ 20+ Projects</span>
-                </div>
-            </div>
-            
-            <!-- Company Links -->
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul class="footer-links">
-                    <li><a href="company/about.html">About Us</a></li>
-                    <li><a href="company/mission.html">Our Mission & Vision</a></li>
-                    <li><a href="company/expertise.html">Our Expertise</a></li>
-                    <li><a href="company/Volunteer.html">Volunteer Programs</a></li>
-                    <li><a href="resources/case-studies.html">Success Stories</a></li>
-                    <li><a href="company/contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <!-- Services Links -->
-            <div class="footer-col">
-                <h4>Our Services</h4>
-                <ul class="footer-links">
-                    <li><a href="services/ai-ml.html">AI & Machine Learning</a></li>
-                    <li><a href="services/ERP.html">ERP Solutions</a></li>
-                    <li><a href="services/crm.html">CRM Implementation</a></li>
-                    <li><a href="services/cloud.html">Cloud Services</a></li>
-                    <li><a href="services/business-analysis.html">Business Analysis</a></li>
-                    <li><a href="services/web-marketing.html">Web & Digital Marketing</a></li>
-                </ul>
-            </div>
-            
-            <!-- Resources -->
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul class="footer-links">
-                    <li><a href="resources/research-insights.html">Research & Insights</a></li>
-                    <li><a href="resources/industry-trends.html">Industry Trends</a></li>
-                    <li><a href="resources/case-studies.html">Case Studies</a></li>
-                    <li><a href="consultation.html">Free Consultation</a></li>
-                </ul>
-                <h4 style="margin-top: 2rem;">Legal</h4>
-                <ul class="footer-links">
-                    <li><a href="legal/privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="legal/terms-of-service.html">Terms of Service</a></li>
-                    <li><a href="legal/cookie-policy.html">Cookie Policy</a></li>
-                </ul>
-            </div>
-            
-            <!-- Contact & Social -->
-            <div class="footer-col footer-contact-col">
-                <h4>Get In Touch</h4>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Headquarters</strong>
-                            <p>Kraków, Poland</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Regional Offices</strong>
-                            <p>Douala, Cameroon<br>Abuja, Nigeria</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <strong>Phone</strong>
-                            <p><a href="tel:+48690386721">+48 690 386 721</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>Email</strong>
-                            <p><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com">ArmelSandjong@afriqueeuropeconnexionvmetc.com</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <h4 style="margin-top: 2rem;">Follow Us</h4>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc" target="_blank" rel="noopener noreferrer" class="social-link linkedin" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://x.com/SandjongAr3472" target="_blank" rel="noopener noreferrer" class="social-link twitter" aria-label="X (Twitter)">
-                        <i class="fab fa-x-twitter"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@afriqueeuropeconnexionvmetc" target="_blank" rel="noopener noreferrer" class="social-link youtube" aria-label="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://wa.me/48690386721" target="_blank" rel="noopener noreferrer" class="social-link whatsapp" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://github.com/afriqueeuropeconnexionvmetc" target="_blank" rel="noopener noreferrer" class="social-link github" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-
-                <!-- Newsletter Signup -->
-                <div class="newsletter-box">
-                    <h4>Newsletter</h4>
-                    <p>Stay updated with latest insights</p>
-                    <form class="newsletter-form" action="https://formsubmit.co/ArmelSandjong@afriqueeuropeconnexionvmetc.com" method="POST">
-                        <input type="hidden" name="_subject" value="Newsletter Subscription">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="email" name="email" placeholder="Your email" required>
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- Trust Signals -->
-        <div class="footer-trust">
-            <div class="trust-item">
-                <i class="fas fa-shield-alt"></i>
-                <span>SSL Secured</span>
-            </div>
-            <div class="trust-item">
-                <i class="fas fa-lock"></i>
-                <span>GDPR Compliant</span>
-            </div>
-            <div class="trust-item">
-                <i class="fas fa-certificate"></i>
-                <span>ISO Certified</span>
-            </div>
-            <div class="trust-item">
-                <i class="fas fa-award"></i>
-                <span>Award Winner 2024</span>
-            </div>
-        </div>
-
-        <!-- Values Banner -->
-        <div class="footer-values-banner">
-            <div class="value-pill">🎯 Aim High</div>
-            <div class="value-pill">❤️ Be Kind</div>
-            <div class="value-pill">✨ Dare to be Different</div>
-        </div>
-        
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="footer-bottom-content">
-                <p class="copyright">
-                    &copy; 2025 <strong>AFRIQUEEUROPECONNEXIONVMETC</strong> (AEC). All Rights Reserved. 
-                    <span class="separator">|</span> 
-                    Registered in Kraków, Poland
-                </p>
-                <p class="footer-credit">
-                    Designed & Developed by <strong>Armel Sandjong Nantchouang</strong> with ❤️
-                </p>
-            </div>
-            <div class="footer-bottom-links">
-                <a href="legal/privacy-policy.html">Privacy</a>
-                <a href="legal/terms-of-service.html">Terms</a>
-                <a href="legal/cookie-policy.html">Cookies</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "AFRIQUEEUROPECONNEXIONVMETC",
-      "alternateName": "AEC",
-      "url": "https://afriqueeuropeconnexionvmetc.com",
-      "logo": "https://afriqueeuropeconnexionvmetc.com/assets/logo.png",
-      "description": "Leading digital transformation partner specializing in AI, ERP, CRM, and Cloud solutions across Africa and Europe",
-      "foundingDate": "2017",
-      "founder": {
-        "@type": "Person",
-        "name": "Armel Sandjong Nantchouang"
-      },
-      "address": [
-        {
-          "@type": "PostalAddress",
-          "addressLocality": "Kraków",
-          "addressCountry": "Poland"
-        },
-        {
-          "@type": "PostalAddress",
-          "addressLocality": "Douala",
-          "addressCountry": "Cameroon"
-        },
-        {
-          "@type": "PostalAddress",
-          "addressLocality": "Abuja",
-          "addressCountry": "Nigeria"
+        // Prevent body scroll when menu is open
+        if (navLinks.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
         }
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+48-690-386-721",
-        "contactType": "Customer Service",
-        "email": "ArmelSandjong@afriqueeuropeconnexionvmetc.com",
-        "availableLanguage": ["English", "French"]
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/afriqueeuropeconnexionvmetc",
-        "https://x.com/SandjongAr3472",
-        "https://github.com/afriqueeuropeconnexionvmetc"
-      ],
-      "areaServed": ["Africa", "Europe"],
-      "serviceType": [
-        "AI & Machine Learning",
-        "ERP Solutions",
-        "CRM Implementation",
-        "Cloud Services",
-        "Business Analysis",
-        "Digital Marketing"
-      ]
+    });
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    if (navLinks && navLinks.classList.contains('active')) {
+        if (!event.target.closest('nav')) {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     }
-    </script>
-</footer>
+});
 
-<!-- Back to Top Button -->
-<button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-</button>
+// Close mobile menu when clicking on a link
+const navLinksItems = document.querySelectorAll('.nav-links a:not(.dropdown-toggle)');
+navLinksItems.forEach(link => {
+    link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+});
 
-<!-- Floating Social Media Bar -->
-<div class="floating-social">
-    <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc" target="_blank" class="linkedin" title="LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://x.com/SandjongAr3472" target="_blank" class="twitter" title="X (Twitter)">
-        <i class="fab fa-x-twitter"></i>
-    </a>
-    <a href="https://www.youtube.com/@afriqueeuropeconnexionvmetc" target="_blank" class="youtube" title="YouTube">
-        <i class="fab fa-youtube"></i>
-    </a>
-</div>
+// Dropdown Toggle for Mobile
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
-<script src="js/main.js"></script>
-</body>
-</html>
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const dropdown = this.closest('.dropdown');
+            dropdown.classList.toggle('active');
+        }
+    });
+});
+
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href !== '#company' && href !== '#services' && href !== '#resources') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
+});
+
+// Back to Top Button
+const backToTopBtn = document.getElementById('backToTop');
+
+if (backToTopBtn) {
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Scroll Indicator
+const scrollIndicator = document.querySelector('.scroll-indicator');
+
+if (scrollIndicator) {
+    scrollIndicator.addEventListener('click', function() {
+        window.scrollBy({
+            top: window.innerHeight,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Header Scroll Effect
+const header = document.querySelector('header');
+let lastScroll = 0;
+
+window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+    
+    // Hide header on scroll down, show on scroll up
+    if (currentScroll > lastScroll && currentScroll > 500) {
+        header.classList.add('hide');
+    } else {
+        header.classList.remove('hide');
+    }
+    
+    lastScroll = currentScroll;
+});
+
+// Animated Counter for Stats
+const statNumbers = document.querySelectorAll('.stat-number');
+
+const animateCounter = (element) => {
+    const target = parseInt(element.getAttribute('data-count')) || parseInt(element.textContent);
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+    
+    const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+            element.textContent = Math.floor(current) + '+';
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target + '+';
+        }
+    };
+    
+    updateCounter();
+};
+
+// Intersection Observer for Stats Animation
+if (statNumbers.length > 0) {
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                animateCounter(entry.target);
+                entry.target.classList.add('animated');
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    statNumbers.forEach(stat => statsObserver.observe(stat));
+}
+
+// Form Validation
+const forms = document.querySelectorAll('form');
+
+forms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+        let isValid = true;
+        const requiredFields = form.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.classList.add('error');
+                
+                // Remove error class on input
+                field.addEventListener('input', function() {
+                    this.classList.remove('error');
+                }, { once: true });
+            }
+        });
+        
+        // Email validation
+        const emailFields = form.querySelectorAll('input[type="email"]');
+        emailFields.forEach(field => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (field.value && !emailRegex.test(field.value)) {
+                isValid = false;
+                field.classList.add('error');
+            }
+        });
+        
+        if (!isValid) {
+            e.preventDefault();
+            alert('Please fill in all required fields correctly.');
+        }
+    });
+});
+
+// Newsletter Form Success Message
+const newsletterForms = document.querySelectorAll('.newsletter-form');
+
+newsletterForms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+        const email = form.querySelector('input[type="email"]').value;
+        if (email) {
+            // Show success message after form submission
+            setTimeout(() => {
+                alert('✅ Thank you for subscribing! Check your email for confirmation.');
+            }, 100);
+        }
+    });
+});
+
+// Lazy Loading for Images
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+    
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    lazyImages.forEach(img => imageObserver.observe(img));
+}
+
+// Console Branding
+console.log('%c AFRIQUEEUROPECONNEXIONVMETC ', 'background: #2C5F8D; color: white; font-size: 20px; font-weight: bold; padding: 10px;');
+console.log('%c Digital Transformation Solutions ', 'background: #E8A547; color: #0F1419; font-size: 14px; padding: 5px;');
+console.log('Interested in working with us? Visit: https://afriqueeuropeconnexionvmetc.com/company/contact.html');
+
+// Performance Monitoring
+window.addEventListener('load', function() {
+    if (window.performance && window.performance.timing) {
+        const perfData = window.performance.timing;
+        const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+        console.log(`Page loaded in ${pageLoadTime}ms`);
+    }
+});
