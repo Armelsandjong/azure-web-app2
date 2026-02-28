@@ -1,118 +1,164 @@
 /* ==============================================
-   AFRIQUEEUROPECONNEXION - Human-Friendly Theme
+   AFRIQUEEUROPECONNEXION - Human-Centric Theme
+   Colors: Deep Indigo, Midnight Purple, Sunset Gold
    ============================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
-    --primary: #6366f1;
+    --primary: #6366f1;       /* Friendly Indigo */
     --primary-dark: #4338ca;
     --primary-light: #818cf8;
-    --accent: #f59e0b; /* Warmer, less robotic gold */
-    --bg-dark: #0b0914; /* Deep purple-black */
-    --bg-secondary: #161426; /* Deep navy-purple */
-    --bg-tertiary: #1f1d36;
-    --surface: rgba(255, 255, 255, 0.04);
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --text-muted: #94a3b8;
-    --white: #ffffff;
-    --radius-lg: 24px;
-    --radius-md: 12px;
+    --accent: #f59e0b;        /* Warm Sunset Gold */
+    --bg-dark: #0a0910;       /* Softer than pure black */
+    --bg-card: #161525;       /* Deep Purple-Navy */
+    --text-main: #f8fafc;     /* Off-white (easier on eyes) */
+    --text-dim: #94a3b8;      /* Soft blue-gray */
+    --glass: rgba(255, 255, 255, 0.03);
+    --radius: 24px;           /* Large "Human" curves */
 }
 
+/* --- Global Reset --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    background: radial-gradient(circle at top right, #1e1b4b, #0b0914);
-    font-family: 'Inter', -apple-system, sans-serif;
-    color: var(--text-secondary);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    background: radial-gradient(circle at top right, #1e1b4b, #0a0910);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* --- GLASSMORPHIC HEADER --- */
+/* --- Header & Navigation --- */
 header {
-    background: rgba(11, 9, 20, 0.75);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(10, 9, 16, 0.8);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* --- HERO: SOFT & INVITING --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { 
+    color: var(--text-dim); 
+    font-weight: 500; 
+    transition: 0.3s;
+    text-decoration: none;
+}
+.nav-links a:hover { color: var(--primary-light); }
+
+/* --- Hero Section (The "Breathe" Effect) --- */
 .hero {
+    padding: 10rem 0 6rem;
+    text-align: center;
     background: linear-gradient(135deg, #4338ca 0%, #6366f1 50%, #a855f7 100%);
-    border-radius: 0 0 60px 60px; /* Large curves feel more organic */
-    padding: 10rem 0 8rem;
-    position: relative;
-    overflow: hidden;
+    border-radius: 0 0 60px 60px;
+    margin-bottom: 4rem;
 }
 
-/* Subtle animated glow behind hero content */
-.hero::after {
-    content: '';
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent);
-    top: 10%;
-    left: 10%;
-    filter: blur(80px);
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
 }
 
-/* --- CARDS: SOFT DEPTH --- */
+/* --- Human-Friendly Cards --- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
 .card {
-    background: var(--bg-secondary);
+    background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius);
     padding: 2.5rem;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
 }
 
 .card:hover {
-    transform: translateY(-12px);
-    background: var(--bg-tertiary);
+    transform: translateY(-10px);
     border-color: var(--primary-light);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* --- BUTTONS: PILL SHAPED --- */
-.btn-primary, .submit-btn, .cta-btn {
-    border-radius: 50px; /* Pill shapes are perceived as friendlier */
-    font-weight: 600;
+.card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+/* --- Buttons (Pill Shaped) --- */
+.btn-primary, .cta-btn, .submit-btn {
+    display: inline-block;
     padding: 1rem 2.5rem;
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+    color: white;
+    border-radius: 50px; /* Essential for "Human" feel */
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+    transition: 0.3s;
 }
 
-.btn-cta {
-    background: linear-gradient(135deg, var(--accent), #fbbf24);
-    color: #000 !important;
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(99, 102, 241, 0.4);
 }
 
-/* --- FORM FIELDS: MODERN & SOFT --- */
-.form-group input, .form-group textarea, .form-group select {
+/* --- Form Improvements --- */
+.form-group input, .form-group textarea {
+    width: 100%;
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-md);
+    border-radius: 14px;
     padding: 1rem;
     color: white;
+    margin-bottom: 1rem;
 }
 
 .form-group input:focus {
-    background: rgba(0, 0, 0, 0.4);
+    outline: none;
     border-color: var(--primary-light);
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    background: rgba(0, 0, 0, 0.3);
 }
 
-/* --- FOOTER: ELEGANT CURVES --- */
-.footer {
-    background: #080612;
-    border-radius: 60px 60px 0 0;
+/* --- Footer --- */
+footer {
+    background: #06050a;
+    padding: 5rem 0 2rem;
     margin-top: 5rem;
-    padding: 6rem 0 2rem;
+    border-radius: 60px 60px 0 0;
 }
 
-/* --- REVEAL EFFECTS --- */
+/* --- Mobile Menu Fix --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Handle with JS 'open' class */
+    .hero { border-radius: 0 0 40px 40px; }
+}
+
+/* --- Animations for JS --- */
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
     transition: all 0.8s ease-out;
 }
-
 .revealed {
     opacity: 1;
     transform: translateY(0);
