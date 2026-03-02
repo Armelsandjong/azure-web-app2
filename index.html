@@ -19,14 +19,17 @@
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
+                
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">Company <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-menu">
                         <a href="company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
                         <a href="company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
+                        <a href="company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
                         <a href="company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
                     </div>
                 </li>
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-menu">
@@ -36,6 +39,7 @@
                         <a href="services/cloud.html"><i class="fas fa-cloud"></i> Azure Cloud</a>
                     </div>
                 </li>
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">Resources <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-menu">
@@ -43,7 +47,8 @@
                         <a href="resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
                     </div>
                 </li>
-                <li><a href="#consultation" class="cta-btn">Free Consultation</a></li>
+
+                <li><a href="consultation.html" class="cta-btn">Book Consultation</a></li>
             </ul>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -68,7 +73,7 @@
                 
                 <div class="hero-buttons">
                     <a href="#why-choose-us" class="btn-primary">Explore Our Impact</a>
-                    <a href="#consultation" class="btn-secondary">Get Started</a>
+                    <a href="consultation.html" class="btn-secondary">Get Started</a>
                 </div>
             </div>
             
@@ -77,17 +82,6 @@
             </div>
         </div>
         <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
-    </section>
-
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item"><h3 class="stat-number">8+</h3><p>Years Experience</p></div>
-                <div class="stat-item"><h3 class="stat-number">2</h3><p>Continents</p></div>
-                <div class="stat-item"><h3 class="stat-number">200+</h3><p>Projects</p></div>
-                <div class="stat-item"><h3 class="stat-number">24/7</h3><p>Expert Support</p></div>
-            </div>
-        </div>
     </section>
 
     <section id="why-choose-us" class="bg-light">
@@ -105,44 +99,6 @@
         </div>
     </section>
 
-    <section id="consultation" class="bg-white">
-        <div class="container">
-            <div class="consultation-form reveal">
-                <div class="text-center mb-3">
-                    <h2>Ready to Transform Your Business?</h2>
-                    <p class="form-intro">Book your free consultation today and discover how we can help you achieve your digital transformation goals.</p>
-                </div>
-                
-                <form id="hero-contact-form" action="https://formsubmit.co/ArmelSandjong@afriqueeuropeconnexionvmetc.com" method="POST">
-                    <div class="grid-2">
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" name="name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="email" name="email" placeholder="email@company.com" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Business Need</label>
-                        <select name="service" required>
-                            <option value="">Select a service...</option>
-                            <option value="erp">ERP & CRM Solutions</option>
-                            <option value="cloud">Azure Cloud Deployment</option>
-                            <option value="ai">AI & Machine Learning</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea name="message" placeholder="Tell us about your project..." rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-cta" style="width: 100%; justify-content: center;">Send Consultation Request</button>
-                </form>
-                <div id="form-status" class="mt-2 text-center"></div>
-            </div>
-        </div>
-    </section>
 </main>
 
 <footer class="footer">
@@ -152,18 +108,19 @@
                 <img src="assets/logo.png" alt="AEC Logo" class="footer-logo-img">
                 <p class="footer-tagline">Aim High • Be Kind • Dare to be Different</p>
                 <p class="footer-description">Locations: Poland • Cameroun • Nigeria</p>
-                <div class="mt-2">
-                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Subscribe to Newsletter</button>
-                </div>
             </div>
+            
             <div class="footer-col">
-                <h4>Connect</h4>
+                <h4>Company</h4>
                 <ul class="footer-links">
-                    <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com"><i class="fas fa-envelope"></i> Email Us</a></li>
-                    <li><a href="tel:+48690386721"><i class="fas fa-phone"></i> Contact Sales</a></li>
+                    <li><a href="company/about.html">About Us</a></li>
+                    <li><a href="consultation.html">Book Consultation</a></li>
+                    <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com">Support</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
+                <h4>Social</h4>
                 <div class="footer-social">
                     <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc" target="_blank" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://x.com/SandjongAr3472" target="_blank" class="social-link twitter"><i class="fab fa-x-twitter"></i></a>
@@ -176,8 +133,6 @@
         </div>
     </div>
 </footer>
-
-<button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
 
 <script src="js/main.js"></script>
 </body>
