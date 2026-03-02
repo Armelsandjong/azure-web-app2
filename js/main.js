@@ -6,18 +6,20 @@
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
   /* =========================================================
-     MOBILE MENU (Humane Interactions)
+      MOBILE MENU (Humane Interactions)
   ========================================================= */
   const mobileMenuBtn = $('#mobileMenuBtn');
   const navLinks = $('#navLinks');
 
   function openMenu() {
-    navLinks.classList.add('open'); // Match your CSS class
+    if (!navLinks) return;
+    navLinks.classList.add('open'); 
     mobileMenuBtn.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
+    if (!navLinks) return;
     navLinks.classList.remove('open');
     mobileMenuBtn.classList.remove('active');
     document.body.style.overflow = '';
@@ -29,12 +31,10 @@
       navLinks.classList.contains('open') ? closeMenu() : openMenu();
     });
 
-    // Close menu when clicking a link
     navLinks.addEventListener('click', (e) => {
       if (e.target.closest('a')) closeMenu();
     });
 
-    // Close menu when clicking outside (on the overlay/body)
     document.addEventListener('click', (e) => {
       if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
         closeMenu();
@@ -43,7 +43,7 @@
   }
 
   /* =========================================================
-     DROPDOWNS
+      DROPDOWNS (Mobile Toggle)
   ========================================================= */
   const dropdowns = $$('.dropdown');
   dropdowns.forEach((dd) => {
@@ -66,7 +66,7 @@
   });
 
   /* =========================================================
-     SMOOTH SCROLL (With Offset for Header)
+      SMOOTH SCROLL (With Offset for Header)
   ========================================================= */
   document.addEventListener('click', (e) => {
     const anchor = e.target.closest('a[href^="#"]');
@@ -85,7 +85,7 @@
   });
 
   /* =========================================================
-     BACK TO TOP (Soft Fade)
+      BACK TO TOP (Soft Fade)
   ========================================================= */
   const backToTop = $('#backToTop');
   if (backToTop) {
@@ -108,7 +108,7 @@
   }
 
   /* =========================================================
-     REVEAL ON SCROLL
+      REVEAL ON SCROLL (Intersection Observer)
   ========================================================= */
   const revealEls = $$('.reveal');
   if (revealEls.length && 'IntersectionObserver' in window) {
@@ -125,17 +125,38 @@
   }
 
   /* =========================================================
-     FORM HANDLING (Simple Human Validation)
+      HERO FORM HANDLING (Success State)
   ========================================================= */
-  const forms = $$('form');
-  forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
-      const emailInput = form.querySelector('input[type="email"]');
-      if (emailInput && !emailInput.value.includes('@')) {
-        e.preventDefault();
-        alert('Please enter a valid email address.');
-      }
+  const heroForm = $('#hero-contact-form');
+  const statusDiv = $('#form-status');
+
+  if (heroForm) {
+    heroForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const btn = this.querySelector('button');
+      const originalContent = btn.innerHTML;
+      
+      // Simple Visual Feedback
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+
+      // Simulate an API call
+      setTimeout(() => {
+        if (statusDiv) {
+          statusDiv.innerHTML = `<p style="color: #4ade80; background: rgba(74, 222, 128, 0.1); padding: 1rem; border-radius: 8px; margin-top: 1rem; font-size: 0.9rem;">
+            <i class="fas fa-check-circle"></i> Success! Our consultants in Poland, Cameroon, or Nigeria will reach out shortly.
+          </p>`;
+        }
+        
+        this.reset();
+        btn.innerHTML = originalContent;
+        btn.disabled = false;
+        
+        // Clear status after 8 seconds
+        setTimeout(() => { if(statusDiv) statusDiv.innerHTML = ''; }, 8000);
+      }, 1500);
     });
-  });
+  }
 
 })();
