@@ -4,7 +4,33 @@
   // Utility helpers
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+/* =========================================================
+   DROPDOWN TOGGLE LOGIC
+========================================================= */
+const dropdowns = document.querySelectorAll('.dropdown');
 
+dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    
+    // Desktop: Handle clicks if you want them to click-to-open
+    toggle.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevents page from jumping to top
+        e.stopPropagation();
+
+        // Close other open dropdowns first (Human-Centric Behavior)
+        dropdowns.forEach(other => {
+            if (other !== dropdown) other.classList.remove('active');
+        });
+
+        // Toggle the current one
+        dropdown.classList.toggle('active');
+    });
+});
+
+// Close dropdowns if user clicks anywhere else on the screen
+document.addEventListener('click', () => {
+    dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+});
   /* =========================================================
       MOBILE MENU (Humane Interactions)
   ========================================================= */
