@@ -1,47 +1,50 @@
-/* ============================================================
-   AFRIQUEEUROPECONNEXIONVMETC — main.js
-   ============================================================ */
-
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');
 
+    // 1. Mobile Toggle
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            mobileMenuBtn.classList.toggle('open');
+            // Toggle between Hamburger and Close icon if using FontAwesome
+            const icon = mobileMenuBtn.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
         });
     }
 
-    // 2. Back to Top Visibility
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTop.style.display = "flex";
-        } else {
-            backToTop.style.display = "none";
-        }
-    });
-
-    // 3. Smooth Scroll for Anchor Links
+    // 2. Smooth Scroll for internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            if (this.hash !== "") {
+                e.preventDefault();
+                const target = document.querySelector(this.hash);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    // Close mobile menu after click
+                    navLinks.classList.remove('active');
+                }
+            }
         });
     });
 
-    // 4. Form Submit Protection
-    const form = document.querySelector('form');
-    if (form) {
-        form.addEventListener('submit', () => {
-            const btn = form.querySelector('button');
-            btn.innerHTML = "Sending...";
-            btn.style.opacity = "0.7";
+    // 3. Scroll Reveal Effect
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            }
         });
-    }
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(30px)";
+        el.style.transition = "all 0.6s ease-out";
+        observer.observe(el);
+    });
 });
