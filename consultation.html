@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Consultation | AFRIQUEEUROPECONNEXIONVMETC</title>
+    <title>Book Consultation | AFRIQUE EUROPE CONNEXION VMETC</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        /* Modern Consultation Specific Styling */
+        .consultation-hero {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .trust-bar {
+            background: #f8f9fa;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+        .trust-bar span {
+            margin: 0 20px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+        .benefit-card {
+            transition: transform 0.3s ease;
+            border-left: 4px solid #fdbb2d; /* Gold accent */
+            margin-bottom: 20px;
+        }
+        .benefit-card:hover {
+            transform: translateX(10px);
+        }
+        .form-card {
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 40px;
+            background: #fff;
+        }
+        .footer-top-border {
+            border-top: 4px solid #fdbb2d;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #fff;
+            transition: 0.3s;
+        }
+        .social-icons a:hover { color: #fdbb2d; }
+    </style>
 </head>
 <body>
     <header>
@@ -17,29 +63,23 @@
                 </a>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
-                    
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">Company <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-menu">
                             <a href="company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                            <a href="company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
                             <a href="company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
                             <a href="company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
                         </div>
                     </li>
-
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-menu">
                             <a href="services/ai-ml.html"><i class="fas fa-robot"></i> AI & ML</a>
                             <a href="services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-                            <a href="services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
                             <a href="services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
                         </div>
                     </li>
-
-                    <li><a href="consultation.html" class="cta-btn active">Free Consultation</a></li>
-                    <li><a href="company/contact.html">Contact</a></li>
+                    <li><a href="consultation.html" class="cta-btn active">Book Consultation</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -49,67 +89,94 @@
     </header>
 
     <main>
-        <section class="hero consultation-hero">
+        <section class="consultation-hero">
             <div class="container">
-                <h1><i class="fas fa-calendar-check"></i> Book Your Free Consultation</h1>
-                <p class="hero-description">
-                    Take the first step towards digital transformation. Schedule a complimentary session to discuss your business goals.
+                <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Unlock Your Business Potential</h1>
+                <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9;">
+                    Expert advice on AI, ERP, and Cloud strategies. Let's bridge the gap between technology and your vision.
                 </p>
             </div>
         </section>
 
-        <section class="container consultation-section py-5">
-            <div class="grid-2">
-                <div class="consultation-benefits">
-                    <h2>What to Expect</h2>
-                    <p class="text-large">Tailored recommendations designed to solve your specific challenges.</p>
+        <div class="trust-bar">
+            <div class="container">
+                <span><i class="fas fa-map-marker-alt"></i> POLAND</span>
+                <span><i class="fas fa-map-marker-alt"></i> CAMEROON</span>
+                <span><i class="fas fa-map-marker-alt"></i> NIGERIA</span>
+            </div>
+        </div>
 
-                    <div class="card benefit-card">
-                        <i class="fas fa-clock"></i>
-                        <h3>30–60 Minute Session</h3>
-                        <p>A deep dive into your business objectives and current bottlenecks.</p>
-                    </div>
+        <section class="container py-5">
+            <div class="grid-2" style="align-items: start; gap: 60px;">
+                <div class="consultation-info">
+                    <h2 style="color: #1a2a6c; margin-bottom: 25px;">Why consult with us?</h2>
                     
                     <div class="card benefit-card">
-                        <i class="fas fa-lightbulb"></i>
-                        <h3>Custom Roadmap</h3>
-                        <p>Receive immediate actionable insights during the call.</p>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-rocket" style="font-size: 2rem; color: #b21f1f;"></i>
+                            <div>
+                                <h3 style="margin: 0;">Strategic Roadmaps</h3>
+                                <p style="margin: 5px 0 0;">Don't just buy software; build a scalable digital ecosystem.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card benefit-card">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: #1a2a6c;"></i>
+                            <div>
+                                <h3 style="margin: 0;">Expert Guidance</h3>
+                                <p style="margin: 5px 0 0;">Talk directly with consultants experienced in Europe and Africa markets.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card benefit-card">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-brain" style="font-size: 2rem; color: #fdbb2d;"></i>
+                            <div>
+                                <h3 style="margin: 0;">AI Readiness Audit</h3>
+                                <p style="margin: 5px 0 0;">Find out if your data is ready for Machine Learning integration.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div>
-                    <div class="card form-card">
-                        <h2>Request Your Session</h2>
+                <div class="form-container">
+                    <div class="form-card">
+                        <h3 style="text-align: center; margin-bottom: 30px;">Request a Callback</h3>
                         <form action="https://formsubmit.co/ArmelSandjong@afriqueeuropeconnexionvmetc.com" method="POST">
-                            <input type="hidden" name="_subject" value="AEC Consultation Request">
-                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_subject" value="New AEC Consultation Request">
                             
                             <div class="form-group">
-                                <label><i class="fas fa-user"></i> Full Name *</label>
-                                <input type="text" name="name" required placeholder="John Doe">
+                                <label>Your Name</label>
+                                <input type="text" name="name" required placeholder="Full Name">
                             </div>
 
                             <div class="form-group">
-                                <label><i class="fas fa-envelope"></i> Email Address *</label>
-                                <input type="email" name="email" required placeholder="john@company.com">
+                                <label>Work Email</label>
+                                <input type="email" name="email" required placeholder="name@company.com">
                             </div>
 
                             <div class="form-group">
-                                <label><i class="fas fa-cogs"></i> Primary Interest *</label>
-                                <select name="interest" required>
-                                    <option value="AI-ML">AI & Machine Learning</option>
-                                    <option value="ERP">ERP Solutions (Dynamics 365)</option>
-                                    <option value="Cloud">Azure Cloud Services</option>
-                                    <option value="Analysis">Business Analysis</option>
+                                <label>Service of Interest</label>
+                                <select name="service" required>
+                                    <option value="">Select Service...</option>
+                                    <option value="ERP">Dynamics 365 / ERP</option>
+                                    <option value="AI">Artificial Intelligence</option>
+                                    <option value="Cloud">Azure Cloud Migration</option>
+                                    <option value="CRM">CRM & Marketing</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <label><i class="fas fa-comment-dots"></i> Business Goals</label>
-                                <textarea name="message" rows="4" placeholder="Tell us what you hope to achieve..."></textarea>
+                                <label>Tell us about your project</label>
+                                <textarea name="message" rows="4" placeholder="Briefly describe your business needs..."></textarea>
                             </div>
 
-                            <button type="submit" class="btn-primary" style="width: 100%;">Schedule Now</button>
+                            <button type="submit" class="btn-primary" style="width: 100%; padding: 15px; font-weight: bold;">
+                                SEND REQUEST <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -117,36 +184,50 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer footer-top-border">
         <div class="container">
-            <div class="footer-main">
-                <div class="footer-col footer-brand">
-                    <img src="assets/logo.png" alt="AEC Logo" class="footer-logo-img">
-                    <p class="footer-tagline">Aim High • Be Kind • Dare to be Different</p>
-                    <div class="footer-badges">
-                        <span class="badge">🏆 8+ Years</span>
-                        <span class="badge">🌍 Africa & Europe</span>
-                    </div>
-                </div>
+            <div class="footer-main" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; padding: 60px 0;">
                 
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
+                    <img src="assets/logo.png" alt="AEC Logo" style="height: 50px; margin-bottom: 20px;">
+                    <p style="opacity: 0.8; line-height: 1.6;">Afrique Europe Connexion VMETC is your premier partner for digital transformation, bridging innovation between two continents since 2017.</p>
+                    <div class="social-icons" style="margin-top: 20px;">
+                        <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/SandjongAr3472" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.youtube.com/@afriqueeuropeconnexionvmetc" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 style="color: #fdbb2d; margin-bottom: 20px;">Solutions</h4>
+                    <ul class="footer-links" style="list-style: none; padding: 0;">
+                        <li><a href="services/ai-ml.html">AI & ML</a></li>
+                        <li><a href="services/ERP.html">Dynamics 365</a></li>
+                        <li><a href="services/cloud.html">Azure Cloud</a></li>
+                        <li><a href="services/crm.html">CRM Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 style="color: #fdbb2d; margin-bottom: 20px;">Company</h4>
+                    <ul class="footer-links" style="list-style: none; padding: 0;">
                         <li><a href="company/about.html">About Us</a></li>
-                        <li><a href="services/ai-ml.html">AI Services</a></li>
+                        <li><a href="company/expertise.html">Expertise</a></li>
+                        <li><a href="company/Volunteer.html">Volunteer</a></li>
                         <li><a href="resources/case-studies.html">Case Studies</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com">Email Us</a></p>
-                    <p><i class="fas fa-phone"></i> +48 690 386 721</p>
+                    <h4 style="color: #fdbb2d; margin-bottom: 20px;">Contact</h4>
+                    <p style="margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> ArmelSandjong@afriqueeuropeconnexionvmetc.com</p>
+                    <p style="margin-bottom: 10px;"><i class="fas fa-phone" style="margin-right: 10px;"></i> +48 690 386 721</p>
+                    <p><i class="fas fa-globe" style="margin-right: 10px;"></i> Poland | Cameroon | Nigeria</p>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2026 AFRIQUEEUROPECONNEXIONVMETC. All Rights Reserved.</p>
+            <div class="footer-bottom" style="text-align: center; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>&copy; 2026 AFRIQUE EUROPE CONNEXION VMETC. Designed for Excellence.</p>
             </div>
         </div>
     </footer>
