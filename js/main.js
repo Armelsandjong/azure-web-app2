@@ -1,50 +1,84 @@
+/* ============================================================
+   AFRIQUEEUROPECONNEXIONVMETC — Refined main.js
+   ============================================================ */
+
 document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');
+    const backToTop = document.getElementById('backToTop');
 
-    // 1. Mobile Toggle
+    // 1. Scroll Effects (Header & Back to Top)
+    const onScroll = () => {
+        const scrollPos = window.scrollY;
+
+        // Header Background on Scroll
+        if (scrollPos > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        // Back to Top Button Visibility
+        if (backToTop) {
+            if (scrollPos > 400) {
+                backToTop.style.opacity = "1";
+                backToTop.style.transform = "translateY(0)";
+                backToTop.style.pointerEvents = "auto";
+            } else {
+                backToTop.style.opacity = "0";
+                backToTop.style.transform = "translateY(20px)";
+                backToTop.style.pointerEvents = "none";
+            }
+        }
+    };
+
+    window.addEventListener('scroll', onScroll);
+
+    // 2. Mobile Menu Toggle
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            // Toggle between Hamburger and Close icon if using FontAwesome
-            const icon = mobileMenuBtn.querySelector('i');
-            if (icon) {
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
-            }
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('open');
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : 'auto';
         });
     }
 
-    // 2. Smooth Scroll for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            if (this.hash !== "") {
+    // 3. Mobile Dropdown Support
+    // If user clicks "Company" or "Services" on mobile, toggle the dropdown
+    document.querySelectorAll('.dropdown-toggle').forEach(item => {
+        item.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
                 e.preventDefault();
-                const target = document.querySelector(this.hash);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    // Close mobile menu after click
-                    navLinks.classList.remove('active');
-                }
+                const parent = item.parentElement;
+                parent.classList.toggle('dropdown-open');
             }
         });
     });
 
-    // 3. Scroll Reveal Effect
-    const observerOptions = { threshold: 0.1 };
-    const observer = new IntersectionObserver((entries) => {
+    // 4. Smooth Reveal Animation (Intersection Observer)
+    const revealCallback = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target); // Runs only once
             }
         });
-    }, observerOptions);
+    };
+
+    const revealObserver = new IntersectionObserver(revealCallback, {
+        threshold: 0.15
+    });
 
     document.querySelectorAll('.reveal').forEach(el => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(30px)";
-        el.style.transition = "all 0.6s ease-out";
-        observer.observe(el);
+        revealObserver.observe(el);
     });
+
+    // 5. Back to Top Click
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });
