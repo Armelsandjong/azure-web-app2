@@ -1,87 +1,98 @@
-(function () {
-    'use strict';
+/* ============================================================
+   AFRIQUEEUROPECONNEXIONVMETC — main.js
+   Functionality: Mobile Menu, Scroll Effects, Form Handling
+   ============================================================ */
 
-    const $ = (s) => document.querySelector(s);
-    const $$ = (s) => [...document.querySelectorAll(s)];
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Navbar Scroll Effect
+    const header = document.querySelector('header');
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    };
+    window.addEventListener('scroll', handleScroll);
 
-    // 1. Header Scroll Effect
-    window.addEventListener('scroll', () => {
-        const header = $('header');
-        if (window.scrollY > 50) header.classList.add('scrolled');
-        else header.classList.remove('scrolled');
-    });
+    // 2. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
 
-    // 2. Mobile Menu & Dropdowns
-    const mobileBtn = $('#mobileMenuBtn');
-    const navLinks = $('#navLinks');
-    const dropdowns = $$('.dropdown');
-
-    if (mobileBtn) {
-        mobileBtn.addEventListener('click', () => {
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
             navLinks.classList.toggle('open');
-            mobileBtn.classList.toggle('active');
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('open');
+                document.body.style.overflow = '';
+            });
         });
     }
 
-    // Toggle Dropdowns on Click (Crucial for mobile/tablet)
-    dropdowns.forEach(dd => {
-        const toggle = dd.querySelector('.dropdown-toggle');
+    // 3. Dropdown Toggle (Mobile optimized)
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
         toggle.addEventListener('click', (e) => {
-            if (window.innerWidth <= 1024) {
+            if (window.innerWidth <= 768) {
                 e.preventDefault();
-                e.stopPropagation();
-                
-                // Close others
-                dropdowns.forEach(other => {
-                    if (other !== dd) other.classList.remove('dropdown-open');
-                });
-                
-                dd.classList.toggle('dropdown-open');
+                dropdown.classList.toggle('dropdown-open');
             }
         });
     });
 
-    // 3. Form Handling with Feedback
-    const heroForm = $('#hero-contact-form');
-    if (heroForm) {
-        heroForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = heroForm.querySelector('button');
-            const status = $('#form-status');
-            
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            btn.disabled = true;
+    // 4. Reveal Animations on Scroll
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                revealObserver.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, { threshold: 0.15 });
 
-            setTimeout(() => {
-                status.innerHTML = '<p class="gold" style="font-weight:bold;">Success! Our experts will contact you shortly.</p>';
-                heroForm.reset();
-                btn.innerHTML = 'Send Consultation Request';
-                btn.disabled = false;
-            }, 1500);
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // 5. Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTop.style.opacity = '1';
+                backToTop.style.pointerEvents = 'auto';
+                backToTop.style.transform = 'translateY(0)';
+            } else {
+                backToTop.style.opacity = '0';
+                backToTop.style.pointerEvents = 'none';
+                backToTop.style.transform = 'translateY(12px)';
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
-    // 4. Reveal Animation
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('revealed');
+    // 6. Basic Form Validation (Optional)
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function() {
+            const btn = this.querySelector('button[type="submit"]');
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                btn.style.opacity = '0.7';
+                btn.style.pointerEvents = 'none';
+            }
         });
-    }, { threshold: 0.1 });
-    $$('.reveal').forEach(el => observer.observe(el));
-
-    // 5. Back to Top
-    const btt = $('#backToTop');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-            btt.style.opacity = '1';
-            btt.style.pointerEvents = 'auto';
-            btt.style.transform = 'translateY(0)';
-        } else {
-            btt.style.opacity = '0';
-            btt.style.pointerEvents = 'none';
-            btt.style.transform = 'translateY(12px)';
-        }
     });
-    btt.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
-
-})();
+});
