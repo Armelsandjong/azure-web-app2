@@ -1,170 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-ML | AFRIQUEEUROPECONNEXIONVMETC</title>
-    <meta name="description" content="Advanced AI and Machine Learning solutions by AEC.">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI &amp; Machine Learning | AFRIQUEEUROPECONNEXIONVMETC</title>
+  <meta name="description" content="Custom AI and Machine Learning solutions — predictive analytics, intelligent automation, NLP and computer vision for your business.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- NOTE: all paths use ../ because this file is inside services/ -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
+<!-- ═══════════════════ HEADER ═══════════════════ -->
 <header>
-    <div class="container">
-        <nav>
-            <a href="../index.html" class="logo">
-                <img src="../assets/logo.png" alt="AEC" class="logo-img">
-            </a>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html">Home</a></li>
-                
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">Company <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                        <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
-                        <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-                        <a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
-                    </div>
-                </li>
-                
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle active">Services <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="ai-ml.html"><i class="fas fa-robot"></i> AI & Machine Learning</a>
-                        <a href="ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-                        <a href="crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
-                        <a href="cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
-                    </div>
-                </li>
+  <div class="container">
+    <nav>
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.png" alt="AEC Logo" class="logo-img">
+        <span class="logo-text">AEC</span>
+      </a>
 
-                <li><a href="../consultation.html" class="cta-btn">Free Consultation</a></li>
-                <li><a href="../company/contact.html">Contact</a></li>
-            </ul>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Company <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
+            <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
+            <a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle active">Services <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="ai-ml.html"><i class="fas fa-robot"></i> AI &amp; Machine Learning</a>
+            <a href="ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
+            <a href="crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
+            <a href="cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
+            <a href="business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
+            <a href="web-marketing.html"><i class="fas fa-globe"></i> Web &amp; Marketing</a>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Resources <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="../resources/research-insights.html"><i class="fas fa-book"></i> Research &amp; Insights</a>
+            <a href="../resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
+            <a href="../resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
+          </div>
+        </li>
+
+        <li><a href="../consultation.html" class="cta-btn">Free Consultation</a></li>
+        <li><a href="../company/contact.html">Contact</a></li>
+      </ul>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
 </header>
 
+<!-- ═══════════════════ MAIN ═══════════════════ -->
 <main>
-    <section class="hero reveal">
-        <div class="container hero-split">
-            <div class="hero-content">
-                <h1 class="hero-title"><i class="fas fa-robot"></i> <span>AI & ML</span> Solutions</h1>
-                <p>Unlock the power of Artificial Intelligence and Machine Learning for your business. We deliver custom AI solutions, intelligent automation, and predictive analytics.</p>
-                <a href="../consultation.html" class="btn-primary">Book Free Consultation</a>
-            </div>
-            <div class="hero-image">
-                <img src="../assets/ai-service.jpg" alt="AI Technology" class="featured-image">
-            </div>
-        </div>
-    </section>
 
-    <section class="container reveal" style="padding: 60px 0;">
-        <div class="grid-3">
-            <div class="card">
-                <i class="fas fa-brain fa-2x" style="color: var(--gold);"></i>
-                <h3>Predictive Analytics</h3>
-                <p>Leverage historical data to forecast future trends and customer behavior.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-comments fa-2x" style="color: var(--gold);"></i>
-                <h3>Natural Language</h3>
-                <p>Build intelligent chatbots and sentiment analysis tools.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-eye fa-2x" style="color: var(--gold);"></i>
-                <h3>Computer Vision</h3>
-                <p>Automate quality control and object detection with visual AI.</p>
-            </div>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">›</span>
+        <a href="#">Services</a>
+        <span class="sep">›</span>
+        <span>AI &amp; Machine Learning</span>
+      </div>
+      <div class="section-tag">Our Services</div>
+      <h1><i class="fas fa-robot"></i> AI &amp; Machine Learning Solutions</h1>
+      <p>
+        Unlock the power of Artificial Intelligence and Machine Learning for your business.
+        We deliver custom AI solutions, intelligent automation, and predictive analytics
+        to help you innovate, optimise, and grow.
+      </p>
+      <div class="hero-buttons">
+        <a href="../consultation.html" class="btn-primary"><i class="fas fa-calendar-alt"></i> Book Free Consultation</a>
+        <a href="../company/contact.html" class="btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section>
+    <div class="container">
+      <div class="about-split reveal">
+        <div>
+          <div class="section-tag">Transform Your Business</div>
+          <h2>AI Is Here — And It Works For You</h2>
+          <p>
+            Artificial Intelligence is no longer a futuristic concept. At AFRIQUEEUROPECONNEXIONVMETC,
+            we help you harness the power of AI and Machine Learning to automate processes,
+            gain predictive insights, and make data-driven decisions that propel your business forward.
+          </p>
+          <p>
+            Whether you're an SME in Douala or a large organisation in Kraków, our solutions are
+            designed to scale with you — from initial discovery through to deployment and ongoing optimisation.
+          </p>
+          <a href="../consultation.html" class="btn-primary mt-2">Start Your AI Journey</a>
         </div>
-    </section>
+        <img src="../assets/human machine.jpg" alt="AI and Machine Learning" style="border-radius:18px;width:100%">
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES CARDS -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">What We Offer</div>
+        <h2>Our AI &amp; ML Capabilities</h2>
+        <p class="section-intro">End-to-end artificial intelligence services tailored to your specific industry and challenges.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal">
+          <i class="fas fa-cogs"></i>
+          <h3>Process Automation</h3>
+          <p>Automate repetitive tasks and workflows, freeing your team to focus on strategic initiatives.</p>
+          <ul>
+            <li>Robotic Process Automation (RPA)</li>
+            <li>Document processing automation</li>
+            <li>Workflow optimisation</li>
+            <li>Intelligent task routing</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <i class="fas fa-chart-line"></i>
+          <h3>Predictive Analytics</h3>
+          <p>Leverage historical data to forecast future trends, customer behaviour, and business outcomes.</p>
+          <ul>
+            <li>Sales forecasting</li>
+            <li>Demand prediction</li>
+            <li>Risk assessment</li>
+            <li>Customer churn prediction</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <i class="fas fa-comments"></i>
+          <h3>Natural Language Processing</h3>
+          <p>Enable your systems to understand, interpret, and respond to human language intelligently.</p>
+          <ul>
+            <li>AI-powered chatbots</li>
+            <li>Sentiment analysis</li>
+            <li>Text classification</li>
+            <li>Language translation</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <i class="fas fa-brain"></i>
+          <h3>Custom ML Models</h3>
+          <p>Models trained on your specific business data — from recommendation engines to fraud detection.</p>
+          <ul>
+            <li>Custom model development</li>
+            <li>Model training &amp; optimisation</li>
+            <li>Feature engineering</li>
+            <li>Performance monitoring</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <i class="fas fa-eye"></i>
+          <h3>Computer Vision</h3>
+          <p>Extract meaningful information from images and video for quality control and automation.</p>
+          <ul>
+            <li>Image classification</li>
+            <li>Object detection &amp; tracking</li>
+            <li>Facial recognition</li>
+            <li>Quality inspection automation</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <i class="fas fa-database"></i>
+          <h3>Data-Driven Insights</h3>
+          <p>Transform raw data into actionable intelligence that reveals patterns invisible to traditional analytics.</p>
+          <ul>
+            <li>Advanced data analytics</li>
+            <li>Pattern recognition</li>
+            <li>Anomaly detection</li>
+            <li>BI dashboards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section>
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Our Process</div>
+        <h2>How We Implement AI</h2>
+        <p class="section-intro">A structured, low-risk approach from discovery to continuous improvement.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
+          <div class="step-number">1</div>
+          <div>
+            <h3>Discovery &amp; Assessment</h3>
+            <p>We understand your business challenges, existing data infrastructure, and AI readiness — identifying where AI delivers the most value.</p>
+          </div>
+        </div>
+        <div class="card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
+          <div class="step-number">2</div>
+          <div>
+            <h3>Data Preparation</h3>
+            <p>Quality data is the foundation of effective AI. We help collect, clean, and organise your data to ensure optimal model performance.</p>
+          </div>
+        </div>
+        <div class="card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
+          <div class="step-number">3</div>
+          <div>
+            <h3>Model Development</h3>
+            <p>Our data scientists develop and train custom AI models tailored to your specific use case, ensuring accuracy and reliability.</p>
+          </div>
+        </div>
+        <div class="card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
+          <div class="step-number">4</div>
+          <div>
+            <h3>Integration &amp; Deployment</h3>
+            <p>We seamlessly integrate AI into your existing systems and workflows, minimising disruption and ensuring smooth adoption.</p>
+          </div>
+        </div>
+        <div class="card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
+          <div class="step-number">5</div>
+          <div>
+            <h3>Training &amp; Support</h3>
+            <p>We train your team to work with AI systems effectively and provide ongoing support to ensure continued success.</p>
+          </div>
+        </div>
+        <div class="card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
+          <div class="step-number">6</div>
+          <div>
+            <h3>Monitoring &amp; Optimisation</h3>
+            <p>AI models improve over time. We continuously monitor performance and optimise models to maintain peak effectiveness.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Industries We Serve</div>
+        <h2>Transforming Businesses Across Sectors</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal"><i class="fas fa-shopping-cart"></i><h3>Retail &amp; E-commerce</h3><p>Personalised recommendations, demand forecasting, and dynamic pricing.</p></div>
+        <div class="card reveal"><i class="fas fa-heartbeat"></i><h3>Healthcare</h3><p>Diagnostic assistance, patient risk prediction, and medical image analysis.</p></div>
+        <div class="card reveal"><i class="fas fa-university"></i><h3>Finance &amp; Banking</h3><p>Fraud detection, credit risk assessment, and customer service automation.</p></div>
+        <div class="card reveal"><i class="fas fa-industry"></i><h3>Manufacturing</h3><p>Predictive maintenance, quality control, and supply chain optimisation.</p></div>
+        <div class="card reveal"><i class="fas fa-truck"></i><h3>Logistics &amp; Transport</h3><p>Route optimisation, delivery prediction, and fleet management.</p></div>
+        <div class="card reveal"><i class="fas fa-phone"></i><h3>Telecommunications</h3><p>Network optimisation, churn prediction, and usage pattern analysis.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container text-center">
+      <div class="section-tag" style="background:rgba(201,150,60,.15);color:var(--gold-light)">Ready to Embrace AI?</div>
+      <h2>Start Your AI Journey Today</h2>
+      <p class="cta-description">Whether you're starting out or scaling existing AI initiatives, we're here to guide you.</p>
+      <a href="../consultation.html" class="btn-cta"><i class="fas fa-calendar-alt"></i> Book Your Free Consultation</a>
+      <div class="cta-contact">
+        <span><i class="fas fa-phone"></i> +48 690 386 721</span>
+        <span class="separator">|</span>
+        <span><i class="fas fa-envelope"></i> ArmelSandjong@afriqueeuropeconnexionvmetc.com</span>
+      </div>
+    </div>
+  </section>
+
 </main>
 
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<!-- THIS IS THE STANDARD FOOTER — USE THIS ON EVERY PAGE INSIDE A SUBFOLDER -->
+<!-- For root-level pages (index.html), remove the ../ prefix from all hrefs -->
 <footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h3>About AEC</h3>
-                <p>
-                    AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner, empowering businesses across Africa and Europe through technology, innovation, and collaboration since 2017.
-                </p>
-            </div>
+  <div class="container">
+    <div class="footer-content">
 
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../company/about.html">About Us</a></li>
-                    <li><a href="../services/ai-ml.html">AI & ML Solutions</a></li>
-                    <li><a href="../resources/research-insights.html">Research & Insights</a></li>
-                    <li><a href="../company/contact.html">Contact Us</a></li>
-                </ul>
-            </div>
+      <div class="footer-col">
+        <img src="../assets/logo.png" alt="AEC Logo" class="footer-logo-img">
+        <p class="footer-tagline">Aim High • Be Kind • Dare to be Different</p>
+        <p>
+          AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner,
+          empowering businesses across Africa and Europe through technology, innovation,
+          and collaboration since 2017.
+        </p>
+      </div>
 
-            <div class="footer-col">
-                <h3>Get In Touch</h3>
-                <ul class="footer-links">
-                    <li>
-                        <a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com">
-                            <i class="fas fa-envelope"></i> ArmelSandjong@afriqueeuropeconnexionvmetc.com
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:+48690386721">
-                            <i class="fas fa-phone"></i> +48 690 386 721
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/48690386721" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                        </a>
-                    </li>
-                </ul>
-                <div style="margin-top: 1rem; color: rgba(255,255,255,0.8); font-size: 0.9rem;">
-                    <p><strong>Headquarters:</strong> Kraków, Poland</p>
-                    <p><strong>Regional Office:</strong> Douala, Cameroon</p>
-                </div>
-            </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../company/about.html">About Us</a></li>
+          <li><a href="ai-ml.html">AI &amp; ML</a></li>
+          <li><a href="../resources/research-insights.html">Research</a></li>
+          <li><a href="../csr/social-impact.html">Social Impact</a></li>
+          <li><a href="../company/contact.html">Contact</a></li>
+        </ul>
+      </div>
 
-            <div class="footer-col">
-                <h3>Follow Our Work</h3>
-                <ul class="footer-links social-links">
-                    <li>
-                        <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank">
-                            <i class="fab fa-linkedin"></i> LinkedIn Company
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://x.com/SandjongAr3472" target="_blank">
-                            <i class="fab fa-x-twitter"></i> Twitter / X
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank">
-                            <i class="fab fa-researchgate"></i> ResearchGate
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="ERP.html">ERP Solutions</a></li>
+          <li><a href="crm.html">CRM Implementation</a></li>
+          <li><a href="cloud.html">Cloud Services</a></li>
+          <li><a href="business-analysis.html">Business Analysis</a></li>
+          <li><a href="web-marketing.html">Web &amp; Marketing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Connect</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com">
+              <i class="fas fa-envelope"></i> Email Us
+            </a>
+          </li>
+          <li>
+            <a href="tel:+48690386721">
+              <i class="fas fa-phone"></i> +48 690 386 721
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/48690386721" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/SandjongAr3472" target="_blank" rel="noopener">
+              <i class="fab fa-x-twitter"></i> Twitter / X
+            </a>
+          </li>
+          <li>
+            <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank" rel="noopener">
+              <i class="fab fa-researchgate"></i> ResearchGate
+            </a>
+          </li>
+        </ul>
+        <div class="contact-info-block">
+          <p><strong>Headquarters:</strong> Kraków, Poland</p>
+          <p><strong>Regional Office:</strong> Douala, Cameroon</p>
         </div>
+      </div>
 
-        <div class="footer-bottom">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved.</p>
-                <p style="font-size: 0.85rem; opacity: 0.8;">
-                    Designed by <strong>Armel Sandjong Nantchouang</strong> | Microsoft Partner
-                </p>
-            </div>
-        </div>
     </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved. | Designed by Armel Sandjong Nantchouang</p>
+      <p><strong>Microsoft Partner</strong></p>
+    </div>
+  </div>
 </footer>
 
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- NOTE: path uses ../ because this file is inside services/ -->
 <script src="../js/main.js"></script>
 </body>
 </html>
