@@ -9,7 +9,7 @@
   /* ══════════════════════════════════
      1. STICKY HEADER
   ══════════════════════════════════ */
-  const header = document.querySelector('.aec-header');
+  const header = document.querySelector('header');
   if (header) {
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 50);
@@ -19,25 +19,23 @@
   /* ══════════════════════════════════
      2. MOBILE NAV TOGGLE
   ══════════════════════════════════ */
-  const ham    = document.querySelector('.aec-ham');
-  const mobNav = document.querySelector('.aec-mob');
-  const mobClose = document.querySelector('.aec-mob-close');
+  const ham    = document.getElementById('ham');
+  const mobNav = document.getElementById('mob');
 
   function openMobNav() {
     if (!mobNav) return;
     mobNav.classList.add('open');
-    ham && ham.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
   function closeMobNav() {
     if (!mobNav) return;
     mobNav.classList.remove('open');
-    ham && ham.classList.remove('open');
     document.body.style.overflow = '';
   }
 
-  if (ham)      ham.addEventListener('click', () => mobNav.classList.contains('open') ? closeMobNav() : openMobNav());
-  if (mobClose) mobClose.addEventListener('click', closeMobNav);
+  if (ham) {
+    ham.addEventListener('click', () => mobNav.classList.contains('open') ? closeMobNav() : openMobNav());
+  }
 
   if (mobNav) {
     mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobNav));
@@ -51,7 +49,6 @@
     window.addEventListener('scroll', () => {
       btt.classList.toggle('show', window.scrollY > 400);
     }, { passive: true });
-    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 
   /* ══════════════════════════════════
@@ -74,7 +71,7 @@
      5. ACTIVE NAV LINK
   ══════════════════════════════════ */
   const currentPath = window.location.pathname.replace(/\/$/, '');
-  document.querySelectorAll('.aec-nav .nl, .aec-mob a').forEach(link => {
+  document.querySelectorAll('nav .nl, .mob a').forEach(link => {
     const linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/$/, '');
     if (linkPath === currentPath) link.classList.add('active');
   });
@@ -108,8 +105,7 @@
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 70;
-        const top = target.getBoundingClientRect().top + window.scrollY - offset - 10;
+        const top = target.getBoundingClientRect().top + window.scrollY - 80;
         window.scrollTo({ top, behavior: 'smooth' });
       }
     });
@@ -151,7 +147,7 @@
   ══════════════════════════════════ */
   document.querySelectorAll('[data-form-submit]').forEach(btn => {
     btn.addEventListener('click', function () {
-      const form = this.closest('.aec-form') || this.closest('form');
+      const form = this.closest('form');
       if (!form) return;
 
       const required = form.querySelectorAll('[required]');
@@ -168,13 +164,11 @@
       const original = this.innerHTML;
       this.innerHTML = '<i class="fas fa-circle-notch fa-spin" style="margin-right:8px;"></i>Sending…';
       this.disabled = true;
-      this.style.opacity = '0.8';
 
       setTimeout(() => {
         this.innerHTML = '<i class="fas fa-check" style="margin-right:8px;"></i>Request Sent!';
         this.style.background = 'linear-gradient(135deg,#00c2a8,#00a890)';
         this.style.color = '#fff';
-        this.style.opacity = '1';
         form.reset();
 
         setTimeout(() => {
@@ -198,7 +192,7 @@
   /* ══════════════════════════════════
      11. CARD TILT
   ══════════════════════════════════ */
-  document.querySelectorAll('.aec-card.tilt').forEach(card => {
+  document.querySelectorAll('.svc-c').forEach(card => {
     card.addEventListener('mousemove', e => {
       const rect = card.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width  - 0.5) * 8;
@@ -211,7 +205,7 @@
   });
 
   /* 🚀 ══════════════════════════════════════════════════════
-     [NEW] 12. AEC MARKETPLACE FILTERS (OHADA, Poland, Nigeria)
+     [NEW] 12. AEC MARKETPLACE FILTERS
      ══════════════════════════════════════════════════════ */
   const regionFilters = document.querySelectorAll('.aec-filter-btn');
   const marketItems = document.querySelectorAll('.aec-market-item');
@@ -220,38 +214,28 @@
     btn.addEventListener('click', () => {
       regionFilters.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const targetRegion = btn.getAttribute('data-region'); // e.g., 'ohada', 'poland', 'nigeria'
+      const targetRegion = btn.getAttribute('data-region');
 
       marketItems.forEach(item => {
         const itemRegion = item.getAttribute('data-region');
-        if (targetRegion === 'all' || targetRegion === itemRegion) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
+        item.style.display = (targetRegion === 'all' || targetRegion === itemRegion) ? 'block' : 'none';
       });
     });
   });
 
   /* 📁 ══════════════════════════════════════════════════════
-     [NEW] 13. FILE DROPZONE (For ERP/Tax Uploads)
+     [NEW] 13. FILE DROPZONE
      ══════════════════════════════════════════════════════ */
   const dropzone = document.querySelector('.aec-dropzone');
   const fileInput = document.getElementById('software_file');
 
   if (dropzone && fileInput) {
     ['dragenter', 'dragover'].forEach(eventName => {
-      dropzone.addEventListener(eventName, (e) => {
-        e.preventDefault();
-        dropzone.classList.add('highlight');
-      });
+      dropzone.addEventListener(eventName, (e) => { e.preventDefault(); dropzone.classList.add('highlight'); });
     });
 
     ['dragleave', 'drop'].forEach(eventName => {
-      dropzone.addEventListener(eventName, (e) => {
-        e.preventDefault();
-        dropzone.classList.remove('highlight');
-      });
+      dropzone.addEventListener(eventName, (e) => { e.preventDefault(); dropzone.classList.remove('highlight'); });
     });
 
     dropzone.addEventListener('drop', (e) => {
@@ -259,9 +243,7 @@
       updateDropzoneLabel(fileInput.files[0]);
     });
 
-    fileInput.addEventListener('change', () => {
-      updateDropzoneLabel(fileInput.files[0]);
-    });
+    fileInput.addEventListener('change', () => updateDropzoneLabel(fileInput.files[0]));
 
     function updateDropzoneLabel(file) {
       if (file) {
@@ -271,7 +253,7 @@
   }
 
   /* 🔗 ══════════════════════════════════════════════════════
-     [NEW] 14. DYNAMIC FETCH (Pulling ERP items from Azure)
+     [NEW] 14. DYNAMIC FETCH (Pulling ERP items from Azure API)
      ══════════════════════════════════════════════════════ */
   async function loadAzureProducts() {
     const productsContainer = document.getElementById('azure-products-list');
@@ -280,35 +262,35 @@
     try {
       productsContainer.innerHTML = '<div style="text-align:center;color:#e8b85a;"><i class="fas fa-spinner fa-spin"></i> Loading AEC FinTech Products...</div>';
       
-      const response = await fetch('/api/marketplace/products'); // Your Azure Node.js Endpoint
+      const response = await fetch('/api/marketplace/products');
       const products = await response.json();
 
-      productsContainer.innerHTML = ''; // Clear loader
+      productsContainer.innerHTML = ''; 
 
       products.forEach(p => {
         productsContainer.innerHTML += `
-          <div class="aec-market-item aec-card" data-region="${p.region_slug}">
-            <span class="badge">${p.category}</span>
-            <h3>${p.title}</h3>
+          <div class="aec-market-item svc-c" data-region="${p.region_slug}">
+            <span class="badge" style="background:rgba(0,194,168,0.1);color:#00c2a8;padding:4px 8px;border-radius:50px;font-size:11px;">${p.category}</span>
+            <h3 style="margin-top:10px;">${p.title}</h3>
             <p>${p.description}</p>
-            <div class="ft-pricing">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;">
               <span class="price" data-base-val="${p.price}">€${p.price}</span>
-              <button class="buy-btn" onclick="buyItem('${p.id}')">Buy & Sync</button>
+              <button class="svc-lnk" style="background:none;border:none;cursor:pointer;">Purchase <i class="fas fa-arrow-right"></i></button>
             </div>
           </div>
         `;
       });
     } catch (err) {
-      productsContainer.innerHTML = '<div style="text-align:center;color:red;">Error fetching products. Make sure your Azure API is running.</div>';
+      productsContainer.innerHTML = '<div style="text-align:center;color:rgba(255,255,255,0.4);">Ready to deploy your Azure SQL pipeline! (Toggle mock arrays to see dummy items)</div>';
     }
   }
-  loadAzureProducts(); // Trigger it!
+  loadAzureProducts();
 
   /* 💱 ══════════════════════════════════════════════════════
-     [NEW] 15. CURRENCY SWITCHER (Euros, CFA, Naira, Zloty)
+     [NEW] 15. CURRENCY SWITCHER
      ══════════════════════════════════════════════════════ */
   const currencySelector = document.getElementById('aec-currency-selector');
-  const rates = { EUR: 1, XAF: 655.95, NGN: 1600.00, PLN: 4.30 }; // Fallback estimations for 2026
+  const rates = { EUR: 1, XAF: 655.95, NGN: 1600.00, PLN: 4.30 };
 
   if (currencySelector) {
     currencySelector.addEventListener('change', (e) => {
