@@ -179,35 +179,16 @@ nav { display: flex; align-items: center; gap: 2px; }
 .sn { font-family: var(--ff-head); font-size: 28px; font-weight: 800; color: var(--gold-lt); line-height: 1; }
 .sl { font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
 
-/* Globe */
-.hero-globe { position: relative; display: flex; align-items: center; justify-content: center; animation: fadeUp 0.5s ease 0.3s both; }
-.gw { position: relative; width: 400px; height: 400px; }
-.g-img {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-  width: 260px; height: 260px; border-radius: 50%; background: #fff; overflow: hidden;
-  border: 2px solid rgba(201,150,60,0.3);
-  box-shadow: 0 0 50px rgba(0,194,168,0.13), 0 0 18px rgba(201,150,60,0.09);
-  animation: bob 5s ease-in-out infinite;
+/* Hero image */
+.hero-globe { display: flex; align-items: center; justify-content: center; animation: fadeUp 0.5s ease 0.3s both; }
+.hero-img-wrap {
+  width: 100%; max-width: 520px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.4), 0 0 40px rgba(0,194,168,0.08);
 }
-.g-img img { width: 100%; height: 100%; object-fit: contain; }
-@keyframes bob { 0%,100%{transform:translate(-50%,-50%) translateY(0);} 50%{transform:translate(-50%,-50%) translateY(-13px);} }
-.gr {
-  position: absolute; top: 50%; left: 50%; border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.06); transform: translate(-50%,-50%);
-}
-.gr1 { width: 320px; height: 320px; animation: spin 20s linear infinite; }
-.gr2 { width: 390px; height: 390px; animation: spin 30s linear infinite reverse; border-color: rgba(0,194,168,0.07); }
-@keyframes spin { to { transform: translate(-50%,-50%) rotate(360deg); } }
-.gr-dot { position: absolute; top: -4px; left: 50%; transform: translateX(-50%); width: 7px; height: 7px; border-radius: 50%; }
-.gr-dot.g { background: var(--gold-lt); box-shadow: 0 0 9px var(--gold); }
-.gr-dot.t { background: var(--teal); box-shadow: 0 0 9px var(--teal); }
-.gpin { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 3px; }
-.gpin-dot { width: 7px; height: 7px; border-radius: 50%; animation: ppulse 2s ease-in-out infinite; }
-.gpin-dot.t { background: var(--teal); box-shadow: 0 0 9px var(--teal); }
-.gpin-dot.c { background: #f25840; box-shadow: 0 0 9px #f25840; }
-.gpin-dot.g { background: var(--gold-lt); box-shadow: 0 0 9px var(--gold); }
-.gpin-lbl { font-size: 9px; font-weight: 600; color: rgba(255,255,255,0.6); letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
-@keyframes ppulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.8);opacity:0.6;} }
+.hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ─── TICKER ─── */
 .ticker-wrap {
@@ -454,7 +435,6 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
       </p>
       <div class="hero-btns">
         <a href="consultation.html" class="btn-p"><i class="fas fa-calendar-alt"></i> Book Free Consultation</a>
-        <a href="#services" class="btn-g">Explore Services →</a>
       </div>
       <div class="hero-stats">
         <div><div class="sn">8+</div><div class="sl">Years Excellence</div></div>
@@ -464,17 +444,10 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
       </div>
     </div>
 
-    <!-- Right — Globe -->
+    <!-- Right — Hero Image -->
     <div class="hero-globe">
-      <div class="gw">
-        <div class="gr gr1"><div class="gr-dot g"></div></div>
-        <div class="gr gr2"><div class="gr-dot t"></div></div>
-        <div class="g-img">
-          <img src="assets/logo.png" alt="AEC Globe">
-        </div>
-        <div class="gpin" style="top:16%;left:53%;"><div class="gpin-dot t"></div><div class="gpin-lbl">Kraków</div></div>
-        <div class="gpin" style="bottom:22%;left:37%;"><div class="gpin-dot c"></div><div class="gpin-lbl">Douala</div></div>
-        <div class="gpin" style="bottom:28%;right:15%;"><div class="gpin-dot g"></div><div class="gpin-lbl">Abuja</div></div>
+      <div class="hero-img-wrap">
+        <img src="assets/human machine.jpg" alt="Human and machine working together">
       </div>
     </div>
 
@@ -599,9 +572,9 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
           <h4>Happy Clients Across 3 Continents</h4>
           <p>Businesses in Poland, Cameroon, and Nigeria trust AEC as their long-term technology partner.</p>
           <div class="locs">
-            <div class="lb">🇵🇱 Kraków, Poland</div>
-            <div class="lb">🇨🇲 Douala, Cameroon</div>
-            <div class="lb">🇳🇬 Abuja, Nigeria</div>
+            <div class="lb">🇵🇱 Poland</div>
+            <div class="lb">🇨🇲 Cameroon</div>
+            <div class="lb">🇳🇬  Nigeria</div>
           </div>
         </div>
       </div>
@@ -619,7 +592,6 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
       </div>
       <div class="cta-btns">
         <a href="consultation.html" class="btn-p"><i class="fas fa-calendar-alt"></i> Book Free Consultation</a>
-        <a href="company/contact.html" class="btn-g">Contact Us</a>
       </div>
     </div>
   </div>
@@ -670,7 +642,7 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
     <div>
       <h4>Get In Touch</h4>
       <ul class="fl">
-        <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com"><i class="fas fa-envelope"></i>Email Us</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#c485b6a9a1a897a5aaa0aeabaaa384a5a2b6adb5b1a1a1b1b6abb4a1a7abaaaaa1bcadabaab2a9a1b0a7eaa7aba9"><i class="fas fa-envelope"></i>Email Us</a></li>
         <li><a href="tel:+48690386721"><i class="fas fa-phone"></i>+48 690 386 721</a></li>
         <li><a href="https://wa.me/48690386721" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
         <li><a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
@@ -688,7 +660,7 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
   <i class="fas fa-arrow-up"></i>
 </button>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* Sticky header */
 const hdr = document.getElementById('hdr');
 window.addEventListener('scroll', () => {
@@ -706,9 +678,4 @@ window.addEventListener('scroll', () => btt.classList.toggle('show', window.scro
 
 /* Scroll reveal */
 const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.rv').forEach(el => obs.observe(el));
-</script>
-</body>
-</html>
+  entries.forEach(e => { if (e.isIntersecting) {
