@@ -5,361 +5,568 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AFRIQUEEUROPECONNEXIONVMETC | Digital Transformation Solutions</title>
 <meta name="description" content="Human-centric Business & Technology Solutions — Dynamics 365, Azure Cloud, AI, and CRM for SMEs and large organisations.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- ── Google Tag Manager ── -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- Replace GTM-XXXXXXX with your GTM container ID -->
+
+<!-- ── Microsoft Clarity ── -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window,document,"clarity","script","v4lglq0gvb");
+</script>
+
+<!-- ── Font Awesome ── -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 <style>
+/* ══════════════════════════════════════
+   AEC — Master Styles
+   Typography: Times New Roman (premium,
+   human-crafted editorial feel)
+══════════════════════════════════════ */
 :root {
-  --navy:    #0b1535;
-  --navy2:   #111d45;
-  --gold:    #c9963c;
-  --gold-lt: #e8b85a;
-  --teal:    #00c2a8;
-  --white:   #ffffff;
-  --muted:   rgba(255,255,255,0.55);
-  --border:  rgba(255,255,255,0.08);
-  --card-bg: rgba(255,255,255,0.04);
-  --radius:  12px;
-  --ff-head: 'Syne', sans-serif;
-  --ff-body: 'Outfit', sans-serif;
+  --navy:      #0b1535;
+  --navy2:     #0f1c42;
+  --gold:      #c9963c;
+  --gold-lt:   #e8b85a;
+  --gold-pale: rgba(232,184,90,0.12);
+  --teal:      #00c2a8;
+  --teal-pale: rgba(0,194,168,0.08);
+  --white:     #ffffff;
+  --cream:     #f9f5ef;
+  --muted:     rgba(255,255,255,0.52);
+  --border:    rgba(255,255,255,0.08);
+  --card:      rgba(255,255,255,0.035);
+  --radius:    12px;
+  /* Typography */
+  --ff-serif:  'Times New Roman', Times, Georgia, serif;
+  --ff-sans:   'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
 body {
-  font-family: var(--ff-body);
+  font-family: var(--ff-sans);
   background: var(--navy);
   color: var(--white);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+
 img { max-width: 100%; display: block; }
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
+a   { text-decoration: none; color: inherit; }
+ul  { list-style: none; }
+
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--navy); }
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+::selection { background: rgba(201,150,60,0.28); }
 
-/* ─── HEADER ─── */
+/* ══ HEADER ══ */
 header {
-  position: fixed; top: 0; left: 0; right: 0; height: 70px;
-  display: flex; align-items: center; padding: 0 48px;
-  background: rgba(11,21,53,0.9);
-  backdrop-filter: blur(16px);
+  position: fixed; inset: 0 0 auto;
+  height: 70px;
+  display: flex; align-items: center;
+  padding: 0 52px;
+  background: rgba(11,21,53,0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
-  z-index: 1000; transition: background 0.3s;
+  z-index: 1000;
+  transition: background 0.35s;
 }
-.hdr-inner {
-  width: 100%; max-width: 1200px; margin: 0 auto;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.logo-link { display: flex; align-items: center; gap: 11px; }
-.logo-circle {
-  width: 42px; height: 42px; border-radius: 50%; background: #fff;
-  overflow: hidden; border: 2px solid rgba(201,150,60,0.35); flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-}
-.logo-circle img { width: 100%; height: 100%; object-fit: contain; }
-.logo-text { display: flex; flex-direction: column; line-height: 1; }
-.logo-abbr { font-family: var(--ff-head); font-size: 20px; font-weight: 800; letter-spacing: 2px; }
-.logo-sub  { font-size: 9px; color: var(--gold-lt); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+header.scrolled { background: rgba(11,21,53,0.98); }
 
+.hdr { width: 100%; max-width: 1220px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+
+/* Logo */
+.logo-a { display: flex; align-items: center; gap: 12px; }
+.logo-ring {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #fff;
+  border: 2px solid rgba(201,150,60,0.4);
+  overflow: hidden; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 18px rgba(201,150,60,0.18);
+}
+.logo-ring img { width: 100%; height: 100%; object-fit: contain; }
+.logo-copy { display: flex; flex-direction: column; line-height: 1; }
+.logo-name {
+  font-family: var(--ff-serif);
+  font-size: 21px; font-weight: 700;
+  letter-spacing: 1px; color: #fff;
+}
+.logo-tag {
+  font-family: var(--ff-sans);
+  font-size: 8.5px; color: var(--gold-lt);
+  letter-spacing: 1.8px; text-transform: uppercase; margin-top: 3px;
+}
+
+/* Nav */
 nav { display: flex; align-items: center; gap: 2px; }
 .ni { position: relative; }
 .nl {
-  display: block; font-size: 13px; font-weight: 500; color: var(--muted);
-  padding: 8px 13px; border-radius: 8px; transition: color 0.2s, background 0.2s;
-  white-space: nowrap;
+  font-family: var(--ff-sans);
+  font-size: 13px; font-weight: 400;
+  color: var(--muted); padding: 8px 13px;
+  border-radius: 7px;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap; display: block;
 }
+.nl i { font-size: 9px; margin-left: 4px; opacity: 0.7; }
 .nl:hover, .nl.active { color: #fff; background: rgba(255,255,255,0.06); }
-.nl i { font-size: 9px; margin-left: 4px; }
 .nl.cta {
+  font-weight: 600 !important;
   background: linear-gradient(135deg, var(--gold), var(--gold-lt));
-  color: var(--navy) !important; font-weight: 700 !important;
-  padding: 9px 20px !important; border-radius: 50px !important;
+  color: var(--navy) !important;
+  padding: 9px 20px !important;
+  border-radius: 50px !important;
   margin-left: 6px;
+  font-family: var(--ff-serif) !important;
+  letter-spacing: 0.3px;
   transition: transform 0.2s, box-shadow 0.2s !important;
 }
-.nl.cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,150,60,0.35); background: linear-gradient(135deg, var(--gold), var(--gold-lt)) !important; }
+.nl.cta:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(201,150,60,0.38); background: linear-gradient(135deg,var(--gold),var(--gold-lt)) !important; }
 
+/* Dropdowns */
 .drop {
   position: absolute; top: calc(100% + 10px); left: 0;
-  min-width: 210px; background: rgba(13,24,64,0.97);
-  backdrop-filter: blur(20px); border: 1px solid var(--border);
+  min-width: 215px;
+  background: rgba(10,18,50,0.97);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
   border-radius: 12px; padding: 6px;
-  opacity: 0; pointer-events: none; transform: translateY(6px);
-  transition: opacity 0.2s, transform 0.2s; z-index: 200;
+  opacity: 0; pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.22s, transform 0.22s;
+  z-index: 200;
 }
 .ni:hover .drop { opacity: 1; pointer-events: all; transform: translateY(0); }
 .drop a {
-  display: flex; align-items: center; gap: 9px; font-size: 13px; color: var(--muted);
-  padding: 9px 13px; border-radius: 8px; transition: color 0.2s, background 0.2s;
+  display: flex; align-items: center; gap: 9px;
+  font-size: 13px; color: var(--muted);
+  padding: 9px 13px; border-radius: 8px;
+  transition: color 0.18s, background 0.18s;
 }
-.drop a i { color: var(--gold); width: 14px; font-size: 12px; }
+.drop a i { color: var(--gold); width: 14px; font-size: 11px; }
 .drop a:hover { color: #fff; background: rgba(255,255,255,0.05); }
 
-.ham { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
-.ham span { width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: 0.3s; }
+/* Hamburger */
+.ham { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.ham span { width: 22px; height: 1.5px; background: #fff; border-radius: 2px; transition: 0.3s; display: block; }
 
-.mob-nav {
+/* Mobile overlay */
+.mob {
   position: fixed; inset: 0; z-index: 999;
-  background: rgba(11,21,53,0.98); backdrop-filter: blur(20px);
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px;
-  transform: translateX(100%); transition: transform 0.35s cubic-bezier(.23,1,.32,1);
+  background: rgba(9,16,45,0.98); backdrop-filter: blur(20px);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 28px;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(.23,1,.32,1);
 }
-.mob-nav.open { transform: translateX(0); }
-.mob-nav a { font-family: var(--ff-head); font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.8); }
-.mob-nav a:hover { color: var(--gold-lt); }
-.mob-close { position: absolute; top: 22px; right: 24px; background: none; border: none; color: #fff; font-size: 26px; cursor: pointer; }
+.mob.open { transform: translateX(0); }
+.mob a {
+  font-family: var(--ff-serif);
+  font-size: 26px; font-weight: 700;
+  color: rgba(255,255,255,0.82);
+  transition: color 0.2s;
+}
+.mob a:hover { color: var(--gold-lt); }
+.mob-x { position: absolute; top: 22px; right: 24px; background: none; border: none; color: #fff; font-size: 26px; cursor: pointer; }
 
-/* ─── HERO ─── */
+/* ══ HERO ══ */
 .hero {
-  min-height: 100vh; display: flex; align-items: center;
-  padding: 100px 48px 80px; position: relative; overflow: hidden;
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 100px 52px 80px;
+  position: relative; overflow: hidden;
 }
-.hero::before {
-  content: ''; position: absolute; top: -80px; right: -80px;
-  width: 500px; height: 500px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,194,168,0.05) 0%, transparent 70%);
+/* faint diagonal rule — editorial feel */
+.hero::after {
+  content: '';
+  position: absolute; top: 0; right: 35%;
+  width: 1px; height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(201,150,60,0.12) 40%, transparent);
   pointer-events: none;
 }
-.hero-inner {
-  max-width: 1200px; margin: 0 auto; width: 100%;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+
+.hero-in {
+  max-width: 1220px; margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
 }
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(201,150,60,0.1); border: 1px solid rgba(201,150,60,0.25);
-  color: var(--gold-lt); font-size: 11px; font-weight: 600;
-  letter-spacing: 2px; text-transform: uppercase;
-  padding: 6px 14px; border-radius: 50px; margin-bottom: 24px;
-  animation: fadeUp 0.5s ease 0.1s both;
+
+/* Left */
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 9px;
+  border: 1px solid rgba(201,150,60,0.28);
+  background: rgba(201,150,60,0.07);
+  color: var(--gold-lt);
+  font-family: var(--ff-sans);
+  font-size: 10.5px; font-weight: 600;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 50px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.55s ease 0.1s both;
 }
-.bdot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); animation: blink 1.6s ease-in-out infinite; }
-@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.2;} }
+.pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); animation: blink 1.8s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.15;} }
 
 .hero-h1 {
-  font-family: var(--ff-head); font-size: clamp(38px, 4.5vw, 60px);
-  font-weight: 800; line-height: 1.08; margin-bottom: 20px;
-  animation: fadeUp 0.5s ease 0.25s both;
+  font-family: var(--ff-serif);
+  font-size: clamp(40px, 4.8vw, 66px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.5px;
+  margin-bottom: 22px;
+  animation: fadeUp 0.55s ease 0.25s both;
 }
-.hero-h1 .accent {
-  background: linear-gradient(120deg, var(--gold), var(--teal));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-}
+.hero-h1 .italic { font-style: italic; color: var(--gold-lt); }
+
 .hero-desc {
-  font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--muted);
-  max-width: 490px; margin-bottom: 34px;
-  animation: fadeUp 0.5s ease 0.4s both;
+  font-family: var(--ff-sans);
+  font-size: 15px; font-weight: 300; line-height: 1.9;
+  color: var(--muted);
+  max-width: 490px; margin-bottom: 36px;
+  animation: fadeUp 0.55s ease 0.4s both;
 }
-.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; animation: fadeUp 0.5s ease 0.55s both; }
-.btn-p {
-  display: inline-flex; align-items: center; gap: 8px;
+
+.hero-btn {
+  display: inline-flex; align-items: center; gap: 9px;
   background: linear-gradient(135deg, var(--gold), var(--gold-lt));
-  color: var(--navy); font-family: var(--ff-head); font-size: 13px; font-weight: 700;
-  padding: 13px 26px; border-radius: 50px; letter-spacing: 0.3px;
+  color: var(--navy);
+  font-family: var(--ff-serif); font-size: 15px; font-weight: 700;
+  padding: 14px 32px; border-radius: 50px;
+  letter-spacing: 0.2px;
+  box-shadow: 0 8px 28px rgba(201,150,60,0.3);
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 6px 24px rgba(201,150,60,0.28);
+  animation: fadeUp 0.55s ease 0.55s both;
 }
-.btn-p:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(201,150,60,0.42); }
-.btn-g {
-  display: inline-flex; align-items: center; gap: 8px;
-  border: 1px solid rgba(255,255,255,0.2); color: #fff;
-  font-size: 13px; font-weight: 500; padding: 12px 24px; border-radius: 50px;
-  transition: border-color 0.2s, background 0.2s;
-}
-.btn-g:hover { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.04); }
+.hero-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(201,150,60,0.45); }
 
+/* Stats */
 .hero-stats {
-  display: flex; gap: 34px; margin-top: 46px; padding-top: 30px;
+  display: flex; gap: 36px;
+  margin-top: 48px; padding-top: 32px;
   border-top: 1px solid var(--border);
-  animation: fadeUp 0.5s ease 0.7s both;
+  animation: fadeUp 0.55s ease 0.7s both;
 }
-.sn { font-family: var(--ff-head); font-size: 28px; font-weight: 800; color: var(--gold-lt); line-height: 1; }
-.sl { font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+.st-num {
+  font-family: var(--ff-serif);
+  font-size: 30px; font-weight: 700;
+  color: var(--gold-lt); line-height: 1;
+}
+.st-lbl {
+  font-family: var(--ff-sans);
+  font-size: 10px; color: var(--muted);
+  letter-spacing: 1.2px; text-transform: uppercase; margin-top: 5px;
+}
 
-/* Hero image */
-.hero-globe { display: flex; align-items: center; justify-content: center; animation: fadeUp 0.5s ease 0.3s both; }
-.hero-img-wrap {
-  width: 100%; max-width: 520px;
+/* Right — image */
+.hero-img-col {
+  position: relative;
+  animation: fadeUp 0.55s ease 0.3s both;
+}
+.hero-img-frame {
+  position: relative;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 32px 80px rgba(0,0,0,0.4), 0 0 40px rgba(0,194,168,0.08);
+  border: 1px solid rgba(255,255,255,0.09);
+  box-shadow: 0 40px 90px rgba(0,0,0,0.45), 0 0 50px rgba(0,194,168,0.07);
 }
-.hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-img-frame img {
+  width: 100%; height: 440px;
+  object-fit: cover; object-position: center;
+  display: block;
+}
+/* subtle gold overlay at bottom of image */
+.hero-img-frame::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(11,21,53,0.55) 0%, transparent 50%);
+  pointer-events: none;
+}
+/* floating caption badge */
+.img-badge {
+  position: absolute; bottom: 22px; left: 22px;
+  background: rgba(11,21,53,0.82);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(201,150,60,0.25);
+  border-radius: 50px;
+  padding: 9px 18px;
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--ff-sans);
+  font-size: 12px; color: rgba(255,255,255,0.85);
+  z-index: 2;
+}
+.img-badge i { color: var(--teal); }
 
-/* ─── TICKER ─── */
-.ticker-wrap {
-  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-  padding: 18px 0; overflow: hidden; background: rgba(255,255,255,0.018); position: relative;
+/* ══ TICKER ══ */
+.ticker-bar {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 17px 0; overflow: hidden;
+  background: rgba(255,255,255,0.015);
+  position: relative;
 }
-.ticker-wrap::before,.ticker-wrap::after {
-  content:''; position:absolute; top:0; bottom:0; width:100px; z-index:2; pointer-events:none;
+.ticker-bar::before, .ticker-bar::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 110px; z-index: 2; pointer-events: none;
 }
-.ticker-wrap::before { left:0; background: linear-gradient(to right, var(--navy), transparent); }
-.ticker-wrap::after  { right:0; background: linear-gradient(to left, var(--navy), transparent); }
-.ticker-track { display: flex; gap: 28px; width: max-content; animation: ticker 32s linear infinite; }
+.ticker-bar::before { left: 0; background: linear-gradient(to right, var(--navy), transparent); }
+.ticker-bar::after  { right: 0; background: linear-gradient(to left, var(--navy), transparent); }
+.ticker-track { display: flex; gap: 26px; width: max-content; animation: ticker 34s linear infinite; }
 @keyframes ticker { to { transform: translateX(-50%); } }
-.tc {
-  display: flex; align-items: center; gap: 7px; padding: 7px 16px;
-  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+.chip {
+  display: flex; align-items: center; gap: 7px;
+  padding: 6px 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
   border-radius: 50px; white-space: nowrap;
+  transition: border-color 0.2s;
 }
-.tc .d { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-.tc span { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.68); }
+.chip:hover { border-color: rgba(201,150,60,0.25); }
+.chip .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.chip span {
+  font-family: var(--ff-sans);
+  font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.65);
+}
 
-/* ─── SECTION SHELL ─── */
-.sec { padding: 88px 48px; }
-.sec.alt { background: rgba(255,255,255,0.018); }
-.si { max-width: 1200px; margin: 0 auto; }
+/* ══ SECTION SHELL ══ */
+.sec { padding: 88px 52px; }
+.sec.alt { background: rgba(255,255,255,0.016); }
+.wrap { max-width: 1220px; margin: 0 auto; }
+
 .stag {
-  display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
-  color: var(--gold-lt); background: rgba(201,150,60,0.09); border: 1px solid rgba(201,150,60,0.2);
+  display: inline-block;
+  font-family: var(--ff-sans);
+  font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold-lt); background: rgba(201,150,60,0.09);
+  border: 1px solid rgba(201,150,60,0.2);
   padding: 5px 13px; border-radius: 50px; margin-bottom: 13px;
 }
-.sh2 { font-family: var(--ff-head); font-size: clamp(26px, 3vw, 40px); font-weight: 800; line-height: 1.15; margin-bottom: 12px; }
-.sh2 em { font-style: normal; color: var(--teal); }
-.sp { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--muted); max-width: 540px; }
+.sh {
+  font-family: var(--ff-serif);
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 700; line-height: 1.15; margin-bottom: 13px;
+}
+.sh em { font-style: italic; color: var(--teal); }
+.sp {
+  font-family: var(--ff-sans);
+  font-size: 15px; font-weight: 300; line-height: 1.85;
+  color: var(--muted); max-width: 550px;
+}
 .ctr { text-align: center; }
 .ctr .sp { margin: 0 auto; }
 
-/* reveal */
-.rv { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+/* Reveal */
+.rv { opacity: 0; transform: translateY(22px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .rv.in { opacity: 1; transform: translateY(0); }
 
-/* ─── SERVICES GRID ─── */
-.sg { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 48px; }
-.sc {
-  background: var(--card-bg); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 28px 22px;
-  transition: transform 0.25s, border-color 0.25s;
+/* ══ SERVICES GRID ══ */
+.svc-g { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 50px; }
+.svc-c {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  transition: transform 0.25s, border-color 0.25s, background 0.25s;
 }
-.sc:hover { transform: translateY(-5px); border-color: rgba(0,194,168,0.22); }
-.sc-ico { font-size: 22px; margin-bottom: 13px; color: var(--teal); }
-.sc h3 { font-family: var(--ff-head); font-size: 15px; font-weight: 700; margin-bottom: 8px; }
-.sc p { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 14px; }
-.sc-lnk { font-size: 12px; font-weight: 600; color: var(--teal); display: inline-flex; align-items: center; gap: 5px; transition: gap 0.2s; }
-.sc-lnk:hover { gap: 9px; }
+.svc-c:hover { transform: translateY(-5px); border-color: rgba(0,194,168,0.22); background: rgba(0,194,168,0.03); }
+.svc-ico { font-size: 22px; margin-bottom: 14px; color: var(--teal); }
+.svc-c h3 {
+  font-family: var(--ff-serif);
+  font-size: 17px; font-weight: 700; margin-bottom: 9px;
+}
+.svc-c p {
+  font-family: var(--ff-sans);
+  font-size: 13px; color: var(--muted); line-height: 1.75; margin-bottom: 16px;
+}
+.svc-lnk {
+  font-family: var(--ff-sans);
+  font-size: 12px; font-weight: 600; color: var(--teal);
+  display: inline-flex; align-items: center; gap: 5px;
+  transition: gap 0.2s;
+}
+.svc-lnk:hover { gap: 9px; }
 
-/* ─── WHY AEC ─── */
-.why-lay { display: grid; grid-template-columns: 1fr 1fr; gap: 68px; align-items: start; }
-.why-items { display: flex; flex-direction: column; gap: 14px; margin-top: 32px; }
+/* ══ WHY AEC ══ */
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
+.why-items { display: flex; flex-direction: column; gap: 13px; margin-top: 32px; }
 .wi {
   display: flex; gap: 14px; align-items: flex-start;
-  padding: 18px; background: var(--card-bg); border: 1px solid var(--border);
-  border-radius: var(--radius); transition: border-color 0.2s;
+  padding: 18px; background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); transition: border-color 0.22s;
 }
 .wi:hover { border-color: rgba(201,150,60,0.22); }
 .wi-ico {
-  font-size: 20px; flex-shrink: 0; width: 40px; height: 40px;
-  background: rgba(201,150,60,0.07); border-radius: 9px;
+  font-size: 19px; flex-shrink: 0;
+  width: 40px; height: 40px;
+  background: rgba(201,150,60,0.07);
+  border-radius: 9px;
   display: flex; align-items: center; justify-content: center;
 }
-.wi h4 { font-family: var(--ff-head); font-size: 14px; font-weight: 700; margin-bottom: 4px; }
-.wi p { font-size: 13px; color: var(--muted); line-height: 1.65; }
-.why-r { display: flex; flex-direction: column; gap: 16px; padding-top: 8px; }
-.wbc {
-  background: linear-gradient(135deg, rgba(201,150,60,0.07), rgba(0,194,168,0.04));
-  border: 1px solid rgba(201,150,60,0.13); border-radius: 16px; padding: 28px 24px;
-}
-.wbc .bnum { font-family: var(--ff-head); font-size: 44px; font-weight: 800; color: var(--gold-lt); line-height: 1; margin-bottom: 5px; }
-.wbc h4 { font-family: var(--ff-head); font-size: 15px; font-weight: 700; margin-bottom: 7px; }
-.wbc p { font-size: 13px; color: var(--muted); line-height: 1.7; }
-.locs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-.lb { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 7px 13px; border-radius: 50px; font-size: 12px; color: rgba(255,255,255,0.6); }
+.wi h4 { font-family: var(--ff-serif); font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.wi p  { font-family: var(--ff-sans); font-size: 13px; color: var(--muted); line-height: 1.65; }
 
-/* ─── CTA STRIP ─── */
+.why-r { display: flex; flex-direction: column; gap: 16px; padding-top: 6px; }
+.wbc {
+  background: linear-gradient(135deg, rgba(201,150,60,0.065), rgba(0,194,168,0.04));
+  border: 1px solid rgba(201,150,60,0.13);
+  border-radius: 16px; padding: 28px 24px;
+}
+.wbc .big {
+  font-family: var(--ff-serif);
+  font-size: 48px; font-weight: 700; color: var(--gold-lt); line-height: 1; margin-bottom: 6px;
+}
+.wbc h4 { font-family: var(--ff-serif); font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.wbc p  { font-family: var(--ff-sans); font-size: 13px; color: var(--muted); line-height: 1.72; }
+.locs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.lb {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  padding: 7px 13px; border-radius: 50px;
+  font-family: var(--ff-sans); font-size: 12px; color: rgba(255,255,255,0.6);
+}
+
+/* ══ CTA STRIP ══ */
 .cta-strip {
-  background: linear-gradient(135deg, rgba(201,150,60,0.07), rgba(0,194,168,0.04));
-  border: 1px solid rgba(201,150,60,0.12); border-radius: 18px;
-  padding: 52px 44px;
+  background: linear-gradient(135deg, rgba(201,150,60,0.065), rgba(0,194,168,0.035));
+  border: 1px solid rgba(201,150,60,0.12);
+  border-radius: 18px; padding: 54px 48px;
   display: flex; align-items: center; justify-content: space-between; gap: 36px; flex-wrap: wrap;
 }
-.cta-strip h2 { font-family: var(--ff-head); font-size: clamp(22px, 2.5vw, 34px); font-weight: 800; margin-bottom: 8px; }
-.cta-strip p { font-size: 14px; color: var(--muted); max-width: 440px; line-height: 1.75; }
-.cta-btns { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
+.cta-strip h2 {
+  font-family: var(--ff-serif);
+  font-size: clamp(24px, 2.8vw, 38px); font-weight: 700; margin-bottom: 9px;
+}
+.cta-strip p {
+  font-family: var(--ff-sans);
+  font-size: 14px; color: var(--muted); max-width: 440px; line-height: 1.8;
+}
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 9px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--gold), var(--gold-lt));
+  color: var(--navy);
+  font-family: var(--ff-serif); font-size: 15px; font-weight: 700;
+  padding: 14px 32px; border-radius: 50px; letter-spacing: 0.2px;
+  box-shadow: 0 8px 28px rgba(201,150,60,0.28);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(201,150,60,0.44); }
 
-/* ─── FOOTER ─── */
+/* ══ FOOTER ══ */
 footer {
-  padding: 52px 48px 26px;
+  padding: 54px 52px 28px;
   border-top: 1px solid var(--border);
-  background: rgba(0,0,0,0.18);
+  background: rgba(0,0,0,0.16);
 }
 .fg {
-  max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 44px;
-  padding-bottom: 36px; border-bottom: 1px solid var(--border);
+  max-width: 1220px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 48px;
+  padding-bottom: 38px; border-bottom: 1px solid var(--border);
 }
-.fb p { font-size: 13px; color: var(--muted); line-height: 1.8; margin-top: 12px; }
-.fm { font-family: var(--ff-head); font-size: 12px; font-weight: 700; color: var(--gold-lt); letter-spacing: 0.5px; margin: 9px 0 5px; }
-footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; margin-bottom: 16px; letter-spacing: 0.5px; }
-.fl { display: flex; flex-direction: column; gap: 9px; }
-.fl a { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 7px; transition: color 0.2s; }
+.fb p {
+  font-family: var(--ff-sans);
+  font-size: 13px; color: var(--muted); line-height: 1.82; margin-top: 13px;
+}
+.fm {
+  font-family: var(--ff-serif);
+  font-size: 13px; font-style: italic; color: var(--gold-lt); margin: 10px 0 5px;
+}
+footer h4 {
+  font-family: var(--ff-serif);
+  font-size: 15px; font-weight: 700; margin-bottom: 17px;
+}
+.fl { display: flex; flex-direction: column; gap: 10px; }
+.fl a {
+  font-family: var(--ff-sans);
+  font-size: 13px; color: var(--muted);
+  display: flex; align-items: center; gap: 7px; transition: color 0.2s;
+}
 .fl a i { color: var(--gold); width: 13px; font-size: 11px; }
 .fl a:hover { color: #fff; }
-.sr { display: flex; gap: 7px; margin-top: 16px; }
+.soc { display: flex; gap: 7px; margin-top: 17px; }
 .sb {
-  width: 32px; height: 32px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  width: 33px; height: 33px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
   border-radius: 7px; display: flex; align-items: center; justify-content: center;
-  font-size: 13px; color: var(--muted); transition: background 0.2s, color 0.2s, border-color 0.2s;
+  font-size: 13px; color: var(--muted);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .sb:hover { background: rgba(201,150,60,0.1); color: var(--gold-lt); border-color: rgba(201,150,60,0.28); }
+
 .fbot {
-  max-width: 1200px; margin: 0 auto; padding-top: 22px;
+  max-width: 1220px; margin: 0 auto; padding-top: 24px;
   display: flex; justify-content: space-between; align-items: center;
-  font-size: 12px; color: rgba(255,255,255,0.28); flex-wrap: wrap; gap: 6px;
+  font-family: var(--ff-sans); font-size: 12px; color: rgba(255,255,255,0.28);
+  flex-wrap: wrap; gap: 6px;
 }
 
 /* Back to top */
 #btt {
-  position: fixed; bottom: 24px; right: 24px; z-index: 500;
+  position: fixed; bottom: 26px; right: 26px; z-index: 500;
   width: 38px; height: 38px; border-radius: 50%;
   background: linear-gradient(135deg, var(--gold), var(--gold-lt));
   color: var(--navy); border: none; font-size: 13px;
-  display: flex; align-items: center; justify-content: center; cursor: pointer;
-  opacity: 0; transform: translateY(12px); transition: opacity 0.3s, transform 0.3s;
-  box-shadow: 0 5px 18px rgba(201,150,60,0.32);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; opacity: 0; transform: translateY(12px);
+  transition: opacity 0.3s, transform 0.3s;
+  box-shadow: 0 5px 18px rgba(201,150,60,0.3);
 }
 #btt.show { opacity: 1; transform: translateY(0); }
 
-@keyframes fadeUp { from{opacity:0;transform:translateY(18px);} to{opacity:1;transform:translateY(0);} }
+/* Keyframes */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
-/* ─── RESPONSIVE ─── */
-@media (max-width: 1024px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-globe { display: none; }
-  .sg { grid-template-columns: repeat(2,1fr); }
-  .why-lay { grid-template-columns: 1fr; gap: 36px; }
+/* ══ RESPONSIVE ══ */
+@media (max-width: 1060px) {
+  .hero-in { grid-template-columns: 1fr; gap: 48px; }
+  .hero-img-col { display: none; }
+  .svc-g { grid-template-columns: repeat(2,1fr); }
+  .why-grid { grid-template-columns: 1fr; gap: 36px; }
   .fg { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 768px) {
   header { padding: 0 20px; }
   nav { display: none; }
   .ham { display: flex; }
-  .hero { padding: 88px 20px 60px; }
-  .sec { padding: 64px 20px; }
-  .sg { grid-template-columns: 1fr; }
-  .cta-strip { flex-direction: column; padding: 32px 22px; }
-  footer { padding: 44px 20px 22px; }
+  .hero { padding: 90px 20px 60px; }
+  .sec { padding: 66px 20px; }
+  .svc-g { grid-template-columns: 1fr; }
+  .cta-strip { flex-direction: column; padding: 34px 24px; }
+  footer { padding: 46px 20px 22px; }
   .fg { grid-template-columns: 1fr; gap: 28px; }
   .fbot { flex-direction: column; text-align: center; }
 }
 </style>
 </head>
-<body>
 
-<!-- ─── HEADER ─── -->
+<body>
+<!-- ── GTM noscript ── -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ══ HEADER ══ -->
 <header id="hdr">
-  <div class="hdr-inner">
-    <a href="index.html" class="logo-link">
-      <div class="logo-circle">
+  <div class="hdr">
+
+    <a href="index.html" class="logo-a">
+      <div class="logo-ring">
         <img src="assets/logo.png" alt="AEC Logo">
       </div>
-      <div class="logo-text">
-        <span class="logo-abbr">AEC</span>
-        <span class="logo-sub">Bridging Continents · Transforming Business</span>
+      <div class="logo-copy">
+        <span class="logo-name">AEC</span>
+        <span class="logo-tag">Bridging Continents · Transforming Business</span>
       </div>
     </a>
 
@@ -394,18 +601,22 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
         </div>
       </div>
       <div class="ni"><a href="company/contact.html" class="nl">Contact</a></div>
-      <div class="ni"><a href="consultation.html" class="nl cta"><i class="fas fa-calendar-alt" style="margin-right:6px;"></i>Free Consultation</a></div>
+      <div class="ni">
+        <a href="consultation.html" class="nl cta">
+          <i class="fas fa-calendar-alt"></i>&nbsp;Free Consultation
+        </a>
+      </div>
     </nav>
 
-    <button class="ham" id="ham" onclick="toggleNav()" aria-label="Menu">
+    <button class="ham" id="ham" onclick="toggleNav()" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
 <!-- Mobile nav -->
-<div class="mob-nav" id="mobNav">
-  <button class="mob-close" onclick="toggleNav()"><i class="fas fa-times"></i></button>
+<div class="mob" id="mob">
+  <button class="mob-x" onclick="toggleNav()"><i class="fas fa-times"></i></button>
   <a href="index.html" onclick="toggleNav()">Home</a>
   <a href="company/about.html" onclick="toggleNav()">About Us</a>
   <a href="services/ERP.html" onclick="toggleNav()">ERP Solutions</a>
@@ -416,129 +627,139 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
   <a href="consultation.html" onclick="toggleNav()" style="color:var(--gold-lt);">Free Consultation</a>
 </div>
 
-<!-- ─── HERO ─── -->
+<!-- ══ HERO ══ -->
 <section class="hero">
-  <div class="hero-inner">
+  <div class="hero-in">
 
-    <!-- Left -->
+    <!-- Left copy -->
     <div>
-      <div class="hero-badge">
-        <span class="bdot"></span>
-        Digital Transformation Partner · Since 2017
+      <div class="hero-eyebrow">
+        <span class="pulse"></span>
+        Digital Transformation Partner &nbsp;·&nbsp; Since 2017
       </div>
+
       <h1 class="hero-h1">
         Bridging Africa &amp; Europe<br>
-        Through <span class="accent">Technology.</span>
+        Through <span class="italic">Technology.</span>
       </h1>
+
       <p class="hero-desc">
-        Business &amp; Technology Solutions for SMEs and Larger Organisations. We implement Dynamics 365 ERP &amp; CRM, deploy Azure Cloud, leverage AI-powered tools, and provide business process insights to help teams work smarter.
+        Business &amp; Technology Solutions for SMEs and Larger Organisations.
+        We implement Dynamics 365 ERP &amp; CRM, deploy Azure Cloud, leverage
+        AI-powered tools, and provide business process insights to help teams
+        work smarter.
       </p>
-      <div class="hero-btns">
-        <a href="consultation.html" class="btn-p"><i class="fas fa-calendar-alt"></i> Book Free Consultation</a>
-      </div>
+
+      <a href="consultation.html" class="hero-btn">
+        <i class="fas fa-calendar-alt"></i> Book Free Consultation
+      </a>
+
       <div class="hero-stats">
-        <div><div class="sn">8+</div><div class="sl">Years Excellence</div></div>
-        <div><div class="sn">20+</div><div class="sl">Projects Delivered</div></div>
-        <div><div class="sn">12+</div><div class="sl">Happy Clients</div></div>
-        <div><div class="sn">3</div><div class="sl">Continents</div></div>
+        <div><div class="st-num">8+</div><div class="st-lbl">Years Excellence</div></div>
+        <div><div class="st-num">20+</div><div class="st-lbl">Projects Delivered</div></div>
+        <div><div class="st-num">12+</div><div class="st-lbl">Happy Clients</div></div>
+        <div><div class="st-num">3</div><div class="st-lbl">Continents</div></div>
       </div>
     </div>
 
-    <!-- Right — Hero Image -->
-    <div class="hero-globe">
-      <div class="hero-img-wrap">
-        <img src="assets/human machine.jpg" alt="Human and machine working together">
+    <!-- Right — human machine image -->
+    <div class="hero-img-col">
+      <div class="hero-img-frame">
+        <img src="assets/human machine.jpg" alt="Human and machine working together at AEC">
+        <div class="img-badge">
+          <i class="fas fa-globe-africa"></i>
+          Kraków &nbsp;·&nbsp; Douala &nbsp;·&nbsp; Abuja
+        </div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ─── ERP TICKER ─── -->
-<div class="ticker-wrap">
+<!-- ══ ERP TICKER ══ -->
+<div class="ticker-bar">
   <div class="ticker-track">
-    <div class="tc"><span class="d" style="background:#00a1f1;"></span><span>Microsoft Dynamics 365</span></div>
-    <div class="tc"><span class="d" style="background:#1668c1;"></span><span>SAP S/4HANA</span></div>
-    <div class="tc"><span class="d" style="background:#f80000;"></span><span>Oracle ERP Cloud</span></div>
-    <div class="tc"><span class="d" style="background:#714b67;"></span><span>Odoo</span></div>
-    <div class="tc"><span class="d" style="background:#00c2a8;"></span><span>Azure Cloud</span></div>
-    <div class="tc"><span class="d" style="background:#0078d4;"></span><span>Power BI</span></div>
-    <div class="tc"><span class="d" style="background:#ff6900;"></span><span>SAP Business One</span></div>
-    <div class="tc"><span class="d" style="background:#2fbf71;"></span><span>Oracle NetSuite</span></div>
-    <div class="tc"><span class="d" style="background:#7f5af0;"></span><span>Dynamics 365 CRM</span></div>
-    <div class="tc"><span class="d" style="background:#e8b85a;"></span><span>Microsoft Copilot</span></div>
-    <!-- loop -->
-    <div class="tc"><span class="d" style="background:#00a1f1;"></span><span>Microsoft Dynamics 365</span></div>
-    <div class="tc"><span class="d" style="background:#1668c1;"></span><span>SAP S/4HANA</span></div>
-    <div class="tc"><span class="d" style="background:#f80000;"></span><span>Oracle ERP Cloud</span></div>
-    <div class="tc"><span class="d" style="background:#714b67;"></span><span>Odoo</span></div>
-    <div class="tc"><span class="d" style="background:#00c2a8;"></span><span>Azure Cloud</span></div>
-    <div class="tc"><span class="d" style="background:#0078d4;"></span><span>Power BI</span></div>
-    <div class="tc"><span class="d" style="background:#ff6900;"></span><span>SAP Business One</span></div>
-    <div class="tc"><span class="d" style="background:#2fbf71;"></span><span>Oracle NetSuite</span></div>
-    <div class="tc"><span class="d" style="background:#7f5af0;"></span><span>Dynamics 365 CRM</span></div>
-    <div class="tc"><span class="d" style="background:#e8b85a;"></span><span>Microsoft Copilot</span></div>
+    <div class="chip"><span class="dot" style="background:#00a1f1"></span><span>Microsoft Dynamics 365</span></div>
+    <div class="chip"><span class="dot" style="background:#1668c1"></span><span>SAP S/4HANA</span></div>
+    <div class="chip"><span class="dot" style="background:#f80000"></span><span>Oracle ERP Cloud</span></div>
+    <div class="chip"><span class="dot" style="background:#714b67"></span><span>Odoo</span></div>
+    <div class="chip"><span class="dot" style="background:#00c2a8"></span><span>Azure Cloud</span></div>
+    <div class="chip"><span class="dot" style="background:#0078d4"></span><span>Power BI</span></div>
+    <div class="chip"><span class="dot" style="background:#ff6900"></span><span>SAP Business One</span></div>
+    <div class="chip"><span class="dot" style="background:#2fbf71"></span><span>Oracle NetSuite</span></div>
+    <div class="chip"><span class="dot" style="background:#7f5af0"></span><span>Dynamics 365 CRM</span></div>
+    <div class="chip"><span class="dot" style="background:#e8b85a"></span><span>Microsoft Copilot</span></div>
+    <!-- duplicate for loop -->
+    <div class="chip"><span class="dot" style="background:#00a1f1"></span><span>Microsoft Dynamics 365</span></div>
+    <div class="chip"><span class="dot" style="background:#1668c1"></span><span>SAP S/4HANA</span></div>
+    <div class="chip"><span class="dot" style="background:#f80000"></span><span>Oracle ERP Cloud</span></div>
+    <div class="chip"><span class="dot" style="background:#714b67"></span><span>Odoo</span></div>
+    <div class="chip"><span class="dot" style="background:#00c2a8"></span><span>Azure Cloud</span></div>
+    <div class="chip"><span class="dot" style="background:#0078d4"></span><span>Power BI</span></div>
+    <div class="chip"><span class="dot" style="background:#ff6900"></span><span>SAP Business One</span></div>
+    <div class="chip"><span class="dot" style="background:#2fbf71"></span><span>Oracle NetSuite</span></div>
+    <div class="chip"><span class="dot" style="background:#7f5af0"></span><span>Dynamics 365 CRM</span></div>
+    <div class="chip"><span class="dot" style="background:#e8b85a"></span><span>Microsoft Copilot</span></div>
   </div>
 </div>
 
-<!-- ─── SERVICES ─── -->
+<!-- ══ SERVICES ══ -->
 <section class="sec" id="services">
-  <div class="si">
+  <div class="wrap">
     <div class="ctr rv">
       <div class="stag">Our Services</div>
-      <h2 class="sh2">End-to-End <em>Digital Solutions</em></h2>
+      <h2 class="sh">End-to-End <em>Digital Solutions</em></h2>
       <p class="sp">From strategy to implementation — we deliver the full spectrum of digital transformation across Africa and Europe.</p>
     </div>
-    <div class="sg">
-      <div class="sc rv" style="transition-delay:.06s">
-        <div class="sc-ico"><i class="fas fa-project-diagram"></i></div>
+    <div class="svc-g">
+      <div class="svc-c rv" style="transition-delay:.06s">
+        <div class="svc-ico"><i class="fas fa-project-diagram"></i></div>
         <h3>Dynamics 365 ERP</h3>
-        <p>Unify operations with Microsoft's modern ERP. Streamline finance, supply chain, and HR.</p>
-        <a href="services/ERP.html" class="sc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
+        <p>Unify operations with Microsoft's modern ERP platform. Streamline finance, supply chain, and HR.</p>
+        <a href="services/ERP.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="sc rv" style="transition-delay:.12s">
-        <div class="sc-ico"><i class="fas fa-cloud"></i></div>
+      <div class="svc-c rv" style="transition-delay:.12s">
+        <div class="svc-ico"><i class="fas fa-cloud"></i></div>
         <h3>Azure Cloud Services</h3>
         <p>Secure, scalable cloud infrastructure managed by Microsoft-certified architects.</p>
-        <a href="services/cloud.html" class="sc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
+        <a href="services/cloud.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="sc rv" style="transition-delay:.18s">
-        <div class="sc-ico"><i class="fas fa-robot"></i></div>
+      <div class="svc-c rv" style="transition-delay:.18s">
+        <div class="svc-ico"><i class="fas fa-robot"></i></div>
         <h3>AI &amp; Machine Learning</h3>
         <p>Predictive analytics, intelligent automation and NLP built on your business data.</p>
-        <a href="services/ai-ml.html" class="sc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
+        <a href="services/ai-ml.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="sc rv" style="transition-delay:.24s">
-        <div class="sc-ico"><i class="fas fa-users"></i></div>
+      <div class="svc-c rv" style="transition-delay:.24s">
+        <div class="svc-ico"><i class="fas fa-users"></i></div>
         <h3>CRM Implementation</h3>
         <p>Build lasting customer relationships with Dynamics 365 CRM tailored for your sales cycle.</p>
-        <a href="services/crm.html" class="sc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
+        <a href="services/crm.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="sc rv" style="transition-delay:.3s">
-        <div class="sc-ico"><i class="fas fa-chart-line"></i></div>
+      <div class="svc-c rv" style="transition-delay:.30s">
+        <div class="svc-ico"><i class="fas fa-chart-line"></i></div>
         <h3>Business Analysis</h3>
         <p>Data-driven insights, process optimisation and strategic roadmaps aligned to your goals.</p>
-        <a href="services/business-analysis.html" class="sc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
+        <a href="services/business-analysis.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="sc rv" style="transition-delay:.36s">
-        <div class="sc-ico"><i class="fas fa-globe"></i></div>
+      <div class="svc-c rv" style="transition-delay:.36s">
+        <div class="svc-ico"><i class="fas fa-globe"></i></div>
         <h3>Web &amp; Digital Marketing</h3>
         <p>High-converting websites and digital campaigns to grow your presence across continents.</p>
-        <a href="services/web-marketing.html" class="sc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
+        <a href="services/web-marketing.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── WHY AEC ─── -->
+<!-- ══ WHY AEC ══ -->
 <section class="sec alt" id="why-aec">
-  <div class="si">
-    <div class="why-lay">
-      <!-- Left -->
+  <div class="wrap">
+    <div class="why-grid">
       <div>
         <div class="rv">
           <div class="stag">Why Choose AEC</div>
-          <h2 class="sh2">More Than Consultants —<br><em>Your Growth Partner</em></h2>
+          <h2 class="sh">More Than Consultants —<br><em>Your Growth Partner</em></h2>
           <p class="sp">We integrate into your journey and deliver enterprise-grade results optimised for your budget and ambitions.</p>
         </div>
         <div class="why-items">
@@ -556,25 +777,24 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
           </div>
           <div class="wi rv" style="transition-delay:.32s">
             <div class="wi-ico">❤️</div>
-            <div><h4>Social Impact</h4><p>Committed to digital skills training, volunteer community support, and inclusive growth.</p></div>
+            <div><h4>Social Impact</h4><p>Committed to digital skills training, volunteer support, and inclusive growth.</p></div>
           </div>
         </div>
       </div>
-      <!-- Right -->
       <div class="why-r rv" style="transition-delay:.1s">
         <div class="wbc">
-          <div class="bnum">20+</div>
+          <div class="big">20+</div>
           <h4>Projects Successfully Delivered</h4>
-          <p>From SME Odoo rollouts to enterprise Dynamics 365 ERP migrations — delivered on time and on budget.</p>
+          <p>From SME Odoo rollouts to enterprise Dynamics 365 ERP migrations — on time and on budget.</p>
         </div>
         <div class="wbc">
-          <div class="bnum">12+</div>
+          <div class="big">12+</div>
           <h4>Happy Clients Across 3 Continents</h4>
           <p>Businesses in Poland, Cameroon, and Nigeria trust AEC as their long-term technology partner.</p>
           <div class="locs">
-            <div class="lb">🇵🇱 Poland</div>
-            <div class="lb">🇨🇲 Cameroon</div>
-            <div class="lb">🇳🇬  Nigeria</div>
+            <div class="lb">🇵🇱 Kraków, Poland</div>
+            <div class="lb">🇨🇲 Douala, Cameroon</div>
+            <div class="lb">🇳🇬 Abuja, Nigeria</div>
           </div>
         </div>
       </div>
@@ -582,36 +802,36 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
   </div>
 </section>
 
-<!-- ─── CTA STRIP ─── -->
+<!-- ══ CTA STRIP ══ -->
 <section class="sec">
-  <div class="si">
+  <div class="wrap">
     <div class="cta-strip rv">
       <div>
         <h2>Ready to Transform Your Business?</h2>
         <p>Book your free consultation and discover how we can help you achieve your digital transformation goals — no commitment, just a conversation.</p>
       </div>
-      <div class="cta-btns">
-        <a href="consultation.html" class="btn-p"><i class="fas fa-calendar-alt"></i> Book Free Consultation</a>
-      </div>
+      <a href="consultation.html" class="cta-btn">
+        <i class="fas fa-calendar-alt"></i> Book Free Consultation
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
+<!-- ══ FOOTER ══ -->
 <footer>
   <div class="fg">
     <div class="fb">
-      <a href="index.html" class="logo-link">
-        <div class="logo-circle" style="width:36px;height:36px;">
+      <a href="index.html" class="logo-a">
+        <div class="logo-ring" style="width:38px;height:38px;">
           <img src="assets/logo.png" alt="AEC">
         </div>
-        <div class="logo-text" style="margin-left:9px;">
-          <span class="logo-abbr" style="font-size:17px;">AEC</span>
+        <div class="logo-copy" style="margin-left:9px;">
+          <span class="logo-name" style="font-size:18px;">AEC</span>
         </div>
       </a>
       <div class="fm">Aim High · Be Kind · Dare to be Different</div>
       <p>AFRIQUEEUROPECONNEXIONVMETC — empowering businesses across Africa and Europe through technology, innovation, and collaboration since 2017.</p>
-      <div class="sr">
+      <div class="soc">
         <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener" class="sb"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://x.com/SandjongAr3472" target="_blank" rel="noopener" class="sb"><i class="fab fa-x-twitter"></i></a>
         <a href="https://wa.me/48690386721" target="_blank" rel="noopener" class="sb"><i class="fab fa-whatsapp"></i></a>
@@ -642,7 +862,7 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
     <div>
       <h4>Get In Touch</h4>
       <ul class="fl">
-        <li><a href="/cdn-cgi/l/email-protection#c485b6a9a1a897a5aaa0aeabaaa384a5a2b6adb5b1a1a1b1b6abb4a1a7abaaaaa1bcadabaab2a9a1b0a7eaa7aba9"><i class="fas fa-envelope"></i>Email Us</a></li>
+        <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com"><i class="fas fa-envelope"></i>Email Us</a></li>
         <li><a href="tel:+48690386721"><i class="fas fa-phone"></i>+48 690 386 721</a></li>
         <li><a href="https://wa.me/48690386721" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
         <li><a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
@@ -652,7 +872,7 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
   </div>
   <div class="fbot">
     <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved.</p>
-    <p>Designed by <strong style="color:var(--gold-lt)">Armel Sandjong Nantchouang</strong> · Microsoft Partner</p>
+    <p>Designed by <strong style="color:var(--gold-lt)">Armel Sandjong Nantchouang</strong> &nbsp;·&nbsp; Microsoft Partner</p>
   </div>
 </footer>
 
@@ -660,16 +880,16 @@ footer h4 { font-family: var(--ff-head); font-size: 13px; font-weight: 700; marg
   <i class="fas fa-arrow-up"></i>
 </button>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* Sticky header */
 const hdr = document.getElementById('hdr');
 window.addEventListener('scroll', () => {
-  hdr.style.background = window.scrollY > 50 ? 'rgba(11,21,53,0.98)' : 'rgba(11,21,53,0.9)';
+  hdr.classList.toggle('scrolled', window.scrollY > 50);
 });
 
 /* Mobile nav */
 function toggleNav() {
-  document.getElementById('mobNav').classList.toggle('open');
+  document.getElementById('mob').classList.toggle('open');
 }
 
 /* Back to top */
@@ -678,4 +898,11 @@ window.addEventListener('scroll', () => btt.classList.toggle('show', window.scro
 
 /* Scroll reveal */
 const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
