@@ -6,15 +6,11 @@
 <title>AFRIQUEEUROPECONNEXIONVMETC | Digital Transformation Solutions</title>
 <meta name="description" content="Human-centric Business & Technology Solutions — Dynamics 365, Azure Cloud, AI, and CRM for SMEs and large organisations.">
 
-<!-- ── Google Tag Manager ── -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-<!-- Replace GTM-XXXXXXX with your GTM container ID -->
-
-<!-- ── Microsoft Clarity ── -->
 <script type="text/javascript">
 (function(c,l,a,r,i,t,y){
   c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -23,7 +19,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,"clarity","script","v4lglq0gvb");
 </script>
 
-<!-- ── Font Awesome ── -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <style>
@@ -553,10 +548,8 @@ footer h4 {
 </head>
 
 <body>
-<!-- ── GTM noscript ── -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<!-- ══ HEADER ══ -->
 <header id="hdr">
   <div class="hdr">
 
@@ -592,6 +585,16 @@ footer h4 {
           <a href="services/web-marketing.html"><i class="fas fa-globe"></i>Web &amp; Marketing</a>
         </div>
       </div>
+      
+      <div class="ni">
+        <a href="#" class="nl">Platform <i class="fas fa-chevron-down"></i></a>
+        <div class="drop">
+          <a href="marketplace/hub.html"><i class="fas fa-vault"></i>ERP & Tax Hub</a>
+          <a href="marketplace/careers.html"><i class="fas fa-briefcase"></i>Niche Tech Jobs</a>
+          <a href="marketplace/upload.html"><i class="fas fa-upload"></i>Deploy Proposals</a>
+        </div>
+      </div>
+
       <div class="ni">
         <a href="#" class="nl">Resources <i class="fas fa-chevron-down"></i></a>
         <div class="drop">
@@ -614,24 +617,21 @@ footer h4 {
   </div>
 </header>
 
-<!-- Mobile nav -->
 <div class="mob" id="mob">
   <button class="mob-x" onclick="toggleNav()"><i class="fas fa-times"></i></button>
   <a href="index.html" onclick="toggleNav()">Home</a>
   <a href="company/about.html" onclick="toggleNav()">About Us</a>
+  <a href="marketplace/hub.html" onclick="toggleNav()">Ecosystem Hub</a>
   <a href="services/ERP.html" onclick="toggleNav()">ERP Solutions</a>
   <a href="services/crm.html" onclick="toggleNav()">CRM</a>
   <a href="services/cloud.html" onclick="toggleNav()">Cloud</a>
-  <a href="services/ai-ml.html" onclick="toggleNav()">AI &amp; ML</a>
   <a href="company/contact.html" onclick="toggleNav()">Contact</a>
   <a href="consultation.html" onclick="toggleNav()" style="color:var(--gold-lt);">Free Consultation</a>
 </div>
 
-<!-- ══ HERO ══ -->
 <section class="hero">
   <div class="hero-in">
 
-    <!-- Left copy -->
     <div>
       <div class="hero-eyebrow">
         <span class="pulse"></span>
@@ -662,7 +662,6 @@ footer h4 {
       </div>
     </div>
 
-    <!-- Right — human machine image -->
     <div class="hero-img-col">
       <div class="hero-img-frame">
         <img src="assets/human machine.jpg" alt="Human and machine working together at AEC">
@@ -676,7 +675,6 @@ footer h4 {
   </div>
 </section>
 
-<!-- ══ ERP TICKER ══ -->
 <div class="ticker-bar">
   <div class="ticker-track">
     <div class="chip"><span class="dot" style="background:#00a1f1"></span><span>Microsoft Dynamics 365</span></div>
@@ -689,7 +687,6 @@ footer h4 {
     <div class="chip"><span class="dot" style="background:#2fbf71"></span><span>Oracle NetSuite</span></div>
     <div class="chip"><span class="dot" style="background:#7f5af0"></span><span>Dynamics 365 CRM</span></div>
     <div class="chip"><span class="dot" style="background:#e8b85a"></span><span>Microsoft Copilot</span></div>
-    <!-- duplicate for loop -->
     <div class="chip"><span class="dot" style="background:#00a1f1"></span><span>Microsoft Dynamics 365</span></div>
     <div class="chip"><span class="dot" style="background:#1668c1"></span><span>SAP S/4HANA</span></div>
     <div class="chip"><span class="dot" style="background:#f80000"></span><span>Oracle ERP Cloud</span></div>
@@ -703,7 +700,6 @@ footer h4 {
   </div>
 </div>
 
-<!-- ══ SERVICES ══ -->
 <section class="sec" id="services">
   <div class="wrap">
     <div class="ctr rv">
@@ -730,12 +726,14 @@ footer h4 {
         <p>Predictive analytics, intelligent automation and NLP built on your business data.</p>
         <a href="services/ai-ml.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="svc-c rv" style="transition-delay:.24s">
-        <div class="svc-ico"><i class="fas fa-users"></i></div>
-        <h3>CRM Implementation</h3>
-        <p>Build lasting customer relationships with Dynamics 365 CRM tailored for your sales cycle.</p>
-        <a href="services/crm.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
+      
+      <div class="svc-c rv" style="transition-delay:.24s; border: 1px solid rgba(201,150,60,0.25); background: rgba(201,150,60,0.03);">
+        <div class="svc-ico" style="color:var(--gold-lt);"><i class="fas fa-vault"></i></div>
+        <h3>FinTech & Tax Marketplace</h3>
+        <p>Monetize and acquire regional tax algorithms (OHADA/PL/NG), PowerBI ERP templates, and micro-SaaS scripts.</p>
+        <a href="marketplace/hub.html" class="svc-lnk" style="color:var(--gold-lt);">Visit Ecosystem <i class="fas fa-arrow-right"></i></a>
       </div>
+
       <div class="svc-c rv" style="transition-delay:.30s">
         <div class="svc-ico"><i class="fas fa-chart-line"></i></div>
         <h3>Business Analysis</h3>
@@ -752,7 +750,6 @@ footer h4 {
   </div>
 </section>
 
-<!-- ══ WHY AEC ══ -->
 <section class="sec alt" id="why-aec">
   <div class="wrap">
     <div class="why-grid">
@@ -802,7 +799,6 @@ footer h4 {
   </div>
 </section>
 
-<!-- ══ CTA STRIP ══ -->
 <section class="sec">
   <div class="wrap">
     <div class="cta-strip rv">
@@ -817,7 +813,6 @@ footer h4 {
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
 <footer>
   <div class="fg">
     <div class="fb">
@@ -843,7 +838,7 @@ footer h4 {
       <ul class="fl">
         <li><a href="index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
         <li><a href="company/about.html"><i class="fas fa-chevron-right"></i>About Us</a></li>
-        <li><a href="company/mission.html"><i class="fas fa-chevron-right"></i>Our Mission</a></li>
+        <li><a href="marketplace/hub.html"><i class="fas fa-chevron-right"></i>Ecosystem Hub</a></li>
         <li><a href="resources/research-insights.html"><i class="fas fa-chevron-right"></i>Research</a></li>
         <li><a href="company/contact.html"><i class="fas fa-chevron-right"></i>Contact</a></li>
       </ul>
@@ -871,7 +866,7 @@ footer h4 {
     </div>
   </div>
   <div class="fbot">
-    <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved.</p>
+    <p>&copy; 2026 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved.</p>
     <p>Designed by <strong style="color:var(--gold-lt)">Armel Sandjong Nantchouang</strong> &nbsp;·&nbsp; Microsoft Partner</p>
   </div>
 </footer>
@@ -880,29 +875,7 @@ footer h4 {
   <i class="fas fa-arrow-up"></i>
 </button>
 
-<script>
-/* Sticky header */
-const hdr = document.getElementById('hdr');
-window.addEventListener('scroll', () => {
-  hdr.classList.toggle('scrolled', window.scrollY > 50);
-});
+<script src="js/main.js"></script>
 
-/* Mobile nav */
-function toggleNav() {
-  document.getElementById('mob').classList.toggle('open');
-}
-
-/* Back to top */
-const btt = document.getElementById('btt');
-window.addEventListener('scroll', () => btt.classList.toggle('show', window.scrollY > 400));
-
-/* Scroll reveal */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.rv').forEach(el => obs.observe(el));
-</script>
 </body>
 </html>
