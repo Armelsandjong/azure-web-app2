@@ -234,18 +234,46 @@ nav { display: flex; align-items: center; gap: 2px; }
   animation: fadeUp 0.55s ease 0.4s both;
 }
 
+.hero-btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: fadeUp 0.55s ease 0.55s both;
+}
+
 .hero-btn {
-  display: inline-flex; align-items: center; gap: 9px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   background: linear-gradient(135deg, var(--gold), var(--gold-lt));
   color: var(--navy);
-  font-family: var(--ff-serif); font-size: 15px; font-weight: 700;
-  padding: 14px 32px; border-radius: 50px;
+  font-family: var(--ff-serif);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 50px;
   letter-spacing: 0.2px;
   box-shadow: 0 8px 28px rgba(201,150,60,0.3);
   transition: transform 0.2s, box-shadow 0.2s;
-  animation: fadeUp 0.55s ease 0.55s both;
 }
 .hero-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(201,150,60,0.45); }
+
+.hero-btn-alt {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--white);
+  border: 1px solid var(--border);
+  font-family: var(--ff-serif);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 50px;
+  letter-spacing: 0.2px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.hero-btn-alt:hover { background: rgba(255, 255, 255, 0.08); border-color: var(--gold); }
 
 /* Stats */
 .hero-stats {
@@ -585,16 +613,14 @@ footer h4 {
           <a href="services/web-marketing.html"><i class="fas fa-globe"></i>Web &amp; Marketing</a>
         </div>
       </div>
-      
       <div class="ni">
-        <a href="#" class="nl">Platform <i class="fas fa-chevron-down"></i></a>
+        <a href="#" class="nl">Platform Hub <i class="fas fa-chevron-down"></i></a>
         <div class="drop">
-          <a href="marketplace/hub.html"><i class="fas fa-vault"></i>ERP & Tax Hub</a>
-          <a href="marketplace/careers.html"><i class="fas fa-briefcase"></i>Niche Tech Jobs</a>
-          <a href="marketplace/upload.html"><i class="fas fa-upload"></i>Deploy Proposals</a>
+          <a href="#marketplace"><i class="fas fa-store"></i>ERP & Tax Hub</a>
+          <a href="#marketplace"><i class="fas fa-file-invoice-dollar"></i>Compliance Micro-SaaS</a>
+          <a href="#marketplace"><i class="fas fa-briefcase"></i>Niche Careers</a>
         </div>
       </div>
-
       <div class="ni">
         <a href="#" class="nl">Resources <i class="fas fa-chevron-down"></i></a>
         <div class="drop">
@@ -605,8 +631,8 @@ footer h4 {
       </div>
       <div class="ni"><a href="company/contact.html" class="nl">Contact</a></div>
       <div class="ni">
-        <a href="consultation.html" class="nl cta">
-          <i class="fas fa-calendar-alt"></i>&nbsp;Free Consultation
+        <a href="#marketplace" class="nl cta">
+          <i class="fas fa-rocket"></i>&nbsp;Join Hub Waitlist
         </a>
       </div>
     </nav>
@@ -621,10 +647,8 @@ footer h4 {
   <button class="mob-x" onclick="toggleNav()"><i class="fas fa-times"></i></button>
   <a href="index.html" onclick="toggleNav()">Home</a>
   <a href="company/about.html" onclick="toggleNav()">About Us</a>
-  <a href="marketplace/hub.html" onclick="toggleNav()">Ecosystem Hub</a>
   <a href="services/ERP.html" onclick="toggleNav()">ERP Solutions</a>
-  <a href="services/crm.html" onclick="toggleNav()">CRM</a>
-  <a href="services/cloud.html" onclick="toggleNav()">Cloud</a>
+  <a href="#marketplace" onclick="toggleNav()">Ecosystem Marketplace</a>
   <a href="company/contact.html" onclick="toggleNav()">Contact</a>
   <a href="consultation.html" onclick="toggleNav()" style="color:var(--gold-lt);">Free Consultation</a>
 </div>
@@ -635,30 +659,32 @@ footer h4 {
     <div>
       <div class="hero-eyebrow">
         <span class="pulse"></span>
-        Digital Transformation Partner &nbsp;·&nbsp; Since 2017
+        Digital Transformation & Cross-Border Ecosystem
       </div>
 
       <h1 class="hero-h1">
         Bridging Africa &amp; Europe<br>
-        Through <span class="italic">Technology.</span>
+        Through <span class="italic">Enterprise Tech.</span>
       </h1>
 
       <p class="hero-desc">
-        Business &amp; Technology Solutions for SMEs and Larger Organisations.
-        We implement Dynamics 365 ERP &amp; CRM, deploy Azure Cloud, leverage
-        AI-powered tools, and provide business process insights to help teams
-        work smarter.
+        Empowering SMEs and large organisations with Dynamics 365, Azure Cloud, and localized Micro-SaaS. We are launching a curated marketplace for unified B2B ERP templates and cross-border tax algorithms.
       </p>
 
-      <a href="consultation.html" class="hero-btn">
-        <i class="fas fa-calendar-alt"></i> Book Free Consultation
-      </a>
+      <div class="hero-btns">
+        <a href="consultation.html" class="hero-btn">
+          <i class="fas fa-calendar-alt"></i> Book Consultation
+        </a>
+        <a href="#marketplace" class="hero-btn-alt">
+          <i class="fas fa-store"></i> Explore Marketplace
+        </a>
+      </div>
 
       <div class="hero-stats">
         <div><div class="st-num">8+</div><div class="st-lbl">Years Excellence</div></div>
         <div><div class="st-num">20+</div><div class="st-lbl">Projects Delivered</div></div>
-        <div><div class="st-num">12+</div><div class="st-lbl">Happy Clients</div></div>
-        <div><div class="st-num">3</div><div class="st-lbl">Continents</div></div>
+        <div><div class="st-num">3</div><div class="st-lbl">Continents Ecosystem</div></div>
+        <div><div class="st-num">NEW</div><div class="st-lbl">B2B Micro-SaaS Hub</div></div>
       </div>
     </div>
 
@@ -678,25 +704,23 @@ footer h4 {
 <div class="ticker-bar">
   <div class="ticker-track">
     <div class="chip"><span class="dot" style="background:#00a1f1"></span><span>Microsoft Dynamics 365</span></div>
-    <div class="chip"><span class="dot" style="background:#1668c1"></span><span>SAP S/4HANA</span></div>
-    <div class="chip"><span class="dot" style="background:#f80000"></span><span>Oracle ERP Cloud</span></div>
-    <div class="chip"><span class="dot" style="background:#714b67"></span><span>Odoo</span></div>
-    <div class="chip"><span class="dot" style="background:#00c2a8"></span><span>Azure Cloud</span></div>
-    <div class="chip"><span class="dot" style="background:#0078d4"></span><span>Power BI</span></div>
+    <div class="chip"><span class="dot" style="background:#1668c1"></span><span>Tax & Compliance APIs</span></div>
+    <div class="chip"><span class="dot" style="background:#f80000"></span><span>OHADA Compliance</span></div>
+    <div class="chip"><span class="dot" style="background:#714b67"></span><span>Odoo ERP Modules</span></div>
+    <div class="chip"><span class="dot" style="background:#00c2a8"></span><span>Azure Synapse</span></div>
+    <div class="chip"><span class="dot" style="background:#0078d4"></span><span>Power BI Templates</span></div>
     <div class="chip"><span class="dot" style="background:#ff6900"></span><span>SAP Business One</span></div>
-    <div class="chip"><span class="dot" style="background:#2fbf71"></span><span>Oracle NetSuite</span></div>
-    <div class="chip"><span class="dot" style="background:#7f5af0"></span><span>Dynamics 365 CRM</span></div>
-    <div class="chip"><span class="dot" style="background:#e8b85a"></span><span>Microsoft Copilot</span></div>
+    <div class="chip"><span class="dot" style="background:#e8b85a"></span><span>Polish JPK V7 Tools</span></div>
+    <div class="chip"><span class="dot" style="background:#7f5af0"></span><span>Unified Career Hub</span></div>
     <div class="chip"><span class="dot" style="background:#00a1f1"></span><span>Microsoft Dynamics 365</span></div>
-    <div class="chip"><span class="dot" style="background:#1668c1"></span><span>SAP S/4HANA</span></div>
-    <div class="chip"><span class="dot" style="background:#f80000"></span><span>Oracle ERP Cloud</span></div>
-    <div class="chip"><span class="dot" style="background:#714b67"></span><span>Odoo</span></div>
-    <div class="chip"><span class="dot" style="background:#00c2a8"></span><span>Azure Cloud</span></div>
-    <div class="chip"><span class="dot" style="background:#0078d4"></span><span>Power BI</span></div>
+    <div class="chip"><span class="dot" style="background:#1668c1"></span><span>Tax & Compliance APIs</span></div>
+    <div class="chip"><span class="dot" style="background:#f80000"></span><span>OHADA Compliance</span></div>
+    <div class="chip"><span class="dot" style="background:#714b67"></span><span>Odoo ERP Modules</span></div>
+    <div class="chip"><span class="dot" style="background:#00c2a8"></span><span>Azure Synapse</span></div>
+    <div class="chip"><span class="dot" style="background:#0078d4"></span><span>Power BI Templates</span></div>
     <div class="chip"><span class="dot" style="background:#ff6900"></span><span>SAP Business One</span></div>
-    <div class="chip"><span class="dot" style="background:#2fbf71"></span><span>Oracle NetSuite</span></div>
-    <div class="chip"><span class="dot" style="background:#7f5af0"></span><span>Dynamics 365 CRM</span></div>
-    <div class="chip"><span class="dot" style="background:#e8b85a"></span><span>Microsoft Copilot</span></div>
+    <div class="chip"><span class="dot" style="background:#e8b85a"></span><span>Polish JPK V7 Tools</span></div>
+    <div class="chip"><span class="dot" style="background:#7f5af0"></span><span>Unified Career Hub</span></div>
   </div>
 </div>
 
@@ -705,46 +729,94 @@ footer h4 {
     <div class="ctr rv">
       <div class="stag">Our Services</div>
       <h2 class="sh">End-to-End <em>Digital Solutions</em></h2>
-      <p class="sp">From strategy to implementation — we deliver the full spectrum of digital transformation across Africa and Europe.</p>
+      <p class="sp">From traditional consulting to plug-and-play B2B Micro-SaaS — we deliver specialized compliance and cloud systems across Africa and Europe.</p>
     </div>
     <div class="svc-g">
       <div class="svc-c rv" style="transition-delay:.06s">
         <div class="svc-ico"><i class="fas fa-project-diagram"></i></div>
-        <h3>Dynamics 365 ERP</h3>
-        <p>Unify operations with Microsoft's modern ERP platform. Streamline finance, supply chain, and HR.</p>
+        <h3>Dynamics 365 & ERP</h3>
+        <p>Unify operations with Microsoft's modern ERP platform. Streamline finance, localized supply chains, and HR.</p>
         <a href="services/ERP.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="svc-c rv" style="transition-delay:.12s">
         <div class="svc-ico"><i class="fas fa-cloud"></i></div>
-        <h3>Azure Cloud Services</h3>
-        <p>Secure, scalable cloud infrastructure managed by Microsoft-certified architects.</p>
+        <h3>Azure Cloud Architecture</h3>
+        <p>Secure, scalable cloud infrastructure managed by Microsoft-certified architects and running serverless integrations.</p>
         <a href="services/cloud.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="svc-c rv" style="transition-delay:.18s">
         <div class="svc-ico"><i class="fas fa-robot"></i></div>
-        <h3>AI &amp; Machine Learning</h3>
-        <p>Predictive analytics, intelligent automation and NLP built on your business data.</p>
+        <h3>AI, ML & Tax Forecasting</h3>
+        <p>Predictive analytics, intelligent automation, and Natural Language Processing algorithms built for B2B finance.</p>
         <a href="services/ai-ml.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
-      
-      <div class="svc-c rv" style="transition-delay:.24s; border: 1px solid rgba(201,150,60,0.25); background: rgba(201,150,60,0.03);">
-        <div class="svc-ico" style="color:var(--gold-lt);"><i class="fas fa-vault"></i></div>
-        <h3>FinTech & Tax Marketplace</h3>
-        <p>Monetize and acquire regional tax algorithms (OHADA/PL/NG), PowerBI ERP templates, and micro-SaaS scripts.</p>
-        <a href="marketplace/hub.html" class="svc-lnk" style="color:var(--gold-lt);">Visit Ecosystem <i class="fas fa-arrow-right"></i></a>
+      <div class="svc-c rv" style="transition-delay:.24s">
+        <div class="svc-ico"><i class="fas fa-users"></i></div>
+        <h3>CRM Implementation</h3>
+        <p>Build lasting customer relationships with Dynamics 365 CRM tailored for your specific sales cycles.</p>
+        <a href="services/crm.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
-
       <div class="svc-c rv" style="transition-delay:.30s">
         <div class="svc-ico"><i class="fas fa-chart-line"></i></div>
-        <h3>Business Analysis</h3>
-        <p>Data-driven insights, process optimisation and strategic roadmaps aligned to your goals.</p>
+        <h3>Financial Business Analysis</h3>
+        <p>Data-driven insights, process optimization, and regional tax compliance roadmaps aligned to your goals.</p>
         <a href="services/business-analysis.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="svc-c rv" style="transition-delay:.36s">
         <div class="svc-ico"><i class="fas fa-globe"></i></div>
-        <h3>Web &amp; Digital Marketing</h3>
-        <p>High-converting websites and digital campaigns to grow your presence across continents.</p>
+        <h3>Web & Web3 Micro-SaaS</h3>
+        <p>High-converting platforms and API monetization engines to grow your digital presence across continents.</p>
         <a href="services/web-marketing.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="marketplace" style="background: rgba(201,150,60,0.02); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="rv">
+        <div class="stag">Coming Soon: AEC B2B Hub</div>
+        <h2 class="sh">Localized Tax & ERP <em>Marketplace</em></h2>
+        <p class="sp" style="margin-bottom:24px;">We are opening a micro-SaaS hub connecting African and European compliance. Subscribe to become a founding platform member, listing tools or seeking niche talent.</p>
+        
+        <ul class="fl" style="margin-bottom:32px;">
+          <li style="color:var(--muted); font-size:14px; margin-bottom:12px;"><i class="fas fa-check" style="color:var(--teal); margin-right:10px;"></i> <strong>Regional Tax Algorithms:</strong> OHADA, European Union, and Nigerian API calculators.</li>
+          <li style="color:var(--muted); font-size:14px; margin-bottom:12px;"><i class="fas fa-check" style="color:var(--teal); margin-right:10px;"></i> <strong>ERP Modules & Automation:</strong> PowerBI, Dynamics, and Odoo deployable templates.</li>
+          <li style="color:var(--muted); font-size:14px; margin-bottom:12px;"><i class="fas fa-check" style="color:var(--teal); margin-right:10px;"></i> <strong>Crossover Tech Careers:</strong> Sourcing vetted ERP and finance professionals.</li>
+        </ul>
+      </div>
+
+      <div class="rv" style="transition-delay:.2s;">
+        <div class="wbc" style="background: var(--navy2); border: 1px solid rgba(255,255,255,0.05); padding: 40px; border-radius: 16px;">
+          <h4 style="font-family: var(--ff-serif); font-size: 20px; color: var(--gold-lt); margin-bottom: 8px;">Join Ecosystem Waitlist</h4>
+          <p style="font-size: 13px; color: var(--muted); margin-bottom: 24px;">Unlock early-bird seller access & premium job alerts.</p>
+
+          <form class="aec-form" action="#" method="POST" style="display:flex; flex-direction:column; gap:16px;">
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <label style="font-size:12px; color:var(--muted);">Full Name</label>
+              <input type="text" required placeholder="John Doe" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 12px; border-radius: 8px; color: white; outline: none; font-size: 14px;">
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <label style="font-size:12px; color:var(--muted);">Corporate Email</label>
+              <input type="email" required placeholder="name@company.com" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 12px; border-radius: 8px; color: white; outline: none; font-size: 14px;">
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <label style="font-size:12px; color:var(--muted);">I am a:</label>
+              <select required style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 12px; border-radius: 8px; color: white; outline: none; font-size: 14px;">
+                <option value="consumer">Corporate Buyer (seeking templates/APIs)</option>
+                <option value="provider">Developer / Tax Specialist (selling Micro-SaaS)</option>
+                <option value="candidate">Candidate (seeking ERP & Finance Roles)</option>
+              </select>
+            </div>
+
+            <button type="button" data-form-submit class="hero-btn" style="width: 100%; justify-content: center; margin-top:10px;">
+              <i class="fas fa-paper-plane"></i> Subscribe to Waitlist
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -756,8 +828,8 @@ footer h4 {
       <div>
         <div class="rv">
           <div class="stag">Why Choose AEC</div>
-          <h2 class="sh">More Than Consultants —<br><em>Your Growth Partner</em></h2>
-          <p class="sp">We integrate into your journey and deliver enterprise-grade results optimised for your budget and ambitions.</p>
+          <h2 class="sh">More Than Consultants —<br><em>Your Ecosystem Hub</em></h2>
+          <p class="sp">We integrate into your journey and deliver enterprise-grade results optimized for your budget and cross-border ambitions.</p>
         </div>
         <div class="why-items">
           <div class="wi rv" style="transition-delay:.08s">
@@ -766,15 +838,15 @@ footer h4 {
           </div>
           <div class="wi rv" style="transition-delay:.16s">
             <div class="wi-ico">🤝</div>
-            <div><h4>True Partnership</h4><p>We integrate into your team and your journey toward sustainable, long-term success.</p></div>
+            <div><h4>True Regional Partner</h4><p>Deploying specialized OHADA & EU compliant B2B infrastructures seamlessly.</p></div>
           </div>
           <div class="wi rv" style="transition-delay:.24s">
             <div class="wi-ico">💡</div>
-            <div><h4>Innovation First</h4><p>Harnessing AI, Machine Learning, and Azure Cloud to keep your business ahead of the curve.</p></div>
+            <div><h4>Micro-SaaS Innovation</h4><p>Harnessing ready-made code widgets to fast-track modern finance and ERP operations.</p></div>
           </div>
           <div class="wi rv" style="transition-delay:.32s">
             <div class="wi-ico">❤️</div>
-            <div><h4>Social Impact</h4><p>Committed to digital skills training, volunteer support, and inclusive growth.</p></div>
+            <div><h4>Knowledge Transfer</h4><p>Committed to digital skills training, volunteer support, and inclusive ecosystem growth.</p></div>
           </div>
         </div>
       </div>
@@ -782,12 +854,12 @@ footer h4 {
         <div class="wbc">
           <div class="big">20+</div>
           <h4>Projects Successfully Delivered</h4>
-          <p>From SME Odoo rollouts to enterprise Dynamics 365 ERP migrations — on time and on budget.</p>
+          <p>From SME Odoo rollouts to enterprise Dynamics 365 ERP migrations and tax software bridges — on time and on budget.</p>
         </div>
         <div class="wbc">
           <div class="big">12+</div>
-          <h4>Happy Clients Across 3 Continents</h4>
-          <p>Businesses in Poland, Cameroon, and Nigeria trust AEC as their long-term technology partner.</p>
+          <h4>Happy Ecosystem Clients</h4>
+          <p>Cross-border companies trust AEC as their long-term structural tech advisor.</p>
           <div class="locs">
             <div class="lb">🇵🇱 Kraków, Poland</div>
             <div class="lb">🇨🇲 Douala, Cameroon</div>
@@ -803,8 +875,8 @@ footer h4 {
   <div class="wrap">
     <div class="cta-strip rv">
       <div>
-        <h2>Ready to Transform Your Business?</h2>
-        <p>Book your free consultation and discover how we can help you achieve your digital transformation goals — no commitment, just a conversation.</p>
+        <h2>Ready to Scale Your Finance Systems?</h2>
+        <p>Book your free consultation or join our marketplace waitlist to learn how our micro-SaaS tools can streamline your cross-border enterprise.</p>
       </div>
       <a href="consultation.html" class="cta-btn">
         <i class="fas fa-calendar-alt"></i> Book Free Consultation
@@ -825,7 +897,7 @@ footer h4 {
         </div>
       </a>
       <div class="fm">Aim High · Be Kind · Dare to be Different</div>
-      <p>AFRIQUEEUROPECONNEXIONVMETC — empowering businesses across Africa and Europe through technology, innovation, and collaboration since 2017.</p>
+      <p>AFRIQUEEUROPECONNEXIONVMETC — empowering businesses across Africa and Europe through technology, innovation, and marketplace collaboration since 2017.</p>
       <div class="soc">
         <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener" class="sb"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://x.com/SandjongAr3472" target="_blank" rel="noopener" class="sb"><i class="fab fa-x-twitter"></i></a>
@@ -838,7 +910,7 @@ footer h4 {
       <ul class="fl">
         <li><a href="index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
         <li><a href="company/about.html"><i class="fas fa-chevron-right"></i>About Us</a></li>
-        <li><a href="marketplace/hub.html"><i class="fas fa-chevron-right"></i>Ecosystem Hub</a></li>
+        <li><a href="#marketplace"><i class="fas fa-chevron-right"></i>Micro-SaaS Hub</a></li>
         <li><a href="resources/research-insights.html"><i class="fas fa-chevron-right"></i>Research</a></li>
         <li><a href="company/contact.html"><i class="fas fa-chevron-right"></i>Contact</a></li>
       </ul>
@@ -875,7 +947,66 @@ footer h4 {
   <i class="fas fa-arrow-up"></i>
 </button>
 
-<script src="js/main.js"></script>
+<script>
+/* Sticky header */
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('scrolled', window.scrollY > 50);
+});
 
+/* Mobile nav */
+function toggleNav() {
+  document.getElementById('mob').classList.toggle('open');
+}
+
+/* Back to top */
+const btt = document.getElementById('btt');
+window.addEventListener('scroll', () => btt.classList.toggle('show', window.scrollY > 400));
+
+/* Scroll reveal */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+/* Intercept waitlist form submission using existing visual feedbacks */
+document.querySelectorAll('[data-form-submit]').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const form = this.closest('form');
+      if (!form) return;
+
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        if (!field.value.trim()) {
+          valid = false;
+          field.style.borderColor = 'rgba(242,88,64,0.6)';
+          setTimeout(() => field.style.borderColor = '', 2500);
+        }
+      });
+      if (!valid) return;
+
+      const original = this.innerHTML;
+      this.innerHTML = '<i class="fas fa-circle-notch fa-spin" style="margin-right:8px;"></i>Verifying…';
+      this.disabled = true;
+
+      setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-check" style="margin-right:8px;"></i>Subscribed to Waitlist!';
+        this.style.background = 'linear-gradient(135deg,#00c2a8,#00a890)';
+        this.style.color = '#fff';
+        form.reset();
+
+        setTimeout(() => {
+          this.innerHTML = original;
+          this.style.background = '';
+          this.style.color = '';
+          this.disabled = false;
+        }, 3500);
+      }, 1500);
+    });
+});
+</script>
 </body>
 </html>
