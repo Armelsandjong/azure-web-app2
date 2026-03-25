@@ -6,6 +6,15 @@
 <title>AFRIQUEEUROPECONNEXIONVMETC | Digital Transformation & ERP Ecosystem</title>
 <meta name="description" content="Cross-border Business & Technology Solutions — Dynamics 365, SAP, Oracle, Odoo, Azure Cloud, AI, and a forthcoming OHADA · EU · Nigeria compliance marketplace.">
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- ↑ Replace GTM-XXXXXXX with your real container ID -->
+
+<!-- Microsoft Clarity -->
 <script type="text/javascript">
 (function(c,l,a,r,i,t,y){
   c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -14,13 +23,458 @@
 })(window,document,"clarity","script","v4lglq0gvb");
 </script>
 
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<link rel="stylesheet" href="/css/style.css"> </style>
+
+<style>
+/* ══════════════════════════════════════════════
+   AEC — Homepage Styles
+   Typography: Times New Roman — editorial feel
+══════════════════════════════════════════════ */
+:root {
+  --navy:      #0b1535;
+  --navy2:     #0f1c42;
+  --gold:      #c9963c;
+  --gold-lt:   #e8b85a;
+  --teal:      #00c2a8;
+  --white:     #ffffff;
+  --muted:     rgba(255,255,255,0.52);
+  --border:    rgba(255,255,255,0.08);
+  --card:      rgba(255,255,255,0.035);
+  --radius:    12px;
+  --ff-serif:  'Times New Roman', Times, Georgia, serif;
+  --ff-sans:   'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--ff-sans);background:var(--navy);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--navy);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+::selection{background:rgba(201,150,60,0.28);}
+
+/* ── HEADER ── */
+header{
+  position:fixed;inset:0 0 auto;height:70px;
+  display:flex;align-items:center;padding:0 52px;
+  background:rgba(11,21,53,0.88);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);z-index:1000;transition:background 0.35s;
+}
+header.scrolled{background:rgba(11,21,53,0.98);}
+.hdr{width:100%;max-width:1220px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+
+/* Logo */
+.logo-a{display:flex;align-items:center;gap:12px;}
+.logo-ring{
+  width:44px;height:44px;border-radius:50%;background:#fff;
+  border:2px solid rgba(201,150,60,0.4);overflow:hidden;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 18px rgba(201,150,60,0.18);
+}
+.logo-ring img{width:100%;height:100%;object-fit:contain;}
+.logo-copy{display:flex;flex-direction:column;line-height:1;}
+.logo-name{font-family:var(--ff-serif);font-size:21px;font-weight:700;letter-spacing:1px;color:#fff;}
+.logo-tag{font-family:var(--ff-sans);font-size:8.5px;color:var(--gold-lt);letter-spacing:1.8px;text-transform:uppercase;margin-top:3px;}
+
+/* Nav */
+nav{display:flex;align-items:center;gap:2px;}
+.ni{position:relative;}
+.nl{
+  font-family:var(--ff-sans);font-size:13px;font-weight:400;
+  color:var(--muted);padding:8px 13px;border-radius:7px;
+  transition:color 0.2s,background 0.2s;white-space:nowrap;display:block;
+}
+.nl i.ch{font-size:9px;margin-left:4px;opacity:0.7;}
+.nl:hover,.nl.active{color:#fff;background:rgba(255,255,255,0.06);}
+.nl.cta{
+  font-weight:700!important;font-family:var(--ff-serif)!important;
+  background:linear-gradient(135deg,var(--gold),var(--gold-lt));
+  color:var(--navy)!important;padding:9px 20px!important;
+  border-radius:50px!important;margin-left:6px;letter-spacing:0.3px;
+  transition:transform 0.2s,box-shadow 0.2s!important;
+}
+.nl.cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(201,150,60,0.38);}
+
+/* Dropdowns */
+.drop{
+  position:absolute;top:calc(100% + 10px);left:0;min-width:220px;
+  background:rgba(10,18,50,0.97);backdrop-filter:blur(20px);
+  border:1px solid var(--border);border-radius:12px;padding:6px;
+  opacity:0;pointer-events:none;transform:translateY(8px);
+  transition:opacity 0.22s,transform 0.22s;z-index:200;
+}
+.ni:hover .drop{opacity:1;pointer-events:all;transform:translateY(0);}
+.drop a{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--muted);padding:9px 13px;border-radius:8px;transition:color 0.18s,background 0.18s;}
+.drop a i{color:var(--gold);width:14px;font-size:11px;}
+.drop a:hover{color:#fff;background:rgba(255,255,255,0.05);}
+
+/* Hamburger */
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.ham span{width:22px;height:1.5px;background:#fff;border-radius:2px;display:block;transition:0.3s;}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.ham.open span:nth-child(2){opacity:0;}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+/* Mobile overlay */
+.mob{
+  position:fixed;inset:0;z-index:999;background:rgba(9,16,45,0.98);backdrop-filter:blur(20px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;
+  transform:translateX(100%);transition:transform 0.35s cubic-bezier(.23,1,.32,1);
+}
+.mob.open{transform:translateX(0);}
+.mob a{font-family:var(--ff-serif);font-size:24px;font-weight:700;color:rgba(255,255,255,0.82);transition:color 0.2s;}
+.mob a:hover{color:var(--gold-lt);}
+.mob-x{position:absolute;top:22px;right:24px;background:none;border:none;color:#fff;font-size:26px;cursor:pointer;}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:100px 52px 80px;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;top:0;right:35%;width:1px;height:100%;
+  background:linear-gradient(to bottom,transparent,rgba(201,150,60,0.12) 40%,transparent);
+  pointer-events:none;
+}
+.hero-in{
+  max-width:1220px;margin:0 auto;width:100%;
+  display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  border:1px solid rgba(201,150,60,0.28);background:rgba(201,150,60,0.07);
+  color:var(--gold-lt);font-family:var(--ff-sans);font-size:10.5px;font-weight:600;
+  letter-spacing:2.5px;text-transform:uppercase;padding:6px 16px;border-radius:50px;
+  margin-bottom:28px;animation:fadeUp 0.55s ease 0.1s both;
+}
+.pulse{width:6px;height:6px;border-radius:50%;background:var(--teal);animation:blink 1.8s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.15;}}
+
+.hero-h1{
+  font-family:var(--ff-serif);font-size:clamp(38px,4.8vw,64px);
+  font-weight:700;line-height:1.08;letter-spacing:-0.5px;margin-bottom:22px;
+  animation:fadeUp 0.55s ease 0.25s both;
+}
+.hero-h1 .italic{font-style:italic;color:var(--gold-lt);}
+.hero-desc{
+  font-family:var(--ff-sans);font-size:15px;font-weight:300;line-height:1.9;
+  color:var(--muted);max-width:490px;margin-bottom:36px;
+  animation:fadeUp 0.55s ease 0.4s both;
+}
+.hero-btns{display:flex;align-items:center;gap:14px;flex-wrap:wrap;animation:fadeUp 0.55s ease 0.55s both;}
+.btn-gold{
+  display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:var(--navy);
+  font-family:var(--ff-serif);font-size:14px;font-weight:700;
+  padding:13px 28px;border-radius:50px;letter-spacing:0.2px;
+  box-shadow:0 8px 28px rgba(201,150,60,0.28);transition:transform 0.2s,box-shadow 0.2s;
+}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(201,150,60,0.44);}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(255,255,255,0.04);color:var(--white);
+  border:1px solid rgba(255,255,255,0.18);font-family:var(--ff-serif);
+  font-size:14px;font-weight:700;padding:13px 28px;border-radius:50px;
+  transition:background 0.2s,border-color 0.2s;
+}
+.btn-ghost:hover{background:rgba(255,255,255,0.08);border-color:rgba(201,150,60,0.5);}
+
+/* Stats */
+.hero-stats{
+  display:flex;gap:32px;margin-top:46px;padding-top:30px;
+  border-top:1px solid var(--border);animation:fadeUp 0.55s ease 0.7s both;
+}
+.st-num{font-family:var(--ff-serif);font-size:28px;font-weight:700;color:var(--gold-lt);line-height:1;}
+.st-lbl{font-family:var(--ff-sans);font-size:10px;color:var(--muted);letter-spacing:1.2px;text-transform:uppercase;margin-top:5px;}
+
+/* Hero image */
+.hero-img-col{position:relative;animation:fadeUp 0.55s ease 0.3s both;}
+.hero-img-frame{
+  position:relative;border-radius:18px;overflow:hidden;
+  border:1px solid rgba(255,255,255,0.09);
+  box-shadow:0 40px 90px rgba(0,0,0,0.45),0 0 50px rgba(0,194,168,0.07);
+}
+.hero-img-frame img{width:100%;height:440px;object-fit:cover;object-position:center;display:block;}
+.hero-img-frame::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(11,21,53,0.55) 0%,transparent 50%);
+  pointer-events:none;
+}
+.img-badge{
+  position:absolute;bottom:22px;left:22px;background:rgba(11,21,53,0.82);
+  backdrop-filter:blur(12px);border:1px solid rgba(201,150,60,0.25);
+  border-radius:50px;padding:9px 18px;display:flex;align-items:center;gap:8px;
+  font-family:var(--ff-sans);font-size:12px;color:rgba(255,255,255,0.85);z-index:2;
+}
+.img-badge i{color:var(--teal);}
+
+/* ── TICKER ── */
+.ticker-bar{
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:17px 0;overflow:hidden;background:rgba(255,255,255,0.015);position:relative;
+}
+.ticker-bar::before,.ticker-bar::after{content:'';position:absolute;top:0;bottom:0;width:110px;z-index:2;pointer-events:none;}
+.ticker-bar::before{left:0;background:linear-gradient(to right,var(--navy),transparent);}
+.ticker-bar::after{right:0;background:linear-gradient(to left,var(--navy),transparent);}
+.ticker-track{display:flex;gap:26px;width:max-content;animation:ticker 34s linear infinite;}
+@keyframes ticker{to{transform:translateX(-50%);}}
+.chip{
+  display:flex;align-items:center;gap:7px;padding:6px 16px;
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);
+  border-radius:50px;white-space:nowrap;transition:border-color 0.2s;
+}
+.chip:hover{border-color:rgba(201,150,60,0.25);}
+.chip .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.chip span{font-family:var(--ff-sans);font-size:12px;color:rgba(255,255,255,0.65);}
+
+/* ── SECTIONS ── */
+.sec{padding:88px 52px;}
+.sec.alt{background:rgba(255,255,255,0.016);}
+.wrap{max-width:1220px;margin:0 auto;}
+.stag{
+  display:inline-block;font-family:var(--ff-sans);font-size:10px;font-weight:600;
+  letter-spacing:3px;text-transform:uppercase;color:var(--gold-lt);
+  background:rgba(201,150,60,0.09);border:1px solid rgba(201,150,60,0.2);
+  padding:5px 13px;border-radius:50px;margin-bottom:13px;
+}
+.sh{font-family:var(--ff-serif);font-size:clamp(26px,3.2vw,42px);font-weight:700;line-height:1.15;margin-bottom:13px;}
+.sh em{font-style:italic;color:var(--teal);}
+.sh.gold-em em{color:var(--gold-lt);}
+.sp{font-family:var(--ff-sans);font-size:15px;font-weight:300;line-height:1.85;color:var(--muted);max-width:550px;}
+.ctr{text-align:center;}.ctr .sp{margin:0 auto;}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.rv.in{opacity:1;transform:translateY(0);}
+
+/* ── SERVICE CARDS ── */
+.svc-g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:50px;}
+.svc-c{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:30px 24px;transition:transform 0.25s,border-color 0.25s,background 0.25s;
+}
+.svc-c:hover{transform:translateY(-5px);border-color:rgba(0,194,168,0.22);background:rgba(0,194,168,0.03);}
+.svc-c.gold-card{border-color:rgba(201,150,60,0.2);background:rgba(201,150,60,0.03);}
+.svc-c.gold-card:hover{border-color:rgba(201,150,60,0.38);}
+.svc-ico{font-size:22px;margin-bottom:14px;color:var(--teal);}
+.svc-ico.gold{color:var(--gold-lt);}
+.svc-c h3{font-family:var(--ff-serif);font-size:17px;font-weight:700;margin-bottom:9px;}
+.svc-c p{font-family:var(--ff-sans);font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:16px;}
+.svc-lnk{font-family:var(--ff-sans);font-size:12px;font-weight:600;color:var(--teal);display:inline-flex;align-items:center;gap:5px;transition:gap 0.2s;}
+.svc-lnk.gold{color:var(--gold-lt);}
+.svc-lnk:hover{gap:9px;}
+
+/* ── MARKETPLACE SECTION ── */
+.mkt-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.mkt-checklist{display:flex;flex-direction:column;gap:16px;margin-top:28px;}
+.mkt-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:18px;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);transition:border-color 0.2s;
+}
+.mkt-item:hover{border-color:rgba(201,150,60,0.22);}
+.mkt-ico{
+  width:38px;height:38px;border-radius:9px;flex-shrink:0;
+  background:rgba(0,194,168,0.08);display:flex;align-items:center;justify-content:center;
+  font-size:17px;
+}
+.mkt-item h4{font-family:var(--ff-serif);font-size:14px;font-weight:700;margin-bottom:4px;}
+.mkt-item p{font-family:var(--ff-sans);font-size:12px;color:var(--muted);line-height:1.65;}
+
+/* Waitlist card */
+.waitlist-card{
+  background:rgba(11,21,53,0.8);border:1px solid rgba(255,255,255,0.07);
+  border-radius:18px;padding:36px 32px;
+}
+.waitlist-card h3{font-family:var(--ff-serif);font-size:22px;font-weight:700;color:var(--gold-lt);margin-bottom:6px;}
+.waitlist-card .sub{font-family:var(--ff-sans);font-size:13px;color:var(--muted);margin-bottom:28px;}
+
+/* Form */
+.aec-form{display:flex;flex-direction:column;gap:14px;}
+.aec-form .field{display:flex;flex-direction:column;gap:5px;}
+.aec-form label{font-family:var(--ff-sans);font-size:11px;font-weight:600;color:rgba(255,255,255,0.45);letter-spacing:0.5px;}
+.aec-form input,
+.aec-form select{
+  width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);
+  border-radius:9px;padding:12px 15px;color:#fff;
+  font-family:var(--ff-sans);font-size:14px;outline:none;
+  transition:border-color 0.2s,background 0.2s;
+}
+.aec-form input::placeholder{color:rgba(255,255,255,0.26);}
+.aec-form select option{background:var(--navy2);}
+.aec-form input:focus,
+.aec-form select:focus{border-color:rgba(201,150,60,0.45);background:rgba(255,255,255,0.07);}
+.btn-submit{
+  width:100%;justify-content:center;
+  display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:var(--navy);
+  font-family:var(--ff-serif);font-size:15px;font-weight:700;
+  padding:14px 28px;border-radius:50px;letter-spacing:0.2px;border:none;cursor:pointer;
+  margin-top:6px;box-shadow:0 8px 28px rgba(201,150,60,0.28);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(201,150,60,0.44);}
+
+/* Region pills */
+.region-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+.rpill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+  padding:6px 14px;border-radius:50px;
+  font-family:var(--ff-sans);font-size:12px;color:rgba(255,255,255,0.6);
+}
+
+/* ── WHY AEC ── */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;}
+.why-items{display:flex;flex-direction:column;gap:13px;margin-top:32px;}
+.wi{display:flex;gap:14px;align-items:flex-start;padding:18px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);transition:border-color 0.22s;}
+.wi:hover{border-color:rgba(201,150,60,0.22);}
+.wi-ico{font-size:19px;flex-shrink:0;width:40px;height:40px;background:rgba(201,150,60,0.07);border-radius:9px;display:flex;align-items:center;justify-content:center;}
+.wi h4{font-family:var(--ff-serif);font-size:15px;font-weight:700;margin-bottom:4px;}
+.wi p{font-family:var(--ff-sans);font-size:13px;color:var(--muted);line-height:1.65;}
+.why-r{display:flex;flex-direction:column;gap:16px;padding-top:6px;}
+.wbc{background:linear-gradient(135deg,rgba(201,150,60,0.065),rgba(0,194,168,0.04));border:1px solid rgba(201,150,60,0.13);border-radius:16px;padding:28px 24px;}
+.wbc .big{font-family:var(--ff-serif);font-size:48px;font-weight:700;color:var(--gold-lt);line-height:1;margin-bottom:6px;}
+.wbc h4{font-family:var(--ff-serif);font-size:16px;font-weight:700;margin-bottom:8px;}
+.wbc p{font-family:var(--ff-sans);font-size:13px;color:var(--muted);line-height:1.72;}
+.locs{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
+.lb{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:7px 13px;border-radius:50px;font-family:var(--ff-sans);font-size:12px;color:rgba(255,255,255,0.6);}
+
+/* ── CTA STRIP ── */
+.cta-strip{
+  background:linear-gradient(135deg,rgba(201,150,60,0.065),rgba(0,194,168,0.035));
+  border:1px solid rgba(201,150,60,0.12);border-radius:18px;padding:54px 48px;
+  display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap;
+}
+.cta-strip h2{font-family:var(--ff-serif);font-size:clamp(22px,2.8vw,36px);font-weight:700;margin-bottom:9px;}
+.cta-strip p{font-family:var(--ff-sans);font-size:14px;color:var(--muted);max-width:440px;line-height:1.8;}
+
+/* ── FOOTER ── */
+footer{padding:54px 52px 28px;border-top:1px solid var(--border);background:rgba(0,0,0,0.16);}
+.fg{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:48px;padding-bottom:38px;border-bottom:1px solid var(--border);}
+.fb p{font-family:var(--ff-sans);font-size:13px;color:var(--muted);line-height:1.82;margin-top:13px;}
+.fm{font-family:var(--ff-serif);font-size:13px;font-style:italic;color:var(--gold-lt);margin:10px 0 5px;}
+footer h4{font-family:var(--ff-serif);font-size:15px;font-weight:700;margin-bottom:17px;}
+.fl{display:flex;flex-direction:column;gap:10px;}
+.fl a{font-family:var(--ff-sans);font-size:13px;color:var(--muted);display:flex;align-items:center;gap:7px;transition:color 0.2s;}
+.fl a i{color:var(--gold);width:13px;font-size:11px;}
+.fl a:hover{color:#fff;}
+.soc{display:flex;gap:7px;margin-top:17px;}
+.sb{width:33px;height:33px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted);transition:background 0.2s,color 0.2s,border-color 0.2s;}
+.sb:hover{background:rgba(201,150,60,0.1);color:var(--gold-lt);border-color:rgba(201,150,60,0.28);}
+.fbot{max-width:1220px;margin:0 auto;padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-family:var(--ff-sans);font-size:12px;color:rgba(255,255,255,0.28);flex-wrap:wrap;gap:6px;}
+
+/* Back to top */
+#btt{position:fixed;bottom:26px;right:26px;z-index:500;width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:var(--navy);border:none;font-size:13px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(12px);transition:opacity 0.3s,transform 0.3s;box-shadow:0 5px 18px rgba(201,150,60,0.3);}
+#btt.show{opacity:1;transform:translateY(0);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1060px){
+  .hero-in,.why-grid,.mkt-layout{grid-template-columns:1fr;gap:40px;}
+  .hero-img-col{display:none;}
+  .svc-g{grid-template-columns:repeat(2,1fr);}
+  .fg{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  header{padding:0 20px;}
+  nav{display:none;}
+  .ham{display:flex;}
+  .hero{padding:90px 20px 60px;}
+  .sec{padding:64px 20px;}
+  .svc-g{grid-template-columns:1fr;}
+  .cta-strip{flex-direction:column;padding:32px 22px;}
+  footer{padding:44px 20px 22px;}
+  .fg{grid-template-columns:1fr;gap:28px;}
+  .fbot{flex-direction:column;text-align:center;}
+  .hero-stats{gap:20px;}
+}
+</style>
 </head>
 
 <body>
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<aec-header></aec-header> <section class="hero">
+<!-- ════ HEADER ════ -->
+<header id="hdr">
+  <div class="hdr">
+    <a href="index.html" class="logo-a">
+      <div class="logo-ring"><img src="assets/logo.png" alt="AEC Logo"></div>
+      <div class="logo-copy">
+        <span class="logo-name">AEC</span>
+        <span class="logo-tag">Bridging Continents · Transforming Business</span>
+      </div>
+    </a>
+
+    <nav>
+      <div class="ni"><a href="index.html" class="nl active">Home</a></div>
+      <div class="ni">
+        <a href="#" class="nl">Company <i class="fas fa-chevron-down ch"></i></a>
+        <div class="drop">
+          <a href="company/about.html"><i class="fas fa-info-circle"></i>About Us</a>
+          <a href="company/mission.html"><i class="fas fa-bullseye"></i>Our Mission</a>
+          <a href="company/expertise.html"><i class="fas fa-star"></i>Expertise</a>
+          <a href="company/Volunteer.html"><i class="fas fa-hands-helping"></i>Volunteer</a>
+        </div>
+      </div>
+      <div class="ni">
+        <a href="#" class="nl">Services <i class="fas fa-chevron-down ch"></i></a>
+        <div class="drop">
+          <a href="services/ERP.html"><i class="fas fa-project-diagram"></i>ERP Solutions</a>
+          <a href="services/crm.html"><i class="fas fa-users"></i>CRM Implementation</a>
+          <a href="services/cloud.html"><i class="fas fa-cloud"></i>Cloud Services</a>
+          <a href="services/ai-ml.html"><i class="fas fa-robot"></i>AI &amp; Machine Learning</a>
+          <a href="services/business-analysis.html"><i class="fas fa-chart-line"></i>Business Analysis</a>
+          <a href="services/web-marketing.html"><i class="fas fa-globe"></i>Web &amp; Marketing</a>
+        </div>
+      </div>
+      <div class="ni">
+        <a href="#" class="nl">Platform Hub <i class="fas fa-chevron-down ch"></i></a>
+        <div class="drop">
+          <a href="#marketplace"><i class="fas fa-store"></i>ERP &amp; Tax Hub</a>
+          <a href="#marketplace"><i class="fas fa-file-invoice-dollar"></i>Compliance Micro-SaaS</a>
+          <a href="#marketplace"><i class="fas fa-briefcase"></i>Niche Tech Careers</a>
+        </div>
+      </div>
+      <div class="ni">
+        <a href="#" class="nl">Resources <i class="fas fa-chevron-down ch"></i></a>
+        <div class="drop">
+          <a href="resources/research-insights.html"><i class="fas fa-book"></i>Research &amp; Insights</a>
+          <a href="resources/industry-trends.html"><i class="fas fa-chart-bar"></i>Industry Trends</a>
+          <a href="resources/case-studies.html"><i class="fas fa-file-alt"></i>Case Studies</a>
+        </div>
+      </div>
+      <div class="ni"><a href="company/contact.html" class="nl">Contact</a></div>
+      <div class="ni">
+        <a href="#marketplace" class="nl cta"><i class="fas fa-rocket"></i>&nbsp;Join Hub Waitlist</a>
+      </div>
+    </nav>
+
+    <button class="ham" id="ham" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mob" id="mob">
+  <button class="mob-x" id="mob-close" aria-label="Close"><i class="fas fa-times"></i></button>
+  <a href="index.html">Home</a>
+  <a href="company/about.html">About Us</a>
+  <a href="services/ERP.html">ERP Solutions</a>
+  <a href="#marketplace">Ecosystem Hub</a>
+  <a href="company/contact.html">Contact</a>
+  <a href="consultation.html" style="color:var(--gold-lt);">Free Consultation</a>
+</div>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
   <div class="hero-in">
     <div>
       <div class="hero-eyebrow">
@@ -61,8 +515,21 @@
   </div>
 </section>
 
+<!-- ════ ERP TICKER ════ -->
 <div class="ticker-bar">
   <div class="ticker-track" id="tickerTrack">
+    <div class="chip"><span class="dot" style="background:#00a1f1"></span><span>Microsoft Dynamics 365</span></div>
+    <div class="chip"><span class="dot" style="background:#1668c1"></span><span>SAP S/4HANA</span></div>
+    <div class="chip"><span class="dot" style="background:#f80000"></span><span>Oracle ERP Cloud</span></div>
+    <div class="chip"><span class="dot" style="background:#714b67"></span><span>Odoo</span></div>
+    <div class="chip"><span class="dot" style="background:#00c2a8"></span><span>Azure Cloud</span></div>
+    <div class="chip"><span class="dot" style="background:#0078d4"></span><span>Power BI</span></div>
+    <div class="chip"><span class="dot" style="background:#ff6900"></span><span>SAP Business One</span></div>
+    <div class="chip"><span class="dot" style="background:#2fbf71"></span><span>Oracle NetSuite</span></div>
+    <div class="chip"><span class="dot" style="background:#f80000"></span><span>OHADA Compliance</span></div>
+    <div class="chip"><span class="dot" style="background:#e8b85a"></span><span>Polish JPK V7 Tools</span></div>
+    <div class="chip"><span class="dot" style="background:#7f5af0"></span><span>Microsoft Copilot</span></div>
+    <!-- loop -->
     <div class="chip"><span class="dot" style="background:#00a1f1"></span><span>Microsoft Dynamics 365</span></div>
     <div class="chip"><span class="dot" style="background:#1668c1"></span><span>SAP S/4HANA</span></div>
     <div class="chip"><span class="dot" style="background:#f80000"></span><span>Oracle ERP Cloud</span></div>
@@ -77,6 +544,7 @@
   </div>
 </div>
 
+<!-- ════ SERVICES ════ -->
 <section class="sec" id="services">
   <div class="wrap">
     <div class="ctr rv">
@@ -113,8 +581,9 @@
         <div class="svc-ico"><i class="fas fa-chart-line"></i></div>
         <h3>Financial Business Analysis</h3>
         <p>Data-driven insights, process optimisation and regional tax compliance roadmaps aligned to your goals.</p>
-        <a href="services/Financial Analysis-&-Accounting.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
+        <a href="services/business-analysis.html" class="svc-lnk">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
+      <!-- Marketplace teaser card -->
       <div class="svc-c gold-card rv" style="transition-delay:.36s">
         <div class="svc-ico gold"><i class="fas fa-store"></i></div>
         <h3>FinTech &amp; ERP Marketplace</h3>
@@ -125,10 +594,12 @@
   </div>
 </section>
 
+<!-- ════ MARKETPLACE WAITLIST ════ -->
 <section class="sec" id="marketplace" style="background:rgba(201,150,60,0.015);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
   <div class="wrap">
     <div class="mkt-layout">
 
+      <!-- Left: pitch -->
       <div class="rv">
         <div class="stag">Coming Soon — AEC B2B Hub</div>
         <h2 class="sh gold-em">Cross-Border Tax &amp; ERP <em>Marketplace</em></h2>
@@ -139,63 +610,75 @@
           <div class="mkt-item">
             <div class="mkt-ico">🧮</div>
             <div>
-              <h4>Localized Tax Algorithms</h4>
-              <p>Plug-and-play APIs mapped to French OHADA treaties, EU mandates (JPK/KSeF), and West African reporting.</p>
+              <h4>Regional Tax Algorithms</h4>
+              <p>OHADA (Francophone Africa), European Union VAT, and Nigerian FIRS-compliant API calculators ready to plug into your ERP.</p>
             </div>
           </div>
           <div class="mkt-item">
-            <div class="mkt-ico">🛠️</div>
+            <div class="mkt-ico">⚙️</div>
             <div>
-              <h4>ERP Deployment Schemas</h4>
-              <p>PowerBI, Dynamic 365 F&O datasets, and custom Odoo wrappers tailored by regional experts.</p>
+              <h4>ERP Templates &amp; Automation</h4>
+              <p>Deployable Power BI dashboards, Dynamics 365 configurations, and Odoo modules built for cross-border operations.</p>
             </div>
           </div>
           <div class="mkt-item">
-            <div class="mkt-ico">🤝</div>
+            <div class="mkt-ico">💼</div>
             <div>
-              <h4>Curated Careers Matrix</h4>
-              <p>Directly matching accountants and developers between EU and African operations.</p>
+              <h4>Niche Tech &amp; Finance Careers</h4>
+              <p>Sourcing vetted ERP consultants, tax specialists, and finance developers across Poland, Cameroon, and Nigeria.</p>
             </div>
           </div>
         </div>
-
-        <div class="region-pills">
-          <span class="rpill"><i class="fas fa-globe-europe"></i> EU Poland</span>
-          <span class="rpill"><i class="fas fa-globe-africa"></i> OHADA Sub-Saharan</span>
-          <span class="rpill"><i class="fas fa-flag"></i> West Africa Nigeria</span>
+        <div class="region-pills" style="margin-top:24px;">
+          <div class="rpill">🇨🇲 OHADA Zone</div>
+          <div class="rpill">🇵🇱 EU / Poland</div>
+          <div class="rpill">🇳🇬 Nigeria FIRS</div>
+          <div class="rpill">🌍 Cross-Border</div>
         </div>
       </div>
 
-      <div class="rv" style="transition-delay:.2s;">
+      <!-- Right: waitlist form -->
+      <div class="rv" style="transition-delay:.15s;">
         <div class="waitlist-card">
           <h3>Join the Ecosystem Waitlist</h3>
-          <p class="sub">Receive early-bird vendor access and curated deployment notifications.</p>
+          <p class="sub">Unlock early-bird seller access &amp; premium job alerts when we launch.</p>
 
-          <form class="aec-form" action="#" method="POST">
+          <form class="aec-form" id="waitlistForm" novalidate>
             <div class="field">
               <label>Full Name</label>
-              <input type="text" required placeholder="John Doe">
+              <input type="text" name="fullName" placeholder="Armel Sandjong" required>
             </div>
-
             <div class="field">
               <label>Corporate Email</label>
-              <input type="email" required placeholder="john@company.com">
+              <input type="email" name="email" placeholder="name@company.com" required>
             </div>
-
             <div class="field">
-              <label>I am an operating:</label>
-              <select required>
-                <option value="" disabled selected>Select Persona</option>
-                <option value="consumer">Enterprise Buyer (Sourcing APIs & Scripts)</option>
-                <option value="provider">Developer / Modeller (Selling Micro-SaaS)</option>
-                <option value="candidate">Accounting or IT Freelance candidate</option>
+              <label>I am a:</label>
+              <select name="role" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="buyer">Corporate Buyer — seeking ERP templates &amp; APIs</option>
+                <option value="seller">Developer / Tax Specialist — selling Micro-SaaS</option>
+                <option value="candidate">Candidate — seeking ERP &amp; Finance Roles</option>
               </select>
             </div>
-
-            <button type="button" class="btn-submit" id="waitlistSubmit" data-form-submit>
-              <i class="fas fa-paper-plane"></i> Join Waitlist
+            <div class="field">
+              <label>Tax Region</label>
+              <select name="taxRegion" required>
+                <option value="" disabled selected>Select your region</option>
+                <option value="ohada">OHADA — Francophone Africa</option>
+                <option value="eu">European Union / Poland</option>
+                <option value="nigeria">Nigeria — FIRS</option>
+                <option value="global">Global / Multi-Region</option>
+              </select>
+            </div>
+            <button type="button" class="btn-submit" id="waitlistBtn" data-form-submit>
+              <i class="fas fa-paper-plane"></i> Subscribe to Waitlist
             </button>
           </form>
+
+          <p style="font-size:11px;color:rgba(255,255,255,0.28);text-align:center;margin-top:14px;">
+            No spam. Unsubscribe anytime. Your data is stored securely on Azure.
+          </p>
         </div>
       </div>
 
@@ -203,31 +686,32 @@
   </div>
 </section>
 
+<!-- ════ WHY AEC ════ -->
 <section class="sec alt" id="why-aec">
   <div class="wrap">
     <div class="why-grid">
       <div>
         <div class="rv">
           <div class="stag">Why Choose AEC</div>
-          <h2 class="sh">More Than Consultants —<br><em>Your Growth Partner</em></h2>
-          <p class="sp">We integrate into your journey and deliver enterprise-grade results optimised for your budget and ambitions.</p>
+          <h2 class="sh">More Than Consultants —<br><em>Your Ecosystem Partner</em></h2>
+          <p class="sp">We integrate into your journey and deliver enterprise-grade results optimised for your cross-border budget and ambitions.</p>
         </div>
         <div class="why-items">
           <div class="wi rv" style="transition-delay:.08s">
             <div class="wi-ico">🏆</div>
-            <div><h4>8+ Years of Expertise</h4><p>Delivering cutting-edge digital transformation across Africa and Europe since 2017.</p></div>
+            <div><h4>8+ Years of Expertise</h4><p>Delivering digital transformation across Africa and Europe since 2017.</p></div>
           </div>
           <div class="wi rv" style="transition-delay:.16s">
-            <div class="wi-ico">🤝</div>
-            <div><h4>True Partnership</h4><p>We integrate into your team and your journey toward sustainable, long-term success.</p></div>
+            <div class="wi-ico">🌍</div>
+            <div><h4>True Regional Partner</h4><p>Deploying OHADA &amp; EU-compliant B2B infrastructures with local expertise.</p></div>
           </div>
           <div class="wi rv" style="transition-delay:.24s">
             <div class="wi-ico">💡</div>
-            <div><h4>Innovation First</h4><p>Harnessing AI, Machine Learning, and Azure Cloud to keep your business ahead of the curve.</p></div>
+            <div><h4>Micro-SaaS Innovation</h4><p>Ready-made compliance widgets to fast-track modern finance and ERP operations.</p></div>
           </div>
           <div class="wi rv" style="transition-delay:.32s">
             <div class="wi-ico">❤️</div>
-            <div><h4>Social Impact</h4><p>Committed to digital skills training, volunteer support, and inclusive growth.</p></div>
+            <div><h4>Social Impact</h4><p>Committed to digital skills training, volunteer support, and inclusive ecosystem growth.</p></div>
           </div>
         </div>
       </div>
@@ -235,12 +719,12 @@
         <div class="wbc">
           <div class="big">20+</div>
           <h4>Projects Successfully Delivered</h4>
-          <p>From SME Odoo rollouts to enterprise Dynamics 365 ERP migrations — on time and on budget.</p>
+          <p>From SME Odoo rollouts to enterprise Dynamics 365 migrations and cross-border tax bridges — on time and on budget.</p>
         </div>
         <div class="wbc">
           <div class="big">12+</div>
-          <h4>Happy Clients Across 3 Continents</h4>
-          <p>Businesses in Poland, Cameroon, and Nigeria trust AEC as their long-term technology partner.</p>
+          <h4>Happy Ecosystem Clients</h4>
+          <p>Businesses in Poland, Cameroon, and Nigeria trust AEC as their long-term structural tech advisor.</p>
           <div class="locs">
             <div class="lb">🇵🇱 Kraków, Poland</div>
             <div class="lb">🇨🇲 Douala, Cameroon</div>
@@ -252,12 +736,13 @@
   </div>
 </section>
 
+<!-- ════ CTA STRIP ════ -->
 <section class="sec">
   <div class="wrap">
     <div class="cta-strip rv">
       <div>
         <h2>Ready to Scale Your Finance Systems?</h2>
-        <p>Book your free consultation or join our marketplace waitlist to learn how our micro-SaaS tools can streamline your cross-border enterprise.</p>
+        <p>Book your free consultation or join our marketplace waitlist to discover how our micro-SaaS tools can streamline your cross-border enterprise.</p>
       </div>
       <a href="consultation.html" class="btn-gold">
         <i class="fas fa-calendar-alt"></i> Book Free Consultation
@@ -266,9 +751,64 @@
   </div>
 </section>
 
-<aec-footer></aec-footer> <button id="btt" aria-label="Back to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div class="fg">
+    <div class="fb">
+      <a href="index.html" class="logo-a">
+        <div class="logo-ring" style="width:38px;height:38px;"><img src="assets/logo.png" alt="AEC"></div>
+        <div class="logo-copy" style="margin-left:9px;"><span class="logo-name" style="font-size:18px;">AEC</span></div>
+      </a>
+      <div class="fm">Aim High · Be Kind · Dare to be Different</div>
+      <p>AFRIQUEEUROPECONNEXIONVMETC — empowering businesses across Africa and Europe through technology, innovation, and marketplace collaboration since 2017.</p>
+      <div class="soc">
+        <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener" class="sb"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://x.com/SandjongAr3472" target="_blank" rel="noopener" class="sb"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://wa.me/48690386721" target="_blank" rel="noopener" class="sb"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank" rel="noopener" class="sb"><i class="fab fa-researchgate"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="fl">
+        <li><a href="index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
+        <li><a href="company/about.html"><i class="fas fa-chevron-right"></i>About Us</a></li>
+        <li><a href="#marketplace"><i class="fas fa-chevron-right"></i>Micro-SaaS Hub</a></li>
+        <li><a href="resources/research-insights.html"><i class="fas fa-chevron-right"></i>Research</a></li>
+        <li><a href="company/contact.html"><i class="fas fa-chevron-right"></i>Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul class="fl">
+        <li><a href="services/ERP.html"><i class="fas fa-chevron-right"></i>ERP Solutions</a></li>
+        <li><a href="services/crm.html"><i class="fas fa-chevron-right"></i>CRM</a></li>
+        <li><a href="services/cloud.html"><i class="fas fa-chevron-right"></i>Cloud Services</a></li>
+        <li><a href="services/ai-ml.html"><i class="fas fa-chevron-right"></i>AI &amp; ML</a></li>
+        <li><a href="services/business-analysis.html"><i class="fas fa-chevron-right"></i>Business Analysis</a></li>
+        <li><a href="services/web-marketing.html"><i class="fas fa-chevron-right"></i>Web &amp; Marketing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get In Touch</h4>
+      <ul class="fl">
+        <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com"><i class="fas fa-envelope"></i>Email Us</a></li>
+        <li><a href="tel:+48690386721"><i class="fas fa-phone"></i>+48 690 386 721</a></li>
+        <li><a href="https://wa.me/48690386721" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
+        <li><a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+        <li><a href="resources/case-studies.html"><i class="fas fa-file-alt"></i>Case Studies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <p>&copy; 2026 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved.</p>
+    <p>Designed by <strong style="color:var(--gold-lt)">Armel Sandjong Nantchouang</strong> &nbsp;·&nbsp; Microsoft Partner</p>
+  </div>
+</footer>
 
-<script src="/js/main.js"></script> </body>
+<button id="btt" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- Master JS — handles all 15 modules + waitlist API -->
+<script src="js/main.js"></script>
+</body>
 </html>
