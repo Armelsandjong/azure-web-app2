@@ -12,64 +12,7 @@
 <body>
 
 <!-- Header -->
-<header>
-    <div class="container">
-        <nav>
-            <!-- Logo - adjust path based on subfolder depth -->
-            <a href="../index.html" class="logo">
-                <img src="../assets/logo.png" alt="AEC" class="logo-img">
-            </a>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html">Home</a></li>
-                
-                <li class="dropdown">
-                    <a href="#company" class="dropdown-toggle">
-                        Company <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                        <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
-                        <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-                        <a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
-                    </div>
-                </li>
-                
-                <li class="dropdown">
-                    <a href="#services" class="dropdown-toggle">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../services/ai-ml.html"><i class="fas fa-robot"></i> AI & Machine Learning</a>
-                        <a href="../services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-                        <a href="../services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
-                        <a href="../services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
-                        <a href="../services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
-                        <a href="../services/web-marketing.html"><i class="fas fa-globe"></i> Web & Marketing</a>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#resources" class="dropdown-toggle">
-                        Resources <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../resources/research-insights.html"><i class="fas fa-book"></i> Research & Insights</a>
-                        <a href="../resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
-                        <a href="../resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
-                    </div>
-                </li>
-
-                <li><a href="../consultation.html" class="cta-btn">Free Consultation</a></li>
-                <li><a href="../company/contact.html">Contact</a></li>
-            </ul>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </div>
-</header>
+<aec-header></aec-header>
     <main>
         <section class="hero">
             <div class="container">
@@ -318,63 +261,7 @@
 <!-- ══════════════════════════════════════
      FOOTER  (copy verbatim to every page)
 ══════════════════════════════════════ -->
-<footer class="aec-footer">
-  <div class="fg">
-    <div class="fb">
-      <a href="../index.html" class="aec-logo">
-        <div class="logo-ring" style="width:38px;height:38px;">
-          <img src="../assets/logo.png" alt="AEC">
-        </div>
-        <div class="logo-copy" style="margin-left:9px;">
-          <span class="logo-name" style="font-size:18px;">AEC</span>
-        </div>
-      </a>
-      <div class="fm">Aim High · Be Kind · Dare to be Different</div>
-      <p>AFRIQUEEUROPECONNEXIONVMETC — empowering businesses across Africa and Europe through technology, innovation, and collaboration since 2017.</p>
-      <div class="soc">
-        <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener" class="sb"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://x.com/SandjongAr3472" target="_blank" rel="noopener" class="sb"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://wa.me/48690386721" target="_blank" rel="noopener" class="sb"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank" rel="noopener" class="sb"><i class="fab fa-researchgate"></i></a>
-      </div>
-    </div>
-    <div>
-      <h4>Quick Links</h4>
-      <ul class="fl">
-        <li><a href="../index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
-        <li><a href="../company/about.html"><i class="fas fa-chevron-right"></i>About Us</a></li>
-        <li><a href="../company/mission.html"><i class="fas fa-chevron-right"></i>Our Mission</a></li>
-        <li><a href="../resources/research-insights.html"><i class="fas fa-chevron-right"></i>Research</a></li>
-        <li><a href="../company/contact.html"><i class="fas fa-chevron-right"></i>Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Services</h4>
-      <ul class="fl">
-        <li><a href="../services/ERP.html"><i class="fas fa-chevron-right"></i>ERP Solutions</a></li>
-        <li><a href="../services/crm.html"><i class="fas fa-chevron-right"></i>CRM</a></li>
-        <li><a href="../services/cloud.html"><i class="fas fa-chevron-right"></i>Cloud Services</a></li>
-        <li><a href="../services/ai-ml.html"><i class="fas fa-chevron-right"></i>AI &amp; ML</a></li>
-        <li><a href="../services/business-analysis.html"><i class="fas fa-chevron-right"></i>Business Analysis</a></li>
-        <li><a href="../services/web-marketing.html"><i class="fas fa-chevron-right"></i>Web &amp; Marketing</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Get In Touch</h4>
-      <ul class="fl">
-        <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com"><i class="fas fa-envelope"></i>Email Us</a></li>
-        <li><a href="tel:+48690386721"><i class="fas fa-phone"></i>+48 690 386 721</a></li>
-        <li><a href="https://wa.me/48690386721" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
-        <li><a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
-        <li><a href="../resources/case-studies.html"><i class="fas fa-file-alt"></i>Case Studies</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="fbot">
-    <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved.</p>
-    <p>Designed by <strong style="color:var(--gold-lt)">Armel Sandjong Nantchouang</strong> &nbsp;·&nbsp; Microsoft Partner</p>
-  </div>
-</footer>
+<aec-footer></aec-footer>
  
 <button id="btt" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
  
