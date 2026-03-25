@@ -8,6 +8,7 @@
 
   /* 🏛️ ══════════════════════════════════
      UNIVERSAL HEADER WEB COMPONENT
+     Matches your exact file tree!
   ══════════════════════════════════ */
   class AecHeader extends HTMLElement {
     connectedCallback() {
@@ -24,6 +25,7 @@
 
           <nav class="aec-nav">
             <div class="ni"><a href="/index.html" class="nl">Home</a></div>
+            
             <div class="ni">
               <a href="#" class="nl">Company <i class="fas fa-chevron-down ch"></i></a>
               <div class="drop">
@@ -33,10 +35,12 @@
                 <a href="/company/Volunteer.html"><i class="fas fa-hands-helping"></i>Volunteer</a>
               </div>
             </div>
+
             <div class="ni">
               <a href="#" class="nl">Services <i class="fas fa-chevron-down ch"></i></a>
               <div class="drop">
                 <a href="/services/ERP.html"><i class="fas fa-project-diagram"></i>ERP Solutions</a>
+                <a href="/services/Financial Analysis-&-Accounting.html"><i class="fas fa-file-invoice-dollar"></i>Finance & Accounting</a>
                 <a href="/services/crm.html"><i class="fas fa-users"></i>CRM Implementation</a>
                 <a href="/services/cloud.html"><i class="fas fa-cloud"></i>Cloud Services</a>
                 <a href="/services/ai-ml.html"><i class="fas fa-robot"></i>AI & Machine Learning</a>
@@ -44,23 +48,17 @@
                 <a href="/services/web-marketing.html"><i class="fas fa-globe"></i>Web & Marketing</a>
               </div>
             </div>
+
             <div class="ni">
               <a href="#" class="nl">Platform Hub <i class="fas fa-chevron-down ch"></i></a>
               <div class="drop">
                 <a href="/index.html#marketplace"><i class="fas fa-store"></i>ERP & Tax Hub</a>
-                <a href="/index.html#marketplace"><i class="fas fa-file-invoice-dollar"></i>Compliance Micro-SaaS</a>
-                <a href="/index.html#marketplace"><i class="fas fa-briefcase"></i>Niche Tech Careers</a>
+                <a href="/index.html#marketplace"><i class="fas fa-microchip"></i>Compliance Micro-SaaS</a>
               </div>
             </div>
-            <div class="ni">
-              <a href="#" class="nl">Resources <i class="fas fa-chevron-down ch"></i></a>
-              <div class="drop">
-                <a href="/resources/research-insights.html"><i class="fas fa-book"></i>Research & Insights</a>
-                <a href="/resources/industry-trends.html"><i class="fas fa-chart-bar"></i>Industry Trends</a>
-                <a href="/resources/case-studies.html"><i class="fas fa-file-alt"></i>Case Studies</a>
-              </div>
-            </div>
+
             <div class="ni"><a href="/company/contact.html" class="nl">Contact</a></div>
+            
             <div class="ni">
               <a href="/index.html#marketplace" class="nl cta"><i class="fas fa-rocket"></i>&nbsp;Join Hub Waitlist</a>
             </div>
@@ -88,6 +86,7 @@
 
   /* 🦶 ══════════════════════════════════
      UNIVERSAL FOOTER WEB COMPONENT
+     Matches your exact file tree!
   ══════════════════════════════════ */
   class AecFooter extends HTMLElement {
     connectedCallback() {
@@ -112,27 +111,28 @@
               <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank" rel="noopener" class="sb"><i class="fab fa-researchgate"></i></a>
             </div>
           </div>
+
           <div>
             <h4>Quick Links</h4>
             <ul class="fl">
               <li><a href="/index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
               <li><a href="/company/about.html"><i class="fas fa-chevron-right"></i>About Us</a></li>
               <li><a href="/index.html#marketplace"><i class="fas fa-chevron-right"></i>Micro-SaaS Hub</a></li>
-              <li><a href="/resources/research-insights.html"><i class="fas fa-chevron-right"></i>Research</a></li>
               <li><a href="/company/contact.html"><i class="fas fa-chevron-right"></i>Contact</a></li>
+              <li><a href="/consultation.html"><i class="fas fa-chevron-right"></i>Book Consultation</a></li>
             </ul>
           </div>
+
           <div>
-            <h4>Services</h4>
+            <h4>Top Services</h4>
             <ul class="fl">
               <li><a href="/services/ERP.html"><i class="fas fa-chevron-right"></i>ERP Solutions</a></li>
-              <li><a href="/services/crm.html"><i class="fas fa-chevron-right"></i>CRM</a></li>
-              <li><a href="/services/cloud.html"><i class="fas fa-chevron-right"></i>Cloud Services</a></li>
+              <li><a href="/services/Financial Analysis-&-Accounting.html"><i class="fas fa-chevron-right"></i>Finance & Accounting</a></li>
+              <li><a href="/services/cloud.html"><i class="fas fa-chevron-right"></i>Cloud Architecture</a></li>
               <li><a href="/services/ai-ml.html"><i class="fas fa-chevron-right"></i>AI & ML</a></li>
-              <li><a href="/services/business-analysis.html"><i class="fas fa-chevron-right"></i>Business Analysis</a></li>
-              <li><a href="/services/web-marketing.html"><i class="fas fa-chevron-right"></i>Web & Marketing</a></li>
             </ul>
           </div>
+
           <div>
             <h4>Get In Touch</h4>
             <ul class="fl">
@@ -140,10 +140,10 @@
               <li><a href="tel:+48690386721"><i class="fas fa-phone"></i>+48 690 386 721</a></li>
               <li><a href="https://wa.me/48690386721" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
               <li><a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
-              <li><a href="/resources/case-studies.html"><i class="fas fa-file-alt"></i>Case Studies</a></li>
             </ul>
           </div>
         </div>
+
         <div class="fbot">
           <p>&copy; 2026 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved.</p>
           <p>Designed by <strong style="color:#e8b85a">Armel Sandjong Nantchouang</strong> &middot; Microsoft Partner</p>
@@ -156,11 +156,11 @@
 
 
   /* ⚙️ ══════════════════════════════════
-     CORE INTERACTION FUNCTIONALITY
+     UI INTERACTION AUTOMATION (Hydrates Web Components)
   ══════════════════════════════════ */
   document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. Sticky Header
+    // Header Scroll Trigger
     const header = document.getElementById('hdr');
     if (header) {
       window.addEventListener('scroll', () => {
@@ -168,7 +168,7 @@
       }, { passive: true });
     }
 
-    // 2. Mobile Nav Toggle (Scoping runtime to web component hydration)
+    // Mobile Dynamic Drawer
     const ham = document.getElementById('ham');
     const mobNav = document.getElementById('mob');
     const mobClose = document.getElementById('mob-close');
@@ -176,20 +176,17 @@
     if (ham && mobNav) {
       ham.addEventListener('click', () => {
         mobNav.classList.toggle('open');
+        ham.classList.toggle('open');
       });
     }
     if (mobClose && mobNav) {
       mobClose.addEventListener('click', () => {
         mobNav.classList.remove('open');
-      });
-    }
-    if (mobNav) {
-      mobNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => mobNav.classList.remove('open'));
+        if (ham) ham.classList.remove('open');
       });
     }
 
-    // 3. Back to Top
+    // Auto-Scroll to Top
     const btt = document.getElementById('btt');
     if (btt) {
       window.addEventListener('scroll', () => {
@@ -198,7 +195,7 @@
       btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     }
 
-    // 4. Scroll Reveal
+    // Scroll Fade-in Reveal
     const revealEls = document.querySelectorAll('.rv');
     if (revealEls.length) {
       const revealObs = new IntersectionObserver((entries) => {
@@ -212,16 +209,7 @@
       revealEls.forEach(el => revealObs.observe(el));
     }
 
-    // 5. Active Nav Link
-    const currentPath = window.location.pathname.replace(/\/$/, '');
-    document.querySelectorAll('nav .nl, .mob a').forEach(link => {
-      try {
-        const linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/$/, '');
-        if (linkPath === currentPath) link.classList.add('active');
-      } catch (_) {}
-    });
-
-    // 11. Subtle Card Tilt
+    // Dynamic Micro-tilt aesthetic
     document.querySelectorAll('.svc-c, .aec-card.tilt').forEach(card => {
       card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
@@ -234,7 +222,7 @@
       });
     });
 
-    // 16. Azure POST endpoint for waitlist
+    // Azure Tables Waitlist Active Logic
     const waitlistBtn = document.getElementById('waitlistSubmit');
     const waitlistForm = document.querySelector('.aec-form');
 
@@ -276,7 +264,6 @@
             throw new Error("Azure table sync failed.");
           }
         } catch (error) {
-          // Soft fallback so UI doesn't freeze
           this.innerHTML = '<i class="fas fa-check" style="margin-right:8px;"></i>Waitlist Noted!';
           this.style.background = 'linear-gradient(135deg,#00c2a8,#00a890)';
           this.style.color = '#fff';
