@@ -8,7 +8,6 @@
 
   /* 🏛️ ══════════════════════════════════
      UNIVERSAL HEADER WEB COMPONENT
-     Matches your exact file tree!
   ══════════════════════════════════ */
   class AecHeader extends HTMLElement {
     connectedCallback() {
@@ -39,9 +38,8 @@
             <div class="ni">
               <a href="#" class="nl">Services <i class="fas fa-chevron-down ch"></i></a>
               <div class="drop">
-                <a href="/services/ERP.html"><i class="fas fa-project-diagram"></i>ERP Solutions</a>
+                <a href="/services/ERP.html"><i class="fas fa-project-diagram"></i>Dynamics 365 & ERP</a>
                 <a href="/services/Financial Analysis-&-Accounting.html"><i class="fas fa-file-invoice-dollar"></i>Finance & Accounting</a>
-                <a href="/services/crm.html"><i class="fas fa-users"></i>CRM Implementation</a>
                 <a href="/services/cloud.html"><i class="fas fa-cloud"></i>Cloud Services</a>
                 <a href="/services/ai-ml.html"><i class="fas fa-robot"></i>AI & Machine Learning</a>
                 <a href="/services/business-analysis.html"><i class="fas fa-chart-line"></i>Business Analysis</a>
@@ -54,6 +52,15 @@
               <div class="drop">
                 <a href="/index.html#marketplace"><i class="fas fa-store"></i>ERP & Tax Hub</a>
                 <a href="/index.html#marketplace"><i class="fas fa-microchip"></i>Compliance Micro-SaaS</a>
+              </div>
+            </div>
+
+            <div class="ni">
+              <a href="#" class="nl">Resources <i class="fas fa-chevron-down ch"></i></a>
+              <div class="drop">
+                <a href="/resources/research-insights.html"><i class="fas fa-book"></i>Research & Insights</a>
+                <a href="/resources/industry-trends.html"><i class="fas fa-chart-bar"></i>Industry Trends</a>
+                <a href="/resources/case-studies.html"><i class="fas fa-file-alt"></i>Case Studies</a>
               </div>
             </div>
 
@@ -86,7 +93,6 @@
 
   /* 🦶 ══════════════════════════════════
      UNIVERSAL FOOTER WEB COMPONENT
-     Matches your exact file tree!
   ══════════════════════════════════ */
   class AecFooter extends HTMLElement {
     connectedCallback() {
@@ -119,12 +125,11 @@
               <li><a href="/company/about.html"><i class="fas fa-chevron-right"></i>About Us</a></li>
               <li><a href="/index.html#marketplace"><i class="fas fa-chevron-right"></i>Micro-SaaS Hub</a></li>
               <li><a href="/company/contact.html"><i class="fas fa-chevron-right"></i>Contact</a></li>
-              <li><a href="/consultation.html"><i class="fas fa-chevron-right"></i>Book Consultation</a></li>
             </ul>
           </div>
 
           <div>
-            <h4>Top Services</h4>
+            <h4>Services</h4>
             <ul class="fl">
               <li><a href="/services/ERP.html"><i class="fas fa-chevron-right"></i>ERP Solutions</a></li>
               <li><a href="/services/Financial Analysis-&-Accounting.html"><i class="fas fa-chevron-right"></i>Finance & Accounting</a></li>
@@ -139,7 +144,6 @@
               <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com"><i class="fas fa-envelope"></i>Email Us</a></li>
               <li><a href="tel:+48690386721"><i class="fas fa-phone"></i>+48 690 386 721</a></li>
               <li><a href="https://wa.me/48690386721" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>WhatsApp</a></li>
-              <li><a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
             </ul>
           </div>
         </div>
@@ -154,13 +158,12 @@
   }
   customElements.define('aec-footer', AecFooter);
 
-
   /* ⚙️ ══════════════════════════════════
-     UI INTERACTION AUTOMATION (Hydrates Web Components)
+     CORE INTERACTION FUNCTIONALITY
   ══════════════════════════════════ */
   document.addEventListener("DOMContentLoaded", () => {
     
-    // Header Scroll Trigger
+    // Sticky Header Logic
     const header = document.getElementById('hdr');
     if (header) {
       window.addEventListener('scroll', () => {
@@ -208,19 +211,6 @@
       }, { threshold: 0.1 });
       revealEls.forEach(el => revealObs.observe(el));
     }
-
-    // Dynamic Micro-tilt aesthetic
-    document.querySelectorAll('.svc-c, .aec-card.tilt').forEach(card => {
-      card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width - 0.5) * 6;
-        const y = ((e.clientY - rect.top) / rect.height - 0.5) * -6;
-        card.style.transform = `perspective(700px) rotateY(${x}deg) rotateX(${y}deg) translateY(-5px)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-      });
-    });
 
     // Azure Tables Waitlist Active Logic
     const waitlistBtn = document.getElementById('waitlistSubmit');
