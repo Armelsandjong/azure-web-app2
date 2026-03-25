@@ -6,42 +6,22 @@
 
 /* ── Variables ── */
 :root {
-  /* Azure Sky Palette */
-  --navy:       #030a21; /* Deep space navy */
-  --navy2:      #07133a; /* Dark Azure */
-  --navy3:      #0c1b4f; /* True Azure */
-  --azure-glow: #0078d4; /* Microsoft Azure standard blue */
-  --teal:       #00e5ff; /* Hyper-vibrant cyan/teal */
-  --teal-pale:  rgba(0, 229, 255, 0.08);
-  
-  /* AEC Heritage Accents */
-  --gold:       #c9963c;
-  --gold-lt:     #e8b85a;
-  --gold-pale:   rgba(232, 184, 90, 0.10);
-  --gold-border: rgba(232, 184, 90, 0.22);
-  
-  /* UI Glass Colors */
-  --white:      #ffffff;
-  --muted:      rgba(255, 255, 255, 0.6);
-  --muted2:     rgba(255, 255, 255, 0.35);
-  --border:     rgba(255, 255, 255, 0.08);
-  --border2:    rgba(255, 255, 255, 0.15);
-  --card:       rgba(255, 255, 255, 0.03);
-  --card-hover: rgba(0, 120, 212, 0.06); /* Hover with Azure blue */
-  
-  --radius:     12px;
-  --radius-lg:  20px;
-  
-  /* Elevation & Lighting */
-  --shadow:     0 32px 80px rgba(0, 0, 0, 0.45);
-  --shadow-sm:  0 12px 30px rgba(0, 0, 0, 0.3);
-  --glow-sky:   0 0 40px rgba(0, 120, 212, 0.25);
-  
-  /* Typography */
-  --ff-serif:   'Times New Roman', Times, Georgia, serif;
-  --ff-sans:    'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --header-h:   70px;
-  --max-w:      1220px;
+  /* Inherits from your global azure styles */
+  --sky-blue:  var(--azure-glow);
+  --teal:      var(--teal);
+  --orange:    var(--gold);
+  --red:       #dc2626;
+  --yellow:    var(--gold-lt);
+  --light-bg:  rgba(0, 120, 212, 0.02);
+  --border:    var(--border);
+  --text:      var(--white);
+  --muted:     var(--muted);
+}
+
+/* Let the page utilize your master dark glassmorphism palette */
+body { 
+  background: var(--navy); 
+  color: var(--white); 
 }
 
 /* ── Reset ── */
