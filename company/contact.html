@@ -3,318 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Contact | AFRIQUEEUROPECONNEXIONVMETC</title>
-    <meta name="description" content="Page description here">
-    <!-- Adjust path based on subfolder depth -->
+    <title>Contact Us | AFRIQUEEUROPECONNEXIONVMETC</title>
+    <meta name="description" content="Get in touch with AEC for AI, ERP, and Digital Transformation solutions in Europe and Africa.">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #0078D4, #00B7C3);
+        }
+
+        .contact-method-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-method-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-weight: bold;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .form-control:focus {
+            border-color: #0078D4 !important;
+            box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.1);
+            outline: none;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 300px;
+            background: #eee;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Header -->
 <header>
     <div class="container">
         <nav>
-            <!-- Logo - adjust path based on subfolder depth -->
             <a href="../index.html" class="logo">
-                <img src="../assets/logo.png" alt="AEC" class="logo-img">
+                <img src="../assets/logo.png" alt="AEC Logo" class="logo-img">
             </a>
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="../index.html">Home</a></li>
-                
                 <li class="dropdown">
-                    <a href="#company" class="dropdown-toggle">
-                        Company <i class="fas fa-chevron-down"></i>
-                    </a>
+                    <a href="#company" class="dropdown-toggle">Company <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-menu">
-                        <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                        <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
-                        <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-                        <a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
+                        <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="expertise.html"><i class="fas fa-star"></i> Expertise</a>
+                        <a href="Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
                     </div>
                 </li>
-                
-                <li class="dropdown">
-                    <a href="#services" class="dropdown-toggle">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../services/ai-ml.html"><i class="fas fa-robot"></i> AI & Machine Learning</a>
-                        <a href="../services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-                        <a href="../services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
-                        <a href="../services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
-                        <a href="../services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
-                        <a href="../services/web-marketing.html"><i class="fas fa-globe"></i> Web & Marketing</a>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#resources" class="dropdown-toggle">
-                        Resources <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../resources/research-insights.html"><i class="fas fa-book"></i> Research & Insights</a>
-                        <a href="../resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
-                        <a href="../resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
-                    </div>
-                </li>
-
                 <li><a href="../consultation.html" class="cta-btn">Free Consultation</a></li>
-                <li><a href="../company/contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
     </div>
 </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1><i class="fas fa-envelope"></i> Contact Us</h1>
-                <p>
-                    Get in touch with AFRIQUEEUROPECONNEXIONVMETC. We're here to answer your questions and help transform your business with innovative digital solutions.
-                </p>
-            </div>
-        </section>
+<main>
+    <section class="hero" style="background: var(--primary-gradient); color: white; padding: 6rem 0; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;"><i class="fas fa-comments"></i> Let's Connect</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Bridge the gap between vision and reality with our global expertise.</p>
+        </div>
+    </section>
 
-        <section class="container">
-            <div class="grid-2 mt-3">
-                <div>
-                    <h2>Send Us a Message</h2>
-                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
-                    
-                    <form id="contactForm" style="margin-top: 2rem;">
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Full Name *</label>
-                            <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem;">
+    <section class="container" style="padding: 4rem 0;">
+        <div class="grid-2">
+            <div>
+                <div style="background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h2 style="margin-bottom: 1.5rem;">Inquiry Form</h2>
+                    <form id="contactForm">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <label style="font-weight: 600;">Name *</label>
+                                <input type="text" id="name" class="form-control" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:8px;">
+                            </div>
+                            <div>
+                                <label style="font-weight: 600;">Company</label>
+                                <input type="text" id="companyName" class="form-control" style="width:100%; padding:12px; border:1px solid #ccc; border-radius:8px;">
+                            </div>
                         </div>
 
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address *</label>
-                            <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <label style="font-weight: 600;">Email Address *</label>
+                            <input type="email" id="email" class="form-control" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:8px;">
                         </div>
 
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem;">
-                        </div>
-
-                        <div style="margin-bottom: 1.5rem;">
-                            <label for="service" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Service Interest *</label>
-                            <select id="service" name="service" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem;">
-                                <option value="">Select a service...</option>
-                                <option value="AI & Machine Learning">AI & Machine Learning</option>
-                                <option value="ERP Solutions">ERP Solutions</option>
-                                <option value="CRM Implementation">CRM Implementation</option>
-                                <option value="Cloud Services">Cloud Services</option>
-                                <option value="Business Analysis">Business Analysis</option>
-                                <option value="Web & Marketing">Web & Marketing</option>
-                                <option value="General Inquiry">General Inquiry</option>
-                                <option value="Partnership">Partnership Opportunity</option>
+                        <div style="margin-bottom: 1rem;">
+                            <label style="font-weight: 600;">Interested In</label>
+                            <select id="service" class="form-control" style="width:100%; padding:12px; border:1px solid #ccc; border-radius:8px;">
+                                <option>AI & Automation</option>
+                                <option>ERP Implementation</option>
+                                <option>Cloud Migration</option>
+                                <option>Business Strategy</option>
+                                <option>Other</option>
                             </select>
                         </div>
 
                         <div style="margin-bottom: 1.5rem;">
-                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message *</label>
-                            <textarea id="message" name="message" required rows="6" style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem; resize: vertical;"></textarea>
+                            <label style="font-weight: 600;">Message *</label>
+                            <textarea id="message" rows="5" class="form-control" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:8px;"></textarea>
                         </div>
 
-                        <button type="submit" class="btn-primary" style="width: 100%;">
-                            <i class="fas fa-paper-plane"></i> Send Message
+                        <button type="submit" class="btn-primary" style="width:100%; padding: 15px; background: #0078D4; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">
+                            <i class="fas fa-paper-plane"></i> Send via Email Client
                         </button>
-
-                        <div id="formMessage" style="margin-top: 1rem; padding: 1rem; border-radius: 5px; display: none;"></div>
                     </form>
-                </div>
-
-                <div>
-                    <h2>Contact Information</h2>
-                    <div class="card" style="margin-top: 2rem;">
-                        <h3 style="color: var(--sky-blue); margin-bottom: 1.5rem;"><i class="fas fa-map-marker-alt"></i> Our Offices</h3>
-                        
-                        <div style="margin-bottom: 2rem;">
-                            <h4 style="color: var(--teal); margin-bottom: 0.5rem;">Europe Office</h4>
-                            <p>
-                                <strong>Kraków, Poland</strong><br>
-                                <i class="fas fa-phone" style="color: var(--sky-blue); margin-right: 0.5rem;"></i> +48 690 386 721<br>
-                                <i class="fas fa-envelope" style="color: var(--sky-blue); margin-right: 0.5rem;"></i> ArmelSandjong@afriqueeuropeconnexionvmetc.com
-                            </p>
-                        </div>
-
-                        <div style="margin-bottom: 2rem;">
-                            <h4 style="color: var(--teal); margin-bottom: 0.5rem;">Africa Office</h4>
-                            <p>
-                                <strong>Douala, Cameroon</strong><br>
-                                <i class="fas fa-phone" style="color: var(--sky-blue); margin-right: 0.5rem;"></i> +48 690 386 721<br>
-                                <i class="fas fa-envelope" style="color: var(--sky-blue); margin-right: 0.5rem;"></i> ArmelSandjong@afriqueeuropeconnexionvmetc.com
-                            </p>
-                        </div>
-
-                        <div>
-                            <h4 style="color: var(--teal); margin-bottom: 0.5rem;">Business Hours</h4>
-                            <p>
-                                <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM (CET)<br>
-                                <strong>Saturday:</strong> 10:00 AM - 2:00 PM (CET)<br>
-                                <strong>Sunday:</strong> Closed
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="card" style="margin-top: 2rem; background: linear-gradient(135deg, var(--sky-blue), var(--teal)); color: white;">
-                        <h3 style="margin-bottom: 1rem;"><i class="fas fa-calendar-check"></i> Schedule a Consultation</h3>
-                        <p style="margin-bottom: 1.5rem;">
-                            Prefer a detailed discussion? Book a free 30-minute consultation with our experts to explore how we can help your business grow.
-                        </p>
-                        <a href="../consultation.html" class="btn-secondary" style="background: white; color: var(--sky-blue); display: inline-block;">
-                            Book Free Consultation
-                        </a>
-                    </div>
-
-                    <div style="margin-top: 2rem;">
-                        <h3 style="margin-bottom: 1rem;">Connect With Us</h3>
-                        <div style="display: flex; gap: 1rem;">
-                            <a href="https://www.linkedin.com/" target="_blank" style="width: 50px; height: 50px; background: #0077b5; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.5rem; text-decoration: none;">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://www.facebook.com/" target="_blank" style="width: 50px; height: 50px; background: #1877f2; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.5rem; text-decoration: none;">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="https://twitter.com/" target="_blank" style="width: 50px; height: 50px; background: #1da1f2; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.5rem; text-decoration: none;">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com" style="width: 50px; height: 50px; background: var(--red); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.5rem; text-decoration: none;">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
+                    <div id="formStatus" style="display:none; margin-top:1rem; padding:1rem; border-radius:8px; text-align:center;"></div>
                 </div>
             </div>
-        </section>
 
-        <section class="bg-light">
-            <div class="container">
-                <h2>Frequently Asked Questions</h2>
-                <div class="grid-2 mt-3">
-                    <div class="card">
-                        <h3 style="color: var(--sky-blue);">How quickly will I receive a response?</h3>
-                        <p>We typically respond to all inquiries within 24 hours during business days. For urgent matters, please call us directly.</p>
+            <div style="padding-left: 2rem;">
+                <h2 style="margin-bottom: 2rem;">Our Global Presence</h2>
+                
+                <div class="contact-method-card" style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                    <div style="background: #eef7ff; padding: 15px; border-radius: 12px; color: #0078D4;">
+                        <i class="fas fa-map-marker-alt fa-2x"></i>
                     </div>
-                    <div class="card">
-                        <h3 style="color: var(--teal);">Do you offer free consultations?</h3>
-                        <p>Yes! We offer complimentary 30-minute consultations to discuss your business needs and explore how we can help.</p>
-                    </div>
-                    <div class="card">
-                        <h3 style="color: var(--orange);">Which countries do you serve?</h3>
-                        <p>We primarily serve businesses in Africa and Europe, with offices in Cameroon and Poland. We also work with clients globally through remote collaboration.</p>
-                    </div>
-                    <div class="card">
-                        <h3 style="color: var(--red);">What languages do you support?</h3>
-                        <p>We provide services in English, French, and Polish to better serve our diverse client base across continents.</p>
+                    <div>
+                        <h4 style="margin: 0;">Main Office (Poland)</h4>
+                        <p>Kraków, Lesser Poland Voivodeship<br>Strategic Operations & IT Development</p>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>About AEC</h3>
-                    <p>
-                        AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner, empowering businesses across Africa and Europe through technology, innovation, and collaboration since 2017.
-                    </p>
+                <div class="contact-method-card" style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                    <div style="background: #eef7ff; padding: 15px; border-radius: 12px; color: #0078D4;">
+                        <i class="fas fa-globe-africa fa-2x"></i>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0;">Africa Hub (Cameroon)</h4>
+                        <p>Douala, Littoral Region<br>Business Transformation & Outreach</p>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="../services/ai-ml.html">AI & ML</a></li>
-                        <li><a href="../resources/research-insights.html">Research</a></li>
-                        <li><a href="../csr/social-impact.html">Social Impact</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+
+                <div class="contact-method-card" onclick="copyEmail()" style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                    <div style="background: #eef7ff; padding: 15px; border-radius: 12px; color: #0078D4;">
+                        <i class="fas fa-envelope-open-text fa-2x"></i>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0;">Direct Email</h4>
+                        <p id="aecEmail">ArmelSandjong@afriqueeuropeconnexionvmetc.com</p>
+                        <small style="color: #0078D4;">Click to copy address</small>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="../services/ERP.html">ERP Solutions</a></li>
-                        <li><a href="../services/crm.html">CRM Implementation</a></li>
-                        <li><a href="../services/cloud.html">Cloud Services</a></li>
-                        <li><a href="../services/business-analysis.html">Business Analysis</a></li>
-                        <li><a href="../services/web-marketing.html">Web Marketing</a></li>
-                    </ul>
+
+                <div class="map-container">
+                    <i class="fas fa-map-marked-alt fa-3x" style="color: #ccc; margin-right: 10px;"></i>
+                    <p style="color: #666;">Interactive Map Loading...</p>
                 </div>
-                <div class="footer-col">
-                    <h3>Connect</h3>
-                    <ul class="footer-links">
-                        <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com">Email Us</a></li>
-                        <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                    </ul>
-                    <p style="margin-top: 1rem;">
-                        <strong>Phone:</strong> +48 690 386 721<br>
-                        <strong>Locations:</strong> Douala, Cameroon | Krakow, Poland
-                    </p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                &copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved. | Designed by Armel Sandjong Nantchouang
             </div>
         </div>
-    </footer>
+    </section>
+</main>
 
-    <script>
-        // Contact Form Handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formMessage = document.getElementById('formMessage');
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service').value;
-            const message = document.getElementById('message').value;
-            
-            // Create mailto link with form data
-            const subject = encodeURIComponent(`Service Request: ${service} - ${name}`);
-            const body = encodeURIComponent(
-                `Name: ${name}\n` +
-                `Email: ${email}\n` +
-                `Phone: ${phone || 'Not provided'}\n` +
-                `Service Interest: ${service}\n\n` +
-                `Message:\n${message}\n\n` +
-                `---\nSent from AEC Contact Form`
-            );
-            
-            const mailtoLink = `mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com?subject=${subject}&body=${body}`;
-            
-            // Open default email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            formMessage.style.display = 'block';
-            formMessage.style.background = '#c6f6d5';
-            formMessage.style.color = '#22543d';
-            formMessage.innerHTML = '<i class="fas fa-check-circle"></i> Your email client has been opened. Please send the email to complete your request.';
-            
-            // Reset form
-            setTimeout(() => {
-                this.reset();
-            }, 1000);
-        });
+<a href="https://wa.me/48690386721" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp fa-2x"></i>
+    <span>Chat with AEC</span>
+</a>
 
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+<footer class="footer" style="background: #111; color: white; padding: 3rem 0; margin-top: 4rem;">
+    <div class="container" style="text-align: center;">
+        <p>&copy; 2026 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved.</p>
+        <div style="margin-top: 1rem;">
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Form Submission Logic
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const status = document.getElementById('formStatus');
+        const name = document.getElementById('name').value;
+        const company = document.getElementById('companyName').value || 'N/A';
+        const service = document.getElementById('service').value;
+        const message = document.getElementById('message').value;
+
+        const subject = encodeURIComponent(`AEC Inquiry: ${service} from ${name}`);
+        const body = encodeURIComponent(`Client Name: ${name}\nCompany: ${company}\nInterest: ${service}\n\nMessage:\n${message}`);
+        
+        window.location.href = `mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com?subject=${subject}&body=${body}`;
+
+        status.style.display = 'block';
+        status.style.background = '#d4edda';
+        status.style.color = '#155724';
+        status.innerHTML = "Opening your email client... If it doesn't open, please email us directly.";
+    });
+
+    // Copy Email Function
+    function copyEmail() {
+        const emailText = document.getElementById('aecEmail').innerText;
+        navigator.clipboard.writeText(emailText);
+        alert("Email address copied to clipboard!");
+    }
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+        document.getElementById('navLinks').classList.toggle('active');
+    }
+</script>
+
 </body>
 </html>
