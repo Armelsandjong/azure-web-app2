@@ -1,291 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> WEB-Marketing | AFRIQUEEUROPECONNEXIONVMETC</title>
-    <meta name="description" content="Page description here">
-    <!-- Adjust path based on subfolder depth -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development & Digital Marketing | AFRIQUEEUROPECONNEXIONVMETC</title>
+  <meta name="description" content="Professional web architecture and strategic digital marketing to amplify your presence across European and African markets.">
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PDMNDP8F');</script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","v4lglq0gvb");</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    :root {
+      --navy: #0b1535; --navy2: #0f1e4a; --gold: #c9963c; --gold-l: #e8b85a;
+      --teal: #00c2a8; --muted: rgba(255,255,255,.52); --card: rgba(255,255,255,.035);
+      --border: rgba(255,255,255,.08); --ff-serif: "Playfair Display", serif; --ff-sans: "DM Sans", sans-serif;
+    }
+    body { background: var(--navy); color: #e0e4f0; font-family: var(--ff-sans); line-height: 1.7; overflow-x: hidden; }
+
+    /* HEADER & NAV */
+    .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(11,21,53,.85); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); height: 72px; }
+    .hdr-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; height: 100%; }
+    .logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+    .logo img { height:40px; }
+    .logo-text { font-family:var(--ff-serif); font-size:1.5rem; color:#fff; font-weight: 800; }
+    .nav-links { display: flex; align-items: center; gap: 10px; list-style: none; margin-left: auto; }
+    .nav-links a { padding: 10px 15px; color: rgba(255,255,255,.8); text-decoration: none; font-size: .9rem; transition: .3s; }
+    .nav-links a.active { color: var(--gold-l); background: rgba(255,255,255,0.05); border-radius: 8px; }
+
+    /* WEB-MARKETING FORM & PANEL */
+    .glass-panel { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: 24px; padding: 50px; }
+    .form-input { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 15px; border-radius: 10px; color: #fff; margin-top: 8px; font-family: var(--ff-sans); }
+    .form-label { display: block; font-size: .7rem; color: var(--gold-l); letter-spacing: 1px; font-weight: 700; text-transform: uppercase; }
+
+    /* FLOATING SOCIALS */
+    .floating-social { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 10px; z-index: 999; }
+    .floating-social a { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; transition: 0.3s; font-size: 1.1rem; }
+    .linkedin { background: #0077b5; } .facebook { background: #1877f2; } .twitter { background: #000; }
+    .whatsapp { background: #25d366; } .instagram { background: #e4405f; } .researchgate { background: #00ccbb; }
+
+    /* REVEAL */
+    [data-rv] { opacity: 0; transform: translateY(40px); transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
+    [data-rv].visible { opacity: 1; transform: translateY(0); }
+  </style>
 </head>
 <body>
 
-<!-- Header -->
-<header>
-    <div class="container">
-        <nav>
-            <!-- Logo - adjust path based on subfolder depth -->
-            <a href="../index.html" class="logo">
-                <img src="../assets/logo.png" alt="AEC" class="logo-img">
-            </a>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html">Home</a></li>
-                
-                <li class="dropdown">
-                    <a href="#company" class="dropdown-toggle">
-                        Company <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                        <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
-                        <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-                        <a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
-                    </div>
-                </li>
-                
-                <li class="dropdown">
-                    <a href="#services" class="dropdown-toggle">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../services/ai-ml.html"><i class="fas fa-robot"></i> AI & Machine Learning</a>
-                        <a href="../services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-                        <a href="../services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
-                        <a href="../services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
-                        <a href="../services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
-                        <a href="../services/web-marketing.html"><i class="fas fa-globe"></i> Web & Marketing</a>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#resources" class="dropdown-toggle">
-                        Resources <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../resources/research-insights.html"><i class="fas fa-book"></i> Research & Insights</a>
-                        <a href="../resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
-                        <a href="../resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
-                    </div>
-                </li>
-
-                <li><a href="../consultation.html" class="cta-btn">Free Consultation</a></li>
-                <li><a href="../company/contact.html">Contact</a></li>
-            </ul>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </div>
+<header class="site-header">
+  <div class="hdr-inner">
+    <a href="../index.html" class="logo">
+      <img src="../assets/logo.png" alt="AEC">
+      <span class="logo-text">AEC</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../company/about.html">About</a></li>
+      <li><a href="ai-ml.html">AI Solutions</a></li>
+      <li><a href="ERP.html">ERP Systems</a></li>
+      <li><a href="web-marketing.html" class="active">Web-Marketing</a></li>
+      <li><a href="../consultation.html" style="background:var(--gold); color:var(--navy); font-weight:700;">Free Audit</a></li>
+    </ul>
+  </div>
 </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1><i class="fas fa-globe"></i> Web Development & Digital Marketing</h1>
-                <p>Professional websites and strategic marketing to amplify your digital presence</p>
-                <a href="../consultation.html" class="btn-primary">Get Free Website Audit</a>
-            </div>
-        </section>
-
-        <section class="container">
-            <h2>Transform Your Digital Presence</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
-                Your website is your digital storefront. We create stunning websites and execute marketing strategies that attract visitors and convert them into customers.
-            </p>
-
-            <div class="grid-3">
-                <div class="card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Website Development</h3>
-                    <p>Custom responsive websites that work perfectly on all devices.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-search"></i>
-                    <h3>SEO Optimization</h3>
-                    <p>Get found on Google with strategic SEO.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-bullhorn"></i>
-                    <h3>Digital Marketing</h3>
-                    <p>Multi-channel campaigns that deliver results.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-light">
-            <div class="container">
-                <h2 style="text-align: center;">Our Services</h2>
-                <div class="grid-2">
-                    <div class="card">
-                        <i class="fas fa-paint-brush"></i>
-                        <h3>Website Design & Development</h3>
-                        <ul>
-                            <li>Custom responsive design</li>
-                            <li>Mobile-first approach</li>
-                            <li>Fast loading speeds</li>
-                            <li>E-commerce integration</li>
-                            <li>Security & SSL</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>SEO Optimization</h3>
-                        <ul>
-                            <li>Keyword research</li>
-                            <li>On-page optimization</li>
-                            <li>Technical SEO</li>
-                            <li>Link building</li>
-                            <li>Performance tracking</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <i class="fas fa-share-alt"></i>
-                        <h3>Social Media Marketing</h3>
-                        <ul>
-                            <li>Content creation</li>
-                            <li>Community management</li>
-                            <li>Paid advertising</li>
-                            <li>Analytics & reporting</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <i class="fas fa-ad"></i>
-                        <h3>PPC Advertising</h3>
-                        <ul>
-                            <li>Google Ads</li>
-                            <li>Facebook & Instagram ads</li>
-                            <li>LinkedIn advertising</li>
-                            <li>Campaign optimization</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="container">
-            <h2 style="text-align: center;">Website Packages</h2>
-            <div class="grid-3">
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 2rem;">Starter</h3>
-                    <p>Perfect for small businesses</p>
-                    <ul style="text-align: left; margin: 2rem 0;">
-                        <li>Up to 5 pages</li>
-                        <li>Responsive design</li>
-                        <li>Contact form</li>
-                        <li>Basic SEO</li>
-                        <li>1 month support</li>
-                    </ul>
-                    <a href="../consultation.html" class="btn-secondary">Get Started</a>
-                </div>
-
-                <div class="card" style="text-align: center; border-top-color: var(--red); transform: scale(1.05);">
-                    <div style="background: var(--red); color: white; padding: 10px; margin: -2.5rem -2.5rem 1rem -2.5rem; border-radius: 12px 12px 0 0;">
-                        <strong>MOST POPULAR</strong>
-                    </div>
-                    <h3 style="font-size: 2rem;">Professional</h3>
-                    <p>Complete solution</p>
-                    <ul style="text-align: left; margin: 2rem 0;">
-                        <li>Up to 15 pages</li>
-                        <li>Custom design</li>
-                        <li>CMS integration</li>
-                        <li>Advanced SEO</li>
-                        <li>E-commerce ready</li>
-                        <li>3 months support</li>
-                    </ul>
-                    <a href="../consultation.html" class="btn-primary">Get Started</a>
-                </div>
-
-                <div class="card" style="text-align: center;">
-                    <h3 style="font-size: 2rem;">Enterprise</h3>
-                    <p>Full-scale solution</p>
-                    <ul style="text-align: left; margin: 2rem 0;">
-                        <li>Unlimited pages</li>
-                        <li>Custom functionality</li>
-                        <li>Multi-language</li>
-                        <li>Full e-commerce</li>
-                        <li>Priority support</li>
-                        <li>12 months support</li>
-                    </ul>
-                    <a href="../consultation.html" class="btn-secondary">Get Started</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="stats">
-            <div class="container text-center">
-                <h2 style="color: white;">Ready to Grow Your Online Presence?</h2>
-                <p style="font-size: 1.3rem; margin: 2rem auto; max-width: 700px;">
-                    Get a free website audit and marketing consultation today.
-                </p>
-                <a href="../consultation.html" class="btn-primary" style="margin-right: 1rem;">Get Free Audit</a>
-                <a href="../company/contact.html" class="btn-secondary" style="background: white; color: var(--sky-blue);">Contact Us</a>
-                <p style="margin-top: 2rem;">
-                    <i class="fab fa-whatsapp"></i> 
-                    <a href="https://wa.me/48690386721?text=I'm%20interested%20in%20web%20marketing" target="_blank" style="color: #25D366;">
-                        Chat on WhatsApp: +48 690 386 721
-                    </a>
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>About AEC</h3>
-                    <p>AFRIQUEEUROPECONNEXIONVMETC - Microsoft Partner empowering businesses since 2017.</p>
-                    <p style="margin-top: 1rem; font-weight: 600; color: var(--yellow);">
-                        Aim High • Be Kind • Dare to be Different
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../company/about.html">About</a></li>
-                        <li><a href="../company/mission.html">Mission</a></li>
-                        <li><a href="../company/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="ai-ml.html">AI & ML</a></li>
-                        <li><a href="ERP.html">ERP</a></li>
-                        <li><a href="crm.html">CRM</a></li>
-                        <li><a href="cloud.html">Cloud</a></li>
-                        <li><a href="business-analysis.html">Business Analysis</a></li>
-                        <li><a href="web-marketing.html">Web Marketing</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Connect</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/posts/?feedView=all" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.facebook.com/armelsandjongbusiness/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/SandjongAr3472" target="_blank" class="twitter"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.instagram.com/afriqueeuropeconnexionvmetc237/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/48690386721" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang?ev=hdr_xprf" target="_blank" class="researchgate"><i class="fab fa-researchgate"></i></a>
-                        <a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com" class="email"><i class="fas fa-envelope"></i></a>
-                    </div>
-                    <p style="margin-top: 1.5rem;">
-                        <strong>Email:</strong> ArmelSandjong@afriqueeuropeconnexionvmetc.com<br>
-                        <strong>Phone:</strong> +48 690 386 721
-                    </p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                &copy; 2025 AFRIQUEEUROPECONNEXIONVMETC. All Rights Reserved. | <i class="fab fa-microsoft"></i> Microsoft Partner
-            </div>
-        </div>
-    </footer>
-
-    <div class="floating-social">
-        <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/posts/?feedView=all" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.facebook.com/armelsandjongbusiness/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://x.com/SandjongAr3472" target="_blank" class="twitter"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://wa.me/48690386721" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/afriqueeuropeconnexionvmetc237/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang?ev=hdr_xprf" target="_blank" class="researchgate"><i class="fab fa-researchgate"></i></a>
+<main>
+  <section style="padding: 180px 40px 100px; background: radial-gradient(circle at top right, rgba(0,194,168,0.05), transparent);">
+    <div style="max-width: 1300px; margin: 0 auto;">
+      <nav style="color:var(--muted); font-size:.8rem; margin-bottom:20px;">
+        <a href="../index.html" style="color:var(--gold-l)">Home</a> / Services / Web-Marketing
+      </nav>
+      <span style="color:var(--teal); font-weight:700; text-transform:uppercase; letter-spacing:2px; font-size:.75rem;">Global Digital Presence</span>
+      <h1 style="font-family: var(--ff-serif); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin: 20px 0;">Transform Your <span style="color:var(--gold-l)">Digital Storefront</span></h1>
+      <p style="max-width:700px; font-size:1.2rem; color:var(--muted);">Professional web architecture and strategic SEO marketing designed to bridge the gap between European design standards and African market dynamics.</p>
     </div>
-    <script src="js/main.js"></script>
+  </section>
+
+  <section style="padding: 100px 0;">
+    <div style="max-width: 1300px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+      
+      <div data-rv>
+        <h2 style="font-family: var(--ff-serif); font-size: 2.8rem; margin-bottom: 25px;">Architecting <em>High-Conversion</em> Experiences</h2>
+        <p style="color: var(--muted); margin-bottom: 30px;">We move beyond standard templates. Our team engineers custom Micro-SaaS environments and SEO-optimized platforms that perform across low-bandwidth regions and high-competition markets alike.</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div style="padding: 30px; background: var(--card); border: 1px solid var(--border); border-radius: 15px;">
+            <i class="fas fa-search-dollar" style="color: var(--gold); font-size: 1.5rem; margin-bottom: 15px; display: block;"></i>
+            <h4 style="font-family: var(--ff-serif);">SEO Dominance</h4>
+            <p style="font-size: .85rem; color: var(--muted);">Strategic keyword mapping for EU and African search trends.</p>
+          </div>
+          <div style="padding: 30px; background: var(--card); border: 1px solid var(--border); border-radius: 15px;">
+            <i class="fas fa-mobile-alt" style="color: var(--gold); font-size: 1.5rem; margin-bottom: 15px; display: block;"></i>
+            <h4 style="font-family: var(--ff-serif);">Mobile-First</h4>
+            <p style="font-size: .85rem; color: var(--muted);">Ultra-responsive design optimized for the mobile-majority user base.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-panel" data-rv>
+        <h3 style="font-family: var(--ff-serif); font-size: 2rem; margin-bottom: 30px; color: #fff;">Request a <span style="color:var(--gold-l)">Web Audit</span></h3>
+        <form action="#" method="POST">
+          <div style="margin-bottom: 20px;">
+            <label class="form-label">Current Website URL (If any)</label>
+            <input type="url" class="form-input" placeholder="https://your-company.com">
+          </div>
+          <div style="margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div>
+              <label class="form-label">Main Goal</label>
+              <select class="form-input">
+                <option>Lead Generation</option>
+                <option>Brand Identity</option>
+                <option>E-commerce Scale</option>
+                <option>Speed Optimization</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Target Market</label>
+              <select class="form-input">
+                <option>Europe</option>
+                <option>Africa</option>
+                <option>Global</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-bottom: 30px;">
+            <label class="form-label">Specific Challenges</label>
+            <textarea class="form-input" style="height: 100px;" placeholder="What isn't working with your current digital presence?"></textarea>
+          </div>
+          <button type="submit" style="width: 100%; padding: 18px; border-radius: 12px; border: none; background: var(--gold); color: var(--navy); font-weight: 800; cursor: pointer; text-transform: uppercase; letter-spacing: 1px;">Analyze My Presence</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" style="background: #050a1a; padding: 100px 0 40px; border-top: 1px solid var(--border);">
+  <div style="max-width: 1300px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px;">
+    <div>
+      <a href="../index.html" class="logo" style="margin-bottom:20px; display:flex;">
+        <img src="../assets/logo.png" alt="AEC" style="height:40px;">
+        <span class="logo-text" style="margin-left:10px;">AEC</span>
+      </a>
+      <p style="color:var(--muted); font-size:.9rem;">Aim High • Be Kind • Dare to be Different. Leading Digital Transformation partner since 2017.</p>
+    </div>
+    <div>
+      <h4 style="font-family:var(--ff-serif); color:#fff; margin-bottom:20px;">Services</h4>
+      <ul style="list-style:none; line-height:2.5; font-size:.9rem; color:var(--muted);">
+        <li>AI & Machine Learning</li>
+        <li>ERP Implementation</li>
+        <li>Strategic Finance</li>
+        <li>Web-Marketing</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-family:var(--ff-serif); color:#fff; margin-bottom:20px;">Company</h4>
+      <ul style="list-style:none; line-height:2.5; font-size:.9rem; color:var(--muted);">
+        <li>About AEC</li>
+        <li>Volunteer Hub</li>
+        <li>Expertise</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-family:var(--ff-serif); color:#fff; margin-bottom:20px;">HQ Connect</h4>
+      <p style="color:var(--muted); font-size:.9rem;">Kraków, Poland<br>+48 690 386 721<br>ArmelSandjong@afriqueeuropeconnexionvmetc.com</p>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-social">
+  <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://www.facebook.com/armelsandjongbusiness/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://x.com/SandjongAr3472" target="_blank" class="twitter"><i class="fab fa-x-twitter"></i></a>
+  <a href="https://wa.me/48690386721" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.instagram.com/afriqueeuropeconnexionvmetc237/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank" class="researchgate"><i class="fab fa-researchgate"></i></a>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('[data-rv]').forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
