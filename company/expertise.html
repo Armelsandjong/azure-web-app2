@@ -3,63 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Expertise | AFRIQUEEUROPECONNEXIONVMETC</title>
-    <meta name="description" content="Page description here">
-    <!-- Adjust path based on subfolder depth -->
+    <title>Expertise & Documentation | AFRIQUEEUROPECONNEXIONVMETC</title>
+    <meta name="description" content="Access AEC's project documentation, contract templates, and cloud resources.">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        /* Modern Glassmorphism & UI Enhancements */
+        .document-embed-container {
+            position: relative;
+            width: 100%;
+            padding-top: 75%; /* Maintains 4:3 Aspect Ratio */
+            background: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .document-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cloud-resource-card {
+            display: block;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .cloud-resource-card:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background: #e1f5fe;
+            color: #0288d1;
+        }
+
+        /* Responsive Grid Adjustments */
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 { grid-template-columns: 1fr !important; }
+            .hero h1 { font-size: 2.2rem !important; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- Header -->
 <header>
     <div class="container">
         <nav>
-            <!-- Logo - adjust path based on subfolder depth -->
             <a href="../index.html" class="logo">
-                <img src="../assets/logo.png" alt="AEC" class="logo-img">
+                <img src="../assets/logo.png" alt="AEC Logo" class="logo-img">
             </a>
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="../index.html">Home</a></li>
-                
                 <li class="dropdown">
-                    <a href="#company" class="dropdown-toggle">
-                        Company <i class="fas fa-chevron-down"></i>
-                    </a>
+                    <a href="#company" class="dropdown-toggle">Company <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-menu">
                         <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                        <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
                         <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-                        <a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
                     </div>
                 </li>
-                
-                <li class="dropdown">
-                    <a href="#services" class="dropdown-toggle">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../services/ai-ml.html"><i class="fas fa-robot"></i> AI & Machine Learning</a>
-                        <a href="../services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-                        <a href="../services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
-                        <a href="../services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
-                        <a href="../services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
-                        <a href="../services/web-marketing.html"><i class="fas fa-globe"></i> Web & Marketing</a>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#resources" class="dropdown-toggle">
-                        Resources <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../resources/research-insights.html"><i class="fas fa-book"></i> Research & Insights</a>
-                        <a href="../resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
-                        <a href="../resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
-                    </div>
-                </li>
-
                 <li><a href="../consultation.html" class="cta-btn">Free Consultation</a></li>
                 <li><a href="../company/contact.html">Contact</a></li>
             </ul>
@@ -72,386 +95,123 @@
 </header>
 
 <main>
-    <!-- Hero Section -->
-    <section class="hero" style="min-height: 50vh; padding: 6rem 0;">
-        <div class="container" style="text-align: center;">
-            <h1 style="font-size: 3rem; margin-bottom: 1.5rem;">📚 Project Documentation & Expertise</h1>
-            <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
-                Access our comprehensive project documentation, templates, and resources. View and download documents directly from our Microsoft workspace.
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/hero-bg.jpg'); background-size: cover; color: white; padding: 8rem 0; text-align: center;">
+        <div class="container">
+            <span class="status-badge" style="background: #FFB900; color: #000;">V 2.0 Document Portal</span>
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Project Expertise & Assets</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; opacity: 0.9;">
+                Secure access to our strategic frameworks, legal templates, and technical documentation hosted on Microsoft 365.
             </p>
         </div>
     </section>
 
-    <!-- Embedded Documents Section -->
-    <section class="container" style="padding: 4rem 0;">
-        <h2 style="text-align: center; margin-bottom: 3rem;">📄 Our Documentation Library</h2>
+    <section class="container" style="padding: 5rem 0;">
+        <h2 style="text-align: center; margin-bottom: 3rem;"><i class="fas fa-folder-open"></i> Professional Resource Library</h2>
         
-        <div class="grid-2">
-            <!-- Word Document -->
-            <div class="card">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                    <i class="fas fa-file-word" style="font-size: 3rem; color: #2B579A;"></i>
-                    <div>
-                        <h3 style="margin: 0; color: #2B579A;">Contract Templates</h3>
-                        <p style="margin: 0; font-size: 0.9rem; color: #666;">Standard legal agreement frameworks</p>
-                    </div>
+        <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <div class="card" style="border-top: 5px solid #2B579A;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <i class="fas fa-file-word" style="font-size: 2.5rem; color: #2B579A;"></i>
+                    <h3>Contractual Frameworks</h3>
                 </div>
-                
-                <div class="document-embed">
-                    <iframe src="YOUR_WORD_ONLINE_EMBED_URL" 
-                            style="width: 100%; height: 400px; border: 1px solid #e1e1e1; border-radius: 8px;"
-                            frameborder="0">
-                    </iframe>
+                <div class="document-embed-container">
+                    <iframe src="YOUR_WORD_ONLINE_EMBED_URL" title="Word Document Viewer" frameborder="0"></iframe>
                 </div>
-                
-                <div style="margin-top: 1rem; display: flex; gap: 1rem;">
-                    <a href="YOUR_WORD_DIRECT_LINK" target="_blank" class="btn-secondary" style="flex: 1; text-align: center;">
-                        <i class="fas fa-external-link-alt"></i> Open in Word Online
+                <div style="margin-top: 1rem;">
+                    <a href="YOUR_WORD_DIRECT_LINK" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; border: 1px solid #2B579A; border-radius: 5px; color: #2B579A; text-decoration: none;">
+                        <i class="fas fa-external-link-alt"></i> Fullscreen Edit
                     </a>
                 </div>
             </div>
 
-            <!-- Excel Document -->
-            <div class="card">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                    <i class="fas fa-file-excel" style="font-size: 3rem; color: #217346;"></i>
-                    <div>
-                        <h3 style="margin: 0; color: #217346;">Service Pricing & Packages</h3>
-                        <p style="margin: 0; font-size: 0.9rem; color: #666;">Detailed pricing structure</p>
-                    </div>
+            <div class="card" style="border-top: 5px solid #217346;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <i class="fas fa-file-excel" style="font-size: 2.5rem; color: #217346;"></i>
+                    <h3>Service Pricing Index</h3>
                 </div>
-                
-                <div class="document-embed">
-                    <iframe src="YOUR_EXCEL_ONLINE_EMBED_URL" 
-                            style="width: 100%; height: 400px; border: 1px solid #e1e1e1; border-radius: 8px;"
-                            frameborder="0">
-                    </iframe>
+                <div class="document-embed-container">
+                    <iframe src="YOUR_EXCEL_ONLINE_EMBED_URL" title="Excel Sheet Viewer" frameborder="0"></iframe>
                 </div>
-                
-                <div style="margin-top: 1rem; display: flex; gap: 1rem;">
-                    <a href="YOUR_EXCEL_DIRECT_LINK" target="_blank" class="btn-secondary" style="flex: 1; text-align: center;">
-                        <i class="fas fa-external-link-alt"></i> Open in Excel Online
-                    </a>
-                </div>
-            </div>
-
-            <!-- PowerPoint Document -->
-            <div class="card">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                    <i class="fas fa-file-powerpoint" style="font-size: 3rem; color: #D24726;"></i>
-                    <div>
-                        <h3 style="margin: 0; color: #D24726;">Services Overview</h3>
-                        <p style="margin: 0; font-size: 0.9rem; color: #666;">Comprehensive presentation</p>
-                    </div>
-                </div>
-                
-                <div class="document-embed">
-                    <iframe src="YOUR_POWERPOINT_EMBED_URL" 
-                            style="width: 100%; height: 400px; border: 1px solid #e1e1e1; border-radius: 8px;"
-                            frameborder="0">
-                    </iframe>
-                </div>
-                
-                <div style="margin-top: 1rem; display: flex; gap: 1rem;">
-                    <a href="YOUR_POWERPOINT_DIRECT_LINK" target="_blank" class="btn-secondary" style="flex: 1; text-align: center;">
-                        <i class="fas fa-external-link-alt"></i> Open in PowerPoint Online
-                    </a>
-                </div>
-            </div>
-
-            <!-- PDF/SharePoint Document -->
-            <div class="card">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                    <i class="fas fa-file-pdf" style="font-size: 3rem; color: #D13438;"></i>
-                    <div>
-                        <h3 style="margin: 0; color: #D13438;">Legal Framework Guide</h3>
-                        <p style="margin: 0; font-size: 0.9rem; color: #666;">Comprehensive legal documentation</p>
-                    </div>
-                </div>
-                
-                <div class="document-embed">
-                    <iframe src="YOUR_SHAREPOINT_EMBED_URL" 
-                            style="width: 100%; height: 400px; border: 1px solid #e1e1e1; border-radius: 8px;"
-                            frameborder="0">
-                    </iframe>
-                </div>
-                
-                <div style="margin-top: 1rem; display: flex; gap: 1rem;">
-                    <a href="YOUR_SHAREPOINT_DIRECT_LINK" target="_blank" class="btn-secondary" style="flex: 1; text-align: center;">
-                        <i class="fas fa-external-link-alt"></i> Open in SharePoint
+                <div style="margin-top: 1rem;">
+                    <a href="YOUR_EXCEL_DIRECT_LINK" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; border: 1px solid #217346; border-radius: 5px; color: #217346; text-decoration: none;">
+                        <i class="fas fa-table"></i> Open Spreadsheet
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Cloud Resources Section -->
-    <section class="bg-light">
+    <section style="background: #0078D4; padding: 5rem 0; color: white;">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem;">☁️ Cloud Resources</h2>
-            
-            <div class="card" style="background: linear-gradient(135deg, #0078D4, #50E6FF); color: white; padding: 3rem;">
-                <h3 style="color: white; text-align: center; margin-bottom: 2rem; font-size: 2rem;">
-                    <i class="fas fa-cloud"></i> Microsoft Cloud Workspace
-                </h3>
-                
-                <div class="grid-3" style="gap: 2rem;">
-                    <a href="YOUR_ONEDRIVE_FOLDER_LINK" target="_blank" class="cloud-resource-card">
-                        <i class="fas fa-cloud" style="font-size: 3rem; margin-bottom: 1rem; display: block;"></i>
-                        <h4>OneDrive Folder</h4>
-                        <p>Access all documents in one place</p>
-                    </a>
-                    
-                    <a href="YOUR_SHAREPOINT_SITE_LINK" target="_blank" class="cloud-resource-card">
-                        <i class="fas fa-sitemap" style="font-size: 3rem; margin-bottom: 1rem; display: block;"></i>
-                        <h4>SharePoint Site</h4>
-                        <p>Full document library & collaboration</p>
-                    </a>
-                    
-                    <a href="YOUR_TEAMS_LINK" target="_blank" class="cloud-resource-card">
-                        <i class="fas fa-users" style="font-size: 3rem; margin-bottom: 1rem; display: block;"></i>
-                        <h4>Teams Channel</h4>
-                        <p>Collaborate with our team directly</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Instructions Section -->
-    <section class="container">
-        <div class="grid-2">
-            <div class="card">
-                <h3><i class="fas fa-info-circle"></i> How to Use These Documents</h3>
-                <ul style="line-height: 2; margin-top: 1.5rem;">
-                    <li><strong>📖 View Inline:</strong> Documents are embedded directly on this page for quick preview</li>
-                    <li><strong>🔗 Open Full Version:</strong> Click the button below each document to open in Microsoft Office Online</li>
-                    <li><strong>💾 Download:</strong> Use the download option in Office Online to save a local copy</li>
-                    <li><strong>💬 Collaborate:</strong> Registered users can leave comments and suggestions</li>
-                    <li><strong>🔒 Request Access:</strong> Contact us if you need permission for restricted documents</li>
-                </ul>
-            </div>
-
-            <div class="card" style="background: linear-gradient(135deg, #FFB900, #F7630C); color: white;">
-                <h3 style="color: white;"><i class="fas fa-lightbulb"></i> Need Custom Documentation?</h3>
-                <p style="color: white; margin: 1.5rem 0;">
-                    Looking for specific templates or custom documentation for your business? Our team can create tailored solutions.
-                </p>
-                <a href="../consultation.html" class="btn-impact" style="background: white; color: #F7630C;">
-                    <i class="fas fa-calendar-check"></i> Request Custom Documentation
+            <h2 style="text-align: center; color: white; margin-bottom: 3rem;">AEC Cloud Ecosystem</h2>
+            <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <a href="YOUR_ONEDRIVE_LINK" class="cloud-resource-card">
+                    <i class="fas fa-cloud" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                    <h4>OneDrive Storage</h4>
+                    <p>Client shared folders & deliverables</p>
+                </a>
+                <a href="YOUR_SHAREPOINT_LINK" class="cloud-resource-card">
+                    <i class="fas fa-university" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                    <h4>SharePoint Site</h4>
+                    <p>Internal knowledge base & Wiki</p>
+                </a>
+                <a href="YOUR_TEAMS_LINK" class="cloud-resource-card">
+                    <i class="fab fa-microsoft" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                    <h4>Teams Hub</h4>
+                    <p>Real-time project collaboration</p>
                 </a>
             </div>
         </div>
     </section>
-
-    <!-- How to Get Embed Links Section -->
-    <section class="bg-light">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem;">🔧 How to Embed Your Documents</h2>
-            
-            <div class="grid-3">
-                <div class="card">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #0078D4, #50E6FF); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                        <span style="color: white; font-size: 1.5rem; font-weight: bold;">1</span>
-                    </div>
-                    <h4>Upload to OneDrive/SharePoint</h4>
-                    <p>Upload your Word, Excel, PowerPoint, or PDF files to your Microsoft OneDrive or SharePoint site.</p>
-                </div>
-
-                <div class="card">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #0078D4, #50E6FF); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                        <span style="color: white; font-size: 1.5rem; font-weight: bold;">2</span>
-                    </div>
-                    <h4>Get Embed Code</h4>
-                    <p>Open the file → Click "Share" → Select "Embed" → Copy the iframe embed code provided by Microsoft.</p>
-                </div>
-
-                <div class="card">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #0078D4, #50E6FF); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                        <span style="color: white; font-size: 1.5rem; font-weight: bold;">3</span>
-                    </div>
-                    <h4>Paste Embed URL</h4>
-                    <p>Replace the placeholder URLs (YOUR_WORD_ONLINE_EMBED_URL, etc.) in this page with your actual embed links.</p>
-                </div>
-            </div>
-
-            <div class="card" style="margin-top: 3rem; background: #FFF9E6; border-left: 4px solid #FFB900;">
-                <h4 style="color: #F7630C;"><i class="fas fa-exclamation-triangle"></i> Important Notes</h4>
-                <ul style="margin-top: 1rem; line-height: 1.8;">
-                    <li>Make sure your documents are set to <strong>"Anyone with the link can view"</strong> for public access</li>
-                    <li>The embed URL is different from the share URL - always use the embed code from the "Embed" option</li>
-                    <li>For Excel files, you can choose which sheet to display in the embed settings</li>
-                    <li>PowerPoint files will display in slideshow format when embedded</li>
-                    <li>Large files may take a moment to load in the embedded viewer</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="stats cta-section">
-        <div class="container text-center">
-            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">Need Help with Documentation?</h2>
-            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; color: white; opacity: 0.95;">
-                Our team is here to help you access, understand, and utilize our documentation resources.
-            </p>
-            <a href="../company/contact.html" class="btn-cta">
-                <i class="fas fa-envelope"></i> Contact Our Team
-            </a>
-            <p style="margin-top: 1.5rem; font-size: 1.1rem; color: white;">
-                <i class="fas fa-phone"></i> +48 690 386 721 | 
-                <i class="fas fa-envelope"></i> ArmelSandjong@afriqueeuropeconnexionvmetc.com
-            </p>
-        </div>
-    </section>
 </main>
 
-<!-- Footer -->
-<footer class="footer">
+<footer class="footer" style="background: #1a1a1a; color: white; padding: 4rem 0 2rem;">
     <div class="container">
-        <div class="footer-content">
-            <div class="footer-col">
+        <div class="footer-content" style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem;">
+            <div>
                 <h3>About AEC</h3>
-                <p>
-                    AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner, empowering businesses across Africa and Europe through technology, innovation, and comprehensive legal services since 2017.
-                </p>
-                <p style="margin-top: 1rem; font-weight: 600; color: #FFB900;">
-                    🎯 Aim High • ❤️ Be Kind • ✨ Dare to be Different
-                </p>
+                <p>Leading digital transformation across Africa and Europe since 2017. Specializing in AI, ERP, and International Law.</p>
+                <p style="color: #FFB900; margin-top: 1rem;">🎯 Aim High • ❤️ Be Kind • ✨ Dare to be Different</p>
             </div>
-            
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-                    <li><a href="../services/ai-ml.html"><i class="fas fa-robot"></i> AI & ML</a></li>
-                    <li><a href="../resources/research-insights.html"><i class="fas fa-book"></i> Research</a></li>
-                    <li><a href="career.html"><i class="fas fa-balance-scale"></i> Legal & Fiscal</a></li>
-                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
+            <div>
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone"></i> +48 690 386 721</p>
+                <p><i class="fas fa-envelope"></i> ArmelSandjong@afriqueeuropeconnexionvmetc.com</p>
             </div>
-            
-            <div class="footer-col">
-                <h3>Services</h3>
-                <ul class="footer-links">
-                    <li><a href="../services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a></li>
-                    <li><a href="../services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a></li>
-                    <li><a href="../services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a></li>
-                    <li><a href="../services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a></li>
-                    <li><a href="../services/web-marketing.html"><i class="fas fa-globe"></i> Web Marketing</a></li>
-                    <li><a href="career.html"><i class="fas fa-gavel"></i> Legal Services</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h3>Connect With Us</h3>
+            <div>
+                <h3>Social</h3>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/posts/?feedView=all" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.facebook.com/armelsandjongbusiness/" target="_blank" rel="noopener noreferrer" title="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/afriqueeuropeconnexionvmetc237/" target="_blank" rel="noopener noreferrer" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://x.com/SandjongAr3472" target="_blank" rel="noopener noreferrer" title="X (Twitter)">
-                        <i class="fab fa-x-twitter"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@afriqueeuropeconnexionvmetc" target="_blank" rel="noopener noreferrer" title="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://wa.me/48690386721" target="_blank" rel="noopener noreferrer" title="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" title="ResearchGate">
-                        <i class="fas fa-microscope"></i>
-                    </a>
-                    <a href="https://github.com/afriqueeuropeconnexionvmetc" target="_blank" rel="noopener noreferrer" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
+                    <a href="https://github.com/afriqueeuropeconnexionvmetc" style="color: white; font-size: 1.5rem;"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/48690386721" style="color: white; font-size: 1.5rem; margin-left: 15px;"><i class="fab fa-whatsapp"></i></a>
                 </div>
-                <p style="margin-top: 1.5rem; line-height: 1.8;">
-                    <strong>Email:</strong><br>
-                    <a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com" style="color: rgba(255,255,255,0.8);">
-                        ArmelSandjong@afriqueeuropeconnexionvmetc.com
-                    </a><br><br>
-                    <strong>Phone:</strong><br>
-                    <a href="tel:+48690386721" style="color: rgba(255,255,255,0.8);">+48 690 386 721</a><br><br>
-                    <strong>Locations:</strong><br>
-                    📍 Douala, Cameroon<br>
-                    📍 Kraków, Poland
-                </p>
             </div>
         </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved. | Registered in Kraków, Poland | Designed by Armel Sandjong Nantchouang</p>
+        <hr style="margin: 2rem 0; opacity: 0.1;">
+        <div class="footer-bottom" style="text-align: center; font-size: 0.9rem; opacity: 0.7;">
+            <p>&copy; 2026 AFRIQUEEUROPECONNEXIONVMETC (AEC). Registered in Kraków, Poland.</p>
         </div>
     </div>
 </footer>
 
-<!-- Floating Social Media Bar -->
-<div class="floating-social">
-    <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/posts/?feedView=all" target="_blank" class="linkedin" title="LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://www.facebook.com/armelsandjongbusiness/" target="_blank" class="facebook" title="Facebook">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://x.com/SandjongAr3472" target="_blank" class="twitter" title="X (Twitter)">
-        <i class="fab fa-x-twitter"></i>
-    </a>
-    <a href="https://wa.me/48690386721" target="_blank" class="whatsapp" title="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://www.youtube.com/@afriqueeuropeconnexionvmetc" target="_blank" class="youtube" title="YouTube">
-        <i class="fab fa-youtube"></i>
-    </a>
-    <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang?ev=hdr_xprf" target="_blank" class="researchgate" title="ResearchGate">
-        <i class="fab fa-researchgate"></i>
-    </a>
-</div>
+<script>
+    // Simple script to handle mobile menu toggle
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuBtn.querySelector('i').classList.toggle('fa-bars');
+        menuBtn.querySelector('i').classList.toggle('fa-times');
+    });
 
-<script src="../js/main.js"></script>
-
-<style>
-    /* Additional styles for cloud resource cards */
-    .cloud-resource-card {
-        display: block;
-        padding: 2rem;
-        background: rgba(255, 255, 255, 0.15);
-        border-radius: 12px;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-    }
-    
-    .cloud-resource-card:hover {
-        background: rgba(255, 255, 255, 0.25);
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-    
-    .cloud-resource-card h4 {
-        color: white;
-        font-size: 1.3rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .cloud-resource-card p {
-        color: white;
-        opacity: 0.9;
-        margin: 0;
-    }
-    
-    .document-embed {
-        margin: 1.5rem 0;
-    }
-</style>
+    // Lazy load iframes for performance
+    document.addEventListener("DOMContentLoaded", function() {
+        var iframes = document.querySelectorAll('iframe');
+        iframes.forEach(function(iframe) {
+            iframe.setAttribute('loading', 'lazy');
+        });
+    });
+</script>
 
 </body>
 </html>
