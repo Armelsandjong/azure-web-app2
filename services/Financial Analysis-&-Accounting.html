@@ -73,20 +73,35 @@
 </head>
 <body>
 
-<header class="site-header">
+<header class="site-header" id="siteHeader">
   <div class="hdr-inner">
     <a href="../index.html" class="logo">
-      <img src="../assets/logo.png" alt="AEC">
+      <img src="../assets/logo.png" alt="AEC Logo">
       <span class="logo-text">AEC</span>
     </a>
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
-      <li><a href="../company/about.html">About</a></li>
-      <li><a href="../services/ai-ml.html">AI Solutions</a></li>
-      <li><a href="../services/Financial Analysis-&-Accounting.html" class="active">Finance</a></li>
+      <li class="dropdown">
+        <a href="#">Company <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
+          <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
+          <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="active">Services <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="ai-ml.html"><i class="fas fa-robot"></i> AI &amp; ML</a>
+          <a href="ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
+          <a href="crm.html"><i class="fas fa-users"></i> CRM</a>
+          <a href="cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
+        </div>
+      </li>
       <li><a href="../company/contact.html">Contact</a></li>
-      <li><a href="../consultation.html" style="background:var(--gold); color:var(--navy); font-weight:700; border-radius:5px;">Book Audit</a></li>
+      <li><a href="../consultation.html" class="nav-cta">Free Consultation</a></li>
     </ul>
+    <button class="mob-btn" id="ham"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -275,6 +290,77 @@
 
   document.querySelectorAll('[data-rv]').forEach(el => observer.observe(el));
 </script>
-
+  <footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo" style="margin-bottom:12px">
+        <img src="../assets/logo.png" alt="AEC Logo">
+        <span class="logo-text">AEC</span>
+      </a>
+      <p class="tagline">Aim High · Be Kind · Dare to be Different</p>
+      <p>AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner since 2017.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="../company/about.html">About Us</a></li>
+        <li><a href="../company/mission.html">Mission</a></li>
+        <li><a href="../company/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="ERP.html">ERP Solutions</a></li>
+        <li><a href="ai-ml.html">AI & ML</a></li>
+        <li><a href="cloud.html">Cloud Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com"><i class="fas fa-envelope"></i> Email Us</a></li>
+        <li><a href="tel:+48690386721"><i class="fas fa-phone"></i> +48 690 386 721</a></li>
+        <li><a href="https://wa.me/48690386721" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved.</p>
+    <div class="ms-badge"><i class="fab fa-microsoft"></i> Microsoft Partner</div>
+  </div>
+</footer>
 </body>
+
+<div class="floating-social">
+    <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.facebook.com/armelsandjongbusiness/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://x.com/SandjongAr3472" target="_blank" class="twitter"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://wa.me/48690386721" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/afriqueeuropeconnexionvmetc237/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank" class="researchgate"><i class="fab fa-researchgate"></i></a>
+</div>
+
+<button id="btt" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+// Mobile Nav logic
+const ham = document.getElementById('ham');
+const nav = document.querySelector('.nav-links');
+ham.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    ham.classList.toggle('active');
+});
+
+// Scroll Reveal logic
+const ro = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting) e.target.classList.add('in');
+}), { threshold: 0.1 });
+document.querySelectorAll('.rv').forEach(el => ro.observe(el));
+
+// Sticky Header
+window.addEventListener('scroll', () => {
+  document.getElementById('siteHeader').classList.toggle('scrolled', window.scrollY > 60);
+});
+</script>
 </html>
