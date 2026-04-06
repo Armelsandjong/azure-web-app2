@@ -1,475 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERP | AFRIQUEEUROPECONNEXIONVMETC</title>
-  <meta name="description" content="Scale up your Business with the best ERP support for implementation">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Solutions: SAP, Odoo, Oracle & D365 | AFRIQUEEUROPECONNEXIONVMETC</title>
+  <meta name="description" content="Expert ERP implementation for SAP, Odoo, Oracle, and Microsoft Dynamics 365. Specialized in OHADA and EU compliance for cross-border operations.">
 
-  <!-- Fonts -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","v4lglq0gvb");</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- NOTE: all paths use ../ because this file is inside services/ -->
-  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* Custom ERP page enhancements */
+    .partner-logo-strip {
+        display: flex; gap: 30px; margin-top: 25px; flex-wrap: wrap; justify-content: flex-start;
+    }
+    .p-logo { font-weight: 700; font-size: 0.9rem; color: var(--gold-l); display: flex; align-items: center; gap: 8px; }
+    .table-container { overflow-x: auto; margin: 30px 0; border: 1px solid var(--border); border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; background: var(--card); color: #fff; font-size: 0.9rem; }
+    th { background: rgba(255,255,255,0.05); text-align: left; padding: 15px; color: var(--gold-l); border-bottom: 1px solid var(--border); }
+    td { padding: 15px; border-bottom: 1px solid var(--border); line-height: 1.5; }
+    .floating-social {
+      position: fixed; right: 20px; top: 50%; transform: translateY(-50%);
+      display: flex; flex-direction: column; gap: 10px; z-index: 999;
+    }
+    .floating-social a {
+      width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      color: #fff; text-decoration: none; transition: transform 0.3s; font-size: 1.2rem;
+    }
+    .floating-social a:hover { transform: scale(1.15); }
+    .linkedin { background: #0077b5; } .facebook { background: #1877f2; } .twitter { background: #000; }
+    .whatsapp { background: #25d366; } .instagram { background: #e4405f; } .researchgate { background: #00ccbb; }
+  </style>
 </head>
 <body>
 
-<!-- ═══════════════════ HEADER ═══════════════════ -->
-<header>
-  <div class="container">
-    <nav>
-      <a href="../index.html" class="logo">
-        <img src="../assets/logo.png" alt="AEC Logo" class="logo-img">
-        <span class="logo-text">AEC</span>
-      </a>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html">Home</a></li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Company <i class="fas fa-chevron-down"></i></a>
-          <div class="dropdown-menu">
-            <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-            <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
-            <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-            <a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
-          </div>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle active">Services <i class="fas fa-chevron-down"></i></a>
-          <div class="dropdown-menu">
-            <a href="ai-ml.html"><i class="fas fa-robot"></i> AI &amp; Machine Learning</a>
-            <a href="ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-            <a href="crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
-            <a href="cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
-            <a href="business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
-            <a href="web-marketing.html"><i class="fas fa-globe"></i> Web &amp; Marketing</a>
-          </div>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Resources <i class="fas fa-chevron-down"></i></a>
-          <div class="dropdown-menu">
-            <a href="../resources/research-insights.html"><i class="fas fa-book"></i> Research &amp; Insights</a>
-            <a href="../resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
-            <a href="../resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
-          </div>
-        </li>
-
-        <li><a href="../consultation.html" class="cta-btn">Free Consultation</a></li>
-        <li><a href="../company/contact.html">Contact</a></li>
-      </ul>
-
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
+<header class="site-header" id="siteHeader">
+  <div class="hdr-inner">
+    <a href="../index.html" class="logo">
+      <img src="../assets/logo.png" alt="AEC Logo">
+      <span class="logo-text">AEC</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Company <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
+          <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
+          <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="active">Services <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="ai-ml.html"><i class="fas fa-robot"></i> AI &amp; ML</a>
+          <a href="ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
+          <a href="crm.html"><i class="fas fa-users"></i> CRM</a>
+          <a href="cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
+        </div>
+      </li>
+      <li><a href="../company/contact.html">Contact</a></li>
+      <li><a href="../consultation.html" class="nav-cta">Free Consultation</a></li>
+    </ul>
+    <button class="mob-btn" id="ham"><span></span><span></span><span></span></button>
   </div>
 </header>
 
+<div class="page-banner">
+  <div class="banner-inner">
+    <nav class="breadcrumb">
+      <a href="../index.html">Home</a> <i class="fas fa-chevron-right"></i>
+      <span>Services</span> <i class="fas fa-chevron-right"></i>
+      <span style="color:rgba(255,255,255,.7)">ERP Solutions</span>
+    </nav>
+    <span class="stag">Digital Transformation · ERP</span>
+    <h1>Enterprise <em>Resource Planning</em></h1>
+    <p class="lead">Bridging the technical and regional gaps between Africa and Europe through localized, world-class ERP implementation.</p>
+    <div class="partner-logo-strip">
+        <span class="p-logo"><i class="fab fa-microsoft"></i> Dynamics 365</span>
+        <span class="p-logo"><i class="fas fa-database"></i> Oracle</span>
+        <span class="p-logo"><i class="fas fa-cubes"></i> Odoo</span>
+        <span class="p-logo"><i class="fas fa-chart-line"></i> SAP S/4HANA</span>
+    </div>
+  </div>
+</div>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1><i class="fas fa-project-diagram"></i> Enterprise Resource Planning (ERP) Solutions</h1>
-                <p>
-                    Unified business management systems that streamline operations and provide real-time insights across your entire organization.
-                </p>
-                <div style="margin-top: 1.5rem;">
-                    <span class="partner-badge">
-                        <i class="fab fa-microsoft" style="font-size: 2rem; color: #0078D4;"></i>
-                        <span>Powered by Microsoft Dynamics 365</span>
-                    </span>
-                </div>
-                <div style="margin-top: 2rem;">
-                    <a href="../consultation.html" class="btn-primary">Book Free Consultation</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="container">
-            <h2>Transform Your Business with Integrated ERP</h2>
-            <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
-                Enterprise Resource Planning (ERP) systems are the backbone of modern business operations. At AFRIQUEEUROPECONNEXIONVMETC, we implement comprehensive ERP solutions powered by <strong>Microsoft Dynamics 365</strong> that connect all aspects of your business—from finance and supply chain to manufacturing and human resources—in one unified platform.
-            </p>
-
-            <div class="grid-2">
-                <div>
-                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--sky-blue);">Why Choose Our ERP Solutions?</h3>
-                    <ul style="font-size: 1.1rem;">
-                        <li>Unified business management across all departments</li>
-                        <li>Real-time data access and reporting</li>
-                        <li>Automated workflows reducing manual effort</li>
-                        <li>Scalable solutions that grow with your business</li>
-                        <li>Microsoft-powered reliability and security</li>
-                        <li>Seamless integration with existing systems</li>
-                        <li>Mobile access for on-the-go management</li>
-                        <li>Comprehensive training and support</li>
-                    </ul>
-                </div>
-                <div class="card" style="background: linear-gradient(135deg, var(--sky-blue), var(--light-blue)); color: white; padding: 3rem;">
-                    <i class="fab fa-microsoft" style="font-size: 4rem; color: white; margin-bottom: 1.5rem;"></i>
-                    <h3 style="color: white; font-size: 2rem; margin-bottom: 1rem;">Microsoft Dynamics 365</h3>
-                    <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                        As a Microsoft Partner, we deliver world-class ERP solutions built on the industry-leading Dynamics 365 platform.
-                    </p>
-                    <ul style="margin: 0; padding: 0;">
-                        <li style="color: white; padding-left: 30px;">Finance & Operations</li>
-                        <li style="color: white; padding-left: 30px;">Supply Chain Management</li>
-                        <li style="color: white; padding-left: 30px;">Manufacturing</li>
-                        <li style="color: white; padding-left: 30px;">Project Management</li>
-                        <li style="color: white; padding-left: 30px;">Human Resources</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-light">
-            <div class="container">
-                <h2 style="text-align: center;">Comprehensive ERP Modules</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.2rem; color: var(--gray);">
-                    Complete business management solutions tailored to your needs
-                </p>
-
-                <div class="grid-3">
-                    <div class="card">
-                        <i class="fas fa-dollar-sign"></i>
-                        <h3>Financial Management</h3>
-                        <p>Comprehensive financial operations including general ledger, accounts payable/receivable, budgeting, and financial reporting.</p>
-                        <ul>
-                            <li>General Ledger & Chart of Accounts</li>
-                            <li>Accounts Payable & Receivable</li>
-                            <li>Cash Flow Management</li>
-                            <li>Budget Planning & Control</li>
-                            <li>Financial Reporting & Analytics</li>
-                            <li>Multi-currency Support</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <i class="fas fa-truck"></i>
-                        <h3>Supply Chain Management</h3>
-                        <p>Optimize your supply chain from procurement to delivery with intelligent inventory and logistics management.</p>
-                        <ul>
-                            <li>Inventory Management</li>
-                            <li>Procurement & Purchasing</li>
-                            <li>Warehouse Management</li>
-                            <li>Order Management</li>
-                            <li>Logistics & Distribution</li>
-                            <li>Vendor Management</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <i class="fas fa-industry"></i>
-                        <h3>Manufacturing</h3>
-                        <p>End-to-end manufacturing management including production planning, scheduling, and quality control.</p>
-                        <ul>
-                            <li>Production Planning</li>
-                            <li>Bill of Materials (BOM)</li>
-                            <li>Work Orders & Routing</li>
-                            <li>Quality Management</li>
-                            <li>Shop Floor Control</li>
-                            <li>Maintenance Management</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <i class="fas fa-users"></i>
-                        <h3>Human Resources</h3>
-                        <p>Complete HR management from recruitment to retirement, including payroll and performance tracking.</p>
-                        <ul>
-                            <li>Employee Management</li>
-                            <li>Payroll Processing</li>
-                            <li>Time & Attendance</li>
-                            <li>Performance Management</li>
-                            <li>Recruitment & Onboarding</li>
-                            <li>Benefits Administration</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <i class="fas fa-tasks"></i>
-                        <h3>Project Management</h3>
-                        <p>Plan, execute, and monitor projects with integrated time tracking, budgeting, and resource management.</p>
-                        <ul>
-                            <li>Project Planning & Scheduling</li>
-                            <li>Resource Allocation</li>
-                            <li>Time & Expense Tracking</li>
-                            <li>Budget Management</li>
-                            <li>Project Billing</li>
-                            <li>Collaboration Tools</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <i class="fas fa-shopping-cart"></i>
-                        <h3>Sales & Distribution</h3>
-                        <p>Streamline sales processes from quote to cash with integrated order management and customer service.</p>
-                        <ul>
-                            <li>Sales Order Management</li>
-                            <li>Quote Management</li>
-                            <li>Pricing & Discounts</li>
-                            <li>Customer Portal</li>
-                            <li>Sales Analytics</li>
-                            <li>Commission Management</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="container">
-            <h2>Our ERP Implementation Process</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 3rem; text-align: center; color: var(--gray);">
-                Proven methodology ensuring successful deployment and adoption
-            </p>
-
-            <div class="grid-2">
-                <div class="card">
-                    <h3 style="color: var(--sky-blue); font-size: 1.8rem;">1. Discovery & Requirements</h3>
-                    <p>We analyze your business processes, identify pain points, and define clear objectives for your ERP implementation.</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: var(--red); font-size: 1.8rem;">2. Solution Design</h3>
-                    <p>Create a tailored ERP blueprint that aligns with your business needs, including customizations and integrations.</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: var(--yellow); font-size: 1.8rem;">3. Configuration & Development</h3>
-                    <p>Configure Dynamics 365 modules, develop custom features, and integrate with existing systems.</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: var(--teal); font-size: 1.8rem;">4. Data Migration</h3>
-                    <p>Safely transfer your existing data to the new ERP system with validation and quality assurance.</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: var(--orange); font-size: 1.8rem;">5. Testing & Training</h3>
-                    <p>Comprehensive testing and hands-on training for all users to ensure confident adoption.</p>
-                </div>
-                <div class="card">
-                    <h3 style="color: var(--sky-blue); font-size: 1.8rem;">6. Go-Live & Support</h3>
-                    <p>Smooth deployment with ongoing support and continuous optimization for maximum ROI.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-light">
-            <div class="container">
-                <h2 style="text-align: center;">Industries We Serve</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.2rem; color: var(--gray);">
-                    Tailored ERP solutions for diverse business sectors
-                </p>
-
-                <div class="grid-3">
-                    <div class="card" style="text-align: center;">
-                        <i class="fas fa-industry" style="font-size: 3rem; color: var(--sky-blue);"></i>
-                        <h3>Manufacturing</h3>
-                        <p>Production planning, inventory control, quality management, and supply chain optimization.</p>
-                    </div>
-                    <div class="card" style="text-align: center;">
-                        <i class="fas fa-shopping-bag" style="font-size: 3rem; color: var(--red);"></i>
-                        <h3>Retail & Distribution</h3>
-                        <p>Multi-channel sales, inventory management, point-of-sale integration, and customer analytics.</p>
-                    </div>
-                    <div class="card" style="text-align: center;">
-                        <i class="fas fa-box" style="font-size: 3rem; color: var(--yellow);"></i>
-                        <h3>Wholesale & Trading</h3>
-                        <p>Purchase order management, vendor relationships, logistics, and financial tracking.</p>
-                    </div>
-                    <div class="card" style="text-align: center;">
-                        <i class="fas fa-hard-hat" style="font-size: 3rem; color: var(--teal);"></i>
-                        <h3>Construction</h3>
-                        <p>Project costing, resource management, subcontractor tracking, and progress billing.</p>
-                    </div>
-                    <div class="card" style="text-align: center;">
-                        <i class="fas fa-heartbeat" style="font-size: 3rem; color: var(--orange);"></i>
-                        <h3>Healthcare</h3>
-                        <p>Patient management, inventory control, regulatory compliance, and financial operations.</p>
-                    </div>
-                    <div class="card" style="text-align: center;">
-                        <i class="fas fa-cogs" style="font-size: 3rem; color: var(--sky-blue);"></i>
-                        <h3>Professional Services</h3>
-                        <p>Project tracking, resource allocation, time billing, and client management.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="container">
-            <h2 style="text-align: center;">Why Microsoft Dynamics 365?</h2>
-            <div class="grid-2 mt-3">
-                <div class="card">
-                    <i class="fas fa-shield-alt" style="font-size: 3rem; color: #0078D4;"></i>
-                    <h3>Enterprise-Grade Security</h3>
-                    <p>Built on Microsoft Azure with world-class security, compliance, and data protection standards.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-sync-alt" style="font-size: 3rem; color: #0078D4;"></i>
-                    <h3>Seamless Integration</h3>
-                    <p>Native integration with Microsoft 365, Power Platform, Azure, and third-party applications.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-chart-line" style="font-size: 3rem; color: #0078D4;"></i>
-                    <h3>Advanced Analytics</h3>
-                    <p>Powered by Power BI for real-time dashboards, predictive insights, and data visualization.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-mobile-alt" style="font-size: 3rem; color: #0078D4;"></i>
-                    <h3>Mobile & Cloud-Based</h3>
-                    <p>Access your ERP anywhere, anytime on any device with responsive cloud architecture.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="stats">
-            <div class="container text-center">
-                <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">Ready to Transform Your Operations?</h2>
-                <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto 2rem; opacity: 0.95;">
-                    Book a free consultation to discover how our ERP solutions can streamline your business and drive growth.
-                </p>
-                <a href="../consultation.html" class="btn-primary" style="font-size: 1.2rem; padding: 18px 50px; margin-right: 1rem;">Book Free Consultation</a>
-                <a href="../company/contact.html" class="btn-secondary" style="font-size: 1.2rem; padding: 18px 50px; background: white; color: var(--sky-blue); border-color: white;">Contact Us</a>
-                <p style="margin-top: 2rem; font-size: 1.1rem;">
-                    <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i> 
-                    <a href="https://wa.me/48690386721?text=I'm%20interested%20in%20ERP%20solutions" target="_blank" style="color: #25D366; text-decoration: underline;">Chat on WhatsApp: +48 690 386 721</a>
-                </p>
-            </div>
-        </section>
-    </main>
-
+<section class="section">
+  <div class="content-wrap">
     
-<!-- ═══════════════════ FOOTER ═══════════════════ -->
-<!-- THIS IS THE STANDARD FOOTER — USE THIS ON EVERY PAGE INSIDE A SUBFOLDER -->
-<!-- For root-level pages (index.html), remove the ../ prefix from all hrefs -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-
-      <div class="footer-col">
-        <img src="../assets/logo.png" alt="AEC Logo" class="footer-logo-img">
-        <p class="footer-tagline">Aim High • Be Kind • Dare to be Different</p>
-        <p>
-          AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner,
-          empowering businesses across Africa and Europe through technology, innovation,
-          and collaboration since 2017.
-        </p>
+    <div class="two-col rv">
+      <div class="prose">
+        <span class="stag">The AEC Story</span>
+        <h2 class="sh">Unified <em>Cross-Border</em> Operations</h2>
+        <p>In today's global economy, a business in <strong>Cameroon or Nigeria</strong> must speak the same digital language as its partners in <strong>Poland or France</strong>. At AFRIQUEEUROPECONNEXIONVMETC, we don't just "install software"—we build digital bridges.</p>
+        <p>By integrating <strong>SAP, Oracle, Odoo, or D365</strong>, we provide a single source of truth. We help businesses automate regional tax compliance (OHADA & EU), integrate AI-driven predictive forecasting, and ensure that every transaction is visible across borders in real-time.</p>
+        <a href="../consultation.html" class="btn-gold" style="margin-top:20px">Scale Your Business Today</a>
       </div>
-
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../company/about.html">About Us</a></li>
-          <li><a href="ai-ml.html">AI &amp; ML</a></li>
-          <li><a href="../resources/research-insights.html">Research</a></li>
-          <li><a href="../csr/social-impact.html">Social Impact</a></li>
-          <li><a href="../company/contact.html">Contact</a></li>
+      <div class="aec-card">
+        <h3>How We Add Value</h3>
+        <ul>
+          <li><strong>Regional Compliance:</strong> Automated OHADA & EU tax algorithms.</li>
+          <li><strong>AI Integration:</strong> Turning ERP data into predictive financial insights.</li>
+          <li><strong>Cloud Security:</strong> Secure Azure/AWS architecture for global data safety.</li>
+          <li><strong>Local Expertise:</strong> HQ in Poland with field offices in West Africa.</li>
         </ul>
       </div>
-
-      <div class="footer-col">
-        <h3>Services</h3>
-        <ul class="footer-links">
-          <li><a href="ERP.html">ERP Solutions</a></li>
-          <li><a href="crm.html">CRM Implementation</a></li>
-          <li><a href="cloud.html">Cloud Services</a></li>
-          <li><a href="business-analysis.html">Business Analysis</a></li>
-          <li><a href="web-marketing.html">Web &amp; Marketing</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Connect</h3>
-        <ul class="footer-links">
-          <li>
-            <a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com">
-              <i class="fas fa-envelope"></i> Email Us
-            </a>
-          </li>
-          <li>
-            <a href="tel:+48690386721">
-              <i class="fas fa-phone"></i> +48 690 386 721
-            </a>
-          </li>
-          <li>
-            <a href="https://wa.me/48690386721" target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener">
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://x.com/SandjongAr3472" target="_blank" rel="noopener">
-              <i class="fab fa-x-twitter"></i> Twitter / X
-            </a>
-          </li>
-          <li>
-            <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank" rel="noopener">
-              <i class="fab fa-researchgate"></i> ResearchGate
-            </a>
-          </li>
-        </ul>
-        <div class="contact-info-block">
-          <p><strong>Headquarters:</strong> Kraków, Poland</p>
-          <p><strong>Regional Office:</strong> Douala, Cameroon</p>
-        </div>
-      </div>
-
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved. | Designed by Armel Sandjong Nantchouang</p>
-      <p><strong>Microsoft Partner</strong></p>
+
+    <h2 class="sh ctr" style="margin-top:80px">The <em>Right Platform</em> for Your Needs</h2>
+    <div class="grid-2 rv" style="margin-top:40px">
+      <div class="aec-card">
+        <div style="color:var(--gold-l); font-size: 2rem; margin-bottom:15px"><i class="fab fa-microsoft"></i></div>
+        <h3>Microsoft Dynamics 365</h3>
+        <p><strong>The Advantage:</strong> Unmatched ecosystem synergy. D365 integrates natively with Power BI for analytics and Microsoft Copilot for AI-driven trend analysis.</p>
+        <p><strong>AEC Benefit:</strong> We specialize in using D365 to streamline cross-border finance and supply chains between European HQs and African branches.</p>
+      </div>
+      <div class="aec-card">
+        <div style="color:#714B67; font-size: 2rem; margin-bottom:15px"><i class="fas fa-cubes"></i></div>
+        <h3>Odoo ERP</h3>
+        <p><strong>The Advantage:</strong> Modular, flexible, and cost-effective. Odoo allows businesses to start with what they need (CRM/Accounting) and scale infinitely.</p>
+        <p><strong>AEC Benefit:</strong> We provide "Micro-SaaS Scripts"—localized scripts that plug into Odoo to handle regional B2B operations and unique tax structures instantly.</p>
+      </div>
+      <div class="aec-card">
+        <div style="color:#008FD3; font-size: 2rem; margin-bottom:15px"><i class="fas fa-chart-line"></i></div>
+        <h3>SAP S/4HANA</h3>
+        <p><strong>The Advantage:</strong> The global gold standard for operational rigor. Best suited for high-complexity manufacturing and global enterprises.</p>
+        <p><strong>AEC Benefit:</strong> We apply our deep Financial Business Analysis to SAP’s high-power system, optimizing complex internal processes that standard consultants miss.</p>
+      </div>
+      <div class="aec-card">
+        <div style="color:#A52A2A; font-size: 2rem; margin-bottom:15px"><i class="fas fa-database"></i></div>
+        <h3>Oracle NetSuite</h3>
+        <p><strong>The Advantage:</strong> The world’s #1 cloud-native ERP. Oracle offers superior financial management for companies that require strict audit trails and transparency.</p>
+        <p><strong>AEC Benefit:</strong> We integrate Oracle with your "FinTech & ERP Marketplace," ensuring your data flows securely through Azure Cloud architecture.</p>
+      </div>
     </div>
+
+    <div class="table-container rv">
+        <h3 style="padding: 20px; color: #fff;">ERP Comparison Matrix</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ERP System</th>
+                    <th>Primary Benefit</th>
+                    <th>AEC Integration Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Odoo</strong></td>
+                    <td>Extreme Flexibility & Cost</td>
+                    <td>Micro-SaaS localized tax scripts for Africa/EU.</td>
+                </tr>
+                <tr>
+                    <td><strong>Microsoft D365</strong></td>
+                    <td>Ecosystem Synergy</td>
+                    <td>Deep Power BI templates & Copilot AI insights.</td>
+                </tr>
+                <tr>
+                    <td><strong>SAP & Oracle</strong></td>
+                    <td>Operational Rigor</td>
+                    <td>Optimization of complex cross-border financial processes.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2>Ready to Integrate <em>Global Excellence?</em></h2>
+  <p>Book a free 30-minute consultation to discuss your regional compliance needs and AI-readiness.</p>
+  <div class="btn-row">
+    <a href="../consultation.html" class="btn-gold"><i class="fas fa-calendar-check"></i> Book Free Consultation</a>
+    <a href="../company/contact.html" class="btn-outline"><i class="fas fa-envelope"></i> Get in Touch</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo" style="margin-bottom:12px">
+        <img src="../assets/logo.png" alt="AEC Logo">
+        <span class="logo-text">AEC</span>
+      </a>
+      <p class="tagline">Aim High · Be Kind · Dare to be Different</p>
+      <p>AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner since 2017.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="../company/about.html">About Us</a></li>
+        <li><a href="../company/mission.html">Mission</a></li>
+        <li><a href="../company/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="ERP.html">ERP Solutions</a></li>
+        <li><a href="ai-ml.html">AI & ML</a></li>
+        <li><a href="cloud.html">Cloud Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com"><i class="fas fa-envelope"></i> Email Us</a></li>
+        <li><a href="tel:+48690386721"><i class="fas fa-phone"></i> +48 690 386 721</a></li>
+        <li><a href="https://wa.me/48690386721" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved.</p>
+    <div class="ms-badge"><i class="fab fa-microsoft"></i> Microsoft Partner</div>
   </div>
 </footer>
 
-    <!-- Floating Social Media Bar -->
-    <div class="floating-social">
-        <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/posts/?feedView=all" 
-           target="_blank" 
-           class="linkedin" 
-           title="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://www.facebook.com/armelsandjongbusiness/" 
-           target="_blank" 
-           class="facebook" 
-           title="Facebook">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://x.com/SandjongAr3472" 
-           target="_blank" 
-           class="twitter" 
-           title="X (Twitter)">
-            <i class="fab fa-x-twitter"></i>
-        </a>
-        <a href="https://wa.me/48690386721" 
-           target="_blank" 
-           class="whatsapp" 
-           title="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.instagram.com/afriqueeuropeconnexionvmetc237/" 
-           target="_blank" 
-           class="instagram" 
-           title="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang?ev=hdr_xprf" 
-           target="_blank" 
-           class="researchgate" 
-           title="ResearchGate">
-            <i class="fab fa-researchgate"></i>
-        </a>
-    </div>
+<div class="floating-social">
+    <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.facebook.com/armelsandjongbusiness/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://x.com/SandjongAr3472" target="_blank" class="twitter"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://wa.me/48690386721" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/afriqueeuropeconnexionvmetc237/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank" class="researchgate"><i class="fab fa-researchgate"></i></a>
+</div>
+
+<button id="btt" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+// Mobile Nav logic
+const ham = document.getElementById('ham');
+const nav = document.querySelector('.nav-links');
+ham.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    ham.classList.toggle('active');
+});
+
+// Scroll Reveal logic
+const ro = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting) e.target.classList.add('in');
+}), { threshold: 0.1 });
+document.querySelectorAll('.rv').forEach(el => ro.observe(el));
+
+// Sticky Header
+window.addEventListener('scroll', () => {
+  document.getElementById('siteHeader').classList.toggle('scrolled', window.scrollY > 60);
+});
+</script>
 </body>
 </html>
