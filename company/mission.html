@@ -1,331 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Mission | AFRIQUEEUROPECONNEXIONVMETC</title>
-    <meta name="description" content="Page description here">
-    <!-- Adjust path based on subfolder depth -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Mission | AFRIQUEEUROPECONNEXIONVMETC</title>
+  <meta name="description" content="Empowering businesses across Africa and Europe through innovative digital solutions, strategic partnerships, and sustainable growth strategies.">
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PDMNDP8F');</script>
+  
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","v4lglq0gvb");</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+  :root {
+    --navy:   #0b1535;
+    --navy2:  #0f1e4a;
+    --gold:   #c9963c;
+    --gold-l: #e8b85a;
+    --teal:   #00c2a8;
+    --muted:  rgba(255,255,255,.52);
+    --card:   rgba(255,255,255,.035);
+    --border: rgba(255,255,255,.08);
+    --ff-serif: "Times New Roman", "Playfair Display", serif;
+    --ff-sans:  "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--navy); color: #e0e4f0; font-family: var(--ff-sans); line-height: 1.7; overflow-x: hidden; }
+
+  /* Shared header/banner styles from your template */
+  .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(11,21,53,.85); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+  .hdr-inner { max-width: 1280px; margin: 0 auto; padding: 0 28px; display: flex; align-items: center; height: 68px; gap: 40px; }
+  .logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+  .logo img { height:38px; }
+  .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; margin-left: auto; }
+  .nav-links a { padding: 8px 14px; color: rgba(255,255,255,.78); font-size: .88rem; text-decoration: none; }
+  .nav-links a.active { color: #fff; background: rgba(255,255,255,.07); border-radius: 7px; }
+  .nav-cta { background: linear-gradient(135deg, var(--gold), var(--gold-l)); color: var(--navy) !important; font-weight: 700; border-radius: 8px !important; }
+
+  .page-banner { padding: 130px 28px 64px; background: linear-gradient(135deg, var(--navy) 0%, #0d2060 50%, #0a2418 100%); position: relative; border-bottom: 1px solid var(--border); }
+  .banner-inner { max-width: 1280px; margin: 0 auto; }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: .8rem; color: var(--muted); margin-bottom: 16px; }
+  .breadcrumb a { color: var(--gold-l); text-decoration: none; }
+  .page-banner h1 { font-family: var(--ff-serif); font-size: clamp(1.8rem, 4.5vw, 3rem); color: #fff; line-height: 1.1; }
+  .page-banner h1 em { color: var(--gold-l); font-style: italic; }
+
+  .content-wrap { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+  .section { padding: 80px 0; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .aec-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 34px; transition: 0.3s; }
+  .aec-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+  .sh { font-family: var(--ff-serif); font-size: 2.2rem; color: #fff; margin-bottom: 20px; text-align: center; }
+  
+  /* Footer */
+  .site-footer { background: #060d20; border-top: 1px solid var(--border); padding: 60px 28px 30px; margin-top: 60px; }
+  .footer-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 40px; }
+  </style>
 </head>
 <body>
 
-<!-- Header -->
-<header>
-    <div class="container">
-        <nav>
-            <!-- Logo - adjust path based on subfolder depth -->
-            <a href="../index.html" class="logo">
-                <img src="../assets/logo.png" alt="AEC" class="logo-img">
-            </a>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html">Home</a></li>
-                
-                <li class="dropdown">
-                    <a href="#company" class="dropdown-toggle">
-                        Company <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                        <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
-                        <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-                        <a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
-                    </div>
-                </li>
-                
-                <li class="dropdown">
-                    <a href="#services" class="dropdown-toggle">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../services/ai-ml.html"><i class="fas fa-robot"></i> AI & Machine Learning</a>
-                        <a href="../services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-                        <a href="../services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
-                        <a href="../services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
-                        <a href="../services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
-                        <a href="../services/web-marketing.html"><i class="fas fa-globe"></i> Web & Marketing</a>
-                    </div>
-                </li>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDMNDP8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-                <li class="dropdown">
-                    <a href="#resources" class="dropdown-toggle">
-                        Resources <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../resources/research-insights.html"><i class="fas fa-book"></i> Research & Insights</a>
-                        <a href="../resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
-                        <a href="../resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
-                    </div>
-                </li>
-
-                <li><a href="../consultation.html" class="cta-btn">Free Consultation</a></li>
-                <li><a href="../company/contact.html">Contact</a></li>
-            </ul>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </div>
+<header class="site-header">
+  <div class="hdr-inner">
+    <a href="../index.html" class="logo">
+      <img src="../assets/logo.png" alt="AEC Logo">
+      <span style="font-family:var(--ff-serif); color:#fff; font-size:1.3rem;">AEC</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html" class="active">Company</a></li>
+      <li><a href="../services/ERP.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="../consultation.html" class="nav-cta">Free Consultation</a></li>
+    </ul>
+  </div>
 </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1><i class="fas fa-bullseye"></i> Our Mission & Vision</h1>
-                <p>
-                    Empowering businesses across Africa and Europe through innovative digital solutions, strategic partnerships, and sustainable growth strategies.
-                </p>
-            </div>
-        </section>
+<div class="page-banner">
+  <div class="banner-inner">
+    <nav class="breadcrumb">
+      <a href="../index.html">Home</a> <i class="fas fa-chevron-right"></i>
+      <span>Company</span> <i class="fas fa-chevron-right"></i>
+      <span style="color:#fff">Our Mission</span>
+    </nav>
+    <h1>Our Mission & <em>Vision</em></h1>
+    <p style="color:var(--muted); max-width:700px; margin-top:15px; font-size:1.1rem;">Empowering businesses across Africa and Europe through innovative digital solutions, strategic partnerships, and sustainable growth strategies.</p>
+  </div>
+</div>
 
-        <section class="container">
-            <div class="grid-2 mt-3">
-                <div class="card" style="background: linear-gradient(135deg, var(--sky-blue), var(--teal)); color: white; padding: 3rem;">
-                    <i class="fas fa-rocket" style="font-size: 4rem; margin-bottom: 1.5rem;"></i>
-                    <h2 style="margin-bottom: 1.5rem;">Our Mission</h2>
-                    <p style="font-size: 1.2rem; line-height: 1.8;">
-                        To bridge the digital divide between Africa and Europe by delivering world-class technology solutions that drive business growth, foster innovation, and create lasting economic impact across both continents.
-                    </p>
-                </div>
-                <div class="card" style="background: linear-gradient(135deg, var(--orange), var(--red)); color: white; padding: 3rem;">
-                    <i class="fas fa-eye" style="font-size: 4rem; margin-bottom: 1.5rem;"></i>
-                    <h2 style="margin-bottom: 1.5rem;">Our Vision</h2>
-                    <p style="font-size: 1.2rem; line-height: 1.8;">
-                        To be the leading digital transformation partner connecting African and European businesses, recognized for excellence in innovation, integrity, and measurable business impact.
-                    </p>
-                </div>
-            </div>
-        </section>
+<main class="content-wrap">
+  <section class="section">
+    <div class="grid-2">
+      <div class="aec-card" style="background: linear-gradient(135deg, rgba(0,194,168,0.1), rgba(11,21,53,0.5)); border-left: 4px solid var(--teal);">
+        <i class="fas fa-rocket" style="font-size: 3rem; color: var(--teal); margin-bottom: 20px;"></i>
+        <h2 class="sh" style="text-align:left">Our Mission</h2>
+        <p>To bridge the digital divide between Africa and Europe by delivering world-class technology solutions that drive business growth, foster innovation, and create lasting economic impact across both continents.</p>
+      </div>
+      <div class="aec-card" style="background: linear-gradient(135deg, rgba(201,150,60,0.1), rgba(11,21,53,0.5)); border-left: 4px solid var(--gold);">
+        <i class="fas fa-eye" style="font-size: 3rem; color: var(--gold); margin-bottom: 20px;"></i>
+        <h2 class="sh" style="text-align:left">Our Vision</h2>
+        <p>To be the leading digital transformation partner connecting African and European businesses, recognized for excellence in innovation, integrity, and measurable business impact.</p>
+      </div>
+    </div>
+  </section>
 
-        <section class="bg-light">
-            <div class="container">
-                <h2>What Drives Us</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
-                    Our mission is powered by core beliefs that guide every decision we make and every solution we deliver.
-                </p>
-                <div class="grid-3 mt-3">
-                    <div class="card">
-                        <i class="fas fa-globe-africa" style="font-size: 3rem; color: var(--teal); margin-bottom: 1rem;"></i>
-                        <h3>Cross-Continental Collaboration</h3>
-                        <p>We believe that the future of global business lies in meaningful partnerships between Africa and Europe. By facilitating these connections, we create opportunities for mutual growth and shared prosperity.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-chart-line" style="font-size: 3rem; color: var(--sky-blue); margin-bottom: 1rem;"></i>
-                        <h3>Technology for Growth</h3>
-                        <p>We're convinced that the right technology, implemented strategically, can transform businesses of any size. Our focus is on delivering solutions that drive measurable results and sustainable competitive advantage.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-users-cog" style="font-size: 3rem; color: var(--orange); margin-bottom: 1rem;"></i>
-                        <h3>Empowerment Through Knowledge</h3>
-                        <p>True digital transformation goes beyond technology—it requires people. We invest in training, capacity building, and knowledge transfer to ensure lasting impact and organizational self-sufficiency.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-leaf" style="font-size: 3rem; color: var(--teal); margin-bottom: 1rem;"></i>
-                        <h3>Sustainable Solutions</h3>
-                        <p>We design solutions with long-term sustainability in mind, considering economic viability, environmental impact, and social responsibility in every project we undertake.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-star" style="font-size: 3rem; color: var(--yellow); margin-bottom: 1rem;"></i>
-                        <h3>Excellence Without Compromise</h3>
-                        <p>We refuse to compromise on quality. Every solution we deliver meets the highest standards of technical excellence, business value, and user experience.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-handshake" style="font-size: 3rem; color: var(--red); margin-bottom: 1rem;"></i>
-                        <h3>Partnership Over Transactions</h3>
-                        <p>We build lasting relationships based on trust, transparency, and mutual success. Your wins are our wins, and we're committed to your long-term prosperity.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <section class="section">
+    <h2 class="sh">What <em>Drives Us</em></h2>
+    <div class="grid-3">
+      <div class="aec-card">
+        <i class="fas fa-globe-africa" style="color:var(--teal); font-size:2rem; margin-bottom:15px;"></i>
+        <h3>Collaboration</h3>
+        <p>We believe the future of global business lies in meaningful partnerships between Africa and Europe.</p>
+      </div>
+      <div class="aec-card">
+        <i class="fas fa-chart-line" style="color:var(--gold); font-size:2rem; margin-bottom:15px;"></i>
+        <h3>Growth</h3>
+        <p>Strategic technology implementation transforms businesses and drives sustainable results.</p>
+      </div>
+      <div class="aec-card">
+        <i class="fas fa-graduation-cap" style="color:var(--teal); font-size:2rem; margin-bottom:15px;"></i>
+        <h3>Empowerment</h3>
+        <p>We invest in capacity building to ensure lasting organizational self-sufficiency.</p>
+      </div>
+    </div>
+  </section>
 
-        <section class="container">
-            <h2>Our Strategic Objectives</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
-                These measurable objectives guide our roadmap and ensure we stay focused on delivering maximum value to our clients and stakeholders.
-            </p>
-            
-            <div class="grid-2 mt-3">
-                <div class="card">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                        <div style="width: 50px; height: 50px; background: var(--sky-blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
-                            <i class="fas fa-expand"></i>
-                        </div>
-                        <h3 style="color: var(--sky-blue); margin: 0;">Market Expansion</h3>
-                    </div>
-                    <p>Expand our reach to serve 200+ businesses across 10+ African and European countries by 2027, establishing ourselves as the go-to partner for cross-continental digital transformation.</p>
-                </div>
-
-                <div class="card">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                        <div style="width: 50px; height: 50px; background: var(--teal); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <h3 style="color: var(--teal); margin: 0;">Service Excellence</h3>
-                    </div>
-                    <p>Maintain a client satisfaction rate above 95% and achieve industry recognition for our innovative solutions and exceptional service delivery.</p>
-                </div>
-
-                <div class="card">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                        <div style="width: 50px; height: 50px; background: var(--orange); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3 style="color: var(--orange); margin: 0;">Knowledge Leadership</h3>
-                    </div>
-                    <p>Establish ourselves as thought leaders in digital transformation through continuous research, publication of industry insights, and active participation in professional communities.</p>
-                </div>
-
-                <div class="card">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                        <div style="width: 50px; height: 50px; background: var(--red); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3 style="color: var(--red); margin: 0;">Innovation</h3>
-                    </div>
-                    <p>Continuously invest in emerging technologies and innovative methodologies, ensuring our clients always have access to cutting-edge solutions that provide competitive advantages.</p>
-                </div>
-
-                <div class="card">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                        <div style="width: 50px; height: 50px; background: var(--yellow); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3 style="color: var(--yellow); margin: 0;">Social Impact</h3>
-                    </div>
-                    <p>Create positive social and economic impact by training 1000+ individuals in digital skills, supporting local communities, and promoting technology adoption across underserved markets.</p>
-                </div>
-
-                <div class="card">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                        <div style="width: 50px; height: 50px; background: var(--sky-blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 style="color: var(--sky-blue); margin: 0;">Team Development</h3>
-                    </div>
-                    <p>Build a world-class team of certified professionals across our African and European offices, fostering a culture of continuous learning and professional excellence.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-light">
-            <div class="container">
-                <h2>Our Commitment to You</h2>
-                <div class="card" style="max-width: 900px; margin: 0 auto; padding: 3rem;">
-                    <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; margin-bottom: 2rem;">
-                        When you choose AFRIQUEEUROPECONNEXIONVMETC as your digital transformation partner, you're not just getting a service provider—you're gaining a committed ally in your success.
-                    </p>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                        <div style="text-align: center;">
-                            <i class="fas fa-check-circle" style="font-size: 2.5rem; color: var(--teal); margin-bottom: 1rem;"></i>
-                            <h4>Quality Guaranteed</h4>
-                            <p>Every solution meets our rigorous quality standards</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <i class="fas fa-clock" style="font-size: 2.5rem; color: var(--sky-blue); margin-bottom: 1rem;"></i>
-                            <h4>On-Time Delivery</h4>
-                            <p>We respect your deadlines and deliver as promised</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <i class="fas fa-comments" style="font-size: 2.5rem; color: var(--orange); margin-bottom: 1rem;"></i>
-                            <h4>Clear Communication</h4>
-                            <p>Transparent updates throughout every project phase</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <i class="fas fa-headset" style="font-size: 2.5rem; color: var(--red); margin-bottom: 1rem;"></i>
-                            <h4>Ongoing Support</h4>
-                            <p>We're here for you long after project completion</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="container">
-            <h2>Join Our Mission</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
-                Our mission comes to life through the people who believe in it. Whether you're a potential client, partner, or team member, there's a place for you in our story.
-            </p>
-            <div class="grid-3 mt-3">
-                <div class="card" style="text-align: center;">
-                    <i class="fas fa-briefcase" style="font-size: 3rem; color: var(--sky-blue); margin-bottom: 1rem;"></i>
-                    <h3>Work With Us</h3>
-                    <p>Partner with us to transform your business through innovative digital solutions.</p>
-                    <a href="../consultation.html" class="btn-secondary" style="margin-top: 1rem;">Book Consultation</a>
-                </div>
-                <div class="card" style="text-align: center;">
-                    <i class="fas fa-user-plus" style="font-size: 3rem; color: var(--teal); margin-bottom: 1rem;"></i>
-                    <h3>Join Our Team</h3>
-                    <p>Build your career with a dynamic, forward-thinking organization making real impact.</p>
-                    <a href="career.html" class="btn-secondary" style="margin-top: 1rem;">View Careers</a>
-                </div>
-                <div class="card" style="text-align: center;">
-                    <i class="fas fa-hands-helping" style="font-size: 3rem; color: var(--orange); margin-bottom: 1rem;"></i>
-                    <h3>Volunteer</h3>
-                    <p>Contribute your skills to help bridge the digital divide and empower communities.</p>
-                    <a href="Volunteer.html" class="btn-secondary" style="margin-top: 1rem;">Get Involved</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>About AEC</h3>
-                    <p>
-                        AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner, empowering businesses across Africa and Europe through technology, innovation, and collaboration since 2017.
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="../services/ai-ml.html">AI & ML</a></li>
-                        <li><a href="../resources/research-insights.html">Research</a></li>
-                        <li><a href="../csr/social-impact.html">Social Impact</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="../services/ERP.html">ERP Solutions</a></li>
-                        <li><a href="../services/crm.html">CRM Implementation</a></li>
-                        <li><a href="../services/cloud.html">Cloud Services</a></li>
-                        <li><a href="../services/business-analysis.html">Business Analysis</a></li>
-                        <li><a href="../services/web-marketing.html">Web Marketing</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Connect</h3>
-                    <ul class="footer-links">
-                        <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com">Email Us</a></li>
-                        <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                    </ul>
-                    <p style="margin-top: 1rem;">
-                        <strong>Phone:</strong> +48 690 386 721<br>
-                        <strong>Locations:</strong> Douala, Cameroon | Krakow, Poland
-                    </p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                &copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved. | Designed by Armel Sandjong Nantchouang
-            </div>
+  <section class="section" style="background:var(--card); border-radius:20px; padding:60px;">
+    <div style="text-align:center; max-width:800px; margin:0 auto;">
+      <h2 class="sh">Our Strategic <em>Objectives</em></h2>
+      <p style="margin-bottom:40px;">Serving 200+ businesses across 10+ countries by 2027 while maintaining a 95% satisfaction rate.</p>
+      <div class="grid-2">
+        <div style="text-align:left;">
+          <h4><i class="fas fa-check-circle" style="color:var(--teal)"></i> Quality Guaranteed</h4>
+          <p style="font-size:0.9rem; color:var(--muted)">Solutions meeting rigorous global standards.</p>
         </div>
-    </footer>
+        <div style="text-align:left;">
+          <h4><i class="fas fa-clock" style="color:var(--gold)"></i> On-Time Delivery</h4>
+          <p style="font-size:0.9rem; color:var(--muted)">We respect deadlines and deliver as promised.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <script>
-        function toggleMobileMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3 style="font-family:var(--ff-serif); margin-bottom:15px;">AEC</h3>
+      <p style="font-size:0.85rem; color:var(--muted)">Leading digital transformation across Africa and Europe since 2017.</p>
+    </div>
+    <div class="footer-col">
+      <h4 style="color:#fff; margin-bottom:15px;">Company</h4>
+      <ul style="list-style:none; font-size:0.9rem;">
+        <li><a href="about.html" style="color:var(--muted); text-decoration:none;">About Us</a></li>
+        <li><a href="contact.html" style="color:var(--muted); text-decoration:none;">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div style="text-align:center; padding-top:40px; border-top:1px solid var(--border); margin-top:40px; font-size:0.8rem; color:var(--muted);">
+    &copy; 2026 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved.
+  </div>
+</footer>
+
 </body>
 </html>
