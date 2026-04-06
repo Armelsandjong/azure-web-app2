@@ -3,388 +3,373 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI &amp; Machine Learning | AFRIQUEEUROPECONNEXIONVMETC</title>
-  <meta name="description" content="Custom AI and Machine Learning solutions — predictive analytics, intelligent automation, NLP and computer vision for your business.">
+  <title>Enterprise AI & Digital Transformation | AFRIQUEEUROPECONNEXIONVMETC</title>
+  <meta name="description" content="Harness the power of AI, ERP, and Cloud solutions with AEC. Bridging the gap between European innovation and African growth through expert digital consulting.">
 
-  <!-- Fonts -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","v4lglq0gvb");</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- NOTE: all paths use ../ because this file is inside services/ -->
-  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    :root {
+      --navy: #0b1535; --navy2: #0f1e4a; --gold: #c9963c; --gold-l: #e8b85a;
+      --teal: #00c2a8; --muted: rgba(255,255,255,.52); --card: rgba(255,255,255,.035);
+      --border: rgba(255,255,255,.08); --ff-serif: "Playfair Display", serif; --ff-sans: "DM Sans", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--navy); color: #e0e4f0; font-family: var(--ff-sans); line-height: 1.7; overflow-x: hidden; }
+
+    /* --- ENHANCED UI COMPONENTS --- */
+    .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid var(--border); }
+    .text-gradient { background: linear-gradient(135deg, #fff 30%, var(--gold-l) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    
+    /* --- HEADER & NAVIGATION --- */
+    .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(11,21,53,.85); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); transition: all .3s; }
+    .site-header.scrolled { background: rgba(11,21,53,.97); box-shadow: 0 4px 32px rgba(0,0,0,.4); }
+    .hdr-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; height: 72px; gap: 40px; }
+    .logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+    .logo img { height:42px; width:42px; }
+    .logo-text { font-family:var(--ff-serif); font-size:1.5rem; color:#fff; font-weight: 800; }
+    
+    .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; margin-left: auto; }
+    .nav-links > li > a { padding: 10px 16px; border-radius: 8px; color: rgba(255,255,255,.8); font-size: .9rem; font-weight: 500; text-decoration: none; transition: .2s; }
+    .nav-links > li > a:hover, .nav-links > li > a.active { color: #fff; background: rgba(255,255,255,.1); }
+    .nav-cta { background: linear-gradient(135deg, var(--gold), var(--gold-l)) !important; color: var(--navy) !important; font-weight: 700 !important; }
+
+    /* --- PAGE BANNER --- */
+    .page-banner { padding: 160px 40px 100px; background: radial-gradient(circle at top right, rgba(201,150,60,.1), transparent), linear-gradient(135deg, #0b1535 0%, #050a1a 100%); position: relative; border-bottom: 1px solid var(--border); }
+    .banner-inner { max-width: 1200px; margin: 0 auto; }
+    .breadcrumb { display: flex; align-items: center; gap: 10px; font-size: .85rem; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--gold-l); text-decoration: none; }
+    .stag { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,150,60,.1); border: 1px solid rgba(201,150,60,0.3); color: var(--gold-l); padding: 6px 16px; border-radius: 30px; font-size: .75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+    .page-banner h1 { font-family: var(--ff-serif); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 24px; }
+    .page-banner .lead { font-size: 1.2rem; color: var(--muted); max-width: 700px; line-height: 1.6; }
+
+    /* --- SECTIONS --- */
+    .section { padding: 100px 0; position: relative; }
+    .content-wrap { max-width: 1300px; margin: 0 auto; padding: 0 40px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    @media(max-width: 992px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+    /* --- INTERACTIVE CARDS --- */
+    .aec-card { background: var(--card); border: 1px solid var(--border); padding: 40px; border-radius: 20px; transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; overflow: hidden; }
+    .aec-card:hover { transform: translateY(-10px); border-color: var(--gold); background: rgba(255,255,255,0.06); }
+    .aec-card i { font-size: 2.5rem; color: var(--gold-l); margin-bottom: 24px; display: block; }
+    .aec-card h3 { font-family: var(--ff-serif); font-size: 1.6rem; color: #fff; margin-bottom: 16px; }
+    .aec-card p { color: var(--muted); font-size: 1rem; line-height: 1.6; }
+
+    /* --- STEP PROCESS --- */
+    .process-flow { position: relative; margin-top: 60px; }
+    .step-item { display: flex; gap: 40px; margin-bottom: 40px; }
+    .step-num { width: 60px; height: 60px; background: var(--gold); color: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; flex-shrink: 0; box-shadow: 0 0 20px rgba(201,150,60,0.4); }
+    .step-content { padding-top: 10px; }
+    .step-content h4 { font-family: var(--ff-serif); font-size: 1.4rem; color: #fff; margin-bottom: 8px; }
+
+    /* --- STATS --- */
+    .stats-container { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 24px; padding: 60px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 40px; margin: 80px 0; }
+    .stat-box { text-align: center; }
+    .stat-val { font-family: var(--ff-serif); font-size: 3.5rem; color: var(--gold); font-weight: 700; display: block; }
+    .stat-label { color: var(--muted); text-transform: uppercase; letter-spacing: 2px; font-size: .8rem; margin-top: 8px; }
+
+    /* --- BUTTONS --- */
+    .btn { display: inline-flex; align-items: center; gap: 12px; padding: 16px 36px; border-radius: 12px; font-weight: 700; text-decoration: none; transition: all .3s; font-size: 1rem; cursor: pointer; border: none; }
+    .btn-gold { background: linear-gradient(135deg, var(--gold), var(--gold-l)); color: var(--navy); }
+    .btn-gold:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(201,150,60,0.4); }
+    .btn-outline { border: 1px solid var(--border); color: #fff; background: transparent; }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+
+    /* --- ACCORDION --- */
+    .faq-container { max-width: 900px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
+    .faq-trigger { width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; color: #fff; font-family: var(--ff-serif); font-size: 1.3rem; cursor: pointer; text-align: left; }
+    .faq-content { max-height: 0; overflow: hidden; transition: all .4s ease; color: var(--muted); padding-top: 0; }
+    .faq-item.active .faq-content { max-height: 300px; padding-top: 20px; }
+    .faq-item.active i { transform: rotate(180deg); color: var(--gold); }
+
+    /* --- FOOTER --- */
+    .site-footer { background: #050a1a; padding: 100px 0 40px; border-top: 1px solid var(--border); }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 60px; max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+    .footer-col h4 { font-family: var(--ff-serif); color: #fff; margin-bottom: 24px; font-size: 1.2rem; position: relative; }
+    .footer-col h4::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 30px; height: 2px; background: var(--gold); }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a { color: var(--muted); text-decoration: none; transition: .2s; font-size: .95rem; }
+    .footer-links a:hover { color: var(--gold); padding-left: 8px; }
+
+    /* --- ANIMATIONS --- */
+    [data-reveal] { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    [data-reveal].visible { opacity: 1; transform: translateY(0); }
+  </style>
 </head>
 <body>
 
-<!-- ═══════════════════ HEADER ═══════════════════ -->
-<header>
-  <div class="container">
-    <nav>
-      <a href="../index.html" class="logo">
-        <img src="../assets/logo.png" alt="AEC Logo" class="logo-img">
-        <span class="logo-text">AEC</span>
-      </a>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html">Home</a></li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Company <i class="fas fa-chevron-down"></i></a>
-          <div class="dropdown-menu">
-            <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-            <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
-            <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-            <a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
-          </div>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle active">Services <i class="fas fa-chevron-down"></i></a>
-          <div class="dropdown-menu">
-            <a href="ai-ml.html"><i class="fas fa-robot"></i> AI &amp; Machine Learning</a>
-            <a href="ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-            <a href="crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
-            <a href="cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
-            <a href="business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
-            <a href="web-marketing.html"><i class="fas fa-globe"></i> Web &amp; Marketing</a>
-          </div>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Resources <i class="fas fa-chevron-down"></i></a>
-          <div class="dropdown-menu">
-            <a href="../resources/research-insights.html"><i class="fas fa-book"></i> Research &amp; Insights</a>
-            <a href="../resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
-            <a href="../resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
-          </div>
-        </li>
-
-        <li><a href="../consultation.html" class="cta-btn">Free Consultation</a></li>
-        <li><a href="../company/contact.html">Contact</a></li>
-      </ul>
-
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
+<header class="site-header" id="siteHeader">
+  <div class="hdr-inner">
+    <a href="../index.html" class="logo">
+      <img src="../assets/logo.png" alt="AEC Logo">
+      <span class="logo-text">AEC</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../company/about.html">About</a></li>
+      <li><a href="../services/ai-ml.html" class="active">AI Solutions</a></li>
+      <li><a href="../services/ERP.html">ERP Systems</a></li>
+      <li><a href="../company/contact.html">Contact</a></li>
+      <li><a href="../consultation.html" class="nav-cta">Free Consultation</a></li>
+    </ul>
   </div>
 </header>
 
-<!-- ═══════════════════ MAIN ═══════════════════ -->
 <main>
-
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="breadcrumb">
-        <a href="../index.html">Home</a>
-        <span class="sep">›</span>
-        <a href="#">Services</a>
-        <span class="sep">›</span>
-        <span>AI &amp; Machine Learning</span>
-      </div>
-      <div class="section-tag">Our Services</div>
-      <h1><i class="fas fa-robot"></i> AI &amp; Machine Learning Solutions</h1>
-      <p>
-        Unlock the power of Artificial Intelligence and Machine Learning for your business.
-        We deliver custom AI solutions, intelligent automation, and predictive analytics
-        to help you innovate, optimise, and grow.
-      </p>
-      <div class="hero-buttons">
-        <a href="../consultation.html" class="btn-primary"><i class="fas fa-calendar-alt"></i> Book Free Consultation</a>
-        <a href="../company/contact.html" class="btn-secondary">Contact Us</a>
+  <section class="page-banner">
+    <div class="banner-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a> / <a href="#">Services</a> / <span>Enterprise AI</span>
+      </nav>
+      <span class="stag">Future-Proof Your Business</span>
+      <h1 class="text-gradient">Next-Generation <br><em>Enterprise AI</em> Solutions</h1>
+      <p class="lead">We integrate advanced Machine Learning and Big Data analytics to transform complex operational data into actionable strategic intelligence.</p>
+      <div style="margin-top: 40px; display: flex; gap: 20px;">
+        <a href="#solutions" class="btn btn-gold">Explore Solutions</a>
+        <a href="../consultation.html" class="btn btn-outline">Technical Audit</a>
       </div>
     </div>
   </section>
 
-  <!-- INTRO -->
-  <section>
-    <div class="container">
-      <div class="about-split reveal">
-        <div>
-          <div class="section-tag">Transform Your Business</div>
-          <h2>AI Is Here — And It Works For You</h2>
-          <p>
-            Artificial Intelligence is no longer a futuristic concept. At AFRIQUEEUROPECONNEXIONVMETC,
-            we help you harness the power of AI and Machine Learning to automate processes,
-            gain predictive insights, and make data-driven decisions that propel your business forward.
-          </p>
-          <p>
-            Whether you're an SME in Douala or a large organisation in Kraków, our solutions are
-            designed to scale with you — from initial discovery through to deployment and ongoing optimisation.
-          </p>
-          <a href="../consultation.html" class="btn-primary mt-2">Start Your AI Journey</a>
-        </div>
-        <img src="../assets/human machine.jpg" alt="AI and Machine Learning" style="border-radius:18px;width:100%">
+  <section class="section" id="solutions">
+    <div class="content-wrap">
+      <div style="text-align: center; margin-bottom: 80px;" data-reveal>
+        <span class="stag">Capabilities</span>
+        <h2 style="font-family: var(--ff-serif); font-size: 3rem;">Specialized <em>Technological</em> Verticals</h2>
       </div>
-    </div>
-  </section>
-
-  <!-- SERVICES CARDS -->
-  <section class="bg-light">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">What We Offer</div>
-        <h2>Our AI &amp; ML Capabilities</h2>
-        <p class="section-intro">End-to-end artificial intelligence services tailored to your specific industry and challenges.</p>
-      </div>
+      
       <div class="grid-3">
-        <div class="card reveal">
-          <i class="fas fa-cogs"></i>
-          <h3>Process Automation</h3>
-          <p>Automate repetitive tasks and workflows, freeing your team to focus on strategic initiatives.</p>
-          <ul>
-            <li>Robotic Process Automation (RPA)</li>
-            <li>Document processing automation</li>
-            <li>Workflow optimisation</li>
-            <li>Intelligent task routing</li>
-          </ul>
-        </div>
-        <div class="card reveal">
-          <i class="fas fa-chart-line"></i>
-          <h3>Predictive Analytics</h3>
-          <p>Leverage historical data to forecast future trends, customer behaviour, and business outcomes.</p>
-          <ul>
-            <li>Sales forecasting</li>
-            <li>Demand prediction</li>
-            <li>Risk assessment</li>
-            <li>Customer churn prediction</li>
-          </ul>
-        </div>
-        <div class="card reveal">
-          <i class="fas fa-comments"></i>
-          <h3>Natural Language Processing</h3>
-          <p>Enable your systems to understand, interpret, and respond to human language intelligently.</p>
-          <ul>
-            <li>AI-powered chatbots</li>
-            <li>Sentiment analysis</li>
-            <li>Text classification</li>
-            <li>Language translation</li>
-          </ul>
-        </div>
-        <div class="card reveal">
+        <div class="aec-card" data-reveal>
           <i class="fas fa-brain"></i>
-          <h3>Custom ML Models</h3>
-          <p>Models trained on your specific business data — from recommendation engines to fraud detection.</p>
-          <ul>
-            <li>Custom model development</li>
-            <li>Model training &amp; optimisation</li>
-            <li>Feature engineering</li>
-            <li>Performance monitoring</li>
-          </ul>
+          <h3>Predictive Analytics</h3>
+          <p>Leverage historical data to forecast market trends, demand spikes, and consumer behavior with up to 94% accuracy using our proprietary AEC-Forecaster engine.</p>
         </div>
-        <div class="card reveal">
-          <i class="fas fa-eye"></i>
-          <h3>Computer Vision</h3>
-          <p>Extract meaningful information from images and video for quality control and automation.</p>
-          <ul>
-            <li>Image classification</li>
-            <li>Object detection &amp; tracking</li>
-            <li>Facial recognition</li>
-            <li>Quality inspection automation</li>
-          </ul>
+        <div class="aec-card" data-reveal style="transition-delay: 0.1s">
+          <i class="fas fa-microchip"></i>
+          <h3>Edge Computing</h3>
+          <p>Deploy AI models directly on local hardware to reduce latency and enhance security for manufacturing plants and distributed logistics networks.</p>
         </div>
-        <div class="card reveal">
-          <i class="fas fa-database"></i>
-          <h3>Data-Driven Insights</h3>
-          <p>Transform raw data into actionable intelligence that reveals patterns invisible to traditional analytics.</p>
-          <ul>
-            <li>Advanced data analytics</li>
-            <li>Pattern recognition</li>
-            <li>Anomaly detection</li>
-            <li>BI dashboards</li>
-          </ul>
+        <div class="aec-card" data-reveal style="transition-delay: 0.2s">
+          <i class="fas fa-network-wired"></i>
+          <h3>NLP Integration</h3>
+          <p>Automate document processing and customer sentiment analysis with multi-lingual Natural Language Processing tailored for African and European markets.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section>
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">Our Process</div>
-        <h2>How We Implement AI</h2>
-        <p class="section-intro">A structured, low-risk approach from discovery to continuous improvement.</p>
-      </div>
+  <section class="section" style="background: rgba(255,255,255,0.01);">
+    <div class="content-wrap">
       <div class="grid-2">
-        <div class="card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
-          <div class="step-number">1</div>
-          <div>
-            <h3>Discovery &amp; Assessment</h3>
-            <p>We understand your business challenges, existing data infrastructure, and AI readiness — identifying where AI delivers the most value.</p>
+        <div data-reveal>
+          <span class="stag">Our Process</span>
+          <h2 style="font-family: var(--ff-serif); font-size: 2.8rem; margin: 20px 0;">The AEC <em>Implementation</em> Framework</h2>
+          <p style="color: var(--muted); margin-bottom: 40px;">Our structured 4-step methodology ensures zero downtime during integration and maximum ROI within the first fiscal quarter.</p>
+          
+          <div class="process-flow">
+            <div class="step-item">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <h4>Data Discovery</h4>
+                <p>We audit your current tech stack to identify data silos and optimization opportunities.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <h4>Model Prototyping</h4>
+                <p>Developing a sandbox environment to test AI hypothesis against real-world scenarios.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <h4>Full-Scale Deployment</h4>
+                <p>Seamless integration into your ERP/CRM systems with real-time monitoring.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
-          <div class="step-number">2</div>
-          <div>
-            <h3>Data Preparation</h3>
-            <p>Quality data is the foundation of effective AI. We help collect, clean, and organise your data to ensure optimal model performance.</p>
+        <div class="glass" style="padding: 50px; border-radius: 30px;" data-reveal>
+          <h3 style="font-family: var(--ff-serif); font-size: 2rem; margin-bottom: 30px;">Request a <em>Whitepaper</em></h3>
+          <form data-form-submit>
+            <div style="margin-bottom: 20px;">
+              <label style="display:block; margin-bottom:8px; font-size:.8rem; color:var(--muted)">FULL NAME</label>
+              <input type="text" name="name" required style="width:100%; background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:15px; border-radius:10px; color:#fff;">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display:block; margin-bottom:8px; font-size:.8rem; color:var(--muted)">WORK EMAIL</label>
+              <input type="email" name="email" required style="width:100%; background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:15px; border-radius:10px; color:#fff;">
+            </div>
+            <div style="margin-bottom: 30px;">
+              <label style="display:block; margin-bottom:8px; font-size:.8rem; color:var(--muted)">INDUSTRY</label>
+              <select name="industry" style="width:100%; background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:15px; border-radius:10px; color:#fff;">
+                <option value="fintech">FinTech</option>
+                <option value="agritech">AgriTech</option>
+                <option value="logistics">Logistics</option>
+                <option value="retail">Retail</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-gold" style="width: 100%;">Download Insights</button>
+            <div class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="content-wrap">
+      <div class="stats-container" data-reveal>
+        <div class="stat-box">
+          <span class="stat-val aec-counter" data-target="150" data-suffix="+">0</span>
+          <span class="stat-label">Deployments</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-val aec-counter" data-target="40" data-suffix="%">0</span>
+          <span class="stat-label">Cost Reduction</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-val aec-counter" data-target="12" data-suffix="M">0</span>
+          <span class="stat-label">Data Points/Sec</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-val aec-counter" data-target="99" data-suffix=".9%">0</span>
+          <span class="stat-label">Uptime SLA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="content-wrap">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <span class="stag">Expertise FAQ</span>
+        <h2 style="font-family: var(--ff-serif); font-size: 2.5rem;">Strategic <em>Inquiries</em></h2>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-trigger">How does AEC ensure data sovereignty between Europe and Africa? <i class="fas fa-plus"></i></button>
+          <div class="faq-content">
+            <p>We utilize hybrid cloud architectures that comply with both GDPR (Europe) and local data protection regulations (e.g., NDPR in Nigeria), ensuring your data resides within chosen jurisdictions while remaining accessible for global operations.</p>
           </div>
         </div>
-        <div class="card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
-          <div class="step-number">3</div>
-          <div>
-            <h3>Model Development</h3>
-            <p>Our data scientists develop and train custom AI models tailored to your specific use case, ensuring accuracy and reliability.</p>
-          </div>
-        </div>
-        <div class="card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
-          <div class="step-number">4</div>
-          <div>
-            <h3>Integration &amp; Deployment</h3>
-            <p>We seamlessly integrate AI into your existing systems and workflows, minimising disruption and ensuring smooth adoption.</p>
-          </div>
-        </div>
-        <div class="card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
-          <div class="step-number">5</div>
-          <div>
-            <h3>Training &amp; Support</h3>
-            <p>We train your team to work with AI systems effectively and provide ongoing support to ensure continued success.</p>
-          </div>
-        </div>
-        <div class="card reveal" style="display:flex;gap:1.25rem;align-items:flex-start">
-          <div class="step-number">6</div>
-          <div>
-            <h3>Monitoring &amp; Optimisation</h3>
-            <p>AI models improve over time. We continuously monitor performance and optimise models to maintain peak effectiveness.</p>
+        <div class="faq-item">
+          <button class="faq-trigger">What is the typical timeframe for an AI ERP integration? <i class="fas fa-plus"></i></button>
+          <div class="faq-content">
+            <p>A standard deployment cycle takes between 8 to 14 weeks, depending on the complexity of legacy data migration and the level of custom ML model training required.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- INDUSTRIES -->
-  <section class="bg-light">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">Industries We Serve</div>
-        <h2>Transforming Businesses Across Sectors</h2>
-      </div>
-      <div class="grid-3">
-        <div class="card reveal"><i class="fas fa-shopping-cart"></i><h3>Retail &amp; E-commerce</h3><p>Personalised recommendations, demand forecasting, and dynamic pricing.</p></div>
-        <div class="card reveal"><i class="fas fa-heartbeat"></i><h3>Healthcare</h3><p>Diagnostic assistance, patient risk prediction, and medical image analysis.</p></div>
-        <div class="card reveal"><i class="fas fa-university"></i><h3>Finance &amp; Banking</h3><p>Fraud detection, credit risk assessment, and customer service automation.</p></div>
-        <div class="card reveal"><i class="fas fa-industry"></i><h3>Manufacturing</h3><p>Predictive maintenance, quality control, and supply chain optimisation.</p></div>
-        <div class="card reveal"><i class="fas fa-truck"></i><h3>Logistics &amp; Transport</h3><p>Route optimisation, delivery prediction, and fleet management.</p></div>
-        <div class="card reveal"><i class="fas fa-phone"></i><h3>Telecommunications</h3><p>Network optimisation, churn prediction, and usage pattern analysis.</p></div>
-      </div>
+  <section class="section" style="background: linear-gradient(to right, #0b1535, #0f1e4a);">
+    <div class="content-wrap" style="text-align: center;">
+      <h2 style="font-family: var(--ff-serif); font-size: 3.5rem; margin-bottom: 20px;">Ready to <em>Scale?</em></h2>
+      <p style="color: var(--muted); max-width: 600px; margin: 0 auto 40px;">Join the 200+ enterprises leveraging AEC technology to dominate their markets.</p>
+      <a href="../consultation.html" class="btn btn-gold">Start Your Transformation</a>
     </div>
   </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container text-center">
-      <div class="section-tag" style="background:rgba(201,150,60,.15);color:var(--gold-light)">Ready to Embrace AI?</div>
-      <h2>Start Your AI Journey Today</h2>
-      <p class="cta-description">Whether you're starting out or scaling existing AI initiatives, we're here to guide you.</p>
-      <a href="../consultation.html" class="btn-cta"><i class="fas fa-calendar-alt"></i> Book Your Free Consultation</a>
-      <div class="cta-contact">
-        <span><i class="fas fa-phone"></i> +48 690 386 721</span>
-        <span class="separator">|</span>
-        <span><i class="fas fa-envelope"></i> ArmelSandjong@afriqueeuropeconnexionvmetc.com</span>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<!-- ═══════════════════ FOOTER ═══════════════════ -->
-<!-- THIS IS THE STANDARD FOOTER — USE THIS ON EVERY PAGE INSIDE A SUBFOLDER -->
-<!-- For root-level pages (index.html), remove the ../ prefix from all hrefs -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-
-      <div class="footer-col">
-        <img src="../assets/logo.png" alt="AEC Logo" class="footer-logo-img">
-        <p class="footer-tagline">Aim High • Be Kind • Dare to be Different</p>
-        <p>
-          AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner,
-          empowering businesses across Africa and Europe through technology, innovation,
-          and collaboration since 2017.
-        </p>
-      </div>
-
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../company/about.html">About Us</a></li>
-          <li><a href="ai-ml.html">AI &amp; ML</a></li>
-          <li><a href="../resources/research-insights.html">Research</a></li>
-          <li><a href="../csr/social-impact.html">Social Impact</a></li>
-          <li><a href="../company/contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Services</h3>
-        <ul class="footer-links">
-          <li><a href="ERP.html">ERP Solutions</a></li>
-          <li><a href="crm.html">CRM Implementation</a></li>
-          <li><a href="cloud.html">Cloud Services</a></li>
-          <li><a href="business-analysis.html">Business Analysis</a></li>
-          <li><a href="web-marketing.html">Web &amp; Marketing</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Connect</h3>
-        <ul class="footer-links">
-          <li>
-            <a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com">
-              <i class="fas fa-envelope"></i> Email Us
-            </a>
-          </li>
-          <li>
-            <a href="tel:+48690386721">
-              <i class="fas fa-phone"></i> +48 690 386 721
-            </a>
-          </li>
-          <li>
-            <a href="https://wa.me/48690386721" target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener">
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://x.com/SandjongAr3472" target="_blank" rel="noopener">
-              <i class="fab fa-x-twitter"></i> Twitter / X
-            </a>
-          </li>
-          <li>
-            <a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank" rel="noopener">
-              <i class="fab fa-researchgate"></i> ResearchGate
-            </a>
-          </li>
-        </ul>
-        <div class="contact-info-block">
-          <p><strong>Headquarters:</strong> Kraków, Poland</p>
-          <p><strong>Regional Office:</strong> Douala, Cameroon</p>
-        </div>
-      </div>
-
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo" style="margin-bottom:20px">
+        <img src="../assets/logo.png" alt="AEC Logo">
+        <span class="logo-text">AEC</span>
+      </a>
+      <p style="color: var(--muted); font-size: .9rem;">Leading the digital frontier through innovative AI, Cloud, and Strategic Consulting services across two continents.</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved. | Designed by Armel Sandjong Nantchouang</p>
-      <p><strong>Microsoft Partner</strong></p>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="../company/about.html">About Us</a></li>
+        <li><a href="../services/ai-ml.html">AI Solutions</a></li>
+        <li><a href="../services/cloud.html">Cloud Systems</a></li>
+        <li><a href="../company/contact.html">Careers</a></li>
+      </ul>
     </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul class="footer-links">
+        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Contact HQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Global HQ</h4>
+      <p style="color: var(--muted); font-size: .9rem;">Kraków, Poland<br>Office 402, Tech Plaza<br>+48 690 386 721</p>
+    </div>
+  </div>
+  <div style="max-width: 1400px; margin: 60px auto 0; padding: 20px 40px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; color: rgba(255,255,255,0.2); font-size: .8rem;">
+    <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC. All Rights Reserved.</p>
+    <p>ISO 27001 Certified Partner</p>
   </div>
 </footer>
 
-<button id="backToTop" class="back-to-top" aria-label="Back to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
+<script>
+  // Sticky Header
+  window.addEventListener('scroll', () => {
+    document.getElementById('siteHeader').classList.toggle('scrolled', window.scrollY > 50);
+  });
 
-<!-- NOTE: path uses ../ because this file is inside services/ -->
-<script src="../js/main.js"></script>
+  // FAQ Toggle
+  document.querySelectorAll('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const parent = trigger.parentElement;
+      parent.classList.toggle('active');
+      const icon = trigger.querySelector('i');
+      icon.classList.toggle('fa-plus');
+      icon.classList.toggle('fa-minus');
+    });
+  });
+
+  // Reveal Animation
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        if (entry.target.classList.contains('aec-counter')) animateCounter(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('[data-reveal], .aec-counter').forEach(el => observer.observe(el));
+
+  // Counter Logic
+  function animateCounter(el) {
+    const target = +el.getAttribute('data-target');
+    const suffix = el.getAttribute('data-suffix') || '';
+    let count = 0;
+    const speed = 2000 / target;
+    const updateCount = () => {
+      const inc = target / 100;
+      if (count < target) {
+        count += inc;
+        el.innerText = Math.ceil(count) + suffix;
+        setTimeout(updateCount, 20);
+      } else {
+        el.innerText = target + suffix;
+      }
+    };
+    updateCount();
+  }
+</script>
+
 </body>
 </html>
