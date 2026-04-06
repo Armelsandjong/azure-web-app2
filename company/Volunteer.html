@@ -1,74 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Volunteer | AFRIQUEEUROPECONNEXIONVMETC</title>
-    <meta name="description" content="Page description here">
-   
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Volunteer | AFRIQUEEUROPECONNEXIONVMETC</title>
+  <meta name="description" content="Page description for SEO — max 160 characters.">
+ 
+  <!-- Google Tag Manager — replace GTM-XXXXXXX -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","v4lglq0gvb");</script>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+ 
+  <!-- ★ SUBFOLDER pages use ../ — root pages use css/ directly -->
+  <link rel="stylesheet" href="../css/style.css">
+ 
+  <style>
+  /* ═══════════════════════════════════════════════════════════
+     SHARED INNER-PAGE STYLES — do not modify
+     All design tokens live in css/style.css
+  ═══════════════════════════════════════════════════════════ */
+  :root {
+    --navy:   #0b1535;
+    --navy2:  #0f1e4a;
+    --gold:   #c9963c;
+    --gold-l: #e8b85a;
+    --teal:   #00c2a8;
+    --muted:  rgba(255,255,255,.52);
+    --card:   rgba(255,255,255,.035);
+    --border: rgba(255,255,255,.08);
+    --ff-serif: "Times New Roman", "Playfair Display", serif;
+    --ff-sans:  "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--navy);
+    color: #e0e4f0;
+    font-family: var(--ff-sans);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+ 
+  /* ── HEADER ─────────────────────────────────────────────── */
+  .site-header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(11,21,53,.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    transition: background .3s, box-shadow .3s;
+  }
+  .site-header.scrolled {
+    background: rgba(11,21,53,.97);
+    box-shadow: 0 4px 32px rgba(0,0,0,.4);
+  }
+  .hdr-inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 28px;
+    display: flex; align-items: center; height: 68px; gap: 40px;
+  }
+  .logo { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
+  .logo img { height:38px; width:38px; object-fit:contain; }
+  .logo-text { font-family:var(--ff-serif); font-size:1.35rem; color:#fff; letter-spacing:.03em; }
+  .nav-links {
+    display: flex; align-items: center; gap: 4px;
+    list-style: none; margin-left: auto;
+  }
+  .nav-links > li > a {
+    display: flex; align-items: center; gap: 5px;
+    padding: 8px 14px; border-radius: 7px;
+    color: rgba(255,255,255,.78); font-size: .88rem; font-weight: 500;
+    text-decoration: none; transition: color .2s, background .2s;
+  }
+  .nav-links > li > a:hover,
+  .nav-links > li > a.active { color: #fff; background: rgba(255,255,255,.07); }
+  .nav-links > li > a i { font-size: .7rem; opacity: .6; }
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold), var(--gold-l)) !important;
+    color: var(--navy) !important; font-weight: 700 !important;
+    padding: 8px 20px !important; border-radius: 8px !important;
+  }
+  .dropdown { position: relative; }
+  .dropdown-menu {
+    display: none; position: absolute; top: calc(100% + 8px); left: 0;
+    min-width: 240px; background: rgba(11,21,53,.97);
+    border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5); z-index: 200;
+  }
+  .dropdown:hover .dropdown-menu { display: block; }
+  .dropdown-menu a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 11px 18px; color: rgba(255,255,255,.78);
+    font-size: .88rem; text-decoration: none; transition: background .15s, color .15s;
+  }
+  .dropdown-menu a:hover { background: rgba(255,255,255,.07); color: #fff; }
+  .dropdown-menu a i { width: 16px; opacity: .6; font-size: .85rem; }
+  .mob-btn {
+    display: none; background: none; border: none; cursor: pointer;
+    padding: 6px; margin-left: auto;
+  }
+  .mob-btn span {
+    display: block; width: 24px; height: 2px; background: #fff;
+    margin: 5px 0; transition: transform .3s, opacity .3s; border-radius: 2px;
+  }
+  #mob { display: none; }
+  #mob.open { display: flex; flex-direction: column; }
+ 
+  /* ── PAGE BANNER ─────────────────────────────────────────── */
+  .page-banner {
+    padding: 130px 28px 64px;
+    background: linear-gradient(135deg, var(--navy) 0%, #0d2060 50%, #0a2418 100%);
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-banner::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 70% 50%, rgba(201,150,60,.08) 0%, transparent 70%);
+  }
+  .banner-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
+  .breadcrumb {
+    display: flex; align-items: center; gap: 8px;
+    font-size: .8rem; color: var(--muted);
+    margin-bottom: 16px; flex-wrap: wrap;
+  }
+  .breadcrumb a { color: var(--gold-l); text-decoration: none; transition: color .2s; }
+  .breadcrumb a:hover { color: #fff; }
+  .breadcrumb i { font-size: .65rem; opacity: .5; }
+  .stag {
+    display: inline-block;
+    background: rgba(201,150,60,.12); border: 1px solid rgba(201,150,60,.28);
+    color: var(--gold-l); font-size: .75rem; letter-spacing: .12em;
+    text-transform: uppercase; padding: 5px 15px; border-radius: 20px; margin-bottom: 14px;
+  }
+  .page-banner h1 {
+    font-family: var(--ff-serif);
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    color: #fff; line-height: 1.18; max-width: 700px;
+  }
+  .page-banner h1 em { color: var(--gold-l); font-style: italic; }
+  .page-banner .lead {
+    color: var(--muted); font-size: 1.05rem; max-width: 580px;
+    margin-top: 14px; line-height: 1.75;
+  }
+ 
+  /* ── CONTENT AREA ────────────────────────────────────────── */
+  .content-wrap { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+  .section { padding: 80px 0; }
+  .section.tight { padding: 52px 0; }
+ 
+  .sh {
+    font-family: var(--ff-serif);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    color: #fff; line-height: 1.2; margin-bottom: 12px;
+  }
+  .sh em { color: var(--gold-l); font-style: italic; }
+  .sp { color: var(--muted); max-width: 620px; font-size: 1rem; }
+  .ctr { text-align: center; }
+  .ctr .sp { margin: 0 auto; }
+ 
+  /* ── CARDS ───────────────────────────────────────────────── */
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 22px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 18px; }
+ 
+  .aec-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 26px;
+    transition: border-color .25s, transform .25s;
+  }
+  .aec-card:hover { border-color: rgba(201,150,60,.35); transform: translateY(-3px); }
+  .aec-card h3 { font-family: var(--ff-serif); font-size: 1.05rem; color: #fff; margin-bottom: 10px; }
+  .aec-card p  { color: var(--muted); font-size: .91rem; line-height: 1.7; }
+  .aec-card ul { color: var(--muted); font-size: .91rem; padding-left: 16px; line-height: 2; }
+ 
+  /* ── BUTTONS ─────────────────────────────────────────────── */
+  .btn-gold {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-l));
+    color: var(--navy); font-weight: 700; font-size: .93rem;
+    padding: 13px 28px; border-radius: 9px; border: none;
+    cursor: pointer; text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 4px 18px rgba(201,150,60,.3);
+  }
+  .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,150,60,.4); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: transparent; color: rgba(255,255,255,.8);
+    border: 1px solid rgba(255,255,255,.22); font-weight: 600; font-size: .93rem;
+    padding: 12px 26px; border-radius: 9px; cursor: pointer; text-decoration: none;
+    transition: border-color .2s, background .2s;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,.5); background: rgba(255,255,255,.05); }
+  .btn-teal {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: var(--teal); color: var(--navy);
+    font-weight: 700; font-size: .93rem;
+    padding: 13px 28px; border-radius: 9px; border: none;
+    cursor: pointer; text-decoration: none;
+    transition: opacity .2s, transform .2s;
+  }
+  .btn-teal:hover { opacity: .88; transform: translateY(-2px); }
+ 
+  /* ── PROSE (long-form text) ──────────────────────────────── */
+  .prose h2 { font-family: var(--ff-serif); color: #fff; font-size: 1.5rem; margin: 2rem 0 .8rem; }
+  .prose h3 { font-family: var(--ff-serif); color: var(--gold-l); font-size: 1.15rem; margin: 1.5rem 0 .6rem; }
+  .prose p  { color: var(--muted); margin-bottom: 1rem; line-height: 1.8; }
+  .prose ul { color: var(--muted); padding-left: 22px; margin-bottom: 1rem; line-height: 2; }
+  .prose strong { color: rgba(255,255,255,.85); }
+ 
+  /* ── TWO-COL LAYOUT ──────────────────────────────────────── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+  @media(max-width:860px){ .two-col { grid-template-columns: 1fr; } }
+ 
+  /* ── STAT ROW ────────────────────────────────────────────── */
+  .stats-row {
+    display: grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+  }
+  .stat-cell { background: var(--card); padding: 28px 16px; text-align: center; }
+  .stat-cell .num { font-family: var(--ff-serif); font-size: 2rem; color: var(--gold-l); font-weight: 700; }
+  .stat-cell .lbl { font-size: .77rem; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; margin-top: 4px; }
+ 
+  /* ── ACCORDION ───────────────────────────────────────────── */
+  .acc-item { border-bottom: 1px solid var(--border); }
+  .acc-btn {
+    width: 100%; background: none; border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 0; color: #fff; font-family: var(--ff-sans);
+    font-size: .97rem; font-weight: 600; text-align: left;
+  }
+  .acc-btn i { transition: transform .3s; color: var(--gold); flex-shrink: 0; }
+  .acc-item.open .acc-btn i { transform: rotate(180deg); }
+  .acc-body { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+  .acc-body-inner { padding: 0 0 18px; color: var(--muted); font-size: .93rem; line-height: 1.75; }
+  .acc-item.open .acc-body { max-height: 500px; }
+ 
+  /* ── CONTACT FORM ────────────────────────────────────────── */
+  .page-form {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 34px;
+  }
+  .pg-fg { margin-bottom: 16px; }
+  .pg-fg label {
+    display: block; font-size: .79rem; font-weight: 600;
+    letter-spacing: .07em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 7px;
+  }
+  .pg-fg input, .pg-fg select, .pg-fg textarea {
+    width: 100%; background: rgba(255,255,255,.055);
+    border: 1px solid var(--border); border-radius: 8px;
+    color: #fff; font-family: var(--ff-sans); font-size: .93rem;
+    padding: 11px 15px; outline: none; transition: border-color .2s; resize: vertical;
+  }
+  .pg-fg input:focus, .pg-fg select:focus, .pg-fg textarea:focus { border-color: var(--gold); }
+  .pg-fg select option { background: var(--navy); }
+  .pg-fg input::placeholder, .pg-fg textarea::placeholder { color: rgba(255,255,255,.25); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media(max-width:560px){ .form-row { grid-template-columns: 1fr; } }
+  .form-msg { padding: 11px 15px; border-radius: 8px; font-size: .88rem; margin-top: 12px; display: none; }
+  .form-msg.ok { background: rgba(0,194,168,.12); border: 1px solid rgba(0,194,168,.28); color: var(--teal); }
+  .form-msg.err { background: rgba(220,38,38,.1); border: 1px solid rgba(220,38,38,.3); color: #fca5a5; }
+ 
+  /* ── CTA STRIP ───────────────────────────────────────────── */
+  .cta-strip {
+    background: linear-gradient(135deg, #0d2060, #0f2a1a);
+    border-top: 1px solid rgba(201,150,60,.18);
+    padding: 80px 28px; text-align: center;
+  }
+  .cta-strip h2 { font-family: var(--ff-serif); font-size: clamp(1.5rem,4vw,2.4rem); color: #fff; margin-bottom: 13px; }
+  .cta-strip p { color: var(--muted); max-width: 540px; margin: 0 auto 28px; }
+  .cta-strip .btn-row { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+ 
+  /* ── FOOTER ──────────────────────────────────────────────── */
+  .site-footer {
+    background: #060d20; border-top: 1px solid var(--border); padding: 70px 0 0;
+  }
+  .footer-grid {
+    max-width: 1280px; margin: 0 auto; padding: 0 28px;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 48px;
+  }
+  @media(max-width:900px){ .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media(max-width:560px){ .footer-grid { grid-template-columns: 1fr; } }
+  .footer-brand .tagline {
+    color: var(--gold); font-family: var(--ff-serif); font-style: italic;
+    font-size: .88rem; margin: 12px 0;
+  }
+  .footer-brand p { color: var(--muted); font-size: .85rem; line-height: 1.75; }
+  .footer-col h4 {
+    font-family: var(--ff-serif); color: #fff; font-size: 1rem;
+    margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border);
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 9px; }
+  .footer-col ul a {
+    display: flex; align-items: center; gap: 8px;
+    color: var(--muted); font-size: .87rem; text-decoration: none; transition: color .2s;
+  }
+  .footer-col ul a:hover { color: var(--gold-l); }
+  .footer-col ul a i { width: 14px; opacity: .6; font-size: .82rem; }
+  .footer-bottom {
+    max-width: 1280px; margin: 48px auto 0; padding: 20px 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  }
+  .footer-bottom p { color: rgba(255,255,255,.35); font-size: .8rem; }
+  .ms-badge { display:flex; align-items:center; gap:6px; color:rgba(255,255,255,.45); font-size:.8rem; }
+  .ms-badge i { color: #00a4ef; }
+ 
+  /* ── BACK TO TOP ─────────────────────────────────────────── */
+  #btt {
+    position: fixed; bottom: 28px; right: 28px; z-index: 900;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--gold); color: var(--navy);
+    border: none; cursor: pointer; font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transform: translateY(20px);
+    transition: opacity .3s, transform .3s;
+    box-shadow: 0 4px 16px rgba(201,150,60,.35);
+  }
+  #btt.visible { opacity: 1; transform: none; }
+ 
+  /* ── SCROLL REVEAL ───────────────────────────────────────── */
+  .rv { opacity: 0; transform: translateY(22px); transition: opacity .55s, transform .55s; }
+  .rv.in { opacity: 1; transform: none; }
+ 
+  /* ── RESPONSIVE ──────────────────────────────────────────── */
+  @media(max-width:860px) {
+    .mob-btn { display: flex; flex-direction: column; }
+    .nav-links { display: none; }
+    #mob {
+      position: fixed; top: 68px; left: 0; right: 0; bottom: 0;
+      background: rgba(11,21,53,.98); z-index: 999;
+      flex-direction: column; padding: 28px; overflow-y: auto;
+    }
+    #mob li { border-bottom: 1px solid var(--border); }
+    #mob li a { display: block; padding: 14px 0; color: #fff; font-size: 1rem; text-decoration: none; }
+    #mob .dropdown-menu { position:static; display:none; background:transparent; border:none; box-shadow:none; padding-left:16px; }
+    #mob .dropdown.open .dropdown-menu { display: block; }
+    #mob .dropdown-menu a { padding: 9px 0; font-size: .92rem; color: var(--muted); }
+  }
+  </style>
 </head>
 <body>
-
-<header>
-    <div class="container">
-        <nav>
-            <!-- Logo - adjust path based on subfolder depth -->
-            <a href="../index.html" class="logo">
-                <img src="../assets/logo.png" alt="AEC" class="logo-img">
-            </a>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html">Home</a></li>
-                
-                <li class="dropdown">
-                    <a href="#company" class="dropdown-toggle">
-                        Company <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                        <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
-                        <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-                        <a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
-                    </div>
-                </li>
-                
-                <li class="dropdown">
-                    <a href="#services" class="dropdown-toggle">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../services/ai-ml.html"><i class="fas fa-robot"></i> AI & Machine Learning</a>
-                        <a href="../services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-                        <a href="../services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
-                        <a href="../services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
-                        <a href="../services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
-                        <a href="../services/web-marketing.html"><i class="fas fa-globe"></i> Web & Marketing</a>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#resources" class="dropdown-toggle">
-                        Resources <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../resources/research-insights.html"><i class="fas fa-book"></i> Research & Insights</a>
-                        <a href="../resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
-                        <a href="../resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
-                    </div>
-                </li>
-
-                <li><a href="../consultation.html" class="cta-btn">Free Consultation</a></li>
-                <li><a href="../company/contact.html">Contact</a></li>
-            </ul>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </div>
+ 
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ 
+<!-- ═══════════════════════ HEADER ═══════════════════════
+  ★ Set the correct .active class on the current section's parent item
+  ★ SUBFOLDER: all hrefs start with ../ except cross-links within same folder
+═══════════════════════════════════════════════════════ -->
+<header class="site-header" id="siteHeader">
+  <div class="hdr-inner">
+    <a href="../index.html" class="logo">
+      <img src="../assets/logo.png" alt="AEC Logo">
+      <span class="logo-text">AEC</span>
+    </a>
+ 
+    <!-- Desktop nav -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+ 
+      <li class="dropdown">
+        <!-- ★ Add class="active" to the <a> below when on a Company page -->
+        <a href="#">Company <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
+          <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
+          <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
+          <a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
+        </div>
+      </li>
+ 
+      <li class="dropdown">
+        <!-- ★ Add class="active" to the <a> below when on a Services page -->
+        <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="../services/ai-ml.html"><i class="fas fa-robot"></i> AI &amp; Machine Learning</a>
+          <a href="../services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
+          <a href="../services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
+          <a href="../services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
+          <a href="../services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
+          <a href="../services/web-marketing.html"><i class="fas fa-globe"></i> Web &amp; Marketing</a>
+          <a href="../services/Financial Analysis-&-Accounting.html"><i class="fas fa-chart-pie"></i> Financial Analysis &amp; Accounting</a>
+        </div>
+      </li>
+ 
+      <li class="dropdown">
+        <!-- ★ Add class="active" to the <a> below when on a Resources page -->
+        <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="../resources/research-insights.html"><i class="fas fa-book"></i> Research &amp; Insights</a>
+          <a href="../resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
+          <a href="../resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
+        </div>
+      </li>
+ 
+      <li><a href="../index.html#marketplace">FinTech Hub</a></li>
+      <li><a href="../company/contact.html">Contact</a></li>
+      <li><a href="../consultation.html" class="nav-cta">Free Consultation</a></li>
+    </ul>
+ 
+    <!-- Mobile toggle -->
+    <button class="mob-btn" id="ham" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+ 
+  <!-- Mobile overlay -->
+  <ul id="mob">
+    <li><a href="../index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#" id="mob-company">Company <i class="fas fa-chevron-down"></i></a>
+      <div class="dropdown-menu">
+        <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
+        <a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
+        <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
+        <a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" id="mob-services">Services <i class="fas fa-chevron-down"></i></a>
+      <div class="dropdown-menu">
+        <a href="../services/ai-ml.html"><i class="fas fa-robot"></i> AI &amp; Machine Learning</a>
+        <a href="../services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
+        <a href="../services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
+        <a href="../services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
+        <a href="../services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
+        <a href="../services/web-marketing.html"><i class="fas fa-globe"></i> Web &amp; Marketing</a>
+        <a href="../services/Financial Analysis-&-Accounting.html"><i class="fas fa-chart-pie"></i> Financial A&amp;A</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" id="mob-resources">Resources <i class="fas fa-chevron-down"></i></a>
+      <div class="dropdown-menu">
+        <a href="../resources/research-insights.html"><i class="fas fa-book"></i> Research &amp; Insights</a>
+        <a href="../resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
+        <a href="../resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
+      </div>
+    </li>
+    <li><a href="../index.html#marketplace">FinTech Hub</a></li>
+    <li><a href="../company/contact.html">Contact</a></li>
+    <li><a href="../consultation.html">Free Consultation</a></li>
+  </ul>
 </header>
+ 
+<!-- ═══════════════════════ PAGE BANNER ═══════════════════════
+  ★ Customise: .stag text, h1, .lead paragraph, breadcrumb items
+═══════════════════════════════════════════════════════════ -->
+<div class="page-banner">
+  <div class="banner-inner">
+    <!-- Breadcrumb — update the second item for each page -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Section Name</span>          <!-- e.g. "Services" or "Company" -->
+      <i class="fas fa-chevron-right"></i>
+      <span style="color:rgba(255,255,255,.7)">Page Title</span>
+    </nav>
+ 
+    <span class="stag">
+      <i class="fas fa-circle" style="font-size:.5rem"></i>&nbsp; Section · Page Label
+    </span>
+ 
+    <h1>
+      Page Heading Here<br>
+      <em>Subtitle in italic gold</em>
+    </h1>
+    <p class="lead">
+      A short introductory paragraph describing this page — one to two sentences maximum. Keep it focused and compelling.
+    </p>
+  </div>
+</div>
 
     <main>
         <section class="hero">
@@ -368,104 +775,195 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>About AEC</h3>
-                    <p>
-                        AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner, empowering businesses across Africa and Europe through technology, innovation, and collaboration since 2017.
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="../services/ai-ml.html">AI & ML</a></li>
-                        <li><a href="../resources/research-insights.html">Research</a></li>
-                        <li><a href="../csr/social-impact.html">Social Impact</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="../services/ERP.html">ERP Solutions</a></li>
-                        <li><a href="../services/crm.html">CRM Implementation</a></li>
-                        <li><a href="../services/cloud.html">Cloud Services</a></li>
-                        <li><a href="../services/business-analysis.html">Business Analysis</a></li>
-                        <li><a href="../services/web-marketing.html">Web Marketing</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Connect</h3>
-                    <ul class="footer-links">
-                        <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com">Email Us</a></li>
-                        <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                    </ul>
-                    <p style="margin-top: 1rem;">
-                        <strong>Phone:</strong> +48 690 386 721<br>
-                        <strong>Locations:</strong> Douala, Cameroon | Krakow, Poland
-                    </p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                &copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved. | Designed by Armel Sandjong Nantchouang
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Volunteer Form Handler
-        document.getElementById('volunteerForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const volunteerMessage = document.getElementById('volunteerMessage');
-            const name = document.getElementById('vol_name').value;
-            const email = document.getElementById('vol_email').value;
-            const skills = document.getElementById('vol_skills').value;
-            const interest = document.getElementById('vol_interest').value;
-            const availability = document.getElementById('vol_availability').value;
-            const message = document.getElementById('vol_message').value;
-            
-            // Create mailto link with form data
-            const subject = encodeURIComponent(`Volunteer Application: ${name}`);
-            const body = encodeURIComponent(
-                `VOLUNTEER APPLICATION\n\n` +
-                `Name: ${name}\n` +
-                `Email: ${email}\n` +
-                `Skills & Expertise: ${skills}\n` +
-                `Area of Interest: ${interest}\n` +
-                `Weekly Availability: ${availability}\n\n` +
-                `Why I want to volunteer:\n${message}\n\n` +
-                `---\nSent from AEC Volunteer Application Form`
-            );
-            
-            const mailtoLink = `mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com?subject=${subject}&body=${body}`;
-            
-            // Open default email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            volunteerMessage.style.display = 'block';
-            volunteerMessage.style.background = '#c6f6d5';
-            volunteerMessage.style.color = '#22543d';
-            volunteerMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your email client has been opened. Please send the email to complete your volunteer application.';
-            
-            // Reset form
-            setTimeout(() => {
-                this.reset();
-            }, 1000);
-        });
-
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+<!-- ═══════════════════════ FOOTER ═══════════════════════
+  Identical across all inner pages — do not modify
+═══════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-grid">
+ 
+    <div class="footer-brand">
+      <a href="../index.html" class="logo" style="margin-bottom:12px">
+        <img src="../assets/logo.png" alt="AEC Logo">
+        <span class="logo-text">AEC</span>
+      </a>
+      <p class="tagline">Aim High · Be Kind · Dare to be Different</p>
+      <p>AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner, empowering businesses across Africa and Europe through technology, innovation, and collaboration since 2017.</p>
+    </div>
+ 
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="../company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a></li>
+        <li><a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a></li>
+        <li><a href="../company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a></li>
+        <li><a href="../company/contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+      </ul>
+    </div>
+ 
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="../services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a></li>
+        <li><a href="../services/crm.html"><i class="fas fa-users"></i> CRM</a></li>
+        <li><a href="../services/ai-ml.html"><i class="fas fa-robot"></i> AI &amp; ML</a></li>
+        <li><a href="../services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a></li>
+        <li><a href="../services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a></li>
+        <li><a href="../services/web-marketing.html"><i class="fas fa-globe"></i> Web &amp; Marketing</a></li>
+        <li><a href="../services/Financial Analysis-&-Accounting.html"><i class="fas fa-chart-pie"></i> Financial A&amp;A</a></li>
+      </ul>
+    </div>
+ 
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com"><i class="fas fa-envelope"></i> Email Us</a></li>
+        <li><a href="tel:+48690386721"><i class="fas fa-phone"></i> +48 690 386 721</a></li>
+        <li><a href="https://wa.me/48690386721" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+        <li><a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="https://x.com/SandjongAr3472" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i> Twitter / X</a></li>
+        <li><a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank" rel="noopener"><i class="fab fa-researchgate"></i> ResearchGate</a></li>
+      </ul>
+      <div style="margin-top:18px;padding-top:14px;border-top:1px solid var(--border)">
+        <p style="color:var(--muted);font-size:.82rem;line-height:1.8">
+          <i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:5px"></i><strong style="color:rgba(255,255,255,.6)">HQ:</strong> Kraków, Poland<br>
+          <i class="fas fa-map-marker-alt" style="color:var(--teal);margin-right:5px"></i><strong style="color:rgba(255,255,255,.6)">Africa:</strong> Douala, Cameroon · Abuja, Nigeria
+        </p>
+      </div>
+    </div>
+ 
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved. Designed by Armel Sandjong Nantchouang.</p>
+    <div class="ms-badge"><i class="fab fa-microsoft"></i> Microsoft Partner</div>
+  </div>
+</footer>
+ 
+<!-- Back to top -->
+<button id="btt" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+ 
+<!-- ═══════════════════════ SCRIPTS ═══════════════════════
+  Do not modify — all modules included
+═══════════════════════════════════════════════════════ -->
+<script>
+// 1 — Sticky header
+const hdr = document.getElementById('siteHeader');
+const btt = document.getElementById('btt');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('scrolled', window.scrollY > 60);
+  btt.classList.toggle('visible', window.scrollY > 400);
+});
+ 
+// 2 — Mobile nav
+const ham = document.getElementById('ham');
+const mob = document.getElementById('mob');
+ham.addEventListener('click', () => {
+  const open = mob.classList.toggle('open');
+  const spans = ham.querySelectorAll('span');
+  spans[0].style.transform = open ? 'rotate(45deg) translate(5px,5px)' : '';
+  spans[1].style.opacity   = open ? '0' : '1';
+  spans[2].style.transform = open ? 'rotate(-45deg) translate(5px,-5px)' : '';
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+['mob-company','mob-services','mob-resources'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', e => { e.preventDefault(); el.closest('.dropdown').classList.toggle('open'); });
+});
+mob.querySelectorAll('a[href]:not([href="#"])').forEach(a => {
+  a.addEventListener('click', () => { mob.classList.remove('open'); document.body.style.overflow = ''; });
+});
+ 
+// 3 — Back to top
+btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+ 
+// 4 — Scroll reveal
+const ro = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting) e.target.classList.add('in');
+}), { threshold: 0.08 });
+document.querySelectorAll('.rv').forEach(el => ro.observe(el));
+ 
+// 5 — Active nav auto-highlight
+const path = window.location.pathname.toLowerCase();
+document.querySelectorAll('.nav-links a, #mob a').forEach(a => {
+  if (a.href && a.href.includes(path.split('/').pop()) && path !== '/') {
+    a.classList.add('active');
+    const dd = a.closest('.dropdown');
+    if (dd) { const toggle = dd.querySelector('.dropdown-toggle, .dropdown > a'); if (toggle) toggle.classList.add('active'); }
+  }
+});
+ 
+// 6 — Accordion
+document.querySelectorAll('.acc-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.acc-item');
+    item.classList.toggle('open');
+  });
+});
+ 
+// 7 — Smooth scroll (anchor links)
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+ 
+// 8 — Counter animation
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  if (isNaN(target)) return;
+  let cur = 0; const step = Math.ceil(target / 60);
+  const t = setInterval(() => { cur = Math.min(cur + step, target); el.textContent = cur + suffix; if (cur >= target) clearInterval(t); }, 18);
+}
+const co = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting) { animateCounter(e.target); co.unobserve(e.target); }
+}), { threshold: 0.5 });
+document.querySelectorAll('.aec-counter').forEach(el => co.observe(el));
+ 
+// 9 — Generic form feedback (data-form-submit attribute)
+document.querySelectorAll('[data-form-submit]').forEach(form => {
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('[type="submit"]');
+    const msg = this.querySelector('.form-msg');
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+    const data = Object.fromEntries(new FormData(this).entries());
+    try {
+      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+      if (res.ok && msg) { msg.className = 'form-msg ok'; msg.style.display = 'block'; msg.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully. We\'ll be in touch within 24 hours.'; this.reset(); }
+      else throw new Error();
+    } catch {
+      // fallback mailto
+      const subject = encodeURIComponent('AEC Website Contact — ' + (data.name || ''));
+      const body    = encodeURIComponent(Object.entries(data).map(([k,v]) => `${k}: ${v}`).join('\n'));
+      window.location.href = `mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com?subject=${subject}&body=${body}`;
+      if (msg) { msg.className = 'form-msg ok'; msg.style.display = 'block'; msg.innerHTML = '<i class="fas fa-check-circle"></i> Email client opened — send it to complete your enquiry.'; }
+    } finally {
+      if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || 'Submit'; }
+    }
+  });
+});
+ 
+// 10 — Ticker pause on hover (handled by CSS animation-play-state in main.js, backup here)
+document.querySelectorAll('.ticker-track').forEach(t => {
+  t.addEventListener('mouseenter', () => t.style.animationPlayState = 'paused');
+  t.addEventListener('mouseleave', () => t.style.animationPlayState = 'running');
+});
+ 
+// 11 — Card tilt on hover
+document.querySelectorAll('.svc-c.tilt, .aec-card.tilt').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width  - .5;
+    const y = (e.clientY - r.top)  / r.height - .5;
+    card.style.transform = `perspective(600px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-4px)`;
+  });
+  card.addEventListener('mouseleave', () => card.style.transform = '');
+});
+</script>
+ 
+<!-- Master JS — uncomment when css/style.css fully defines all shared components -->
+<!-- <script src="../js/main.js"></script> -->
 </body>
 </html>
