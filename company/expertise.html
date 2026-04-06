@@ -1,217 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expertise & Documentation | AFRIQUEEUROPECONNEXIONVMETC</title>
-    <meta name="description" content="Access AEC's project documentation, contract templates, and cloud resources.">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <style>
-        /* Modern Glassmorphism & UI Enhancements */
-        .document-embed-container {
-            position: relative;
-            width: 100%;
-            padding-top: 75%; /* Maintains 4:3 Aspect Ratio */
-            background: #f8f9fa;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #ddd;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expertise & Documentation | AFRIQUEEUROPECONNEXIONVMETC</title>
+  <meta name="description" content="Access AEC project documentation, contract templates, and pricing packages through our integrated Microsoft Cloud Workspace.">
 
-        .document-embed-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PDMNDP8F');</script>
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","v4lglq0gvb");</script>
 
-        .cloud-resource-card {
-            display: block;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            color: white;
-            text-decoration: none;
-            text-align: center;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .cloud-resource-card:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-        .status-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            background: #e1f5fe;
-            color: #0288d1;
-        }
+  <link rel="stylesheet" href="../css/style.css">
 
-        /* Responsive Grid Adjustments */
-        @media (max-width: 768px) {
-            .grid-2, .grid-3 { grid-template-columns: 1fr !important; }
-            .hero h1 { font-size: 2.2rem !important; }
-        }
-    </style>
+  <style>
+    :root {
+      --navy: #0b1535; --navy2: #0f1e4a; --gold: #c9963c; --gold-l: #e8b85a;
+      --teal: #00c2a8; --muted: rgba(255,255,255,.52); --card: rgba(255,255,255,.035);
+      --border: rgba(255,255,255,.08); --ff-serif: "Playfair Display", serif;
+      --ff-sans: "DM Sans", sans-serif;
+    }
+
+    body { background: var(--navy); color: #e0e4f0; font-family: var(--ff-sans); line-height: 1.7; }
+
+    /* Header & Navigation */
+    .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(11,21,53,.85); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .hdr-inner { max-width: 1280px; margin: 0 auto; padding: 0 28px; display: flex; align-items: center; height: 68px; gap: 40px; }
+    .logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+    .logo img { height:38px; width:38px; object-fit:contain; }
+    .logo-text { font-family:var(--ff-serif); font-size:1.35rem; color:#fff; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; margin-left: auto; }
+    .nav-links > li > a { padding: 8px 14px; color: rgba(255,255,255,.78); font-size: .88rem; text-decoration: none; border-radius: 7px; }
+    .nav-links > li > a:hover { color: #fff; background: rgba(255,255,255,.07); }
+    .nav-cta { background: linear-gradient(135deg, var(--gold), var(--gold-l)) !important; color: var(--navy) !important; font-weight: 700 !important; border-radius: 8px; }
+
+    /* Layout Sections */
+    .page-banner { padding: 130px 28px 64px; background: linear-gradient(135deg, var(--navy) 0%, #0d2060 100%); border-bottom: 1px solid var(--border); }
+    .banner-inner { max-width: 1280px; margin: 0 auto; }
+    .section { padding: 80px 28px; max-width: 1280px; margin: 0 auto; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media(max-width: 860px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+    /* Expertise Cards */
+    .aec-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 30px; transition: transform 0.3s; }
+    .aec-card:hover { transform: translateY(-5px); border-color: rgba(201,150,60,0.3); }
+    .doc-icon { font-size: 2.5rem; margin-bottom: 15px; }
+    .sh { font-family: var(--ff-serif); font-size: 2.2rem; color: #fff; margin-bottom: 15px; }
+    .sh em { color: var(--gold-l); font-style: italic; }
+
+    /* Microsoft Embeds */
+    .document-embed { margin: 20px 0; background: #000; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+    iframe { width: 100%; height: 450px; background: #fff; }
+
+    /* Cloud Workspace Strip */
+    .cloud-workspace { 
+      background: linear-gradient(135deg, #0078D4 0%, #003a66 100%); 
+      border-radius: 16px; padding: 50px; text-align: center; margin-top: 40px;
+    }
+    .cloud-link { 
+      background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px; 
+      color: #fff; text-decoration: none; transition: 0.3s; border: 1px solid rgba(255,255,255,0.1);
+    }
+    .cloud-link:hover { background: rgba(255,255,255,0.2); transform: translateY(-3px); }
+
+    .btn-gold { 
+      display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, var(--gold), var(--gold-l)); 
+      color: var(--navy); text-decoration: none; font-weight: 700; border-radius: 8px; margin-top: 15px;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <nav>
-            <a href="../index.html" class="logo">
-                <img src="../assets/logo.png" alt="AEC Logo" class="logo-img">
-            </a>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#company" class="dropdown-toggle">Company <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="../company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                        <a href="../company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-                    </div>
-                </li>
-                <li><a href="../consultation.html" class="cta-btn">Free Consultation</a></li>
-                <li><a href="../company/contact.html">Contact</a></li>
-            </ul>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDMNDP8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="site-header">
+  <div class="hdr-inner">
+    <a href="../index.html" class="logo">
+      <img src="../assets/logo.png" alt="AEC Logo">
+      <span class="logo-text">AEC</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">Company</a></li>
+      <li><a href="../services/ERP.html">Services</a></li>
+      <li><a href="../index.html#marketplace">FinTech Hub</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="../consultation.html" class="nav-cta">Free Consultation</a></li>
+    </ul>
+  </div>
 </header>
 
-<main>
-    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/hero-bg.jpg'); background-size: cover; color: white; padding: 8rem 0; text-align: center;">
-        <div class="container">
-            <span class="status-badge" style="background: #FFB900; color: #000;">V 2.0 Document Portal</span>
-            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Project Expertise & Assets</h1>
-            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; opacity: 0.9;">
-                Secure access to our strategic frameworks, legal templates, and technical documentation hosted on Microsoft 365.
-            </p>
-        </div>
-    </section>
+<div class="page-banner">
+  <div class="banner-inner">
+    <span class="stag" style="background:rgba(201,150,60,.1); border:1px solid var(--gold); color:var(--gold-l); padding:4px 12px; border-radius:20px; font-size:0.75rem;">PROJECT ASSETS</span>
+    <h1 class="sh">AEC <em>Expertise</em> & Library</h1>
+    <p style="color:var(--muted); max-width:700px;">Direct access to our strategic documentation, financial templates, and legal frameworks via Microsoft Cloud Integration.</p>
+  </div>
+</div>
 
-    <section class="container" style="padding: 5rem 0;">
-        <h2 style="text-align: center; margin-bottom: 3rem;"><i class="fas fa-folder-open"></i> Professional Resource Library</h2>
-        
-        <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-            <div class="card" style="border-top: 5px solid #2B579A;">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <i class="fas fa-file-word" style="font-size: 2.5rem; color: #2B579A;"></i>
-                    <h3>Contractual Frameworks</h3>
-                </div>
-                <div class="document-embed-container">
-                    <iframe src="YOUR_WORD_ONLINE_EMBED_URL" title="Word Document Viewer" frameborder="0"></iframe>
-                </div>
-                <div style="margin-top: 1rem;">
-                    <a href="YOUR_WORD_DIRECT_LINK" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; border: 1px solid #2B579A; border-radius: 5px; color: #2B579A; text-decoration: none;">
-                        <i class="fas fa-external-link-alt"></i> Fullscreen Edit
-                    </a>
-                </div>
-            </div>
-
-            <div class="card" style="border-top: 5px solid #217346;">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <i class="fas fa-file-excel" style="font-size: 2.5rem; color: #217346;"></i>
-                    <h3>Service Pricing Index</h3>
-                </div>
-                <div class="document-embed-container">
-                    <iframe src="YOUR_EXCEL_ONLINE_EMBED_URL" title="Excel Sheet Viewer" frameborder="0"></iframe>
-                </div>
-                <div style="margin-top: 1rem;">
-                    <a href="YOUR_EXCEL_DIRECT_LINK" target="_blank" class="btn-secondary" style="display: block; text-align: center; padding: 10px; border: 1px solid #217346; border-radius: 5px; color: #217346; text-decoration: none;">
-                        <i class="fas fa-table"></i> Open Spreadsheet
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section style="background: #0078D4; padding: 5rem 0; color: white;">
-        <div class="container">
-            <h2 style="text-align: center; color: white; margin-bottom: 3rem;">AEC Cloud Ecosystem</h2>
-            <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <a href="YOUR_ONEDRIVE_LINK" class="cloud-resource-card">
-                    <i class="fas fa-cloud" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                    <h4>OneDrive Storage</h4>
-                    <p>Client shared folders & deliverables</p>
-                </a>
-                <a href="YOUR_SHAREPOINT_LINK" class="cloud-resource-card">
-                    <i class="fas fa-university" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                    <h4>SharePoint Site</h4>
-                    <p>Internal knowledge base & Wiki</p>
-                </a>
-                <a href="YOUR_TEAMS_LINK" class="cloud-resource-card">
-                    <i class="fab fa-microsoft" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                    <h4>Teams Hub</h4>
-                    <p>Real-time project collaboration</p>
-                </a>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer class="footer" style="background: #1a1a1a; color: white; padding: 4rem 0 2rem;">
-    <div class="container">
-        <div class="footer-content" style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem;">
-            <div>
-                <h3>About AEC</h3>
-                <p>Leading digital transformation across Africa and Europe since 2017. Specializing in AI, ERP, and International Law.</p>
-                <p style="color: #FFB900; margin-top: 1rem;">🎯 Aim High • ❤️ Be Kind • ✨ Dare to be Different</p>
-            </div>
-            <div>
-                <h3>Contact</h3>
-                <p><i class="fas fa-phone"></i> +48 690 386 721</p>
-                <p><i class="fas fa-envelope"></i> ArmelSandjong@afriqueeuropeconnexionvmetc.com</p>
-            </div>
-            <div>
-                <h3>Social</h3>
-                <div class="social-links">
-                    <a href="https://github.com/afriqueeuropeconnexionvmetc" style="color: white; font-size: 1.5rem;"><i class="fab fa-github"></i></a>
-                    <a href="https://wa.me/48690386721" style="color: white; font-size: 1.5rem; margin-left: 15px;"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
-        <hr style="margin: 2rem 0; opacity: 0.1;">
-        <div class="footer-bottom" style="text-align: center; font-size: 0.9rem; opacity: 0.7;">
-            <p>&copy; 2026 AFRIQUEEUROPECONNEXIONVMETC (AEC). Registered in Kraków, Poland.</p>
-        </div>
+<section class="section">
+  <h2 class="sh" style="text-align:center; margin-bottom:50px;">Project <em>Documentation</em></h2>
+  
+  <div class="grid-2">
+    <div class="aec-card">
+      <div class="doc-icon"><i class="fas fa-file-word" style="color:#2B579A;"></i></div>
+      <h3>Legal & Contract Templates</h3>
+      <p style="font-size:0.9rem; color:var(--muted); margin-bottom:15px;">Standard framework for Africa-Europe cross-border agreements.</p>
+      <div class="document-embed">
+        <iframe src="YOUR_WORD_ONLINE_EMBED_URL" frameborder="0"></iframe>
+      </div>
+      <a href="YOUR_WORD_DIRECT_LINK" target="_blank" class="btn-gold" style="width:100%; text-align:center;">Open in Word Online</a>
     </div>
-</footer>
 
-<script>
-    // Simple script to handle mobile menu toggle
-    const menuBtn = document.getElementById('mobileMenuBtn');
-    const navLinks = document.getElementById('navLinks');
+    <div class="aec-card">
+      <div class="doc-icon"><i class="fas fa-file-excel" style="color:#217346;"></i></div>
+      <h3>Service Pricing & Packages</h3>
+      <p style="font-size:0.9rem; color:var(--muted); margin-bottom:15px;">Live pricing calculator for ERP and AI implementations.</p>
+      <div class="document-embed">
+        <iframe src="YOUR_EXCEL_ONLINE_EMBED_URL" frameborder="0"></iframe>
+      </div>
+      <a href="YOUR_EXCEL_DIRECT_LINK" target="_blank" class="btn-gold" style="width:100%; text-align:center;">Open in Excel Online</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: rgba(255,255,255,0.02); border-radius: 20px;">
+  <div class="cloud-workspace">
+    <h2 style="color:#fff; margin-bottom:10px;"><i class="fas fa-cloud"></i> Microsoft Cloud Workspace</h2>
+    <p style="color:rgba(255,255,255,0.8); margin-bottom:40px;">Centralized hub for project collaboration and asset management.</p>
     
-    menuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        menuBtn.querySelector('i').classList.toggle('fa-bars');
-        menuBtn.querySelector('i').classList.toggle('fa-times');
-    });
+    <div class="grid-3">
+      <a href="YOUR_ONEDRIVE_FOLDER_LINK" target="_blank" class="cloud-link">
+        <i class="fas fa-folder-open" style="font-size:2rem; color:var(--gold-l);"></i>
+        <h4 style="margin-top:15px;">OneDrive Folder</h4>
+        <p style="font-size:0.8rem; opacity:0.7;">Bulk asset access</p>
+      </a>
+      <a href="YOUR_SHAREPOINT_SITE_LINK" target="_blank" class="cloud-link">
+        <i class="fas fa-sitemap" style="font-size:2rem; color:var(--gold-l);"></i>
+        <h4 style="margin-top:15px;">SharePoint Site</h4>
+        <p style="font-size:0.8rem; opacity:0.7;">Internal Library</p>
+      </a>
+      <a href="YOUR_TEAMS_LINK" target="_blank" class="cloud-link">
+        <i class="fab fa-microsoft" style="font-size:2rem; color:var(--gold-l);"></i>
+        <h4 style="margin-top:15px;">Teams Channel</h4>
+        <p style="font-size:0.8rem; opacity:0.7;">Live Collaboration</p>
+      </a>
+    </div>
+  </div>
+</section>
 
-    // Lazy load iframes for performance
-    document.addEventListener("DOMContentLoaded", function() {
-        var iframes = document.querySelectorAll('iframe');
-        iframes.forEach(function(iframe) {
-            iframe.setAttribute('loading', 'lazy');
-        });
-    });
-</script>
+<section class="section">
+  <div class="grid-2" style="align-items: center;">
+    <div class="aec-card" style="border-left: 4px solid var(--teal);">
+      <h3><i class="fas fa-info-circle" style="color:var(--teal)"></i> How to use this Library</h3>
+      <ul style="margin-top:15px; list-style:none; color:var(--muted); font-size:0.9rem;">
+        <li style="margin-bottom:10px;"><i class="fas fa-check" style="color:var(--teal)"></i> <strong>Preview:</strong> View documents directly on this page.</li>
+        <li style="margin-bottom:10px;"><i class="fas fa-check" style="color:var(--teal)"></i> <strong>Download:</strong> Open in Office Online to save a local copy.</li>
+        <li style="margin-bottom:10px;"><i class="fas fa-check" style="color:var(--teal)"></i> <strong>Access:</strong> Some files require an AEC partner login.</li>
+      </ul>
+    </div>
+    <div style="text-align:center;">
+      <h2 class="sh">Need Custom <em>Docs?</em></h2>
+      <p style="color:var(--muted); margin-bottom:20px;">We create tailored financial and legal documentation for cross-border businesses.</p>
+      <a href="../consultation.html" class="btn-gold">Request Custom Solution</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" style="background:#060d20; padding:60px 28px 20px; border-top:1px solid var(--border);">
+  <div style="max-width:1280px; margin:0 auto; display:grid; grid-template-columns: 2fr 1fr 1.5fr; gap:40px;">
+    <div>
+      <a href="../index.html" class="logo" style="margin-bottom:15px;">
+        <img src="../assets/logo.png" alt="AEC">
+        <span class="logo-text">AEC</span>
+      </a>
+      <p style="font-size:0.85rem; color:var(--muted); max-width:300px;">Aim High · Be Kind · Dare to be Different. Empowering Africa-Europe business since 2017.</p>
+    </div>
+    <div>
+      <h4 style="color:#fff; margin-bottom:15px;">Quick Links</h4>
+      <ul style="list-style:none; font-size:0.85rem; line-height:2;">
+        <li><a href="about.html" style="color:var(--muted); text-decoration:none;">About Us</a></li>
+        <li><a href="expertise.html" style="color:var(--gold-l); text-decoration:none;">Expertise</a></li>
+        <li><a href="contact.html" style="color:var(--muted); text-decoration:none;">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#fff; margin-bottom:15px;">Global Offices</h4>
+      <p style="font-size:0.85rem; color:var(--muted);">
+        📍 Kraków, Poland<br>
+        📍 Douala, Cameroon<br>
+        📞 +48 690 386 721
+      </p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:40px; padding-top:20px; border-top:1px solid var(--border); font-size:0.75rem; color:rgba(255,255,255,0.2);">
+    &copy; 2026 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved.
+  </div>
+</footer>
 
 </body>
 </html>
