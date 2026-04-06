@@ -14,15 +14,6 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    /* Inherit template design tokens */
-    :root {
-      --navy: #0b1535; --navy2: #0f1e4a; --gold: #c9963c; --gold-l: #e8b85a;
-      --teal: #00c2a8; --muted: rgba(255,255,255,.52); --card: rgba(255,255,255,.035);
-      --border: rgba(255,255,255,.08); --ff-serif: "Playfair Display", serif; --ff-sans: "DM Sans", sans-serif;
-    }
-    /* Simple reset and base styles included in template */
-    body { background: var(--navy); color: #e0e4f0; font-family: var(--ff-sans); line-height: 1.7; margin: 0; }
-    
     /* Specific styling for the benefit cards to match template aesthetics */
     .benefit-item { display: flex; gap: 20px; margin-bottom: 30px; }
     .benefit-icon { 
@@ -161,17 +152,17 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
 <script>
-  // Script logic from template for sticky header and reveal animations
   const hdr = document.getElementById('siteHeader');
   window.addEventListener('scroll', () => {
     hdr.classList.toggle('scrolled', window.scrollY > 60);
   });
+
   const ro = new IntersectionObserver(entries => entries.forEach(e => {
     if (e.isIntersecting) e.target.classList.add('in');
   }), { threshold: 0.08 });
   document.querySelectorAll('.rv').forEach(el => ro.observe(el));
 </script>
+
 </body>
 </html>
