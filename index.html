@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AFRIQUEEUROPECONNEXIONVMETC | Digital Transformation · Africa &amp; Europe</title>
-  <meta name="description" content="AEC — Digital transformation partner empowering businesses across Africa and Europe through ERP, CRM, AI/ML, Cloud, FinTech, and Financial Analysis services since 2017.">
+  <meta name="description" content="AEC supports organizations across Africa and Europe with ERP implementation, IFRS financial reporting, consolidation, and finance operations.">
 
-  <!-- Google Tag Manager >
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PDMNDP8F);</script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PDMNDP8F');</script>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","v4lglq0gvb");</script>
 
@@ -275,13 +275,6 @@
   }
   .svc-c .svc-link:hover { gap: 10px; }
 
-  /* Gold fintech card */
-  .svc-c.fintech {
-    background: linear-gradient(135deg, rgba(201,150,60,.12), rgba(201,150,60,.04));
-    border-color: rgba(201,150,60,.3);
-  }
-  .svc-c.fintech h3 { color: var(--gold-l); }
-
   /* ── WHY AEC ─────────────────────────────────────────────── */
   .why-grid {
     display: grid;
@@ -299,71 +292,36 @@
   }
   .why-item .wi-label { font-size: .82rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
 
-  /* ── MARKETPLACE WAITLIST ────────────────────────────────── */
-  #marketplace { scroll-margin-top: 80px; }
-  .market-wrap {
+  /* ── ERP AND REPORTING UPDATES ───────────────────────────── */
+  .updates-panel {
     background: linear-gradient(135deg, rgba(15,30,74,.8), rgba(0,40,30,.6));
     border: 1px solid var(--border); border-radius: 20px;
     overflow: hidden; margin-top: 52px;
   }
-  .market-header {
+  .updates-header {
     background: linear-gradient(135deg, rgba(201,150,60,.1), rgba(0,194,168,.06));
     border-bottom: 1px solid var(--border);
     padding: 36px 40px;
     display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;
   }
-  .market-header-text { flex: 1; min-width: 260px; }
-  .market-header h2 { font-family: var(--ff-serif); font-size: 1.8rem; color: #fff; margin-bottom: 8px; }
-  .market-header p { color: var(--muted); font-size: .95rem; max-width: 480px; }
+  .updates-header-text { flex: 1; min-width: 260px; }
+  .updates-header h2 { font-family: var(--ff-serif); font-size: 1.8rem; color: #fff; margin-bottom: 8px; }
+  .updates-header p { color: var(--muted); font-size: .95rem; max-width: 480px; }
 
-  .market-features {
+  .updates-topics {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 16px; padding: 28px 40px;
     border-bottom: 1px solid var(--border);
   }
-  .mf-card {
+  .topic-card {
     background: rgba(255,255,255,.03); border: 1px solid var(--border);
     border-radius: 10px; padding: 20px;
   }
-  .mf-card .mf-icon { font-size: 1.5rem; margin-bottom: 10px; }
-  .mf-card h4 { color: var(--gold-l); font-family: var(--ff-serif); font-size: 1rem; margin-bottom: 6px; }
-  .mf-card p { color: var(--muted); font-size: .83rem; }
+  .topic-card .topic-icon { font-size: 1.5rem; margin-bottom: 10px; }
+  .topic-card h4 { color: var(--gold-l); font-family: var(--ff-serif); font-size: 1rem; margin-bottom: 6px; }
+  .topic-card p { color: var(--muted); font-size: .83rem; }
 
-  .market-form-area { padding: 32px 40px; }
-  .region-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
-  .region-pill {
-    background: rgba(255,255,255,.05); border: 1px solid var(--border);
-    color: var(--teal); font-size: .77rem; font-weight: 600;
-    padding: 5px 14px; border-radius: 20px; cursor: pointer;
-    transition: all .2s;
-  }
-  .region-pill.active, .region-pill:hover {
-    background: rgba(0,194,168,.12); border-color: rgba(0,194,168,.4);
-  }
-
-  .waitlist-form {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
-  }
-  @media(max-width:580px){ .waitlist-form { grid-template-columns: 1fr; } }
-  .wf-input {
-    background: rgba(255,255,255,.055); border: 1px solid var(--border);
-    border-radius: 8px; color: #fff; font-size: .93rem; font-family: var(--ff-sans);
-    padding: 12px 16px; outline: none; width: 100%;
-    transition: border-color .2s;
-  }
-  .wf-input:focus { border-color: var(--gold); }
-  .wf-input::placeholder { color: rgba(255,255,255,.3); }
-  .wf-input option { background: var(--navy); }
-  .wf-submit {
-    grid-column: 1 / -1;
-    background: linear-gradient(135deg, var(--gold), var(--gold-l));
-    color: var(--navy); font-weight: 700; font-size: .95rem;
-    padding: 14px; border-radius: 9px; border: none; cursor: pointer;
-    width: 100%; transition: opacity .2s, transform .2s;
-  }
-  .wf-submit:hover { opacity: .9; transform: translateY(-1px); }
-  .wf-msg { grid-column: 1/-1; font-size: .88rem; padding: 10px 14px; border-radius: 7px; display: none; }
-  .wf-msg.ok { background: rgba(0,194,168,.12); border: 1px solid rgba(0,194,168,.3); color: var(--teal); }
+  .updates-note { padding: 32px 40px; }
 
   /* ── CTA STRIP ───────────────────────────────────────────── */
   .cta-strip {
@@ -466,7 +424,7 @@
 <body>
 
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDMNDP8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ═══════════════════════ HEADER ═══════════════════════ -->
 <header class="site-header" id="siteHeader">
@@ -493,13 +451,13 @@
       <li class="dropdown">
         <a href="#">Services <i class="fas fa-chevron-down"></i></a>
         <div class="dropdown-menu">
-          <a href="services/ai-ml.html"><i class="fas fa-robot"></i> AI &amp; Machine Learning</a>
           <a href="services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
+          <a href="services/Financial Analysis-&-Accounting.html"><i class="fas fa-chart-pie"></i> IFRS Financial Reporting</a>
+          <a href="services/ai-ml.html"><i class="fas fa-robot"></i> AI &amp; Machine Learning</a>
           <a href="services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
           <a href="services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
           <a href="services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
           <a href="services/web-marketing.html"><i class="fas fa-globe"></i> Web &amp; Marketing</a>
-          <a href="services/Financial Analysis-&-Accounting.html"><i class="fas fa-chart-pie"></i> Financial Analysis &amp; Accounting</a>
         </div>
       </li>
 
@@ -512,7 +470,7 @@
         </div>
       </li>
 
-      <li><a href="index.html#marketplace">FinTech Hub</a></li>
+      <li><a href="resources/research-insights.html">Articles &amp; Insights</a></li>
       <li><a href="company/contact.html">Contact</a></li>
       <li><a href="consultation.html" class="nav-cta">Free Consultation</a></li>
     </ul>
@@ -538,13 +496,13 @@
     <li class="dropdown">
       <a href="#" id="mob-services">Services <i class="fas fa-chevron-down"></i></a>
       <div class="dropdown-menu">
-        <a href="services/ai-ml.html"><i class="fas fa-robot"></i> AI &amp; Machine Learning</a>
         <a href="services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
+        <a href="services/Financial Analysis-&-Accounting.html"><i class="fas fa-chart-pie"></i> IFRS Financial Reporting</a>
+        <a href="services/ai-ml.html"><i class="fas fa-robot"></i> AI &amp; Machine Learning</a>
         <a href="services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
         <a href="services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
         <a href="services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
         <a href="services/web-marketing.html"><i class="fas fa-globe"></i> Web &amp; Marketing</a>
-        <a href="services/Financial Analysis-&-Accounting.html"><i class="fas fa-chart-pie"></i> Financial A&amp;A</a>
       </div>
     </li>
     <li class="dropdown">
@@ -555,7 +513,7 @@
         <a href="resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
       </div>
     </li>
-    <li><a href="index.html#marketplace">FinTech Hub</a></li>
+    <li><a href="resources/research-insights.html">Articles &amp; Insights</a></li>
     <li><a href="company/contact.html">Contact</a></li>
     <li><a href="consultation.html">Free Consultation</a></li>
   </ul>
@@ -572,10 +530,10 @@
       Technology That Crosses<br>
       <em>Borders &amp; Builds Futures</em>
     </h1>
-    <p>AEC empowers businesses across Africa and Europe through ERP, AI/ML, Cloud, CRM, FinTech, and Financial Analysis — bridging continents with strategy-first technology since 2017.</p>
+    <p>AEC helps businesses across Africa and Europe implement ERP systems and produce reliable financial reporting, including IFRS-aligned reporting and management insights.</p>
     <div class="hero-btns">
       <a href="consultation.html" class="btn-gold"><i class="fas fa-calendar-check"></i> Free Consultation</a>
-      <a href="#marketplace" class="btn-outline"><i class="fas fa-store"></i> Explore FinTech Hub</a>
+      <a href="services/ERP.html" class="btn-outline"><i class="fas fa-project-diagram"></i> Explore ERP Services</a>
     </div>
   </div>
 </section>
@@ -589,26 +547,22 @@
     <span class="ticker-item"><i class="fas fa-circle"></i> Oracle NetSuite</span>
     <span class="ticker-item"><i class="fas fa-circle"></i> Odoo ERP</span>
     <span class="ticker-item"><i class="fas fa-circle"></i> Microsoft Azure</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> OHADA Compliance</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Poland JPK V7</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Nigeria FIRS VAT</span>
+    <span class="ticker-item"><i class="fas fa-circle"></i> IFRS Reporting</span>
+    <span class="ticker-item"><i class="fas fa-circle"></i> Multi-Entity Consolidation</span>
     <span class="ticker-item"><i class="fas fa-circle"></i> Power BI Dashboards</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Salesforce CRM</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> EU OSS VAT</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> IFRS &amp; SYSCOHADA</span>
+    <span class="ticker-item"><i class="fas fa-circle"></i> ERP Finance Modules</span>
+    <span class="ticker-item"><i class="fas fa-circle"></i> Management Reporting</span>
     <!-- Set 2 — identical, creates seamless loop -->
     <span class="ticker-item"><i class="fas fa-circle"></i> Microsoft Dynamics 365</span>
     <span class="ticker-item"><i class="fas fa-circle"></i> SAP S/4HANA</span>
     <span class="ticker-item"><i class="fas fa-circle"></i> Oracle NetSuite</span>
     <span class="ticker-item"><i class="fas fa-circle"></i> Odoo ERP</span>
     <span class="ticker-item"><i class="fas fa-circle"></i> Microsoft Azure</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> OHADA Compliance</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Poland JPK V7</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Nigeria FIRS VAT</span>
+    <span class="ticker-item"><i class="fas fa-circle"></i> IFRS Reporting</span>
+    <span class="ticker-item"><i class="fas fa-circle"></i> Multi-Entity Consolidation</span>
     <span class="ticker-item"><i class="fas fa-circle"></i> Power BI Dashboards</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Salesforce CRM</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> EU OSS VAT</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> IFRS &amp; SYSCOHADA</span>
+    <span class="ticker-item"><i class="fas fa-circle"></i> ERP Finance Modules</span>
+    <span class="ticker-item"><i class="fas fa-circle"></i> Management Reporting</span>
   </div>
 </div>
 
@@ -617,8 +571,8 @@
   <div class="wrap">
     <div class="ctr rv">
       <span class="stag">What We Do</span>
-      <h2 class="sh">End-to-End <em>Digital Services</em></h2>
-      <p class="sp">From enterprise ERP implementation to AI-powered analytics — we deliver technology that transforms operations and drives measurable growth.</p>
+      <h2 class="sh">ERP and <em>Financial Reporting</em></h2>
+      <p class="sp">We implement practical ERP solutions and strengthen the reporting processes that help leadership understand performance and make decisions.</p>
     </div>
 
     <div class="svc-grid">
@@ -631,46 +585,10 @@
       </div>
 
       <div class="svc-c rv">
-        <div class="svc-icon" style="background:rgba(0,194,168,.12)"><i class="fas fa-users" style="color:var(--teal)"></i></div>
-        <h3>CRM Implementation</h3>
-        <p>Salesforce and Microsoft Dynamics CRM deployment that unifies customer data, automates sales pipelines, and accelerates growth.</p>
-        <a href="services/crm.html" class="svc-link">Learn more <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <div class="svc-c rv">
-        <div class="svc-icon" style="background:rgba(139,92,246,.15)"><i class="fas fa-robot" style="color:#a78bfa"></i></div>
-        <h3>AI &amp; Machine Learning</h3>
-        <p>Intelligent automation, predictive analytics, and custom AI models that turn your data into competitive advantage.</p>
-        <a href="services/ai-ml.html" class="svc-link">Learn more <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <div class="svc-c rv">
-        <div class="svc-icon" style="background:rgba(6,182,212,.12)"><i class="fas fa-cloud" style="color:#22d3ee"></i></div>
-        <h3>Cloud Services</h3>
-        <p>Azure cloud architecture, migration, and managed services — scalable, secure, and optimised for cross-border operations.</p>
-        <a href="services/cloud.html" class="svc-link">Learn more <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <div class="svc-c rv">
-        <div class="svc-icon" style="background:rgba(234,88,12,.12)"><i class="fas fa-chart-line" style="color:#fb923c"></i></div>
-        <h3>Business Analysis</h3>
-        <p>Process mapping, requirements engineering, and data-driven strategy that bridges the gap between business goals and technology.</p>
-        <a href="services/business-analysis.html" class="svc-link">Learn more <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <div class="svc-c rv">
         <div class="svc-icon" style="background:rgba(201,150,60,.12)"><i class="fas fa-chart-pie" style="color:var(--gold-l)"></i></div>
         <h3>Financial Analysis &amp; Accounting</h3>
-        <p>Multi-region accounting, OHADA compliance, JPK V7, Nigeria FIRS VAT — with built-in calculators and free Excel toolkit.</p>
+        <p>IFRS-aligned financial statements, consolidation support, month-end close, and management reporting that connects to your ERP data.</p>
         <a href="services/Financial Analysis-&-Accounting.html" class="svc-link">Learn more <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <!-- FinTech Marketplace teaser — gold card -->
-      <div class="svc-c fintech rv">
-        <div class="svc-icon" style="background:rgba(201,150,60,.2)"><i class="fas fa-store" style="color:var(--gold-l)"></i></div>
-        <h3>FinTech Marketplace <span style="font-size:.7rem;background:rgba(201,150,60,.2);color:var(--gold);padding:2px 8px;border-radius:12px;margin-left:6px;vertical-align:middle">COMING SOON</span></h3>
-        <p>A curated marketplace for tax algorithms, ERP templates, and career opportunities — built for Africa–Europe cross-border business.</p>
-        <a href="#marketplace" class="svc-link" style="color:var(--gold-l)">Join the waitlist <i class="fas fa-arrow-right"></i></a>
       </div>
 
     </div>
@@ -691,12 +609,12 @@
         <div class="wi-label">Client Satisfaction Rate</div>
       </div>
       <div class="why-item rv">
-        <div class="wi-num aec-counter" data-target="17" data-suffix="+">0+</div>
-        <div class="wi-label">OHADA Member States</div>
+        <div class="wi-num">ERP</div>
+        <div class="wi-label">Implementation Focus</div>
       </div>
       <div class="why-item rv">
-        <div class="wi-num aec-counter" data-target="4" data-suffix="">4</div>
-        <div class="wi-label">Tax Frameworks Covered</div>
+        <div class="wi-num">IFRS</div>
+        <div class="wi-label">Financial Reporting Focus</div>
       </div>
       <div class="why-item rv">
         <div class="wi-num">EN · FR · PL</div>
@@ -712,12 +630,12 @@
       <div class="svc-c rv" style="text-align:center">
         <i class="fas fa-globe-africa" style="font-size:2rem;color:var(--teal);margin-bottom:12px"></i>
         <h3>Cross-Border Expertise</h3>
-        <p>Deep understanding of African regulatory environments (OHADA, CEMAC, ECOWAS) and European standards (EU, GDPR, IFRS).</p>
+        <p>ERP and financial reporting support for organizations operating across African and European markets.</p>
       </div>
       <div class="svc-c rv" style="text-align:center">
         <i class="fas fa-shield-alt" style="font-size:2rem;color:var(--gold-l);margin-bottom:12px"></i>
-        <h3>Compliance First</h3>
-        <p>Every solution is built with local compliance baked in — not bolted on. JPK V7, OHADA TVA, FIRS VAT, EU OSS.</p>
+        <h3>Reliable Reporting</h3>
+        <p>Structured close processes, clear reconciliations, consistent reporting definitions, and decision-ready financial views.</p>
       </div>
       <div class="svc-c rv" style="text-align:center">
         <i class="fas fa-handshake" style="font-size:2rem;color:#a78bfa;margin-bottom:12px"></i>
@@ -728,111 +646,43 @@
   </div>
 </section>
 
-<!-- ═══════════════════════ MARKETPLACE WAITLIST ═══════════════════════ -->
-<section class="section" id="marketplace">
+<!-- ═══════════════════════ ERP AND REPORTING UPDATES ═══════════════════════ -->
+<section class="section" id="updates">
   <div class="wrap">
     <div class="ctr rv">
-      <span class="stag">FinTech Marketplace</span>
-      <h2 class="sh">Join the <em>AEC Hub Waitlist</em></h2>
-      <p class="sp">Be first to access tax algorithms, ERP templates, and career opportunities — a marketplace built for Africa–Europe cross-border business.</p>
+      <span class="stag">Articles and Insights</span>
+      <h2 class="sh">ERP and IFRS <em>Updates</em></h2>
+      <p class="sp">Get in touch to discuss ERP delivery, financial reporting, consolidation, and practical finance operations.</p>
     </div>
 
-    <div class="market-wrap rv">
-      <div class="market-header">
-        <div class="market-header-text">
-          <h2>AEC FinTech &amp; ERP Marketplace</h2>
-          <p>A curated platform connecting businesses, developers, and talent across the Africa–Europe corridor. Launching soon — register your interest below.</p>
+    <div class="updates-panel rv">
+      <div class="updates-header">
+        <div class="updates-header-text">
+          <h2>Stay informed</h2>
+          <p>We publish practical guidance on ERP implementation, IFRS reporting, and finance transformation.</p>
         </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start">
-          <span class="region-pill active">OHADA</span>
-          <span class="region-pill">EU / Poland</span>
-          <span class="region-pill">Nigeria FIRS</span>
-          <span class="region-pill">Global</span>
+        <a href="resources/research-insights.html" class="btn-gold">Read the articles <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="updates-topics">
+        <div class="topic-card">
+          <div class="topic-icon"><i class="fas fa-project-diagram"></i></div>
+          <h4>ERP delivery</h4>
+          <p>Requirements, platform selection, implementation, integrations, and adoption.</p>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon"><i class="fas fa-file-invoice"></i></div>
+          <h4>IFRS reporting</h4>
+          <p>Structured close, reconciliations, reporting packs, and consolidation support.</p>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon"><i class="fas fa-chart-line"></i></div>
+          <h4>Finance operations</h4>
+          <p>Improve month-end processes and connect operational data to management insights.</p>
         </div>
       </div>
 
-      <div class="market-features">
-        <div class="mf-card">
-          <div class="mf-icon">🧮</div>
-          <h4>Tax Algorithms</h4>
-          <p>Ready-to-deploy VAT, corporate tax, and OHADA compliance engines for developers and finance teams.</p>
-        </div>
-        <div class="mf-card">
-          <div class="mf-icon">📦</div>
-          <h4>ERP Templates</h4>
-          <p>Pre-configured D365, SAP, and Odoo templates localised for African and European markets.</p>
-        </div>
-        <div class="mf-card">
-          <div class="mf-icon">💼</div>
-          <h4>Careers</h4>
-          <p>Tech and finance opportunities across the Africa–Europe corridor, from Kraków to Lagos.</p>
-        </div>
-      </div>
-
-      <div class="market-form-area">
-        <p style="color:var(--muted);font-size:.88rem;margin-bottom:16px">Select your region of interest, then register:</p>
-        <div class="region-pills" id="regionPills">
-          <span class="region-pill active" data-region="OHADA">OHADA</span>
-          <span class="region-pill" data-region="EU/Poland">EU / Poland</span>
-          <span class="region-pill" data-region="Nigeria FIRS">Nigeria FIRS</span>
-          <span class="region-pill" data-region="Global">Global</span>
-        </div>
-        <form class="waitlist-form" id="waitlistForm" data-form-submit>
-          <input type="text"  class="wf-input" id="wl-name"   name="name"   placeholder="Full Name *" required>
-          <input type="email" class="wf-input" id="wl-email"  name="email"  placeholder="Email Address *" required>
-          <select class="wf-input" id="wl-role" name="role">
-            <option value="" disabled selected>Your Role</option>
-            <option>Business Owner / CEO</option>
-            <option>CFO / Finance Director</option>
-            <option>ERP Consultant</option>
-            <option>Developer</option>
-            <option>Accountant / Tax Advisor</option>
-            <option>Investor</option>
-            <option>Other</option>
-          </select>
-          <input type="hidden" id="wl-region" name="tax_region" value="OHADA">
-          <select class="wf-input" id="wl-region-display" name="tax_region_display">
-            <option value="OHADA">Tax Region: OHADA</option>
-            <option value="EU/Poland">Tax Region: EU / Poland</option>
-            <option value="Nigeria FIRS">Tax Region: Nigeria FIRS</option>
-            <option value="Global">Tax Region: Global</option>
-          </select>
-          <button type="submit" class="wf-submit"><i class="fas fa-rocket"></i> Join the Waitlist</button>
-          <div class="wf-msg" id="wl-msg"></div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════ WEB & MARKETING TEASER ═══════════════════════ -->
-<section class="section tight" style="border-top:1px solid var(--border)">
-  <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center">
-      <div class="rv">
-        <span class="stag">Web &amp; Marketing</span>
-        <h2 class="sh">Digital Presence <em>That Converts</em></h2>
-        <p class="sp" style="margin-bottom:24px">From strategy to launch — we design, build, and optimise digital experiences that grow your audience and revenue across Africa and Europe.</p>
-        <a href="services/web-marketing.html" class="btn-gold"><i class="fas fa-globe"></i> Explore Web Services</a>
-      </div>
-      <div class="rv" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-        <div class="svc-c" style="padding:20px;text-align:center">
-          <i class="fas fa-search" style="color:var(--teal);font-size:1.5rem;margin-bottom:8px"></i>
-          <h3 style="font-size:.95rem">SEO &amp; SEM</h3>
-        </div>
-        <div class="svc-c" style="padding:20px;text-align:center">
-          <i class="fas fa-paint-brush" style="color:var(--gold-l);font-size:1.5rem;margin-bottom:8px"></i>
-          <h3 style="font-size:.95rem">Web Design</h3>
-        </div>
-        <div class="svc-c" style="padding:20px;text-align:center">
-          <i class="fas fa-share-alt" style="color:#a78bfa;font-size:1.5rem;margin-bottom:8px"></i>
-          <h3 style="font-size:.95rem">Social Media</h3>
-        </div>
-        <div class="svc-c" style="padding:20px;text-align:center">
-          <i class="fas fa-envelope-open-text" style="color:#fb923c;font-size:1.5rem;margin-bottom:8px"></i>
-          <h3 style="font-size:.95rem">Email Campaigns</h3>
-        </div>
-      </div>
+      <p class="updates-note">To request an update or discuss a project, <a href="company/contact.html">contact AEC</a>. Article publishing instructions are in <code>resources/articles/README.md</code>.</p>
     </div>
   </div>
 </section>
@@ -857,7 +707,7 @@
         <span class="logo-text">AEC</span>
       </a>
       <p class="tagline">Aim High · Be Kind · Dare to be Different</p>
-      <p>AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner, empowering businesses across Africa and Europe through technology, innovation, and collaboration since 2017.</p>
+      <p>AEC supports organizations across Africa and Europe with ERP implementation and reliable financial reporting.</p>
     </div>
 
     <div class="footer-col">
@@ -986,53 +836,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// ── Region pills (waitlist) ────────────────────────────────
-document.querySelectorAll('#regionPills .region-pill').forEach(pill => {
-  pill.addEventListener('click', () => {
-    document.querySelectorAll('#regionPills .region-pill').forEach(p => p.classList.remove('active'));
-    pill.classList.add('active');
-    document.getElementById('wl-region').value = pill.dataset.region;
-    document.getElementById('wl-region-display').value = pill.dataset.region;
-  });
-});
-
-// ── Waitlist form ──────────────────────────────────────────
-document.getElementById('waitlistForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('.wf-submit');
-  const msg = document.getElementById('wl-msg');
-  btn.textContent = 'Submitting…'; btn.disabled = true;
-  const payload = {
-    name:       document.getElementById('wl-name').value,
-    email:      document.getElementById('wl-email').value,
-    role:       document.getElementById('wl-role').value,
-    tax_region: document.getElementById('wl-region').value
-  };
-  try {
-    const res = await fetch('/api/waitlist', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    if (res.ok) {
-      msg.className = 'wf-msg ok'; msg.style.display = 'block';
-      msg.innerHTML = '<i class="fas fa-check-circle"></i> You\'re on the list! We\'ll be in touch when the marketplace launches.';
-      this.reset();
-    } else throw new Error('Server error');
-  } catch {
-    // Fallback: open mailto
-    const subject = encodeURIComponent('AEC Marketplace Waitlist — ' + payload.name);
-    const body    = encodeURIComponent(`Name: ${payload.name}\nEmail: ${payload.email}\nRole: ${payload.role}\nRegion: ${payload.tax_region}`);
-    window.location.href = `mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com?subject=${subject}&body=${body}`;
-    msg.className = 'wf-msg ok'; msg.style.display = 'block';
-    msg.innerHTML = '<i class="fas fa-check-circle"></i> Email client opened — send it to complete registration.';
-  } finally {
-    btn.textContent = 'Join the Waitlist'; btn.disabled = false;
-  }
-});
 </script>
 
 <!-- Load master JS for any shared modules used by inner pages -->
-<script src="js/main.js"></script>
 </body>
 </html>

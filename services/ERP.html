@@ -56,6 +56,13 @@
     /* ANIMATIONS */
     [data-rv] { opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
     [data-rv].visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 800px) {
+      .hdr-inner { height: auto; min-height: 72px; padding: 12px 20px; flex-wrap: wrap; justify-content: center; gap: 12px; }
+      .nav-links { margin-left: 0; justify-content: center; flex-wrap: wrap; gap: 4px; }
+      .nav-links a { padding: 8px 9px; }
+      .erp-feature-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+      .floating-social { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -98,7 +105,7 @@
 <section class="section">
   <div class="content-wrap" style="max-width: 1300px; margin: 0 auto; padding: 0 40px;">
     
-    <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; align-items: center;">
+    <div class="erp-feature-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; align-items: center;">
       <div data-rv>
         <h2 style="font-family: var(--ff-serif); font-size: 2.8rem; margin-bottom: 25px;">Unified <em>Cross-Border</em> Compliance</h2>
         <p style="margin-bottom: 20px;">In today's global economy, a business in <strong>Cameroon or Nigeria</strong> must speak the same digital language as its partners in <strong>Poland or France</strong>. At AFRIQUEEUROPECONNEXIONVMETC, we don't just "install software"—we build digital bridges.</p>
@@ -106,8 +113,8 @@
         
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
           <div class="feature">
-            <h4 style="color: var(--gold-l); margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Localized Tax Engines</h4>
-            <p style="font-size: .9rem;">Automated VAT, GST, and Regional Levy calculations for 15+ jurisdictions.</p>
+            <h4 style="color: var(--gold-l); margin-bottom: 10px;"><i class="fas fa-check-circle"></i> Finance and Reporting Setup</h4>
+            <p style="font-size: .9rem;">Configure finance workflows, reporting dimensions, and approval paths to support consistent operational and financial reporting.</p>
           </div>
           <div class="feature">
             <h4 style="color: var(--gold-l); margin-bottom: 10px;"><i class="fas fa-check-circle"></i> AI-Forecasting</h4>
@@ -148,8 +155,8 @@
           <tr>
             <td><strong>Odoo</strong></td>
             <td>Agile & Mid-Market</td>
-            <td>Custom Localized Tax Modules</td>
-            <td>Highest (Cost & Flexibility)</td>
+            <td>Finance workflows and reporting tailored to business needs</td>
+            <td>Flexible configuration for growing organizations</td>
           </tr>
           <tr>
             <td><strong>SAP S/4HANA</strong></td>
@@ -161,7 +168,7 @@
             <td><strong>Oracle NetSuite</strong></td>
             <td>Tech & Finance Firms</td>
             <td>Real-time Multi-ledger Audit</td>
-            <td>Strict Fiscal Transparency</td>
+            <td>Multi-entity finance and reporting workflows</td>
           </tr>
         </tbody>
       </table>
@@ -177,7 +184,7 @@
         <img src="../assets/logo.png" alt="AEC" style="height: 40px;">
         <span class="logo-text" style="color: #fff; font-family: var(--ff-serif); font-weight: 800; font-size: 1.4rem; margin-left: 10px;">AEC</span>
       </a>
-      <p style="color: var(--muted); font-size: .9rem;">Leading the digital frontier through innovative AI, ERP, and Strategic Consulting services since 2017. Poland | Cameroon | Nigeria.</p>
+      <p style="color: var(--muted); font-size: .9rem;">ERP implementation and financial reporting support for organizations operating across Europe and Africa. Poland | Cameroon | Nigeria.</p>
     </div>
     <div>
       <h4 style="color: #fff; margin-bottom: 25px; font-family: var(--ff-serif);">Company</h4>
@@ -227,6 +234,7 @@
     document.getElementById('siteHeader').classList.toggle('scrolled', window.scrollY > 60);
   });
 </script>
+<script src="../js/main.js"></script>
 
 </body>
 </html>
