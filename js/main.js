@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════
    AFRIQUEEUROPECONNEXIONVMETC (AEC)
-   Master JavaScript  —  js/main.js
-   Modules 1–11: Core UI  |  12–15: Marketplace  |  16: Waitlist API
+   Shared JavaScript  —  js/main.js
+   Core navigation, reveal effects, counters, and opt-in interactions
    ═══════════════════════════════════════════════════════════ */
 
 (function () {
@@ -40,6 +40,24 @@
   if (ham)      ham.addEventListener('click', () => mobNav.classList.contains('open') ? closeMobNav() : openMobNav());
   if (mobClose) mobClose.addEventListener('click', closeMobNav);
   if (mobNav)   mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobNav));
+
+  const legacyMenuButton = document.getElementById('mobileMenuBtn');
+  const legacyNav = document.getElementById('navLinks');
+  if (legacyMenuButton && legacyNav) {
+    const closeLegacyNav = () => {
+      legacyNav.classList.remove('open');
+      legacyMenuButton.setAttribute('aria-expanded', 'false');
+    };
+
+    legacyMenuButton.setAttribute('aria-expanded', 'false');
+    legacyMenuButton.addEventListener('click', () => {
+      const isOpen = legacyNav.classList.toggle('open');
+      legacyMenuButton.setAttribute('aria-expanded', String(isOpen));
+    });
+    legacyNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeLegacyNav);
+    });
+  }
 
   /* ══════════════════════════════════
      3. BACK TO TOP
@@ -151,46 +169,6 @@
   }
 
   /* ══════════════════════════════════
-     9. GENERIC FORM SUBMISSION FEEDBACK
-     (non-waitlist forms with data-form-submit)
-  ══════════════════════════════════ */
-  document.querySelectorAll('[data-form-submit]:not(#waitlistBtn)').forEach(btn => {
-    btn.addEventListener('click', function () {
-      const form = this.closest('form');
-      if (!form) return;
-
-      const required = form.querySelectorAll('[required]');
-      let valid = true;
-      required.forEach(field => {
-        if (!field.value.trim()) {
-          valid = false;
-          field.style.borderColor = 'rgba(242,88,64,0.6)';
-          setTimeout(() => field.style.borderColor = '', 2500);
-        }
-      });
-      if (!valid) return;
-
-      const original = this.innerHTML;
-      this.innerHTML = '<i class="fas fa-circle-notch fa-spin" style="margin-right:8px;"></i>Sending…';
-      this.disabled = true;
-
-      setTimeout(() => {
-        this.innerHTML = '<i class="fas fa-check" style="margin-right:8px;"></i>Request Sent!';
-        this.style.background = 'linear-gradient(135deg,#00c2a8,#00a890)';
-        this.style.color = '#fff';
-        form.reset();
-
-        setTimeout(() => {
-          this.innerHTML = original;
-          this.style.background = '';
-          this.style.color = '';
-          this.disabled = false;
-        }, 3500);
-      }, 1200);
-    });
-  });
-
-  /* ══════════════════════════════════
      10. TICKER PAUSE ON HOVER
   ══════════════════════════════════ */
   document.querySelectorAll('.ticker-track').forEach(track => {
@@ -211,27 +189,6 @@
     });
     card.addEventListener('mouseleave', () => {
       card.style.transform = '';
-    });
-  });
-
-  /* ══════════════════════════════════
-     12. MARKETPLACE REGION FILTERS
-     Usage: <button class="aec-filter-btn" data-region="ohada">OHADA</button>
-            <div class="aec-market-item" data-region="ohada">…</div>
-  ══════════════════════════════════ */
-  const regionFilters = document.querySelectorAll('.aec-filter-btn');
-  const marketItems   = document.querySelectorAll('.aec-market-item');
-
-  regionFilters.forEach(btn => {
-    btn.addEventListener('click', () => {
-      regionFilters.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const targetRegion = btn.getAttribute('data-region');
-
-      marketItems.forEach(item => {
-        const itemRegion = item.getAttribute('data-region');
-        item.style.display = (targetRegion === 'all' || targetRegion === itemRegion) ? '' : 'none';
-      });
     });
   });
 
@@ -261,131 +218,6 @@
           <strong>${file.name}</strong> (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
       }
     }
-  }
-
-  /* ══════════════════════════════════
-     14. DYNAMIC AZURE PRODUCT FETCH
-     Pulls live ERP items from /api/marketplace/products
-     Falls back gracefully when API isn't ready
-  ══════════════════════════════════ */
-  async function loadAzureProducts() {
-    const container = document.getElementById('azure-products-list');
-    if (!container) return;
-
-    container.innerHTML = '<div style="text-align:center;color:#e8b85a;padding:20px;"><i class="fas fa-spinner fa-spin"></i> Loading AEC FinTech Products…</div>';
-
-    try {
-      const res      = await fetch('/api/marketplace/products');
-      const products = await res.json();
-
-      container.innerHTML = '';
-      products.forEach(p => {
-        container.innerHTML += `
-          <div class="svc-c aec-market-item rv in" data-region="${p.region_slug || 'global'}">
-            <span style="background:rgba(0,194,168,0.1);color:#00c2a8;padding:3px 10px;border-radius:50px;font-size:11px;">${p.category}</span>
-            <h3 style="margin-top:12px;">${p.title}</h3>
-            <p>${p.description}</p>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:18px;">
-              <span class="price" data-base-val="${p.price}" style="font-family:'Times New Roman',serif;font-size:20px;color:#e8b85a;font-weight:700;">€${p.price}</span>
-              <a href="#" class="svc-lnk">Purchase <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>`;
-      });
-    } catch (_) {
-      container.innerHTML = '<div style="text-align:center;color:rgba(255,255,255,0.3);padding:20px;">Marketplace launching soon — join the waitlist above to get early access.</div>';
-    }
-  }
-  loadAzureProducts();
-
-  /* ══════════════════════════════════
-     15. CURRENCY SWITCHER
-     Usage: <select id="aec-currency-selector">
-            <span class="price" data-base-val="45">€45</span>
-  ══════════════════════════════════ */
-  const currencySelector = document.getElementById('aec-currency-selector');
-  const rates = { EUR: 1, XAF: 655.95, NGN: 1600.00, PLN: 4.30 };
-  const symbols = { EUR: '€', XAF: 'CFA ', NGN: '₦', PLN: 'zł' };
-
-  if (currencySelector) {
-    currencySelector.addEventListener('change', e => {
-      const cur  = e.target.value;
-      const rate = rates[cur] || 1;
-      const sym  = symbols[cur] || '€';
-      document.querySelectorAll('.price[data-base-val]').forEach(el => {
-        const base = parseFloat(el.getAttribute('data-base-val'));
-        el.textContent = sym + (base * rate).toFixed(2);
-      });
-    });
-  }
-
-  /* ══════════════════════════════════
-     16. WAITLIST FORM → AZURE API
-     POST /api/waitlist → Azure Table Storage
-     Sends welcome email via Resend
-  ══════════════════════════════════ */
-  const waitlistBtn  = document.getElementById('waitlistBtn');
-  const waitlistForm = document.getElementById('waitlistForm');
-
-  if (waitlistBtn && waitlistForm) {
-    waitlistBtn.addEventListener('click', async function () {
-
-      // Validate
-      const fields  = waitlistForm.querySelectorAll('[required]');
-      let valid = true;
-      fields.forEach(f => {
-        if (!f.value.trim()) {
-          valid = false;
-          f.style.borderColor = 'rgba(242,88,64,0.6)';
-          setTimeout(() => f.style.borderColor = '', 2500);
-        }
-      });
-      if (!valid) return;
-
-      // Collect values
-      const fullName  = waitlistForm.querySelector('[name="fullName"]').value.trim();
-      const email     = waitlistForm.querySelector('[name="email"]').value.trim();
-      const role      = waitlistForm.querySelector('[name="role"]').value;
-      const taxRegion = waitlistForm.querySelector('[name="taxRegion"]').value;
-
-      // Loading state
-      const original = this.innerHTML;
-      this.innerHTML = '<i class="fas fa-circle-notch fa-spin" style="margin-right:8px;"></i>Registering…';
-      this.disabled  = true;
-
-      try {
-        const res = await fetch('/api/waitlist', {
-          method:  'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body:    JSON.stringify({ fullName, email, role, taxRegion })
-        });
-
-        if (res.ok) {
-          this.innerHTML   = '<i class="fas fa-check" style="margin-right:8px;"></i>You\'re on the list!';
-          this.style.background = 'linear-gradient(135deg,#00c2a8,#00a890)';
-          this.style.color = '#fff';
-          waitlistForm.reset();
-        } else {
-          const data = await res.json().catch(() => ({}));
-          throw new Error(data.error || 'Server error');
-        }
-
-      } catch (err) {
-        console.warn('Waitlist submission note:', err.message);
-        // Fallback: still show success UX so user isn't frustrated
-        // (server.js may not be wired yet locally — works on Azure)
-        this.innerHTML   = '<i class="fas fa-check" style="margin-right:8px;"></i>Waitlist Noted!';
-        this.style.background = 'linear-gradient(135deg,#00c2a8,#00a890)';
-        this.style.color = '#fff';
-        waitlistForm.reset();
-      } finally {
-        setTimeout(() => {
-          this.innerHTML   = original;
-          this.style.background = '';
-          this.style.color = '';
-          this.disabled    = false;
-        }, 4000);
-      }
-    });
   }
 
 })();

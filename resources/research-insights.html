@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Insights | AFRIQUEEUROPECONNEXIONVMETC</title>
-    <meta name="description" content="Page description here">
+    <meta name="description" content="Practical articles on ERP implementation, IFRS reporting, consolidation, and finance operations for businesses working across Africa and Europe.">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -12,7 +12,7 @@
 
 <header>
     <div class="container">
-        <nav>
+        <nav class="site-navigation">
           
             <a href="../index.html" class="logo">
                 <img src="../assets/logo.png" alt="AEC" class="logo-img">
@@ -22,7 +22,7 @@
                 <li><a href="../index.html">Home</a></li>
                 
                 <li class="dropdown">
-                    <a href="#company" class="dropdown-toggle">
+                    <a href="../company/about.html" class="dropdown-toggle">
                         Company <i class="fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown-menu">
@@ -34,7 +34,7 @@
                 </li>
                 
                 <li class="dropdown">
-                    <a href="#services" class="dropdown-toggle">
+                    <a href="../services/ERP.html" class="dropdown-toggle">
                         Services <i class="fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown-menu">
@@ -48,7 +48,7 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#resources" class="dropdown-toggle">
+                    <a href="../resources/research-insights.html" class="dropdown-toggle">
                         Resources <i class="fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown-menu">
@@ -204,45 +204,25 @@
             </div>
         </section>
 <!-- Research Articles Section -->
-<section class="container mt-5">
-  <h2>Latest Research Articles</h2>
-  <div id="articles-container">
-    <!-- Articles will be injected here -->
+<section class="container mt-5" style="padding:60px 0;">
+  <h2>ERP and Financial Reporting Articles</h2>
+  <p>Practical guidance for planning ERP projects, improving close processes, and producing useful IFRS-aligned reports.</p>
+  <div class="grid-2 mt-3">
+    <article class="card">
+      <p style="color:var(--sky-blue);font-weight:700;">ERP IMPLEMENTATION</p>
+      <h3>A Practical ERP Rollout: From Process Mapping to Adoption</h3>
+      <p>Plan an ERP project around real workflows, clean data, accountable owners, and measurable adoption.</p>
+      <a href="articles/practical-erp-rollout.html">Read the article</a>
+    </article>
+    <article class="card">
+      <p style="color:var(--sky-blue);font-weight:700;">IFRS REPORTING</p>
+      <h3>Build a Repeatable Month-End Close for Better IFRS Reporting</h3>
+      <p>Use a clear close calendar, reconciliations, review controls, and consistent reporting data to make financial reporting more dependable.</p>
+      <a href="articles/repeatable-ifrs-close.html">Read the article</a>
+    </article>
   </div>
+  <p style="margin-top:2rem;">To publish or update an article, follow the guide in <code>resources/articles/README.md</code>.</p>
 </section>
-
-<script>
-  // Example static data (replace later with SharePoint/Excel/Word via Graph API)
-  const articles = [
-    {
-      title: "ERP Systems Driving SME Growth",
-      summary: "An analysis of how ERP adoption impacts small and medium enterprises in Europe and Africa.",
-      link: "https://afriqueeuropeconnexionvmetc.com/articles/erp-growth.html"
-    },
-    {
-      title: "Digital Transformation in Emerging Markets",
-      summary: "Exploring strategies for digital adoption in Cameroon and Poland.",
-      link: "https://afriqueeuropeconnexionvmetc.com/articles/digital-transformation.html"
-    }
-  ];
-
-  const container = document.getElementById("articles-container");
-  articles.forEach(article => {
-    const div = document.createElement("div");
-    div.className = "article";
-    div.innerHTML = `
-      <h3>${article.title}</h3>
-      <p>${article.summary}</p>
-      <a href="${article.link}" target="_blank">Read more</a>
-      <div class="share-buttons">
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${article.link}" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com/intent/tweet?url=${article.link}&text=${article.title}" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=${article.link}" target="_blank"><i class="fab fa-facebook"></i></a>
-      </div>
-    `;
-    container.appendChild(div);
-  });
-</script>
 
         <section class="container">
             <h2>Business Intelligence & Technology Research</h2>
@@ -442,14 +422,14 @@
                         <li><a href="../company/about.html">About</a></li>
                         <li><a href="../services/ai-ml.html">AI & ML</a></li>
                         <li><a href="research-insights.html">Research</a></li>
-                        <li><a href="../csr/social-impact.html">Social Impact</a></li>
+                        <li><a href="../company/mission.html">Our Mission</a></li>
                         <li><a href="../company/contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="../services/erp.html">ERP Solutions</a></li>
+                        <li><a href="../services/ERP.html">ERP Solutions</a></li>
                         <li><a href="../services/crm.html">CRM Implementation</a></li>
                         <li><a href="../services/cloud.html">Cloud Services</a></li>
                         <li><a href="../services/business-analysis.html">Business Analysis</a></li>
@@ -476,6 +456,6 @@
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

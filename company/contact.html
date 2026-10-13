@@ -48,6 +48,14 @@
     .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; padding: 15px 25px; border-radius: 50px; text-decoration: none; display: flex; align-items: center; gap: 10px; font-weight: 700; box-shadow: 0 10px 20px rgba(0,0,0,0.3); z-index: 999; }
     
     @media (max-width: 992px) { .contact-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 700px) {
+      .hdr-inner { height: auto; min-height: 68px; padding: 12px 20px; flex-wrap: wrap; gap: 10px; }
+      .nav-links { margin-left: 0; justify-content: center; gap: 10px; flex-wrap: wrap; }
+      .contact-grid { padding: 50px 20px; gap: 35px; }
+      .form-card { padding: 24px; }
+      .contact-grid form > div:first-child { grid-template-columns: 1fr !important; gap: 0 !important; }
+      .whatsapp-btn { right: 15px; bottom: 15px; }
+    }
   </style>
 </head>
 <body>
@@ -80,36 +88,36 @@
       <form id="aecContactForm">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
           <div class="form-group">
-            <label>Full Name</label>
+            <label for="name">Full Name</label>
             <input type="text" id="name" class="form-control" placeholder="John Doe" required>
           </div>
           <div class="form-group">
-            <label>Company</label>
+            <label for="company">Company</label>
             <input type="text" id="company" class="form-control" placeholder="Acme Corp">
           </div>
         </div>
         <div class="form-group">
-          <label>Work Email</label>
+          <label for="email">Work Email</label>
           <input type="email" id="email" class="form-control" placeholder="john@company.com" required>
         </div>
         <div class="form-group">
-          <label>Service Interest</label>
+          <label for="service">Service Interest</label>
           <select id="service" class="form-control" style="background: #162450;">
-            <option>AI & Automation</option>
-            <option>ERP Implementation</option>
-            <option>Business Analysis</option>
-            <option>Cloud Services</option>
+            <option>ERP implementation</option>
+            <option>IFRS financial reporting</option>
+            <option>ERP finance and reporting integration</option>
+            <option>Other business systems</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Your Message</label>
+          <label for="message">Your Message</label>
           <textarea id="message" rows="5" class="form-control" placeholder="Tell us about your project..." required></textarea>
         </div>
         <button type="submit" class="nav-cta" style="width: 100%; border: none; cursor: pointer; padding: 18px; font-size: 1rem;">
           <i class="fas fa-paper-plane"></i> Send Inquiry
         </button>
       </form>
-      <div id="statusMsg" style="display:none; margin-top:20px; padding:15px; border-radius:8px; text-align:center;"></div>
+      <div id="statusMsg" role="status" aria-live="polite" style="display:none; margin-top:20px; padding:15px; border-radius:8px; text-align:center;"></div>
     </div>
 
     <div class="contact-info">
@@ -146,7 +154,7 @@
   </div>
 </main>
 
-<a href="https://wa.me/48690386721" class="whatsapp-btn" target="_blank">
+<a href="https://wa.me/48690386721" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
   <i class="fab fa-whatsapp fa-lg"></i> Chat with AEC
 </a>
 
@@ -189,26 +197,25 @@
     const data = {
       name: document.getElementById('name').value,
       company: document.getElementById('company').value || 'N/A',
+      email: document.getElementById('email').value,
       service: document.getElementById('service').value,
       message: document.getElementById('message').value
     };
 
     const subject = encodeURIComponent(`Inquiry from ${data.name} regarding ${data.service}`);
-    const body = encodeURIComponent(`Name: ${data.name}\nCompany: ${data.company}\n\nMessage:\n${data.message}`);
+    const body = encodeURIComponent(`Name: ${data.name}\nCompany: ${data.company}\nReply-to: ${data.email}\nService: ${data.service}\n\nMessage:\n${data.message}`);
+    const mailto = `mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com?subject=${subject}&body=${body}`;
 
-    // Launch Mailto
-    window.location.href = `mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com?subject=${subject}&body=${body}`;
-
-    // Status UI
     status.style.display = 'block';
     status.style.background = 'rgba(0,194,168,0.1)';
     status.style.color = 'var(--teal)';
-    status.innerHTML = "Opening your email client... Redirecting to confirmation page.";
-
-    // Redirect to Thank You page after 3 seconds
-    setTimeout(() => {
-      window.location.href = "thank-you.html";
-    }, 3000);
+    status.textContent = 'Your email app should open with this inquiry. Review it and press Send to contact AEC. If it does not open, ';
+    const fallback = document.createElement('a');
+    fallback.href = mailto;
+    fallback.textContent = 'send the inquiry by email';
+    fallback.style.color = 'inherit';
+    status.appendChild(fallback);
+    window.location.href = mailto;
   });
 </script>
 
