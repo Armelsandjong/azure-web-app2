@@ -1,1038 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AFRIQUEEUROPECONNEXIONVMETC | Digital Transformation · Africa &amp; Europe</title>
-  <meta name="description" content="AEC — Digital transformation partner empowering businesses across Africa and Europe through ERP, CRM, AI/ML, Cloud, FinTech, and Financial Analysis services since 2017.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AFRIQUEEUROPECONNEXIONVMETC | Business Consulting · Africa &amp; Europe</title>
+<meta name="description" content="AEC is a small, hands-on consultancy helping businesses in Africa and Europe with business analysis, finance, ERP, CRM, AI, cloud and web — in plain language. Kraków · Douala · Abuja.">
+<meta name="theme-color" content="#0b1535">
+<link rel="canonical" href="https://afriqueeuropeconnexionvmetc.com/">
+<link rel="icon" href="assets/logo.png">
 
-  <!-- Google Tag Manager >
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PDMNDP8F);</script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","v4lglq0gvb");</script>
+<meta property="og:type" content="website">
+<meta property="og:title" content="AEC | Business Consulting · Africa &amp; Europe">
+<meta property="og:description" content="Practical business help in plain language — finance, ERP, CRM, AI, cloud and web.">
+<meta property="og:url" content="https://afriqueeuropeconnexionvmetc.com/">
+<meta property="og:image" content="https://afriqueeuropeconnexionvmetc.com/assets/logo.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+<!-- lets the page animate only when JavaScript is running -->
+<script>document.documentElement.classList.add('js');</script>
 
-  <style>
-  /* ═══════════════════════════════════════════════════════════
-     AEC HOMEPAGE — page-level styles
-     All shared tokens already in css/style.css
-  ═══════════════════════════════════════════════════════════ */
-  :root {
-    --navy:   #0b1535;
-    --navy2:  #0f1e4a;
-    --gold:   #c9963c;
-    --gold-l: #e8b85a;
-    --teal:   #00c2a8;
-    --muted:  rgba(255,255,255,.52);
-    --card:   rgba(255,255,255,.035);
-    --border: rgba(255,255,255,.08);
-    --ff-serif: "Times New Roman", "Playfair Display", serif;
-    --ff-sans:  "DM Sans", "Helvetica Neue", Arial, sans-serif;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!-- ======== YOUR TRACKING TAGS (kept) ======== -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PDMNDP8F');</script>
+<!-- End Google Tag Manager -->
+<!-- Microsoft Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","v4lglq0gvb");</script>
+<!-- ======== END TRACKING TAGS ======== -->
 
-  body {
-    background: var(--navy);
-    color: #e0e4f0;
-    font-family: var(--ff-sans);
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 
-  /* ── HEADER ─────────────────────────────────────────────── */
-  .site-header {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    background: rgba(11,21,53,.85);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
-    transition: background .3s, box-shadow .3s;
-  }
-  .site-header.scrolled {
-    background: rgba(11,21,53,.97);
-    box-shadow: 0 4px 32px rgba(0,0,0,.4);
-  }
-  .hdr-inner {
-    max-width: 1280px; margin: 0 auto;
-    padding: 0 28px;
-    display: flex; align-items: center; height: 68px; gap: 40px;
-  }
-
-  /* Logo */
-  .logo { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
-  .logo img { height:38px; width:38px; object-fit:contain; }
-  .logo-text { font-family:var(--ff-serif); font-size:1.35rem; color:#fff; letter-spacing:.03em; }
-
-  /* Nav */
-  .nav-links {
-    display: flex; align-items: center; gap: 4px;
-    list-style: none; margin-left: auto;
-  }
-  .nav-links > li > a {
-    display: flex; align-items: center; gap: 5px;
-    padding: 8px 14px; border-radius: 7px;
-    color: rgba(255,255,255,.78); font-size: .88rem; font-weight: 500;
-    text-decoration: none;
-    transition: color .2s, background .2s;
-  }
-  .nav-links > li > a:hover,
-  .nav-links > li > a.active { color: #fff; background: rgba(255,255,255,.07); }
-  .nav-links > li > a i { font-size: .7rem; opacity: .6; }
-
-  /* CTA nav button */
-  .nav-cta {
-    background: linear-gradient(135deg, var(--gold), var(--gold-l)) !important;
-    color: var(--navy) !important; font-weight: 700 !important;
-    padding: 8px 20px !important; border-radius: 8px !important;
-  }
-  .nav-cta:hover { opacity: .9; background: linear-gradient(135deg, var(--gold), var(--gold-l)) !important; }
-
-  /* Dropdown */
-  .dropdown { position: relative; }
-  .dropdown-menu {
-    display: none; position: absolute; top: calc(100% + 8px); left: 0;
-    min-width: 220px;
-    background: rgba(11,21,53,.97);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,.5);
-    z-index: 200;
-  }
-  .dropdown:hover .dropdown-menu { display: block; }
-  .dropdown-menu a {
-    display: flex; align-items: center; gap: 10px;
-    padding: 11px 18px; color: rgba(255,255,255,.78);
-    font-size: .88rem; text-decoration: none;
-    transition: background .15s, color .15s;
-  }
-  .dropdown-menu a:hover { background: rgba(255,255,255,.07); color: #fff; }
-  .dropdown-menu a i { width: 16px; opacity: .6; font-size: .85rem; }
-
-  /* Mobile toggle */
-  .mob-btn {
-    display: none; background: none; border: none; cursor: pointer;
-    padding: 6px; margin-left: auto;
-  }
-  .mob-btn span {
-    display: block; width: 24px; height: 2px;
-    background: #fff; margin: 5px 0;
-    transition: transform .3s, opacity .3s;
-    border-radius: 2px;
-  }
-  #mob { display: none; }
-  #mob.open { display: flex; flex-direction: column; }
-
-  /* ── HERO ────────────────────────────────────────────────── */
-  .hero {
-    min-height: 100vh;
-    display: flex; align-items: center;
-    position: relative; overflow: hidden;
-    padding: 120px 28px 80px;
-  }
-  .hero-bg {
-    position: absolute; inset: 0;
-    background: url('assets/human machine.jpg') center/cover no-repeat;
-    filter: brightness(.25) saturate(.8);
-  }
-  .hero-bg::after {
-    content: "";
-    position: absolute; inset: 0;
-    background: linear-gradient(135deg,
-      rgba(11,21,53,.9) 0%,
-      rgba(11,21,53,.5) 50%,
-      rgba(0,30,20,.7) 100%);
-  }
-  .hero-inner {
-    position: relative; z-index: 2;
-    max-width: 1280px; margin: 0 auto; width: 100%;
-  }
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(201,150,60,.12);
-    border: 1px solid rgba(201,150,60,.3);
-    color: var(--gold-l); font-size: .77rem;
-    letter-spacing: .12em; text-transform: uppercase;
-    padding: 6px 16px; border-radius: 20px; margin-bottom: 24px;
-  }
-  .hero-tag span { width:6px; height:6px; border-radius:50%; background:var(--gold); display:inline-block; animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.3)} }
-
-  .hero h1 {
-    font-family: var(--ff-serif);
-    font-size: clamp(2.4rem, 6vw, 4.2rem);
-    line-height: 1.12;
-    color: #fff;
-    max-width: 780px;
-    margin-bottom: 24px;
-  }
-  .hero h1 em { color: var(--gold-l); font-style: italic; display: block; }
-  .hero p {
-    color: var(--muted); font-size: 1.1rem;
-    max-width: 580px; margin-bottom: 36px; line-height: 1.75;
-  }
-  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn-gold {
-    display: inline-flex; align-items: center; gap: 9px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-l));
-    color: var(--navy); font-weight: 700; font-size: .95rem;
-    padding: 14px 30px; border-radius: 9px; border: none;
-    cursor: pointer; text-decoration: none;
-    transition: transform .2s, box-shadow .2s;
-    box-shadow: 0 4px 20px rgba(201,150,60,.35);
-  }
-  .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,150,60,.45); }
-  .btn-outline {
-    display: inline-flex; align-items: center; gap: 9px;
-    background: transparent; color: rgba(255,255,255,.85);
-    border: 1px solid rgba(255,255,255,.25); font-weight: 600; font-size: .95rem;
-    padding: 13px 28px; border-radius: 9px; cursor: pointer; text-decoration: none;
-    transition: border-color .2s, background .2s, color .2s;
-  }
-  .btn-outline:hover { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.05); color: #fff; }
-
-  /* ── TICKER ──────────────────────────────────────────────── */
-  .ticker-wrap {
-    background: rgba(0,0,0,.35);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    overflow: hidden; padding: 10px 0;
-  }
-  .ticker-track {
-    display: flex; gap: 0; width: max-content;
-    animation: ticker 30s linear infinite;
-  }
-  .ticker-track:hover { animation-play-state: paused; }
-  @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-  .ticker-item {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 0 28px; white-space: nowrap;
-    color: rgba(255,255,255,.6); font-size: .82rem; font-weight: 500;
-    letter-spacing: .06em; text-transform: uppercase;
-  }
-  .ticker-item i { color: var(--gold); font-size: .7rem; }
-
-  /* ── SECTION COMMON ─────────────────────────────────────── */
-  .section { padding: 90px 0; }
-  .section.tight { padding: 60px 0; }
-  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
-  .stag {
-    display: inline-block;
-    background: rgba(201,150,60,.12);
-    border: 1px solid rgba(201,150,60,.28);
-    color: var(--gold-l); font-size: .75rem;
-    letter-spacing: .12em; text-transform: uppercase;
-    padding: 5px 15px; border-radius: 20px; margin-bottom: 16px;
-  }
-  .sh {
-    font-family: var(--ff-serif);
-    font-size: clamp(1.7rem, 3.5vw, 2.6rem);
-    color: #fff; line-height: 1.2; margin-bottom: 14px;
-  }
-  .sh em { color: var(--gold-l); font-style: italic; }
-  .sp { color: var(--muted); max-width: 620px; font-size: 1.02rem; }
-  .ctr { text-align: center; }
-  .ctr .sp { margin: 0 auto; }
-
-  /* ── SERVICE CARDS ───────────────────────────────────────── */
-  .svc-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px; margin-top: 52px;
-  }
-  .svc-c {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px; padding: 30px;
-    display: flex; flex-direction: column;
-    transition: border-color .25s, transform .25s, box-shadow .25s;
-    cursor: default;
-  }
-  .svc-c:hover {
-    border-color: rgba(201,150,60,.4);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 50px rgba(0,0,0,.35);
-  }
-  .svc-c .svc-icon {
-    width: 52px; height: 52px; border-radius: 12px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.4rem; margin-bottom: 18px; flex-shrink: 0;
-  }
-  .svc-c h3 {
-    font-family: var(--ff-serif);
-    font-size: 1.15rem; color: #fff; margin-bottom: 10px;
-  }
-  .svc-c p { color: var(--muted); font-size: .91rem; line-height: 1.7; flex: 1; }
-  .svc-c .svc-link {
-    display: inline-flex; align-items: center; gap: 6px;
-    color: var(--gold-l); font-size: .83rem; font-weight: 600;
-    text-decoration: none; margin-top: 18px;
-    transition: gap .2s;
-  }
-  .svc-c .svc-link:hover { gap: 10px; }
-
-  /* Gold fintech card */
-  .svc-c.fintech {
-    background: linear-gradient(135deg, rgba(201,150,60,.12), rgba(201,150,60,.04));
-    border-color: rgba(201,150,60,.3);
-  }
-  .svc-c.fintech h3 { color: var(--gold-l); }
-
-  /* ── WHY AEC ─────────────────────────────────────────────── */
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px; margin-top: 48px;
-  }
-  .why-item {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 28px 24px; text-align: center;
-  }
-  .why-item .wi-num {
-    font-family: var(--ff-serif); font-size: 2.6rem; font-weight: 700;
-    color: var(--gold-l); line-height: 1;
-    margin-bottom: 8px;
-  }
-  .why-item .wi-label { font-size: .82rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-
-  /* ── MARKETPLACE WAITLIST ────────────────────────────────── */
-  #marketplace { scroll-margin-top: 80px; }
-  .market-wrap {
-    background: linear-gradient(135deg, rgba(15,30,74,.8), rgba(0,40,30,.6));
-    border: 1px solid var(--border); border-radius: 20px;
-    overflow: hidden; margin-top: 52px;
-  }
-  .market-header {
-    background: linear-gradient(135deg, rgba(201,150,60,.1), rgba(0,194,168,.06));
-    border-bottom: 1px solid var(--border);
-    padding: 36px 40px;
-    display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;
-  }
-  .market-header-text { flex: 1; min-width: 260px; }
-  .market-header h2 { font-family: var(--ff-serif); font-size: 1.8rem; color: #fff; margin-bottom: 8px; }
-  .market-header p { color: var(--muted); font-size: .95rem; max-width: 480px; }
-
-  .market-features {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px; padding: 28px 40px;
-    border-bottom: 1px solid var(--border);
-  }
-  .mf-card {
-    background: rgba(255,255,255,.03); border: 1px solid var(--border);
-    border-radius: 10px; padding: 20px;
-  }
-  .mf-card .mf-icon { font-size: 1.5rem; margin-bottom: 10px; }
-  .mf-card h4 { color: var(--gold-l); font-family: var(--ff-serif); font-size: 1rem; margin-bottom: 6px; }
-  .mf-card p { color: var(--muted); font-size: .83rem; }
-
-  .market-form-area { padding: 32px 40px; }
-  .region-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
-  .region-pill {
-    background: rgba(255,255,255,.05); border: 1px solid var(--border);
-    color: var(--teal); font-size: .77rem; font-weight: 600;
-    padding: 5px 14px; border-radius: 20px; cursor: pointer;
-    transition: all .2s;
-  }
-  .region-pill.active, .region-pill:hover {
-    background: rgba(0,194,168,.12); border-color: rgba(0,194,168,.4);
-  }
-
-  .waitlist-form {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
-  }
-  @media(max-width:580px){ .waitlist-form { grid-template-columns: 1fr; } }
-  .wf-input {
-    background: rgba(255,255,255,.055); border: 1px solid var(--border);
-    border-radius: 8px; color: #fff; font-size: .93rem; font-family: var(--ff-sans);
-    padding: 12px 16px; outline: none; width: 100%;
-    transition: border-color .2s;
-  }
-  .wf-input:focus { border-color: var(--gold); }
-  .wf-input::placeholder { color: rgba(255,255,255,.3); }
-  .wf-input option { background: var(--navy); }
-  .wf-submit {
-    grid-column: 1 / -1;
-    background: linear-gradient(135deg, var(--gold), var(--gold-l));
-    color: var(--navy); font-weight: 700; font-size: .95rem;
-    padding: 14px; border-radius: 9px; border: none; cursor: pointer;
-    width: 100%; transition: opacity .2s, transform .2s;
-  }
-  .wf-submit:hover { opacity: .9; transform: translateY(-1px); }
-  .wf-msg { grid-column: 1/-1; font-size: .88rem; padding: 10px 14px; border-radius: 7px; display: none; }
-  .wf-msg.ok { background: rgba(0,194,168,.12); border: 1px solid rgba(0,194,168,.3); color: var(--teal); }
-
-  /* ── CTA STRIP ───────────────────────────────────────────── */
-  .cta-strip {
-    background: linear-gradient(135deg, #0d2060, #0f2a1a);
-    border-top: 1px solid rgba(201,150,60,.18);
-    padding: 80px 28px; text-align: center;
-  }
-  .cta-strip h2 { font-family: var(--ff-serif); font-size: clamp(1.6rem,4vw,2.5rem); color: #fff; margin-bottom: 14px; }
-  .cta-strip p { color: var(--muted); max-width: 560px; margin: 0 auto 32px; font-size: 1.05rem; }
-
-  /* ── FOOTER ──────────────────────────────────────────────── */
-  .site-footer {
-    background: #060d20;
-    border-top: 1px solid var(--border);
-    padding: 70px 0 0;
-  }
-  .footer-grid {
-    max-width: 1280px; margin: 0 auto; padding: 0 28px;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.4fr;
-    gap: 48px;
-  }
-  @media(max-width:900px){ .footer-grid { grid-template-columns: 1fr 1fr; } }
-  @media(max-width:560px){ .footer-grid { grid-template-columns: 1fr; } }
-
-  .footer-brand .logo { margin-bottom: 16px; }
-  .footer-brand .tagline {
-    color: var(--gold); font-family: var(--ff-serif); font-style: italic;
-    font-size: .88rem; margin-bottom: 14px;
-  }
-  .footer-brand p { color: var(--muted); font-size: .85rem; line-height: 1.75; }
-
-  .footer-col h4 {
-    font-family: var(--ff-serif); color: #fff; font-size: 1rem;
-    margin-bottom: 16px; padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
-  }
-  .footer-col ul { list-style: none; }
-  .footer-col ul li { margin-bottom: 9px; }
-  .footer-col ul a {
-    display: flex; align-items: center; gap: 8px;
-    color: var(--muted); font-size: .87rem; text-decoration: none;
-    transition: color .2s;
-  }
-  .footer-col ul a:hover { color: var(--gold-l); }
-  .footer-col ul a i { width: 14px; opacity: .6; font-size: .82rem; }
-
-  .footer-bottom {
-    max-width: 1280px; margin: 48px auto 0;
-    padding: 20px 28px;
-    border-top: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 10px;
-  }
-  .footer-bottom p { color: rgba(255,255,255,.35); font-size: .8rem; }
-  .footer-bottom .ms-badge {
-    display: flex; align-items: center; gap: 6px;
-    color: rgba(255,255,255,.45); font-size: .8rem;
-  }
-  .footer-bottom .ms-badge i { color: #00a4ef; }
-
-  /* ── BACK TO TOP ─────────────────────────────────────────── */
-  #btt {
-    position: fixed; bottom: 28px; right: 28px; z-index: 900;
-    width: 44px; height: 44px; border-radius: 50%;
-    background: var(--gold); color: var(--navy);
-    border: none; cursor: pointer; font-size: 1rem;
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0; transform: translateY(20px);
-    transition: opacity .3s, transform .3s;
-    box-shadow: 0 4px 16px rgba(201,150,60,.4);
-  }
-  #btt.visible { opacity: 1; transform: translateY(0); }
-
-  /* ── SCROLL REVEAL ───────────────────────────────────────── */
-  .rv { opacity: 0; transform: translateY(24px); transition: opacity .6s, transform .6s; }
-  .rv.in { opacity: 1; transform: none; }
-
-  /* ── RESPONSIVE ──────────────────────────────────────────── */
-  @media(max-width:860px) {
-    .mob-btn { display: flex; flex-direction: column; }
-    .nav-links { display: none; }
-    #mob {
-      position: fixed; top: 68px; left: 0; right: 0; bottom: 0;
-      background: rgba(11,21,53,.98); z-index: 999;
-      flex-direction: column; padding: 28px;
-      overflow-y: auto;
-    }
-    #mob li { border-bottom: 1px solid var(--border); }
-    #mob li a { display: block; padding: 14px 0; color: #fff; font-size: 1rem; text-decoration: none; }
-    #mob .dropdown-menu {
-      position: static; display: none; background: transparent;
-      border: none; box-shadow: none; padding-left: 16px;
-    }
-    #mob .dropdown.open .dropdown-menu { display: block; }
-    #mob .dropdown-menu a { padding: 9px 0; font-size: .92rem; color: var(--muted); }
-  }
-  </style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"AFRIQUEEUROPECONNEXIONVMETC",
+  "alternateName":"AEC",
+  "url":"https://afriqueeuropeconnexionvmetc.com",
+  "logo":"https://afriqueeuropeconnexionvmetc.com/assets/logo.png",
+  "description":"A small, hands-on consultancy helping businesses in Africa and Europe with business analysis, finance, ERP, CRM, AI, cloud and web.",
+  "foundingDate":"2017",
+  "founder":{"@type":"Person","name":"Armel Sandjong Nantchouang"},
+  "address":[
+    {"@type":"PostalAddress","addressLocality":"Kraków","addressCountry":"PL"},
+    {"@type":"PostalAddress","addressLocality":"Douala","addressCountry":"CM"},
+    {"@type":"PostalAddress","addressLocality":"Abuja","addressCountry":"NG"}
+  ],
+  "contactPoint":{"@type":"ContactPoint","telephone":"+48-690-386-721","contactType":"customer service","email":"ArmelSandjong@afriqueeuropeconnexionvmetc.com","availableLanguage":["English","French","Polish"]},
+  "sameAs":[
+    "https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/",
+    "https://x.com/SandjongAr3472",
+    "https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang"
+  ]
+}
+</script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDMNDP8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-<!-- ═══════════════════════ HEADER ═══════════════════════ -->
-<header class="site-header" id="siteHeader">
-  <div class="hdr-inner">
-    <a href="index.html" class="logo">
-      <img src="assets/logo.png" alt="AEC Logo">
-      <span class="logo-text">AEC</span>
-    </a>
-
-    <!-- Desktop nav -->
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-
-      <li class="dropdown">
-        <a href="#">Company <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-menu">
-          <a href="company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-          <a href="company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
-          <a href="company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-          <a href="company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
-        </div>
-      </li>
-
-      <li class="dropdown">
-        <a href="#">Services <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-menu">
-          <a href="services/ai-ml.html"><i class="fas fa-robot"></i> AI &amp; Machine Learning</a>
-          <a href="services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-          <a href="services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
-          <a href="services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
-          <a href="services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
-          <a href="services/web-marketing.html"><i class="fas fa-globe"></i> Web &amp; Marketing</a>
-          <a href="services/Financial Analysis-&-Accounting.html"><i class="fas fa-chart-pie"></i> Financial Analysis &amp; Accounting</a>
-        </div>
-      </li>
-
-      <li class="dropdown">
-        <a href="#">Resources <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-menu">
-          <a href="resources/research-insights.html"><i class="fas fa-book"></i> Research &amp; Insights</a>
-          <a href="resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
-          <a href="resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
-        </div>
-      </li>
-
-      <li><a href="index.html#marketplace">FinTech Hub</a></li>
-      <li><a href="company/contact.html">Contact</a></li>
-      <li><a href="consultation.html" class="nav-cta">Free Consultation</a></li>
-    </ul>
-
-    <!-- Mobile toggle -->
-    <button class="mob-btn" id="ham" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-
-  <!-- Mobile overlay nav -->
-  <ul id="mob">
-    <li><a href="index.html">Home</a></li>
-    <li class="dropdown">
-      <a href="#" id="mob-company">Company <i class="fas fa-chevron-down"></i></a>
-      <div class="dropdown-menu">
-        <a href="company/about.html"><i class="fas fa-info-circle"></i> About Us</a>
-        <a href="company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
-        <a href="company/expertise.html"><i class="fas fa-star"></i> Expertise</a>
-        <a href="company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
-      </div>
-    </li>
-    <li class="dropdown">
-      <a href="#" id="mob-services">Services <i class="fas fa-chevron-down"></i></a>
-      <div class="dropdown-menu">
-        <a href="services/ai-ml.html"><i class="fas fa-robot"></i> AI &amp; Machine Learning</a>
-        <a href="services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a>
-        <a href="services/crm.html"><i class="fas fa-users"></i> CRM Implementation</a>
-        <a href="services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a>
-        <a href="services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a>
-        <a href="services/web-marketing.html"><i class="fas fa-globe"></i> Web &amp; Marketing</a>
-        <a href="services/Financial Analysis-&-Accounting.html"><i class="fas fa-chart-pie"></i> Financial A&amp;A</a>
-      </div>
-    </li>
-    <li class="dropdown">
-      <a href="#" id="mob-resources">Resources <i class="fas fa-chevron-down"></i></a>
-      <div class="dropdown-menu">
-        <a href="resources/research-insights.html"><i class="fas fa-book"></i> Research &amp; Insights</a>
-        <a href="resources/industry-trends.html"><i class="fas fa-chart-bar"></i> Industry Trends</a>
-        <a href="resources/case-studies.html"><i class="fas fa-file-alt"></i> Case Studies</a>
-      </div>
-    </li>
-    <li><a href="index.html#marketplace">FinTech Hub</a></li>
-    <li><a href="company/contact.html">Contact</a></li>
-    <li><a href="consultation.html">Free Consultation</a></li>
-  </ul>
-</header>
-
-<!-- ═══════════════════════ HERO ═══════════════════════ -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-inner">
-    <div class="hero-tag">
-      <span></span> Digital Transformation Partner — Africa &amp; Europe
-    </div>
-    <h1>
-      Technology That Crosses<br>
-      <em>Borders &amp; Builds Futures</em>
-    </h1>
-    <p>AEC empowers businesses across Africa and Europe through ERP, AI/ML, Cloud, CRM, FinTech, and Financial Analysis — bridging continents with strategy-first technology since 2017.</p>
-    <div class="hero-btns">
-      <a href="consultation.html" class="btn-gold"><i class="fas fa-calendar-check"></i> Free Consultation</a>
-      <a href="#marketplace" class="btn-outline"><i class="fas fa-store"></i> Explore FinTech Hub</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════ ERP TICKER ═══════════════════════ -->
-<div class="ticker-wrap">
-  <div class="ticker-track">
-    <!-- Set 1 -->
-    <span class="ticker-item"><i class="fas fa-circle"></i> Microsoft Dynamics 365</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> SAP S/4HANA</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Oracle NetSuite</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Odoo ERP</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Microsoft Azure</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> OHADA Compliance</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Poland JPK V7</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Nigeria FIRS VAT</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Power BI Dashboards</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Salesforce CRM</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> EU OSS VAT</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> IFRS &amp; SYSCOHADA</span>
-    <!-- Set 2 — identical, creates seamless loop -->
-    <span class="ticker-item"><i class="fas fa-circle"></i> Microsoft Dynamics 365</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> SAP S/4HANA</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Oracle NetSuite</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Odoo ERP</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Microsoft Azure</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> OHADA Compliance</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Poland JPK V7</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Nigeria FIRS VAT</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Power BI Dashboards</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> Salesforce CRM</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> EU OSS VAT</span>
-    <span class="ticker-item"><i class="fas fa-circle"></i> IFRS &amp; SYSCOHADA</span>
-  </div>
-</div>
-
-<!-- ═══════════════════════ SERVICES ═══════════════════════ -->
-<section class="section">
-  <div class="wrap">
-    <div class="ctr rv">
-      <span class="stag">What We Do</span>
-      <h2 class="sh">End-to-End <em>Digital Services</em></h2>
-      <p class="sp">From enterprise ERP implementation to AI-powered analytics — we deliver technology that transforms operations and drives measurable growth.</p>
-    </div>
-
-    <div class="svc-grid">
-
-      <div class="svc-c rv">
-        <div class="svc-icon" style="background:rgba(37,99,235,.15)"><i class="fas fa-project-diagram" style="color:#60a5fa"></i></div>
-        <h3>ERP Solutions</h3>
-        <p>End-to-end implementation of Microsoft Dynamics 365, SAP, Oracle, and Odoo — tailored for African and European market requirements.</p>
-        <a href="services/ERP.html" class="svc-link">Learn more <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <div class="svc-c rv">
-        <div class="svc-icon" style="background:rgba(0,194,168,.12)"><i class="fas fa-users" style="color:var(--teal)"></i></div>
-        <h3>CRM Implementation</h3>
-        <p>Salesforce and Microsoft Dynamics CRM deployment that unifies customer data, automates sales pipelines, and accelerates growth.</p>
-        <a href="services/crm.html" class="svc-link">Learn more <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <div class="svc-c rv">
-        <div class="svc-icon" style="background:rgba(139,92,246,.15)"><i class="fas fa-robot" style="color:#a78bfa"></i></div>
-        <h3>AI &amp; Machine Learning</h3>
-        <p>Intelligent automation, predictive analytics, and custom AI models that turn your data into competitive advantage.</p>
-        <a href="services/ai-ml.html" class="svc-link">Learn more <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <div class="svc-c rv">
-        <div class="svc-icon" style="background:rgba(6,182,212,.12)"><i class="fas fa-cloud" style="color:#22d3ee"></i></div>
-        <h3>Cloud Services</h3>
-        <p>Azure cloud architecture, migration, and managed services — scalable, secure, and optimised for cross-border operations.</p>
-        <a href="services/cloud.html" class="svc-link">Learn more <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <div class="svc-c rv">
-        <div class="svc-icon" style="background:rgba(234,88,12,.12)"><i class="fas fa-chart-line" style="color:#fb923c"></i></div>
-        <h3>Business Analysis</h3>
-        <p>Process mapping, requirements engineering, and data-driven strategy that bridges the gap between business goals and technology.</p>
-        <a href="services/business-analysis.html" class="svc-link">Learn more <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <div class="svc-c rv">
-        <div class="svc-icon" style="background:rgba(201,150,60,.12)"><i class="fas fa-chart-pie" style="color:var(--gold-l)"></i></div>
-        <h3>Financial Analysis &amp; Accounting</h3>
-        <p>Multi-region accounting, OHADA compliance, JPK V7, Nigeria FIRS VAT — with built-in calculators and free Excel toolkit.</p>
-        <a href="services/Financial Analysis-&-Accounting.html" class="svc-link">Learn more <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-      <!-- FinTech Marketplace teaser — gold card -->
-      <div class="svc-c fintech rv">
-        <div class="svc-icon" style="background:rgba(201,150,60,.2)"><i class="fas fa-store" style="color:var(--gold-l)"></i></div>
-        <h3>FinTech Marketplace <span style="font-size:.7rem;background:rgba(201,150,60,.2);color:var(--gold);padding:2px 8px;border-radius:12px;margin-left:6px;vertical-align:middle">COMING SOON</span></h3>
-        <p>A curated marketplace for tax algorithms, ERP templates, and career opportunities — built for Africa–Europe cross-border business.</p>
-        <a href="#marketplace" class="svc-link" style="color:var(--gold-l)">Join the waitlist <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════ WHY AEC ═══════════════════════ -->
-<section class="section" style="background:linear-gradient(180deg,#0d1e48,var(--navy));border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-  <div class="wrap">
-    <div class="ctr rv">
-      <span class="stag">Why AEC</span>
-      <h2 class="sh">Trusted by Businesses <em>Across Continents</em></h2>
-      <p class="sp">We combine deep local expertise with global technology standards — delivering solutions that work in Kraków, Douala, Abuja, and everywhere in between.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-item rv">
-        <div class="wi-num aec-counter" data-target="95" data-suffix="%">0%</div>
-        <div class="wi-label">Client Satisfaction Rate</div>
-      </div>
-      <div class="why-item rv">
-        <div class="wi-num aec-counter" data-target="17" data-suffix="+">0+</div>
-        <div class="wi-label">OHADA Member States</div>
-      </div>
-      <div class="why-item rv">
-        <div class="wi-num aec-counter" data-target="4" data-suffix="">4</div>
-        <div class="wi-label">Tax Frameworks Covered</div>
-      </div>
-      <div class="why-item rv">
-        <div class="wi-num">EN · FR · PL</div>
-        <div class="wi-label">Languages Supported</div>
-      </div>
-      <div class="why-item rv">
-        <div class="wi-num">2017</div>
-        <div class="wi-label">Founded — 7+ Years</div>
-      </div>
-    </div>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px">
-      <div class="svc-c rv" style="text-align:center">
-        <i class="fas fa-globe-africa" style="font-size:2rem;color:var(--teal);margin-bottom:12px"></i>
-        <h3>Cross-Border Expertise</h3>
-        <p>Deep understanding of African regulatory environments (OHADA, CEMAC, ECOWAS) and European standards (EU, GDPR, IFRS).</p>
-      </div>
-      <div class="svc-c rv" style="text-align:center">
-        <i class="fas fa-shield-alt" style="font-size:2rem;color:var(--gold-l);margin-bottom:12px"></i>
-        <h3>Compliance First</h3>
-        <p>Every solution is built with local compliance baked in — not bolted on. JPK V7, OHADA TVA, FIRS VAT, EU OSS.</p>
-      </div>
-      <div class="svc-c rv" style="text-align:center">
-        <i class="fas fa-handshake" style="font-size:2rem;color:#a78bfa;margin-bottom:12px"></i>
-        <h3>Microsoft Partner</h3>
-        <p>Certified Microsoft Partner with expertise in Dynamics 365, Azure, Power Platform, and the full Microsoft ecosystem.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════ MARKETPLACE WAITLIST ═══════════════════════ -->
-<section class="section" id="marketplace">
-  <div class="wrap">
-    <div class="ctr rv">
-      <span class="stag">FinTech Marketplace</span>
-      <h2 class="sh">Join the <em>AEC Hub Waitlist</em></h2>
-      <p class="sp">Be first to access tax algorithms, ERP templates, and career opportunities — a marketplace built for Africa–Europe cross-border business.</p>
-    </div>
-
-    <div class="market-wrap rv">
-      <div class="market-header">
-        <div class="market-header-text">
-          <h2>AEC FinTech &amp; ERP Marketplace</h2>
-          <p>A curated platform connecting businesses, developers, and talent across the Africa–Europe corridor. Launching soon — register your interest below.</p>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start">
-          <span class="region-pill active">OHADA</span>
-          <span class="region-pill">EU / Poland</span>
-          <span class="region-pill">Nigeria FIRS</span>
-          <span class="region-pill">Global</span>
-        </div>
-      </div>
-
-      <div class="market-features">
-        <div class="mf-card">
-          <div class="mf-icon">🧮</div>
-          <h4>Tax Algorithms</h4>
-          <p>Ready-to-deploy VAT, corporate tax, and OHADA compliance engines for developers and finance teams.</p>
-        </div>
-        <div class="mf-card">
-          <div class="mf-icon">📦</div>
-          <h4>ERP Templates</h4>
-          <p>Pre-configured D365, SAP, and Odoo templates localised for African and European markets.</p>
-        </div>
-        <div class="mf-card">
-          <div class="mf-icon">💼</div>
-          <h4>Careers</h4>
-          <p>Tech and finance opportunities across the Africa–Europe corridor, from Kraków to Lagos.</p>
-        </div>
-      </div>
-
-      <div class="market-form-area">
-        <p style="color:var(--muted);font-size:.88rem;margin-bottom:16px">Select your region of interest, then register:</p>
-        <div class="region-pills" id="regionPills">
-          <span class="region-pill active" data-region="OHADA">OHADA</span>
-          <span class="region-pill" data-region="EU/Poland">EU / Poland</span>
-          <span class="region-pill" data-region="Nigeria FIRS">Nigeria FIRS</span>
-          <span class="region-pill" data-region="Global">Global</span>
-        </div>
-        <form class="waitlist-form" id="waitlistForm" data-form-submit>
-          <input type="text"  class="wf-input" id="wl-name"   name="name"   placeholder="Full Name *" required>
-          <input type="email" class="wf-input" id="wl-email"  name="email"  placeholder="Email Address *" required>
-          <select class="wf-input" id="wl-role" name="role">
-            <option value="" disabled selected>Your Role</option>
-            <option>Business Owner / CEO</option>
-            <option>CFO / Finance Director</option>
-            <option>ERP Consultant</option>
-            <option>Developer</option>
-            <option>Accountant / Tax Advisor</option>
-            <option>Investor</option>
-            <option>Other</option>
-          </select>
-          <input type="hidden" id="wl-region" name="tax_region" value="OHADA">
-          <select class="wf-input" id="wl-region-display" name="tax_region_display">
-            <option value="OHADA">Tax Region: OHADA</option>
-            <option value="EU/Poland">Tax Region: EU / Poland</option>
-            <option value="Nigeria FIRS">Tax Region: Nigeria FIRS</option>
-            <option value="Global">Tax Region: Global</option>
-          </select>
-          <button type="submit" class="wf-submit"><i class="fas fa-rocket"></i> Join the Waitlist</button>
-          <div class="wf-msg" id="wl-msg"></div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════ WEB & MARKETING TEASER ═══════════════════════ -->
-<section class="section tight" style="border-top:1px solid var(--border)">
-  <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center">
-      <div class="rv">
-        <span class="stag">Web &amp; Marketing</span>
-        <h2 class="sh">Digital Presence <em>That Converts</em></h2>
-        <p class="sp" style="margin-bottom:24px">From strategy to launch — we design, build, and optimise digital experiences that grow your audience and revenue across Africa and Europe.</p>
-        <a href="services/web-marketing.html" class="btn-gold"><i class="fas fa-globe"></i> Explore Web Services</a>
-      </div>
-      <div class="rv" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-        <div class="svc-c" style="padding:20px;text-align:center">
-          <i class="fas fa-search" style="color:var(--teal);font-size:1.5rem;margin-bottom:8px"></i>
-          <h3 style="font-size:.95rem">SEO &amp; SEM</h3>
-        </div>
-        <div class="svc-c" style="padding:20px;text-align:center">
-          <i class="fas fa-paint-brush" style="color:var(--gold-l);font-size:1.5rem;margin-bottom:8px"></i>
-          <h3 style="font-size:.95rem">Web Design</h3>
-        </div>
-        <div class="svc-c" style="padding:20px;text-align:center">
-          <i class="fas fa-share-alt" style="color:#a78bfa;font-size:1.5rem;margin-bottom:8px"></i>
-          <h3 style="font-size:.95rem">Social Media</h3>
-        </div>
-        <div class="svc-c" style="padding:20px;text-align:center">
-          <i class="fas fa-envelope-open-text" style="color:#fb923c;font-size:1.5rem;margin-bottom:8px"></i>
-          <h3 style="font-size:.95rem">Email Campaigns</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════ CTA STRIP ═══════════════════════ -->
-<div class="cta-strip">
-  <h2>Ready to Transform <em style="color:var(--gold-l);font-style:italic">Your Business?</em></h2>
-  <p>Book a free 30-minute consultation with our experts. No commitment — just clarity on how technology can accelerate your growth.</p>
-  <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
-    <a href="consultation.html" class="btn-gold"><i class="fas fa-calendar-check"></i> Book Free Consultation</a>
-    <a href="company/contact.html" class="btn-outline"><i class="fas fa-envelope"></i> Get in Touch</a>
-  </div>
-</div>
-
-<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
-<footer class="site-footer">
-  <div class="footer-grid">
-
-    <div class="footer-brand">
-      <a href="index.html" class="logo">
-        <img src="assets/logo.png" alt="AEC Logo">
+<!-- ================= HEADER (same on every page) ================= -->
+<header>
+  <div class="container">
+    <nav aria-label="Main">
+      <a href="index.html" class="logo" aria-label="AEC home">
+        <img src="assets/logo.png" alt="AEC logo" class="logo-img">
         <span class="logo-text">AEC</span>
       </a>
-      <p class="tagline">Aim High · Be Kind · Dare to be Different</p>
-      <p>AFRIQUEEUROPECONNEXIONVMETC (AEC) is a leading digital transformation partner, empowering businesses across Africa and Europe through technology, innovation, and collaboration since 2017.</p>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Company <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <a href="company/about.html"><i class="fas fa-info-circle" aria-hidden="true"></i> About Us</a>
+            <a href="company/mission.html"><i class="fas fa-bullseye" aria-hidden="true"></i> Our Mission</a>
+            <a href="company/expertise.html"><i class="fas fa-star" aria-hidden="true"></i> Expertise</a>
+            <a href="company/Volunteer.html"><i class="fas fa-hands-helping" aria-hidden="true"></i> Volunteer</a>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <a href="services/ai-ml.html"><i class="fas fa-robot" aria-hidden="true"></i> AI &amp; Machine Learning</a>
+            <a href="services/ERP.html"><i class="fas fa-project-diagram" aria-hidden="true"></i> ERP Solutions</a>
+            <a href="services/crm.html"><i class="fas fa-users" aria-hidden="true"></i> CRM Implementation</a>
+            <a href="services/cloud.html"><i class="fas fa-cloud" aria-hidden="true"></i> Cloud Services</a>
+            <a href="services/business-analysis.html"><i class="fas fa-chart-line" aria-hidden="true"></i> Business Analysis</a>
+            <a href="services/web-marketing.html"><i class="fas fa-globe" aria-hidden="true"></i> Web &amp; Marketing</a>
+            <a href="services/Financial%20Analysis-%26-Accounting.html"><i class="fas fa-chart-pie" aria-hidden="true"></i> Financial Analysis &amp; Accounting</a>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Resources <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <a href="resources/research-insights.html"><i class="fas fa-book" aria-hidden="true"></i> Research &amp; Insights</a>
+            <a href="resources/industry-trends.html"><i class="fas fa-chart-bar" aria-hidden="true"></i> Industry Trends</a>
+            <a href="resources/case-studies.html"><i class="fas fa-file-alt" aria-hidden="true"></i> Case Studies</a>
+          </div>
+        </li>
+
+        <li><a href="index.html#marketplace">FinTech Hub</a></li>
+        <li><a href="company/contact.html">Contact</a></li>
+        <li><a href="consultation.html" class="cta-btn">Free Consultation</a></li>
+      </ul>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero home-hero">
+  <div class="hero-media" aria-hidden="true">
+    <img src="assets/human%20machine.jpg" alt="" fetchpriority="high">
+  </div>
+  <div class="container">
+    <div class="hero-copy">
+      <span class="eyebrow">Business consulting · Africa &amp; Europe</span>
+      <h1>Practical business help, <em>explained in plain language.</em></h1>
+      <p class="hero-lead">AEC is a small, hands-on consultancy. Since 2017 we've helped business owners across Africa and Europe sort out their numbers, their systems and their online presence — without the jargon.</p>
+      <div class="hero-actions">
+        <a href="consultation.html" class="btn-gold"><i class="fas fa-comments" aria-hidden="true"></i> Book a free chat</a>
+        <a href="#help" class="btn-outline">See how we can help</a>
+      </div>
+      <p class="hero-note"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Kraków · Douala · Abuja &nbsp;·&nbsp; English · Français · Polski</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= "WHAT'S ON YOUR MIND" PICKER ================= -->
+<section class="picker-wrap" id="help">
+  <div class="container">
+    <div class="picker" id="picker">
+      <h2>What's on your mind today?</h2>
+      <p class="sub">Pick the one that sounds most like you — we'll point you in the right direction.</p>
+
+      <div class="chips" role="group" aria-label="Choose a topic">
+        <button type="button" class="chip" data-title="Let's start with a clear picture" data-text="That's completely normal. We sit down with you, look at how your business runs today, and point out the quickest wins first." data-link="services/business-analysis.html" data-cta="Business Analysis">I'm not sure where to start</button>
+        <button type="button" class="chip" data-title="Numbers you can trust" data-text="We help you make sense of your accounts, VAT and reports — whether you're in Poland, the OHADA zone or Nigeria." data-link="services/Financial%20Analysis-%26-Accounting.html" data-cta="Financial Analysis &amp; Accounting">I need clearer numbers</button>
+        <button type="button" class="chip" data-title="One place for orders, stock and money" data-text="An ERP brings the scattered parts of your business together. We help you choose one and set it up around your team." data-link="services/ERP.html" data-cta="ERP Solutions">My systems don't talk to each other</button>
+        <button type="button" class="chip" data-title="Keep every customer in view" data-text="A CRM remembers who asked what, and what happens next — so no customer slips through the cracks." data-link="services/crm.html" data-cta="CRM Implementation">I want to keep customers close</button>
+        <button type="button" class="chip" data-title="AI for the boring jobs" data-text="We show you where AI can take over repetitive work — with a human always in charge of the decisions." data-link="services/ai-ml.html" data-cta="AI &amp; Machine Learning">I'd like to use AI sensibly</button>
+        <button type="button" class="chip" data-title="Go online at your own pace" data-text="We move your tools to the cloud step by step, safely, and with costs you can actually see." data-link="services/cloud.html" data-cta="Cloud Services">Moving online feels scary</button>
+        <button type="button" class="chip" data-title="Be easy to find" data-text="A website that looks like you, and marketing that puts you in front of the right people." data-link="services/web-marketing.html" data-cta="Web &amp; Marketing">People can't find me online</button>
+      </div>
+
+      <div class="pick-out" id="pickOut" aria-live="polite">
+        <div class="txt">
+          <h3 id="pickTitle">Let's start with a clear picture</h3>
+          <p id="pickText">That's completely normal. We sit down with you, look at how your business runs today, and point out the quickest wins first.</p>
+        </div>
+        <a href="services/business-analysis.html" id="pickLink" class="btn-gold btn-sm"><span>Business Analysis</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">How we can help</span>
+      <h2>One team, many ways to help</h2>
+      <p>Start with what matters most today. You can add the rest whenever you're ready.</p>
     </div>
 
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="company/about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
-        <li><a href="company/mission.html"><i class="fas fa-bullseye"></i> Our Mission</a></li>
-        <li><a href="company/expertise.html"><i class="fas fa-star"></i> Expertise</a></li>
-        <li><a href="company/Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a></li>
-        <li><a href="company/contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
-      </ul>
-    </div>
+    <div class="grid-4">
+      <article class="card star rv">
+        <div class="ic t-gold"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+        <h3>Business Analysis</h3>
+        <p>Not sure where to begin? We map how your business works today and find the quick wins.</p>
+        <a href="services/business-analysis.html" class="more">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </article>
 
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="services/ERP.html"><i class="fas fa-project-diagram"></i> ERP Solutions</a></li>
-        <li><a href="services/crm.html"><i class="fas fa-users"></i> CRM</a></li>
-        <li><a href="services/ai-ml.html"><i class="fas fa-robot"></i> AI &amp; ML</a></li>
-        <li><a href="services/cloud.html"><i class="fas fa-cloud"></i> Cloud Services</a></li>
-        <li><a href="services/business-analysis.html"><i class="fas fa-chart-line"></i> Business Analysis</a></li>
-        <li><a href="services/web-marketing.html"><i class="fas fa-globe"></i> Web &amp; Marketing</a></li>
-        <li><a href="services/Financial Analysis-&-Accounting.html"><i class="fas fa-chart-pie"></i> Financial A&amp;A</a></li>
-      </ul>
-    </div>
+      <article class="card rv">
+        <div class="ic t-teal"><i class="fas fa-chart-pie" aria-hidden="true"></i></div>
+        <h3>Financial Analysis &amp; Accounting</h3>
+        <p>Clear numbers you can trust, across Poland, the OHADA zone and Nigeria.</p>
+        <a href="services/Financial%20Analysis-%26-Accounting.html" class="more">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        <a href="assets/AEC_VAT_Expense_Tracker.xlsx" class="mini-link" download><i class="fas fa-file-excel" aria-hidden="true"></i> Free VAT &amp; expense tracker (Excel)</a>
+      </article>
 
-    <div class="footer-col">
-      <h4>Connect</h4>
-      <ul>
-        <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com"><i class="fas fa-envelope"></i> Email Us</a></li>
-        <li><a href="tel:+48690386721"><i class="fas fa-phone"></i> +48 690 386 721</a></li>
-        <li><a href="https://wa.me/48690386721" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-        <li><a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="https://x.com/SandjongAr3472" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i> Twitter / X</a></li>
-        <li><a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank" rel="noopener"><i class="fab fa-researchgate"></i> ResearchGate</a></li>
-      </ul>
-      <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--border)">
-        <p style="color:var(--muted);font-size:.82rem;line-height:1.8">
-          <i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:5px"></i><strong style="color:rgba(255,255,255,.6)">Headquarters:</strong> Kraków, Poland<br>
-          <i class="fas fa-map-marker-alt" style="color:var(--teal);margin-right:5px"></i><strong style="color:rgba(255,255,255,.6)">Africa:</strong> Douala, Cameroon · Abuja, Nigeria
+      <article class="card rv">
+        <div class="ic t-blue"><i class="fas fa-project-diagram" aria-hidden="true"></i></div>
+        <h3>ERP Solutions</h3>
+        <p>One system for orders, stock and money — set up around how your team really works.</p>
+        <a href="services/ERP.html" class="more">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </article>
+
+      <article class="card rv">
+        <div class="ic t-orange"><i class="fas fa-users" aria-hidden="true"></i></div>
+        <h3>CRM Implementation</h3>
+        <p>Know who your customers are, what they asked for and what comes next.</p>
+        <a href="services/crm.html" class="more">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </article>
+
+      <article class="card rv">
+        <div class="ic t-violet"><i class="fas fa-robot" aria-hidden="true"></i></div>
+        <h3>AI &amp; Machine Learning</h3>
+        <p>Let AI handle the repetitive jobs while people keep the decisions.</p>
+        <a href="services/ai-ml.html" class="more">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </article>
+
+      <article class="card rv">
+        <div class="ic t-cyan"><i class="fas fa-cloud" aria-hidden="true"></i></div>
+        <h3>Cloud Services</h3>
+        <p>Move to the cloud at your own pace, with costs you can see.</p>
+        <a href="services/cloud.html" class="more">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </article>
+
+      <article class="card rv">
+        <div class="ic t-green"><i class="fas fa-globe" aria-hidden="true"></i></div>
+        <h3>Web &amp; Marketing</h3>
+        <p>A website that looks like you, and gets found by the right people.</p>
+        <a href="services/web-marketing.html" class="more">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </article>
+
+      <article class="card star rv">
+        <div class="ic t-gold"><i class="fas fa-store" aria-hidden="true"></i></div>
+        <h3>FinTech Marketplace <span class="soon">Coming soon</span></h3>
+        <p>Tax tools, ERP templates and finance-tech jobs for the Africa–Europe corridor.</p>
+        <a href="#marketplace" class="more">Join the waitlist <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TOOLS & STANDARDS ================= -->
+<section class="strip">
+  <div class="container text-center">
+    <p class="strip-title">Tools and standards we work with</p>
+    <div class="tools">
+      <span class="tool">Microsoft Dynamics 365</span>
+      <span class="tool">SAP S/4HANA</span>
+      <span class="tool">Oracle NetSuite</span>
+      <span class="tool">Odoo</span>
+      <span class="tool">Microsoft Azure</span>
+      <span class="tool">Power BI</span>
+      <span class="tool">Salesforce</span>
+      <span class="tool">IFRS &amp; SYSCOHADA</span>
+      <span class="tool">OHADA</span>
+      <span class="tool">Poland JPK V7</span>
+      <span class="tool">Nigeria FIRS VAT</span>
+      <span class="tool">EU OSS VAT</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TECH x NATURE ================= -->
+<section class="bg-light" id="story">
+  <div class="container">
+    <div class="nature">
+      <div class="rv">
+        <span class="eyebrow">How we think</span>
+        <h2>Technology that grows <em>like a tree</em></h2>
+        <p class="text-large">Good technology is a bit like a good tree: strong roots you don't always see, steady growth, and shade for everyone who stands under it.</p>
+        <p>That's how we like to build — people first, simple wherever possible, and made to last. It's also why we always mix human advice with smart tools, never one without the other.</p>
+        <a href="company/about.html" class="btn-outline">About AEC</a>
+      </div>
+      <div class="nature-pics rv">
+        <figure class="pic">
+          <img src="assets/robot%20tech%20tree.jpeg" alt="A robot and a tree growing together" loading="lazy">
+          <figcaption>Smart tools, human judgement</figcaption>
+        </figure>
+        <figure class="pic">
+          <img src="assets/tech-inspired-nature-tree-stockcake.jpg" alt="A tree inspired by technology" loading="lazy">
+          <figcaption>Growth that respects nature</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOUNDER (light section) ================= -->
+<section class="light" id="founder">
+  <div class="container">
+    <div class="founder">
+      <div class="founder-photo rv">
+        <img src="assets/ARMEL%20JPG.jpg" alt="Armel Sandjong Nantchouang, founder of AEC" loading="lazy">
+      </div>
+      <div class="rv">
+        <span class="eyebrow">Meet the founder</span>
+        <h2>Hi, I'm Armel.</h2>
+        <p class="text-large">I'm Armel Sandjong Nantchouang, a business consultant and the founder of AEC.</p>
+        <p>In 2017 I started small — bringing technology to businesses hand to hand, door to door. Today we work online with a network of trusted partners across Africa and Europe, but the approach hasn't changed: listen first, explain clearly, and build something that genuinely helps.</p>
+        <div class="values">
+          <span class="value">🎯 Aim high</span>
+          <span class="value">❤️ Be kind</span>
+          <span class="value">✨ Dare to be different</span>
+        </div>
+        <div class="hero-actions">
+          <a href="company/about.html" class="btn-gold">Read our story</a>
+          <a href="company/contact.html" class="btn-secondary">Say hello</a>
+        </div>
+        <p class="sign">— Armel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OFFICES ================= -->
+<section>
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">Where to find us</span>
+      <h2>Three cities, one team</h2>
+      <p>We work in English, French and Polish — pick whichever feels most comfortable.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card office rv">
+        <div class="ic t-gold"><i class="fas fa-landmark" aria-hidden="true"></i></div>
+        <small>Headquarters</small>
+        <h3>Kraków, Poland</h3>
+      </div>
+      <div class="card office rv">
+        <div class="ic t-teal"><i class="fas fa-water" aria-hidden="true"></i></div>
+        <small>Regional office</small>
+        <h3>Douala, Cameroon</h3>
+      </div>
+      <div class="card office rv">
+        <div class="ic t-green"><i class="fas fa-city" aria-hidden="true"></i></div>
+        <small>Regional office</small>
+        <h3>Abuja, Nigeria</h3>
+      </div>
+    </div>
+    <p class="text-center reach rv">
+      <a href="https://wa.me/48690386721" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Message us on WhatsApp</a>
+      &nbsp;·&nbsp; <a href="tel:+48690386721"><i class="fas fa-phone" aria-hidden="true"></i> +48 690 386 721</a>
+      &nbsp;·&nbsp; <a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com"><i class="fas fa-envelope" aria-hidden="true"></i> Email us</a>
+    </p>
+  </div>
+</section>
+
+<!-- ================= GIVING BACK ================= -->
+<section class="giving">
+  <div class="container">
+    <div class="giving-grid">
+      <div class="rv">
+        <span class="eyebrow">Giving back</span>
+        <h2>Because business is about people too</h2>
+        <p class="text-large">We run free digital skills training for young people, and give pro-bono help to small businesses that need a hand.</p>
+        <a href="company/Volunteer.html" class="btn-gold"><i class="fas fa-heart" aria-hidden="true"></i> Volunteer with us</a>
+      </div>
+      <div class="nums rv">
+        <div class="num"><b>500+</b><span>Young people trained</span></div>
+        <div class="num"><b>50+</b><span>Small businesses supported</span></div>
+        <div class="num"><b>10+</b><span>Community projects</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINTECH HUB WAITLIST ================= -->
+<section id="marketplace">
+  <div class="container">
+    <div class="hub rv">
+      <div>
+        <span class="eyebrow">FinTech Hub · coming soon</span>
+        <h2>A marketplace for the Africa–Europe corridor</h2>
+        <p class="text-large">We're building a place to find tax tools, ERP templates and finance-tech jobs. Want first access? Join the waitlist.</p>
+        <div class="hub-tags">
+          <span>🧮 Tax tools</span>
+          <span>📦 ERP templates</span>
+          <span>💼 Careers</span>
+        </div>
+      </div>
+
+      <form class="wf" id="waitlistForm" novalidate>
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input class="fi" type="text" id="wl-name" name="name" placeholder="Full name *" autocomplete="name" required>
+        <input class="fi" type="email" id="wl-email" name="email" placeholder="Email address *" autocomplete="email" required>
+        <select class="fi" id="wl-role" name="role" aria-label="Your role">
+          <option value="" disabled selected>Your role</option>
+          <option>Business Owner / CEO</option>
+          <option>CFO / Finance Director</option>
+          <option>ERP Consultant</option>
+          <option>Developer</option>
+          <option>Accountant / Tax Advisor</option>
+          <option>Investor</option>
+          <option>Other</option>
+        </select>
+        <select class="fi" id="wl-region" name="region" aria-label="Region of interest">
+          <option value="OHADA">Region: OHADA</option>
+          <option value="EU / Poland">Region: EU / Poland</option>
+          <option value="Nigeria FIRS">Region: Nigeria FIRS</option>
+          <option value="Global">Region: Global</option>
+        </select>
+        <label class="consent full">
+          <input type="checkbox" id="wl-consent" required>
+          <span>I agree to the <a href="legal/privacy-policy.html">Privacy Policy</a>.</span>
+        </label>
+        <button type="submit" class="btn-gold full"><i class="fas fa-rocket" aria-hidden="true"></i> Join the waitlist</button>
+        <div class="wf-msg full" id="wl-msg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-section">
+  <div class="container text-center">
+    <h2>Let's talk about your business</h2>
+    <p class="cta-text">Book a free 30-minute chat. No pressure, no jargon — just clear next steps.</p>
+    <div class="hero-actions center">
+      <a href="consultation.html" class="btn-gold"><i class="fas fa-calendar-check" aria-hidden="true"></i> Book a free chat</a>
+      <a href="company/contact.html" class="btn-outline"><i class="fas fa-envelope" aria-hidden="true"></i> Get in touch</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER (same on every page) ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="AEC home">
+          <img src="assets/logo.png" alt="AEC logo" class="logo-img">
+          <span class="logo-text">AEC</span>
+        </a>
+        <p class="tagline">Aim High · Be Kind · Dare to be Different</p>
+        <p>AFRIQUEEUROPECONNEXIONVMETC (AEC) is a small consultancy helping businesses in Africa and Europe with practical advice and technology, since 2017.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="company/about.html"><i class="fas fa-info-circle" aria-hidden="true"></i> About Us</a></li>
+          <li><a href="company/mission.html"><i class="fas fa-bullseye" aria-hidden="true"></i> Our Mission</a></li>
+          <li><a href="company/expertise.html"><i class="fas fa-star" aria-hidden="true"></i> Expertise</a></li>
+          <li><a href="company/Volunteer.html"><i class="fas fa-hands-helping" aria-hidden="true"></i> Volunteer</a></li>
+          <li><a href="company/contact.html"><i class="fas fa-envelope" aria-hidden="true"></i> Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services/ERP.html"><i class="fas fa-project-diagram" aria-hidden="true"></i> ERP Solutions</a></li>
+          <li><a href="services/crm.html"><i class="fas fa-users" aria-hidden="true"></i> CRM</a></li>
+          <li><a href="services/ai-ml.html"><i class="fas fa-robot" aria-hidden="true"></i> AI &amp; ML</a></li>
+          <li><a href="services/cloud.html"><i class="fas fa-cloud" aria-hidden="true"></i> Cloud Services</a></li>
+          <li><a href="services/business-analysis.html"><i class="fas fa-chart-line" aria-hidden="true"></i> Business Analysis</a></li>
+          <li><a href="services/web-marketing.html"><i class="fas fa-globe" aria-hidden="true"></i> Web &amp; Marketing</a></li>
+          <li><a href="services/Financial%20Analysis-%26-Accounting.html"><i class="fas fa-chart-pie" aria-hidden="true"></i> Financial A&amp;A</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com"><i class="fas fa-envelope" aria-hidden="true"></i> Email us</a></li>
+          <li><a href="tel:+48690386721"><i class="fas fa-phone" aria-hidden="true"></i> +48 690 386 721</a></li>
+          <li><a href="https://wa.me/48690386721" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+          <li><a href="https://www.linkedin.com/company/afriqueeuropeconnexionvmetc/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          <li><a href="https://x.com/SandjongAr3472" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter" aria-hidden="true"></i> X (Twitter)</a></li>
+          <li><a href="https://www.researchgate.net/profile/Armel-Sandjong-Nantchouang" target="_blank" rel="noopener noreferrer"><i class="fab fa-researchgate" aria-hidden="true"></i> ResearchGate</a></li>
+        </ul>
+        <p class="f-loc">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i><strong>Headquarters:</strong> Kraków, Poland<br>
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i><strong>Africa:</strong> Douala, Cameroon · Abuja, Nigeria
         </p>
       </div>
     </div>
 
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 AFRIQUEEUROPECONNEXIONVMETC (AEC). All Rights Reserved. Designed by Armel Sandjong Nantchouang.</p>
-    <div class="ms-badge"><i class="fab fa-microsoft"></i> Microsoft Partner</div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="yr">2026</span> AFRIQUEEUROPECONNEXIONVMETC (AEC). All rights reserved. Designed by Armel Sandjong Nantchouang.</p>
+      <div class="f-legal">
+        <a href="legal/privacy-policy.html">Privacy</a>
+        <a href="legal/terms-of-service.html">Terms</a>
+        <a href="legal/cookie-policy.html">Cookies</a>
+      </div>
+    </div>
   </div>
 </footer>
 
-<!-- Back to top -->
-<button id="btt" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
 
-<!-- ═══════════════════════ SCRIPTS ═══════════════════════ -->
-<script>
-// ── Sticky header ─────────────────────────────────────────
-const hdr = document.getElementById('siteHeader');
-window.addEventListener('scroll', () => {
-  hdr.classList.toggle('scrolled', window.scrollY > 60);
-  document.getElementById('btt').classList.toggle('visible', window.scrollY > 400);
-});
-
-// ── Back to top ────────────────────────────────────────────
-document.getElementById('btt').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// ── Mobile nav ─────────────────────────────────────────────
-const ham = document.getElementById('ham');
-const mob = document.getElementById('mob');
-ham.addEventListener('click', () => {
-  const open = mob.classList.toggle('open');
-  ham.querySelectorAll('span')[0].style.transform = open ? 'rotate(45deg) translate(5px,5px)' : '';
-  ham.querySelectorAll('span')[1].style.opacity  = open ? '0' : '1';
-  ham.querySelectorAll('span')[2].style.transform = open ? 'rotate(-45deg) translate(5px,-5px)' : '';
-  document.body.style.overflow = open ? 'hidden' : '';
-});
-// Mobile dropdown toggles
-['mob-company','mob-services','mob-resources'].forEach(id => {
-  const el = document.getElementById(id);
-  if (el) el.addEventListener('click', e => {
-    e.preventDefault();
-    el.closest('.dropdown').classList.toggle('open');
-  });
-});
-// Close mob nav on link click
-mob.querySelectorAll('a[href]:not([href="#"])').forEach(a => {
-  a.addEventListener('click', () => {
-    mob.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-});
-
-// ── Scroll reveal ──────────────────────────────────────────
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.rv').forEach(el => observer.observe(el));
-
-// ── Counter animation ──────────────────────────────────────
-function animateCounter(el) {
-  const target = parseInt(el.dataset.target);
-  const suffix = el.dataset.suffix || '';
-  let current = 0;
-  const step = Math.ceil(target / 60);
-  const timer = setInterval(() => {
-    current = Math.min(current + step, target);
-    el.textContent = current + suffix;
-    if (current >= target) clearInterval(timer);
-  }, 20);
-}
-const counterObs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); counterObs.unobserve(e.target); } });
-}, { threshold: 0.5 });
-document.querySelectorAll('.aec-counter').forEach(el => counterObs.observe(el));
-
-// ── Smooth scroll ──────────────────────────────────────────
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
-// ── Region pills (waitlist) ────────────────────────────────
-document.querySelectorAll('#regionPills .region-pill').forEach(pill => {
-  pill.addEventListener('click', () => {
-    document.querySelectorAll('#regionPills .region-pill').forEach(p => p.classList.remove('active'));
-    pill.classList.add('active');
-    document.getElementById('wl-region').value = pill.dataset.region;
-    document.getElementById('wl-region-display').value = pill.dataset.region;
-  });
-});
-
-// ── Waitlist form ──────────────────────────────────────────
-document.getElementById('waitlistForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('.wf-submit');
-  const msg = document.getElementById('wl-msg');
-  btn.textContent = 'Submitting…'; btn.disabled = true;
-  const payload = {
-    name:       document.getElementById('wl-name').value,
-    email:      document.getElementById('wl-email').value,
-    role:       document.getElementById('wl-role').value,
-    tax_region: document.getElementById('wl-region').value
-  };
-  try {
-    const res = await fetch('/api/waitlist', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    if (res.ok) {
-      msg.className = 'wf-msg ok'; msg.style.display = 'block';
-      msg.innerHTML = '<i class="fas fa-check-circle"></i> You\'re on the list! We\'ll be in touch when the marketplace launches.';
-      this.reset();
-    } else throw new Error('Server error');
-  } catch {
-    // Fallback: open mailto
-    const subject = encodeURIComponent('AEC Marketplace Waitlist — ' + payload.name);
-    const body    = encodeURIComponent(`Name: ${payload.name}\nEmail: ${payload.email}\nRole: ${payload.role}\nRegion: ${payload.tax_region}`);
-    window.location.href = `mailto:ArmelSandjong@afriqueeuropeconnexionvmetc.com?subject=${subject}&body=${body}`;
-    msg.className = 'wf-msg ok'; msg.style.display = 'block';
-    msg.innerHTML = '<i class="fas fa-check-circle"></i> Email client opened — send it to complete registration.';
-  } finally {
-    btn.textContent = 'Join the Waitlist'; btn.disabled = false;
-  }
-});
-</script>
-
-<!-- Load master JS for any shared modules used by inner pages -->
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
